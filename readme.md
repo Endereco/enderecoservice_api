@@ -9,7 +9,7 @@
 | [cityNameAutocomplete](functions/cityname-autocomplete.md) | Gibt mögliche Varianten der Stadt für bestimmte Eingabe aus. Sofert die PLZ bekannt ist, wird auch die PLZ ausgegeben. |
 | [streetAutocomplete](functions/street-autocomplete.md) | Gibt mögliche Varianten der Straße zurück. |
 | [addressCheck](functions/address-check.md) | Prüft eine angegebene Adresse. Gibt Varianten zurück, falls die Adresse nicht eindeutig ist oder es mögliche Berichtigungen gibt. |
-| [bankAutocomplete](functions/name-check.md) | Gibt den Namen und volle Bankleitzahl anhand eines Teils der Bankleitzahl. |
+| [bankAutocomplete](functions/bank-autocomplete.md) | Gibt den Namen und volle Bankleitzahl anhand eines Teils der Bankleitzahl. |
 | [emailCheck](functions/email-check.md) | Prüft die eMail-Adresse. |
 | [prephoneCheck](functions/prephone-check.md) | Prüft die Vorwahl oder volle Telefonnummer. Erkennt ob es eine Mobil- oder Festnetznummer ist, gibt die Nummer normalisiert zurück. |
 | [doAccounting](functions/do-accounting.md) | Markiert eine Transaction zur Abrechnung.  |
