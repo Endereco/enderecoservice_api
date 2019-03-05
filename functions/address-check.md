@@ -48,7 +48,7 @@ Content-Type: application/json
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "method": "postCodeAutocomplete",
+  "method": "addressCheck",
   "params": {
     "country": "de",
     "language": "de",
