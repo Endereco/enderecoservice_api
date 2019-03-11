@@ -10,6 +10,8 @@
 | [streetAutocomplete](functions/street-autocomplete.md) | Gibt mögliche Varianten der Straße zurück. |
 | [addressCheck](functions/address-check.md) | Prüft eine angegebene Adresse. Gibt Varianten zurück, falls die Adresse nicht eindeutig ist oder es mögliche Berichtigungen gibt. |
 | [bankAutocomplete](functions/bank-autocomplete.md) | Gibt den Namen und volle Bankleitzahl anhand eines Teils der Bankleitzahl. |
+| [bankCodeAutocomplete](functions/bankcode-autocomplete.md) | (neu) Gibt den Namen, volle Bankleitzahl und BIC anhand eines Teils der Bankleitzahl zurück. Neuster Stand. |
+| [ibanCheck](functions/iban-check.md) | Prüft die IBAN. |
 | [emailCheck](functions/email-check.md) | Prüft die eMail-Adresse. |
 | [prephoneCheck](functions/prephone-check.md) | Prüft die Vorwahl oder volle Telefonnummer. Erkennt ob es eine Mobil- oder Festnetznummer ist, gibt die Nummer normalisiert zurück. |
 | [doAccounting](functions/do-accounting.md) | Markiert eine Transaction zur Abrechnung.  |
