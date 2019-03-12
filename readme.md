@@ -15,6 +15,7 @@
 | [emailCheck](functions/email-check.md) | Prüft die eMail-Adresse. |
 | [prephoneCheck](functions/prephone-check.md) | Prüft die Vorwahl oder volle Telefonnummer. Erkennt ob es eine Mobil- oder Festnetznummer ist, gibt die Nummer normalisiert zurück. |
 | [doAccounting](functions/do-accounting.md) | Markiert eine Transaction zur Abrechnung.  |
+| [ibanConverter](functions/iban-converter.md) | Konvertiert IBAN zu KTO und BLZ oder umgekehrt. |
 
 ## Headers
 
