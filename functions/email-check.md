@@ -62,7 +62,29 @@ Content-Type: application/json
 
 | Feld | Typ | Bedeutung |
 | ---- | --- | --------- |
-| result.status | array | *A1000* - eMail-Adresse korrekt, *A2000* - eMail-Adresse nicht korrekt |
+| result.status | array | siehe Tabelle der Statuscodes |
+
+*Bedeutung der Felder:*
+
+| Status | Bedeutung |
+| ---- | --------- |
+| A1000 | Alles OK. Die eMail soll zustellbar sein und es wurden keine Tricks auf dem Server erkannt. |
+| A1100 | Die eMail werden zu jeder eMail-Adresse akzeptiert. |
+| A1110 | Alle email zu einer bestimmten Domain werden akzeptiert. |
+| A1400 | Die eMail werden akzeptiert, es handelt sich jedoch um eine "disposable" eMail-Adresse |
+| A4000 | Fehler. |
+| A4100 | SMTP Fehler. |
+| A4110 | Man könnte sich zwar mit SMTP verbinden, aber danach bricht die Verbindung ab. |
+| A4200 | Falsche Syntax |
+| A4300 | Server kennt die eMail-Adresse nicht. |
+| A4400 | eMail Zustellung fehlgeschlagen. |
+| A4500 | Relay Fehler. |
+| A4600 | Antispam blockiert die eMail. |
+| A4700 | eMail-Konto existiert nicht, ist inactiv oder kann keine eMail empfangen. |
+| A4800 | Kein eMail Server auf der Domain gefunden. |
+| A4810 | eMail Server ist down. |
+| A4900 | Span traps erkannt. |
+| A5000 | Unbekannter Fehler. |
 
 
 [zur Übersicht](../readme.md)
