@@ -64,8 +64,8 @@ Content-Type: application/json
 
 | Feld | Typ | Bedeutung |
 | ---- | --- | --------- |
-| result.status | array | *A1000* - Name gefunden, *A1100* - Name männlich, *A1200* - Name weiblich, *A1300* - Name ist unisex, *A2000* - Name nicht gefunden |
+| result.status | array | *A1000* - Name gefunden, *A1100* - Name männlich, *A1200* - Name weiblich, *A1300* - Name ist unisex, *A2000* - Name in unserer Datenbank nicht gefunden |
 | result.name | status | Eingegebener Vorname. |
-| result.gender | string | *F* - weiblich, *M* - männlich, *N* - unisex|unbekannt |
+| result.gender | string | *F* - weiblich, *M* - männlich, *N* - unisex, *X* - unbekannt |
 
 [zur Übersicht](../readme.md)
