@@ -16,6 +16,7 @@
 | [prephoneCheck](functions/prephone-check.md) | Prüft die Vorwahl oder gesamte Telefonnummer. Erkennt ob es sich um eine Mobil- oder Festnetznummer handelt, und gibt die Nummer normalisiert zurück. |
 | [doAccounting](functions/do-accounting.md) | Markiert eine Transaktion zur Abrechnung.  |
 | [ibanConverter](functions/iban-converter.md) | Konvertiert IBAN zu KTO und BLZ oder umgekehrt. |
+| [readinessCheck](functions/readiness-check.md) | Prüft, ob der Service erreichbar ist. |
 
 ## Headers
 
@@ -25,8 +26,14 @@ Folgende Header müssen mit jeder Anfrage an den Enderco Service übermittelt we
 | ------ | --------- | -------- |
 | Content-Type | Content type markierung. Soll immer *application/json* sein. | application/json |
 | X-Auth-Key | Auth Key. Wird zur Authentifizierung verwendet. | Beispiel: *a0835c4d0b31b7df976d1153f336d6086b130560e72092808f15b464702ac0fa* |
-| X-Transaction-Id | Transaction ID. Soll für die aktuelle Session des Clients eindeutig sein und nach doAccounting gelöscht werden. es gibt im Moment keine Vorgabe zum Format. | 976d1153f336d6086b130560e |
+| X-Transaction-Id | Bei Web Clients werden mehrere logisch zusammenhängende Anfragen unter einer Transaction erfasst, welche mit TID markiert ist. Ab 1.1 generiert der Server die TID und gibt sie in der ersten Antwort-JSON zurück. Dabei soll der Client `not_set` als TID übermitteln. Wenn gar keine Transaction aufgebaut werden soll, sol lder Client `not_required` als TID übermitteln. | 976d1153f336d6086b130560e |
 | X-Transaction-Referer | Information von wo innerhalb der Anwendung die Anfragen abgesendet werden. z.B. die Unterseite oder eine spezielle Seite innerhalb einer App | https://domain.de/konto-anlegen |
+
+Folgende Header sollen mitübermittelt werden: **X-Agent**
+
+| Header | Bedeutung | Beispiel |
+| ------ | --------- | -------- |
+| X-Agent | Eine Kennung des verwendeten Clients. Die Version soll mitangegeben werden. Idealerweise soll auch das Shopsystem und verwendetes Theme mit Version angegeben werden. | client:enderecoclientox 3.2, shop:OXID eShop CE 6.1.0, theme:flow |
 
 ## Aufbau einer Anfrage
 
@@ -37,10 +44,7 @@ Als Basis sollte folgende JSON Struktur verwendet werden:
 ```javascript
 {
   "jsonrpc": "2.0",
-  "id": <int>,
-  "meta": {
-    ...
-  }  
+  "id": <int>, 
   "method": <string>,
   "params": {
     <string>: <string|int>
@@ -54,7 +58,6 @@ Als Basis sollte folgende JSON Struktur verwendet werden:
 | ---- | --- | --------- |
 | jsonrpc | string | Gibt Protokol und Version an. |
 | id | int | Eindeutige Kennung des Requests. Kann zum Beispiel ein Counter sein. Man benötigt eine Id um ein Request einer Response zuordnen zu können, was bei Bulk Processing möglicherweise benötigt werden kann. Man kann die Id weglassen, wenn keine Antwort erwartet wird. |
-| meta | hash | Optionales Feld. Hier können zusätzlichen Informationen übergeben werden, welche bei der Response wieder zurückgegeben werden. |
 | method | string | Name der Funktion des Webservices. |
 | params | hash | Spezifische Parameter. Je Webservice unterschiedlich. |
 
@@ -92,6 +95,28 @@ Aufbau entspricht folgender Struktur:
   }
 }
 ```
+
+Manchmal kann noch ein `cmd` Feld angehängt werden.
+
+Beispiel:
+```javascript
+{
+  "jsonrpc": "2.0",
+  "id": <int>,
+  "meta": {
+    ...
+  },
+  "result": {
+    "status": <array>,
+    "payload": <null|array|hash>
+  },
+  "cmd": {
+    "use_tid": "0sb6a717690d139d034eb817704e22994e639d24a9b5a56bbf79223e36a15193dd8f6369680d2fbcd0436fd73b282ca571ca50f0204b0ae35f1766b27163ba16"
+  }
+}
+```
+
+Dieses Feld enthält ein Befehl für den Client. Zur Zeit wird nur der `use_tid` verwendet, der dem Client mitteilt, dass er die angegebene TID nutzen soll. Sinn dahinter ist, dass ab 1.1 Version der Schnittstelle die TID's serverseitig generiert werden.
 
 *Bedeutung der Felder:*
 
