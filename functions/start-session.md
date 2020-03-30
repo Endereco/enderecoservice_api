@@ -81,7 +81,7 @@ X-Transaction-Id: not_required
 
 ## Beispiel der Antwort (Fehler)
 
-Die Funktion ist für Ihr API-Key nicht freigegeben. Wahrscheinlich ein Fehler unsererseits. Wenn Sie diesen Fehler bekommen, melden Sie sich am besten bei robert@endereco.de oder ilja@endereco.de.
+Die Funktion ist für den aktuellen API-Key nicht freigegeben. Wahrscheinlich ein Fehler unsererseits. Wenn dieser Fehler erscheint, am besten sich bei robert@endereco.de oder ilja@endereco.de melden.
 
 ```
 400 Bad Request
