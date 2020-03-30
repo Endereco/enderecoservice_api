@@ -19,17 +19,19 @@
 
 | Feld | Typ | Bedeutung |
 | ---- | --- | --------- |
-| jsonrpc | string | Gibt den Protokol und Version an. |
+| jsonrpc | string | Gibt das Protokoll und seine Version an. |
 
 *Session Types*
 
+Der Typ `default` soll niemals manuell gesetzt werden.
+
 | Typ | Bedeutung |
 | --- | --------- |
-| default | Wenn keine Session Type gesetzt ist, wird dieser Typ angenommen. Über einen Cron Job wird später der richtige Typ erkannt. Soll nicht gesetzt werden, ausser man weißt selber nicht welche Session man starten möchte. |
-| inputassistant | Session Typ der nur Eingabeassistent Anfragen enthält. Ist i.d.R. günstiger als `ams`. |
-| addresscheck | Session Typ der nur Addressprüfungen enthält. Ist ebenfalls günstiger als `ams`. |
-| emailservices | Session Typ der nur E-Mail-Services Anfragen enthält. |
-| phoneservices | Session Typ der nur Telefon-Services Anfragen enthält. |
+| default | Wenn kein Session-Typ gesetzt ist, wird der Typ `default` angenommen. Über einen Cronjob wird später der richtige Typ automatisch ermittelt. Dieser Typ soll nicht gesetzt werden. |
+| inputassistant | Session-Typ, der nur Eingabeassistent-Anfragen enthält. |
+| addresscheck | Session-Typ, der nur Addressprüfungen enthält. |
+| emailservices | Session-Typ, der nur E-Mail-Services Anfragen enthält. |
+| phoneservices | Session-Typ, der nur Telefon-Services Anfragen enthält. |
 | ams | Enthält sowohl Adressprüfungen, als auch die Eingabeassistent-Anfragen. |
 | nameservices | Session Typ der nur Personen-Services enthält. (zZ nur Anrede-Prüfung) |
 
@@ -77,11 +79,11 @@ X-Transaction-Id: not_required
 
 | Feld | Typ | Bedeutung |
 | ---- | --- | --------- |
-| result.newTid | string | Das ist die ID der Session, die bei allen folgenden Anfragen des Session Typs in `X-Transaction-Id` Header angegeben werden muss. |
+| result.newTid | string | Das ist die ID der Session, die bei allen folgenden Anfragen des gewählten Session-Typs in `X-Transaction-Id` Header angegeben werden muss. |
 
 ## Beispiel der Antwort (Fehler)
 
-Die Funktion ist für den aktuellen API-Key nicht freigegeben. Wahrscheinlich ein Fehler unsererseits. Wenn dieser Fehler erscheint, am besten sich bei robert@endereco.de oder ilja@endereco.de melden.
+Die Funktion ist für den aktuellen API-Key nicht freigegeben. Wenn dieser Fehler erscheint, wende dich an unseren Support: info@endereco.de.
 
 ```
 400 Bad Request
