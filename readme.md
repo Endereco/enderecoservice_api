@@ -18,6 +18,7 @@
 | [startSession](functions/start-session.md) | Startet eine Session.  |
 | [ibanConverter](functions/iban-converter.md) | Konvertiert IBAN zu KTO und BLZ oder umgekehrt. |
 | [readinessCheck](functions/readiness-check.md) | Prüft, ob der Service erreichbar ist. |
+| [splitStreet](functions/split-street.md) | Prüft, ob der Service erreichbar ist. |
 
 ## Headers
 
@@ -186,3 +187,24 @@ Der Aufbau soll dabei folgender Struktur entsprechen:
   }
 }
 ```
+
+## Session Handling 
+
+Bei Systemen, die für eine Adresse sowohl InputAssistant (streetAutocomplete, postCodeAutocomplete, cityAutocomplete), 
+als auch AddressCheck nutzen, ist es günstiger sich pro Session abrechnen zu lassen.
+
+Dafür muss beim Laden der Seite der Adresse pro Adresse eine eindeutige Session ID generiert werden. Unsere 
+Empfehlung ist dafür eine UUID v4 Id zu generieren.
+
+Z.b. ea5eb301-db9e-49df-93b2-103463142d90
+
+Diese Session ID muss bei jeder Autocomplete und addressCheck Anfrage im X-Transaction-Id Header übermittelt werden.
+
+Sobald der Nutzer einen Erfolgsevent hat, z.B. die Adresse speichert, auf die nächste Seite geht, etc. 
+soll die Session ID mit einem doAccounting abgerechnet werden. Ab dem Moment darf sie nicht mehr verwendet werden.
+
+Falls der Nutzer die Seite neu lädt ohne die Adresse zu speichert, soll die Session ID neugeneriert werden.
+
+Zwei unterschiedliche Adresse auf einer Seite bekommen zwei unterschiedliche Session ID's.
+
+
