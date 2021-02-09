@@ -35,7 +35,7 @@ Content-Type: application/json
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "method": "bankAutocomplete",
+  "method": "bankCodeAutocomplete",
   "params": {
     "bankCode": "79050"
   }
