@@ -188,6 +188,10 @@ Der Aufbau soll dabei folgender Struktur entsprechen:
 }
 ```
 
+## Request Beispiele
+
+[Hier](doc/postman_collection.json) befindet sich ein Json, dass eine Sammlung von vielen Requests beinhaltet. Diese Json kann einfach in Postman impotiert werden. Natürlich muss bei diesen Beispielen noch der API Key eingetragen werden.
+
 ## Session Handling 
 
 Bei Systemen, die für eine Adresse sowohl InputAssistant (streetAutocomplete, postCodeAutocomplete, cityAutocomplete), 
