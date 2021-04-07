@@ -1,0 +1,876 @@
+{
+	"info": {
+		"_postman_id": "d3c25f76-5e70-4a69-8796-9c677213ca8b",
+		"name": "Endereco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "splitStreet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130565",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\":\"2.0\",\n        \"id\":1,\n        \"method\":\"splitStreet\",\n        \"params\":{\n        \"formatCountry\":\"de\",\n            \"language\":\"de\",\n            \"street\":\"Via del Tuf 7\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nameCheck",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e1",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"nameCheck\",\n  \"params\": {\n    \"name\" : \"Robert\"\n  }  \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postCodeAutocomplete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e1",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"postCodeAutocomplete\",\n  \"params\": {\n    \"country\": \"de\",\n    \"language\": \"de\",\n    \"postCode\": \"972\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cityCodeAutocomplete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e1",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"cityNameAutocomplete\",\n  \"params\": {\n    \"country\": \"de\",\n    \"language\": \"de\",\n    \"cityName\": \"Wür\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "streetCodeAutocomplete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e1",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"streetAutocomplete\",\n  \"params\": {\n    \"country\": \"de\",\n    \"language\": \"de\",\n    \"postCode\": \"97232\",\n    \"cityName\": \"Giebelstadt\",\n    \"street\": \"Lud\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addressCheck",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e1",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"addressCheck\",\n  \"params\": {\n    \"country\": \"de\",\n    \"language\": \"de\",\n    \"postCode\": \"97232\",\n    \"cityName\": \"Giebelstadt\",\n    \"street\": \"Lindenstraße\",\n    \"houseNumber\": \"1\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bankAutocomplete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e1",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"bankAutocomplete\",\n  \"params\": {\n    \"bankCode\": \"79050\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bankCodeAutocomplete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e1",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"bankCodeAutocomplete\",\n  \"params\": {\n    \"bankCode\": \"79050\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ibanCheck",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e1",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"ibanCheck\",\n  \"params\": {\n    \"iban\": \"DE80790500000047750831\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "emailCheck",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e1",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"emailCheck\",\n  \"params\": {\n    \"email\": \"ilja@endereco.de\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prephoneCheck",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e1",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"prephoneCheck\",\n  \"params\": {\n    \"prephoneNumber\": \"017678131341\",\n    \"format\": 8\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "doAccounting",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e1",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"method\": \"doAccounting\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "startSession",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e2",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"startSession\",\n  \"params\": {\n    \"sessionType\": \"inputassistant\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ibanConverter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Key",
+						"value": "<api-key>",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "976d1153f336d6086b130560e2",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "testing",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"ibanConverter\",\n  \"params\": {\n    \"iban\" : \"DE63790500000044649465\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ibanConverter 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"type": "text",
+						"value": "<api-key>"
+					},
+					{
+						"key": "X-Auth-Key",
+						"type": "text",
+						"value": "<api-key>"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"type": "text",
+						"value": "976d1153f336d6086b130560e2"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"type": "text",
+						"value": "testing"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"ibanConverter\",\n  \"params\": {\n    \"accountNr\": \"0044649465\",\n    \"bankCode\": \"79050000\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "readinessCheck",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"type": "text",
+						"value": "<api-key>"
+					},
+					{
+						"key": "X-Auth-Key",
+						"type": "text",
+						"value": "<api-key>"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"type": "text",
+						"value": "976d1153f336d6086b130560e2"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"type": "text",
+						"value": "testing"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"readinessCheck\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "splitStreet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"type": "text",
+						"value": "<api-key>"
+					},
+					{
+						"key": "X-Auth-Key",
+						"type": "text",
+						"value": "<api-key>"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"type": "text",
+						"value": "976d1153f336d6086b130560e2"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"type": "text",
+						"value": "testing"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\":\"2.0\",\n        \"id\":1,\n        \"method\":\"splitStreet\",\n        \"params\":{\n        \"formatCountry\":\"de\",\n            \"language\":\"de\",\n            \"street\":\"Via del Tuf 7\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1/",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
