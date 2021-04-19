@@ -2,6 +2,12 @@
 
 # startSession - Beschreibung
 
+## FUNKTION IST VERALTET!
+
+Mittlerweile soll keine Session explizit gestartet werden. Stattdessen soll im Client eine Session ID generiert werden. 
+Wir empfehlen dafür eine UUID v4 zu nehmen. In den gängingen Programmiersprachen gibt 
+es dafür fertige Lösungen: [PHP](https://github.com/ramsey/uuid), [JavaScript](https://www.npmjs.com/package/uuid)
+
 ## Anfrage
 
 ```json

@@ -2,6 +2,10 @@
 
 # readinessCheck - Beschreibung
 
+## FUNKTION IST VERALTET!
+
+Diese Funktion wird nicht weiterentwickelt und soll nicht genutzt werden.
+
 ## Anfrage
 
 ```javascript
