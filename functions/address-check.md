@@ -30,7 +30,7 @@ oder
     "language": <string>,
     "postCode": <string>,
     "cityName": <string>,
-    "streetfull": <string>
+    "streetFull": <string>
   }  
 }
 ```
