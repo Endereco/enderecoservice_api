@@ -62,19 +62,27 @@ Content-Type: application/json
 
 ```javascript
 {
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": {
-    "status": ['A2000'],
-    "predictions": [
-      {
-        "street": "Ludwig-Bauer-Str."
-      },
-      {
-        "street": "Ludwig-Pfeuffer-Ring"
-      }
-    ]
-  }
+    "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+        "predictions": [
+            {
+                "street": "Ludwig-Bauer-Str.",
+                "streetName": "Ludwig-Bauer-Str.",
+                "buildingNumber": null,
+                "additionalInfo": null
+            },
+            {
+                "street": "Ludwig-Pfeuffer-Ring",
+                "streetName": "Ludwig-Pfeuffer-Ring",
+                "buildingNumber": null,
+                "additionalInfo": null
+            }
+        ],
+            "status": [
+            "A2000"
+        ]
+    }
 }
 ```
 
@@ -85,6 +93,9 @@ Content-Type: application/json
 | result.status | array | *A1000* - eine Straße gefunden, *A2000* - mehrere Straßen gefunden, *A3000* - keine Varianten gefunden |
 | result.predictions | status | Liste der Varianten. |
 | result.predictions.street | string | Straßenname. |
+|result.predictions.streetName|string|Straßenname.|
+|result.predictions.buildingNumer| |Vorbereitung für eine zukünftige Version|
+|result.predictions.additionalInfo| |Vorbereitung für eine zukünftige Version|
 
 
 [zur Übersicht](../readme.md)
