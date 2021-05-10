@@ -54,7 +54,7 @@ Content-Type: application/json
   "id": 1,
   "result": {
     "status": ['A1000', 'A1100'],
-    "name": "Robert",
+    "name": "ROBERT",
     "gender": 'M'
   }
 }

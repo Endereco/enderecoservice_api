@@ -85,6 +85,15 @@ Content-Type: application/json
 | A4810 | eMail Server ist down. |
 | A4900 | Span traps erkannt. |
 | A5000 | Unbekannter Fehler. |
+|email_unknown_tld|Unbekannte Top Level Domain|
+|email_syntax_error|Falsche Syntax|
+|email_no_mx|Kein MX|
+|email_not_correct|E-Mailadresse ist falsch|
+
+
+
+
+
 
 
 [zur Übersicht](../readme.md)

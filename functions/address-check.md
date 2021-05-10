@@ -169,7 +169,7 @@ Aktuelle Codes:
 | building_number_correct | Hausnummer ist korrekt. |
 | additional_info_needs_correction | Zusatzinfos sind falsch und müssen korrigiert werden. |
 | additional_info_correct | Zusatzinfos sind korrekt. |
-| address_is_packstation | Bei dem Adress handelt es sich um eine Packstation. |
+| address_is_packstation | Bei der Adresse handelt es sich um eine Packstation. |
 | address_is_postfiliale | Bei der Adresse handelt es sich um eine Postfiliale. |
 | address_is_postfach | Bei der Adresse handelt es sich um ein Postfach. |
 | address_is_paketshop | Bei der Adresse handelt es sich um ein Paketshop. |

@@ -68,12 +68,16 @@ Content-Type: application/json
 
 ```javascript
 {
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": {
-    "status": ['A1000', 'A2000'],
-    "prephoneNumber": "+49 176 78131341"
-  }
+    "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+            "type": "M", 
+            "prephoneNumber": "+49 176 78131341",
+            "status": [
+                "A1000",
+                "A1200"
+            ]
+    }
 }
 ```
 
@@ -83,6 +87,7 @@ Content-Type: application/json
 | ---- | --- | --------- |
 | result.status | array | siehe Statuscode Tabelle. |
 | result.prephoneNumber | array | Telefonnummer, eventuell formatiert. |
+|type|string|*T* - Festnetz, *M* - Mobil, *X* - Vorwahl nicht gefunden
 
 *Statuscodes:*
 
