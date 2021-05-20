@@ -68,6 +68,10 @@ Content-Type: application/json
 
 | Status | Bedeutung |
 | ---- | --------- |
+| email_not_correct | Allgemeiner Statuscode. Irgendwas stimmt mit der E-Mail nicht. |
+| email_syntax_error | Syntax-Fehler in der E-Mail. |
+| email_no_mx | Kein MX Eintrag hinter der Domain. Vermutlich kein E-Mail-Server konfiguriert. |
+| email_unknown_tld | Die Top-Level-Domain ist unbekannt. |
 | A1000 | Alles OK. Die eMail soll zustellbar sein und es wurden keine Tricks auf dem Server erkannt. |
 | A1100 | Die eMail werden zu jeder eMail-Adresse akzeptiert. |
 | A1110 | Alle email zu einer bestimmten Domain werden akzeptiert. |
