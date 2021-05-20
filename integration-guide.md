@@ -1,5 +1,7 @@
 # Integrationsanleitung
 
+!! DIESE ANLEITUNG IST VERALTET !!
+
 Dieser Guide beschreibt die von uns empfohlene Vorgehensweise bei der Integration der Endereco Service API. Die aktuelle Dokumentation zu einzelnen Funktionen der API findest du hier: [Dokumentation](https://github.com/Endereco/enderecoservice_api)
 
 ## Allgemeine Funktionsweise der API
