@@ -167,8 +167,8 @@ Aktuelle Codes:
 | street_full_correct | Volle Straße ist korrekt. |
 | building_number_needs_correction | Hausnummer ist falsch und muss korrigiert werden. |
 | building_number_correct | Hausnummer ist korrekt. |
-| building_is_missing | Hausnummer wurde nicht angegeben. |
-| building_not_found | (optional) Hausnummer ist wurde auf der Straße und in der PLZ nicht gefunden. |
+| building_number_is_missing | Hausnummer wurde nicht angegeben. |
+| building_number_not_found | (optional) Hausnummer ist wurde auf der Straße und in der PLZ nicht gefunden. |
 | additional_info_needs_correction | Zusatzinfos sind falsch und müssen korrigiert werden. |
 | additional_info_correct | Zusatzinfos sind korrekt. |
 | address_is_packstation | Bei dem Adress handelt es sich um eine Packstation. |
