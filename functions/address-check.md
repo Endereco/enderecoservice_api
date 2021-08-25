@@ -126,7 +126,7 @@ Content-Type: application/json
 }
 ```
 
-## Bedeutung der Respone Paremeter:
+## Bedeutung der Response Parameter:
 
 | Feld | Typ | Bedeutung |
 | ---- | --- | --------- |
@@ -142,7 +142,7 @@ Content-Type: application/json
 ## Statuscodes:
 Die Statuscodes geben eine Rückmeldung zu der übermittelten Adresse und deren Bestandteile.
 
-### Aktuelle Stauscodes:
+### Generelle Statuscodes:
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -206,7 +206,7 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | address_contains_unverified_info | In der Adresse gibt es einen Teil, der nicht geprüft werden kann, der jedoch auch nicht entfernt wird. |
 | building_number_contains_unverified_info | In der Hausnummer wurde ein Element übermittelt, das nicht geprüft werden kann und in der Prüfung ignoriert wurde . z.B. ein Zustellhinweis. |
 
-### <span style="color:red;font-weight: bold;">Legacy codes:</span>
+### <span style="color:red;font-weight: bold;">Veraltete Statuscodes:</span>
 
 | Code | Bedeutung |
 | ---- | --------- |
