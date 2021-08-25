@@ -136,15 +136,6 @@ Content-Type: application/json
 
 *Statuscodes:*
 
-Legacy codes:
-
-| Code | Bedeutung |
-| ---- | --------- |
-| A1000 | Adresse korrekt. |
-| A1100 | Adresse korrekt, aber korrigiert. Gibt es, wenn es nur eine Variante der Adresse gibt, diese sich jedoch einwenig unterscheidet. Kommt mit A1000 zusammen.|
-| A2000 | Mehrere Varianten. |
-| A3000 | Keine Varianten. Die Adresse existiert nicht in unseren Datenbanken. |
-
 Aktuelle Codes:
 
 | Code | Bedeutung |
@@ -168,7 +159,7 @@ Aktuelle Codes:
 | building_number_needs_correction | Hausnummer ist falsch und muss korrigiert werden. |
 | building_number_correct | Hausnummer ist korrekt. |
 | building_number_is_missing | Hausnummer wurde nicht angegeben. |
-| building_number_not_found | (optional) Hausnummer ist wurde auf der Straße und in der PLZ nicht gefunden. |
+| building_number_not_found | (optional) Hausnummer wurde auf der Straße und in der PLZ nicht gefunden. |
 | additional_info_needs_correction | Zusatzinfos sind falsch und müssen korrigiert werden. |
 | additional_info_correct | Zusatzinfos sind korrekt. |
 | address_is_packstation | Bei dem Adress handelt es sich um eine Packstation. |
@@ -207,5 +198,13 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | address_contains_unverified_info | In der Adresse gibt es einen Teil, der nicht geprüft werden kann, der jedoch auch nicht entfernt wird. |
 | building_number_contains_unverified_info | In der Hausnummer gibt es einen Teil, der nicht geprüft werden kann und in der Prüfung ignoriert wird. z.B. ein Kommentar. |
 
+Legacy codes:
+
+| Code | Bedeutung |
+| ---- | --------- |
+| A1000 | Adresse korrekt. |
+| A1100 | Adresse korrekt, aber korrigiert. Gibt es, wenn es nur eine Variante der Adresse gibt, diese sich jedoch einwenig unterscheidet. Kommt mit A1000 zusammen.|
+| A2000 | Mehrere Varianten. |
+| A3000 | Keine Varianten. Die Adresse existiert nicht in unseren Datenbanken. |
 
 [zur Übersicht](../readme.md)
