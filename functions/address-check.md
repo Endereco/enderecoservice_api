@@ -198,7 +198,7 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | address_contains_unverified_info | In der Adresse gibt es einen Teil, der nicht geprüft werden kann, der jedoch auch nicht entfernt wird. |
 | building_number_contains_unverified_info | In der Hausnummer gibt es einen Teil, der nicht geprüft werden kann und in der Prüfung ignoriert wird. z.B. ein Kommentar. |
 
-Legacy codes:
+<span style="color:red;font-weight: bold;">Legacy codes:</span>
 
 | Code | Bedeutung |
 | ---- | --------- |
