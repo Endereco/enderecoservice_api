@@ -167,11 +167,45 @@ Aktuelle Codes:
 | street_full_correct | Volle Straße ist korrekt. |
 | building_number_needs_correction | Hausnummer ist falsch und muss korrigiert werden. |
 | building_number_correct | Hausnummer ist korrekt. |
+| building_is_missing | Hausnummer wurde nicht angegeben. |
+| building_not_found | (optional) Hausnummer ist wurde auf der Straße und in der PLZ nicht gefunden. |
 | additional_info_needs_correction | Zusatzinfos sind falsch und müssen korrigiert werden. |
 | additional_info_correct | Zusatzinfos sind korrekt. |
 | address_is_packstation | Bei dem Adress handelt es sich um eine Packstation. |
 | address_is_postfiliale | Bei der Adresse handelt es sich um eine Postfiliale. |
 | address_is_postfach | Bei der Adresse handelt es sich um ein Postfach. |
 | address_is_paketshop | Bei der Adresse handelt es sich um ein Paketshop. |
+
+Erweiterte Statuscodes:
+
+Um den manuellen Aufwand bei Verarbeitung von Adressprüfungen zu minimieren, kann Endereco zusätzlich zu Ergebnissen der 
+Adressprüfung mitteilen, ob die Korrektur automatisch übernommen werden darf. Anhand von diversen Regeln werden die Änderungen serverseitig klassifiziert.
+
+Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [ADRESSTEIL]_[minor|major]_correction
+
+| Code | Bedeutung |
+| ---- | --------- |
+| address_minor_correction | Es handelt sich um eine "kleine" Korrektur, die automatisch übernommen werden kann. |
+| address_major_correction | Es handelt sich um eine "kritische" Korrektur, bei der eine automatische Korrekturübernahme unmöglich ist. |
+| country_code_minor_correction | Kleine Landkorrektur. Wird akuell nie ausgegeben. |
+| country_code_major_correction | Wichtige Landeskorrektur. |
+| postal_code_minor_correction | Kleine Korrektur der PLZ. |
+| postal_code_major_correction | Wichtige Korrektur der PLZ. |
+| locality_minor_correction | Kleine Korrektur des Ortes. |
+| locality_major_correction | Wichtige Korrektur des Ortes. |
+| street_name_minor_correction | Kleine Korrektur der Straße. |
+| street_name_major_correction | Wichtige Korrektur der Straße. |
+| building_number_minor_correction | Kleine Korrektur der Hausnummer. |
+| building_number_major_correction | Wichtige Korrektur der Hausnummer. |
+
+Experimentelle Statuscodes:
+
+Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch folgende Statuscodes ausgegeben werden:
+
+| Code | Bedeutung |
+| ---- | --------- |
+| address_contains_unverified_info | In der Adresse gibt es einen Teil, der nicht geprüft werden kann, der jedoch auch nicht entfernt wird. |
+| building_number_contains_unverified_info | In der Hausnummer gibt es einen Teil, der nicht geprüft werden kann und in der Prüfung ignoriert wird. z.B. ein Kommentar. |
+
 
 [zur Übersicht](../readme.md)
