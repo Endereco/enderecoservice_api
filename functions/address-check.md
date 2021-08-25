@@ -4,6 +4,8 @@
 
 ## Anfrage
 
+### Übergabe der Strasse und Hausnumer in getrennten Feldern
+
 ```javascript
 {
   "jsonrpc": "2.0",
@@ -19,7 +21,9 @@
   }  
 }
 ```
-oder
+### oder Übergabe der Strasse und Hausnummer in einem gemeinsamen Feld
+
+
 ```javascript
 {
   "jsonrpc": "2.0",
