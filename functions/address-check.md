@@ -2,7 +2,7 @@
 
 # addressCheck - Beschreibung
 
-## Anfrage
+## API-Request
 
 ### Übergabe der Strasse und Hausnumer in getrennten Feldern
 
@@ -39,7 +39,7 @@
 }
 ```
 
-*Bedeutung der Felder:*
+## Bedeutung der Request-Parameter:
 
 | Feld | Typ | Bedeutung |
 | ---- | --- | --------- |
@@ -92,7 +92,7 @@ Content-Type: application/json
 }
 ```
 
-## Beispiel der Antwort (Erfolg)
+### Beispiel Response (Erfolgreiche Anfrage)
 
 ```
 200 Ok
@@ -126,7 +126,7 @@ Content-Type: application/json
 }
 ```
 
-*Bedeutung der Felder:*
+## Bedeutung der Respone Paremeter:
 
 | Feld | Typ | Bedeutung |
 | ---- | --- | --------- |
@@ -140,9 +140,9 @@ Content-Type: application/json
 
 
 ## Statuscodes:
+Die Statuscodes geben eine Rückmeldung zu der übermittelten Adresse und deren Bestandteile.
 
-
-### Aktuelle Codes:
+### Aktuelle Stauscodes:
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -176,8 +176,9 @@ Content-Type: application/json
 
 ### Erweiterte Statuscodes:
 
-Um den manuellen Aufwand bei Verarbeitung von Adressprüfungen zu minimieren, kann Endereco zusätzlich zu Ergebnissen der 
-Adressprüfung mitteilen, ob die Korrektur automatisch übernommen werden darf. Anhand von diversen Regeln werden die Änderungen serverseitig klassifiziert.
+Um den manuellen Aufwand bei Bearbeitung von Adressprüfungen zu minimieren, kann zusätzlich zu Ergebnissen der 
+Adressprüfung eine serverseitig klassifizierung die Änderungen bewerten. 
+So kann leichter entschieden werden ob eine vorgeschlagene Korrektur automatisch übernommen werden darf, oder bestätigt werden muss.
 
 Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [ADRESSTEIL]_[minor|major]_correction
 
@@ -203,9 +204,9 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | Code | Bedeutung |
 | ---- | --------- |
 | address_contains_unverified_info | In der Adresse gibt es einen Teil, der nicht geprüft werden kann, der jedoch auch nicht entfernt wird. |
-| building_number_contains_unverified_info | In der Hausnummer gibt es einen Teil, der nicht geprüft werden kann und in der Prüfung ignoriert wird. z.B. ein Kommentar. |
+| building_number_contains_unverified_info | In der Hausnummer wurde ein Element übermittelt, das nicht geprüft werden kann und in der Prüfung ignoriert wurde . z.B. ein Zustellhinweis. |
 
-<span style="color:red;font-weight: bold;">Legacy codes:</span>
+### <span style="color:red;font-weight: bold;">Legacy codes:</span>
 
 | Code | Bedeutung |
 | ---- | --------- |
