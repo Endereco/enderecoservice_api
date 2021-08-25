@@ -134,9 +134,11 @@ Content-Type: application/json
 | result.predictions.houseNumber | string | Hausnummer. |
 | result.predictions.country | string | Landescode. |
 
-*Statuscodes:*
 
-Aktuelle Codes:
+## Statuscodes:
+
+
+### Aktuelle Codes:
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -167,7 +169,8 @@ Aktuelle Codes:
 | address_is_postfach | Bei der Adresse handelt es sich um ein Postfach. |
 | address_is_paketshop | Bei der Adresse handelt es sich um ein Paketshop. |
 
-Erweiterte Statuscodes:
+
+### Erweiterte Statuscodes:
 
 Um den manuellen Aufwand bei Verarbeitung von Adressprüfungen zu minimieren, kann Endereco zusätzlich zu Ergebnissen der 
 Adressprüfung mitteilen, ob die Korrektur automatisch übernommen werden darf. Anhand von diversen Regeln werden die Änderungen serverseitig klassifiziert.
@@ -189,7 +192,7 @@ Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [ADRESSTEIL
 | building_number_minor_correction | Kleine Korrektur der Hausnummer. |
 | building_number_major_correction | Wichtige Korrektur der Hausnummer. |
 
-Experimentelle Statuscodes:
+### Experimentelle Statuscodes:
 
 Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch folgende Statuscodes ausgegeben werden:
 
