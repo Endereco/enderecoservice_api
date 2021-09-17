@@ -1,6 +1,6 @@
 [zur Übersicht](../readme.md)
 
-# vatCheck - Beschreibung
+# vatIdCheck - Beschreibung
 
 <span style="color:red;font-weight: bold;">Dieser Service befindet sich in Staging Phase. Schreibe an support@endereco.de, wenn du dieses Feature einsetzen willst.</span>
 
@@ -36,7 +36,7 @@ Content-Type: application/json
 {
     "jsonrpc": "2.0",
     "id": 1,
-    "method": "vatCheck",
+    "method": "vatIdCheck",
     "params": {
         "vatId": "DE298503575"
     }
