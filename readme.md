@@ -19,6 +19,7 @@
 | [ibanConverter](functions/iban-converter.md) | Konvertiert IBAN zu KTO und BLZ oder umgekehrt. |
 | [readinessCheck](functions/readiness-check.md) | Prüft, ob der Service erreichbar ist. |
 | [splitStreet](functions/split-street.md) | Prüft, ob der Service erreichbar ist. |
+| [vatCheck](functions/vat-check.md) (<span style="color:red;font-weight: bold;">Beta</span>)| Prüft die Umsatzsteuer ID.|
 
 ## Headers
 
