@@ -2,7 +2,9 @@
 
 # addressCheck - Beschreibung
 
-## Anfrage
+## API-Request
+
+### Übergabe der Strasse und Hausnumer in getrennten Feldern
 
 ```javascript
 {
@@ -19,7 +21,9 @@
   }  
 }
 ```
-oder
+### oder Übergabe der Strasse und Hausnummer in einem gemeinsamen Feld
+
+
 ```javascript
 {
   "jsonrpc": "2.0",
@@ -35,7 +39,7 @@ oder
 }
 ```
 
-*Bedeutung der Felder:*
+## Bedeutung der Request-Parameter:
 
 | Feld | Typ | Bedeutung |
 | ---- | --- | --------- |
@@ -88,7 +92,7 @@ Content-Type: application/json
 }
 ```
 
-## Beispiel der Antwort (Erfolg)
+### Beispiel Response (Erfolgreiche Anfrage)
 
 ```
 200 Ok
@@ -122,7 +126,7 @@ Content-Type: application/json
 }
 ```
 
-*Bedeutung der Felder:*
+## Bedeutung der Response Parameter:
 
 | Feld | Typ | Bedeutung |
 | ---- | --- | --------- |
@@ -134,9 +138,11 @@ Content-Type: application/json
 | result.predictions.houseNumber | string | Hausnummer. |
 | result.predictions.country | string | Landescode. |
 
-*Statuscodes:*
 
-Aktuelle Codes:
+## Statuscodes:
+Die Statuscodes geben eine Rückmeldung zu der übermittelten Adresse und deren Bestandteile.
+
+### Generelle Statuscodes:
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -167,10 +173,12 @@ Aktuelle Codes:
 | address_is_postfach | Bei der Adresse handelt es sich um ein Postfach. |
 | address_is_paketshop | Bei der Adresse handelt es sich um ein Paketshop. |
 
-Erweiterte Statuscodes:
 
-Um den manuellen Aufwand bei Verarbeitung von Adressprüfungen zu minimieren, kann Endereco zusätzlich zu Ergebnissen der 
-Adressprüfung mitteilen, ob die Korrektur automatisch übernommen werden darf. Anhand von diversen Regeln werden die Änderungen serverseitig klassifiziert.
+### Erweiterte Statuscodes:
+
+Um den manuellen Aufwand bei Bearbeitung von Adressprüfungen zu minimieren, kann zusätzlich zu Ergebnissen der 
+Adressprüfung eine serverseitig klassifizierung die Änderungen bewerten. 
+So kann leichter entschieden werden ob eine vorgeschlagene Korrektur automatisch übernommen werden darf, oder bestätigt werden muss.
 
 Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [ADRESSTEIL]_[minor|major]_correction
 
@@ -189,16 +197,16 @@ Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [ADRESSTEIL
 | building_number_minor_correction | Kleine Korrektur der Hausnummer. |
 | building_number_major_correction | Wichtige Korrektur der Hausnummer. |
 
-Experimentelle Statuscodes:
+### Experimentelle Statuscodes:
 
 Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch folgende Statuscodes ausgegeben werden:
 
 | Code | Bedeutung |
 | ---- | --------- |
 | address_contains_unverified_info | In der Adresse gibt es einen Teil, der nicht geprüft werden kann, der jedoch auch nicht entfernt wird. |
-| building_number_contains_unverified_info | In der Hausnummer gibt es einen Teil, der nicht geprüft werden kann und in der Prüfung ignoriert wird. z.B. ein Kommentar. |
+| building_number_contains_unverified_info | In der Hausnummer wurde ein Element übermittelt, das nicht geprüft werden kann und in der Prüfung ignoriert wurde . z.B. ein Zustellhinweis. |
 
-<span style="color:red;font-weight: bold;">Legacy codes:</span>
+### <span style="color:red;font-weight: bold;">Veraltete Statuscodes:</span>
 
 | Code | Bedeutung |
 | ---- | --------- |
