@@ -10,9 +10,9 @@
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "method": "vatCheck",
+  "method": "vatIdCheck",
   "params": {
-    "vat": <string>
+    "vatId": <string>
   }  
 }
 ```
@@ -22,7 +22,7 @@
 | ---- | --- | --------- |
 | jsonrpc | string | Gibt den Protokol und Version an. |
 | id | int | Eindeutige Kennung des Request. Kann zum Beispiel ein Counter sein. Man brauch Id um ein Request einem Response zuordnen zu können, was bei Bulk Processing möglicherweise gebraucht werden kann. Man kann Id weglassen, wenn keine Antwort erwartet wird. |
-| params.vat | string | Die Umsatzsteuer ID ohne Leerzeichen. |
+| params.vatId | string | Die Umsatzsteuer ID ohne Leerzeichen. |
 
 ## Beispiel der Anfrage
 
@@ -35,11 +35,11 @@ Content-Type: application/json
 ```javascript
 {
     "jsonrpc": "2.0",
-        "id": 1,
-        "method": "vatCheck",
-        "params": {
-            "vat": "DE298503575"
-        }
+    "id": 1,
+    "method": "vatCheck",
+    "params": {
+        "vatId": "DE298503575"
+    }
 }
 ```
 
@@ -55,7 +55,7 @@ Content-Type: application/json
         "id": 1,
         "result": {
             "status": [
-                "vat_invalid"
+                "vat_id_invalid"
             ]
         }
 }
@@ -75,12 +75,12 @@ Aktuelle Codes:
 
 | Code | Bedeutung |
 | ---- | --------- |
-| vat_valid | Die Umsatzsteuer ID ist syntaktisch korrekt und gültig. |
-| vat_invalid | Die Umsatzsteuer ID wurde in der Datenbank der gültigen Umsatzsteuer ID's nicht gefunden. |
-| vat_has_company_name | Firmenname ist bekannt und wurde in der Antwort im "companyName" Parameter zurückgegeben. |
-| vat_needs_correction | Die Umsatzsteuer ID ist falsch geschrieben: das Land fehlt oder ist nicht bekannt und das Format ist falsch. |
-| vat_unknown_country_code | Das Land bei der Umsatzsteuer ID ist nicht bekannt.  |
-| vat_wrong_format | De Umsatzsteuer ID ist falsch geschrieben. Ein oder mehrere Zeichen sind zu viel oder zu wenig. |
+| vat_id_valid | Die Umsatzsteuer ID ist syntaktisch korrekt und gültig. |
+| vat_id_invalid | Die Umsatzsteuer ID wurde in der Datenbank der gültigen Umsatzsteuer ID's nicht gefunden. |
+| vat_id_has_company_name | Firmenname ist bekannt und wurde in der Antwort im "companyName" Parameter zurückgegeben. |
+| vat_id_needs_correction | Die Umsatzsteuer ID ist falsch geschrieben: das Land fehlt oder ist nicht bekannt und das Format ist falsch. |
+| vat_id_unknown_country_code | Das Land bei der Umsatzsteuer ID ist nicht bekannt.  |
+| vat_id_wrong_format | De Umsatzsteuer ID ist falsch geschrieben. Ein oder mehrere Zeichen sind zu viel oder zu wenig. |
 
 
 [zur Übersicht](../readme.md)
