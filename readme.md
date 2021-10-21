@@ -90,7 +90,7 @@ Um die erfolgsbasierte Abrechnung zu nutzen, müssen die sog. Sessions implement
 
 Jede Anfrage, die bei uns ankommt, muss einem Nutzer zugeordnet werden können. Dafür in ein HTTP Header "X-Auth-Key" vorgesehen. Dieser muss bei jeder Anfrage gesetzt werden. Als Wert nimmst du den API-Key, den wir für dich erstellt haben.
 
-## Methoden der API
+## Nutzung der API
 
 Grundsätzlicher Aufbau des Protokolls ist in der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification) beschrieben. Es muss eine JSON Datei formuliert werden und man bekommt eine JSON Datei als Antwort. Die JSON wird im Body der HTTP Anfrage übermittelt. 
 
@@ -100,7 +100,7 @@ Weitere Steuerinformationen wie API-Key werden in Headers der HTTP Anfrage über
 
 Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sind wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 
-## Verzeichnis der Methoden und Use Cases
+### Verzeichnis der Methoden und Use Cases
 
 | Methoden | Use-Case
 |---| ---|
