@@ -27,6 +27,12 @@ Neben der API entwickeln wir und unsere Integrationspartner fertige Lösungen f�
 
 Wenn du Interesse an einem/r neuen Plugin/Integration hast, sende eine kurze E-Mail an ilja@endereco.de.
 
+# DSGVO Konform
+
+Unsere API ist DSGVO konform.
+
+TODO: Beschreiben was wir für DSGVO tun. Eventuel Datenschutzkonzept verlinken.
+
 ## Vorbereitung
 
 Wenn du die API nutzen willst, dann kannst du so vorgehen:
