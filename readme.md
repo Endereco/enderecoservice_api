@@ -52,7 +52,7 @@ Wenn du die API nutzen willst, dann kannst du so vorgehen:
 | Art der Frage | zuständige Person | Kontakt |
 |---|---|---|
 | geschäftliche/finanzielle Frage | Robert Rieser  | robert@endereco.de oder info@endereco.de |
-| technische Frage | Ilja Weber | ilja@endereco.de oder suppoert@endereco.de  |
+| technische Frage | Ilja Weber | ilja@endereco.de oder support@endereco.de  |
 | Frage zu Datenschutz | Lena Schmitt | lena@endereco.de oder datenschutz@endereco.de |
 
 ## Übersicht der Funktionen
