@@ -18,11 +18,12 @@ Unsere Referenzen:
 
 Neben der API entwickeln wir und unsere Integrationspartner fertige Lösungen für diverse Systeme.
 
-|  |  |  |  |
-|---|---|---|---|
-| [Shopware 5 Plugin](https://github.com/Endereco/endereco-shopware5-client) | [Shopware 6 Plugin](https://github.com/Endereco/endereco-shopware6-client) | [OXID eSales 4 Modul](https://github.com/Endereco/endereco-oxid4-client) | [OXID eSales 6 Modul](https://github.com/Endereco/endereco-oxid6-client) |
-| [JTL Shop 4 Plugin](https://github.com/Endereco/endereco-jtl4-client) | [JTL Shop 5 Plugin](https://github.com/Endereco/endereco-jtl5-client) | [WordPress/WooCommerce Plugin](https://github.com/Endereco/endereco-wp5-client) | [Magento 2 Webshop Extension](https://www.endereco.de/magento/) |
-| [Plentymarkets Extension](https://www.endereco.de/plentymarkets/) | [DreamRobot App](https://www.endereco.de/dreamrobot/) |  |  |
+||||
+|---|---|---|
+| [Shopware 5 Plugin](https://github.com/Endereco/endereco-shopware5-client) | [Shopware 6 Plugin](https://github.com/Endereco/endereco-shopware6-client) | [OXID eSales 4 Modul](https://github.com/Endereco/endereco-oxid4-client) |
+| [OXID eSales 6 Modul](https://github.com/Endereco/endereco-oxid6-client) | [JTL Shop 4 Plugin](https://github.com/Endereco/endereco-jtl4-client) | [JTL Shop 5 Plugin](https://github.com/Endereco/endereco-jtl5-client) | 
+| [WordPress/WooCommerce Plugin](https://github.com/Endereco/endereco-wp5-client) | [Magento 2 Webshop Extension](https://www.endereco.de/magento/) | [Plentymarkets Extension](https://www.endereco.de/plentymarkets/) | 
+| [DreamRobot App](https://www.endereco.de/dreamrobot/) |  |  |
 
 ## Vorbereitung
 
