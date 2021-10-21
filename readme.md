@@ -45,26 +45,39 @@ Wenn du die API nutzen willst, dann kannst du so vorgehen:
 | technische Methoden |
 |---|
 | Abschluss einer Session |
-| Abschluss eine Konversion |
+| Abschluss einer Konversion |
 
 ## Übersicht der Statuscodes
 
-In der Antwort der API wird i.d.R. eine Liste von Statuscodes zurückgegeben. Diese Statuscodes beschreiben den geprüften Datensatz und diktieren weiter folgende Reaktion. Die [vollständige Liste der Statuscodes](./statuscodes.md) ist hilfreich für Entwickler, die die Prüfungen von Endereco tief in ihre Geschäftsprozesse integrieren wollen.. 
+In der Antwort der API wird i.d.R. eine Liste von Statuscodes zurückgegeben. 
 
-Vorgesehene Reaktion auf bestimmte Statuscodes ist in [Frontend Umsetzung](./ui-requirements.md) beschrieben. Diese ist für UI 
+![](./imgs/response_1.png "")
+
+Diese Statuscodes beschreiben den geprüften Datensatz und diktieren weiter folgende Reaktion. Die [vollständige Liste der Statuscodes](./statuscodes.md) ist hilfreich für Entwickler, die die Prüfungen von Endereco tief in ihre Geschäftsprozesse integrieren wollen.
+
+Vorgesehene Reaktion auf bestimmte Statuscodes ist in [UI Guidelines](./ui-guidelines.md) beschrieben. Diese ist für UI Entwickler/Designer nützlich.
 
 ## Request oder Session
 
-Die Leistungen von Endereco sind kostenpflichtig. Die einfachste Art der Abrechnung ist wenn man pro Anfrage einen gewissen Betrag zahlt.
+Die Leistungen von Endereco sind kostenpflichtig. Die einfachste Art der Abrechnung ist, wenn man pro Anfrage einen gewissen Betrag zahlt.
 
-Endereco versucht jedoch dem Nutzer entgegen zu kommen und einen Betrag erst dann in rechnung zu stellen ,wenn dieser auch tatsächlich was genutzt hat. Wir nennen es "erfolgsbasierte Abrechnung". Erst wenn ein bestimmter logischer Datensatz (z.B. eine Lieferadresse) nach der Verarbeitung durch Endereco gespeichert wird, rechnen wir ab.
+Endereco versucht jedoch dem Nutzer entgegenzukommen und einen Betrag erst dann in Rechnung zu stellen, wenn dieser tatsächlich einen Mehrwert bringt. Wir nennen es "erfolgsbasierte Abrechnung". Erst wenn ein bestimmter logischer Datensatz (z.B. eine Lieferadresse) nach der Verarbeitung durch Endereco gespeichert wird, rechnen wir ab.
 
-Um die erfolgsbasierte Abrechnung zu nutzen, müssen die sog. Sessions umgesetzt werden. Dafür haben wir [eine Anleitung](./generating-sessions.md) erstellt. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
+Um die erfolgsbasierte Abrechnung zu nutzen, müssen die sog. Sessions umgesetzt werden. Dafür haben wir [eine Anleitung](./generating-sessions.md) erstellt. Es ist empfehlenswert sie zu lesen, da wir die Umsetzung abnehmen müssen. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
+
+## Authentifizierung
+
+Jede Anfrage, die bei uns ankommt, muss einem Nutzer zugeordnet werden können. Dafür in ein HTTP Header "X-Auth-Key" vorgesehen. Dieser muss bei jeder Anfrage gesetzt werden. Als Wert nimmst du den API-Key, den wir für dich erstellt haben.
 
 ## Methoden der API
 
-Grundstäzlicher Aufbau des Protokolls ist in der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification) beschrieben. Es muss eine JSON Datei formuliert werden und man bekommt eine JSON Datei als Antwort. Die JSON wird im Body der HTTP Anfrage übermittelt. 
-Weitere Steuerinformationen wie API-Key werden in Headers der HTTP Anfrage übermittelt. Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sind nicht zugelassen, wegen [Datenschutz](./data-protection.md).
+Grundsätzlicher Aufbau des Protokolls ist in der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification) beschrieben. Es muss eine JSON Datei formuliert werden und man bekommt eine JSON Datei als Antwort. Die JSON wird im Body der HTTP Anfrage übermittelt. 
+
+Für die Übermittlung ist HTTPS zu nutzen.
+
+Weitere Steuerinformationen wie API-Key werden in Headers der HTTP Anfrage übermittelt. 
+
+Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sind wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 
 ### Prüfung einer Adresse mit getrennten Straße/Hausnummer
 
