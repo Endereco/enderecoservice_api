@@ -595,3 +595,60 @@ POST https://endereco-service.de/rpc/v1
   }
 }
 ```
+
+### Vorschlagsliste für die Teileingabe der Straße mit Hausnummer
+
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+
+#### Request Headers
+
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "streetAutocomplete",
+  "params": {
+    "country": "DE",
+    "language": "de",
+    "cityName": "Würzburg",
+    "postCode": "97070",
+    "streetFull": "Am B 3"
+  }
+}
+```
+
+#### Antwort Basis
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "predictions": [
+      {
+        "street": "Am Bruderhof",
+        "streetName": "Am Bruderhof",
+        "buildingNumber": "3",
+        "additionalInfo": ""
+      }
+    ],
+    "status": [
+      "A1000"
+    ]
+  }
+}
+```
