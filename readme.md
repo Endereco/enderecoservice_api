@@ -127,8 +127,8 @@ wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 | addressCheck | [Prüfung einer Adresse mit getrennten Straße/Hausnummer ↓](#prüfung-einer-adresse-mit-getrennten-straßehausnummer)|
 | ↳ | [Prüfung einer Adresse mit Straße/Hausnummer in einem Feld ↓](#prüfung-einer-adresse-mit-straßehausnummer-in-einem-feld) |
 | postCodeAutocomplete | [Vorschlagsliste für die Teileingabe der Postleitzahl ↓](#vorschlagsliste-für-die-teileingabe-der-postleitzahl) |
-| cityNameAutocomplete | [Vorschlagsliste für die Teileingabe des Ortes](#vorschlagsliste-für-die-teileingabe-des-ortes) ↓ |
-| streetAutocomplete | Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer ↓ |
+| cityNameAutocomplete | [Vorschlagsliste für die Teileingabe des Ortes ↓](#vorschlagsliste-für-die-teileingabe-des-ortes) |
+| streetAutocomplete | [Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer ↓]() |
 | ↳ | Vorschlagsliste für die Teileingabe der Straße mit Hausnummer ↓ |
 | emailCheck | Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse ↓ |
 | nameCheck | Prüfung des Namens einer Person ↓ |
@@ -137,6 +137,8 @@ wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 | vatIdCheck | Prüfung der Umsatzsteuer ID ↓ |
 
 ### Prüfung einer Adresse mit getrennten Straße/Hausnummer
+
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
 
 ```
 POST https://endereco-service.de/rpc/v1
@@ -254,6 +256,8 @@ POST https://endereco-service.de/rpc/v1
 
 ### Prüfung einer Adresse mit Straße/Hausnummer in einem Feld
 
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
+
 ```
 POST https://endereco-service.de/rpc/v1
 ```
@@ -369,6 +373,8 @@ POST https://endereco-service.de/rpc/v1
 
 ### Vorschlagsliste für die Teileingabe der Postleitzahl
 
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
+
 ```
 POST https://endereco-service.de/rpc/v1
 ```
@@ -452,6 +458,8 @@ POST https://endereco-service.de/rpc/v1
 
 ### Vorschlagsliste für die Teileingabe des Ortes
 
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
+
 ```
 POST https://endereco-service.de/rpc/v1
 ```
@@ -526,6 +534,8 @@ POST https://endereco-service.de/rpc/v1
 ```
 
 ### Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer
+
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
 
 ```
 POST https://endereco-service.de/rpc/v1
