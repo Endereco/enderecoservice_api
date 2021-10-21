@@ -652,3 +652,63 @@ POST https://endereco-service.de/rpc/v1
   }
 }
 ```
+
+### Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse
+
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+
+#### Request Headers
+
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "emailCheck",
+  "params": {
+    "email": "rodrigo@endereco.de" // Eine richtig formatierte, aber nicht zustellbare E-Mail Adresse.
+  }
+}
+```
+
+#### Antwort Basis
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "status": [
+      "A1000",
+      "email_correct"
+    ]
+  }
+}
+```
+#### Antwort Basis + Zusatzfunktion "Zustellbarkeitsprüfung"
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "status": [
+      "A4000",
+      "A4700"
+    ]
+  }
+}
+```
