@@ -82,7 +82,7 @@ Die Leistungen von Endereco sind kostenpflichtig. Die einfachste Art der Abrechn
 
 Endereco versucht jedoch dem Nutzer entgegenzukommen und einen Betrag erst dann in Rechnung zu stellen, wenn dieser tatsächlich einen Mehrwert bringt. Wir nennen es "erfolgsbasierte Abrechnung". Erst wenn ein bestimmter logischer Datensatz (z.B. eine Lieferadresse) nach der Verarbeitung durch Endereco gespeichert wird, rechnen wir ab.
 
-Um die erfolgsbasierte Abrechnung zu nutzen, müssen die sog. Sessions umgesetzt werden. Dafür haben wir [eine Anleitung](./generating-sessions.md) erstellt. Es ist empfehlenswert sie zu lesen, da wir die Umsetzung abnehmen müssen. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
+Um die erfolgsbasierte Abrechnung zu nutzen, müssen die sog. Sessions umgesetzt werden. Dafür haben wir [eine Anleitung](./sessions-guideline.md) erstellt. Es ist empfehlenswert sie zu lesen, da wir die Umsetzung abnehmen müssen. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
 
 ## Authentifizierung
 
@@ -107,9 +107,9 @@ POST https://endereco-service.de/rpc/v1
 |  |  |
 |---|---|
 | Content-Type| application/json  |
-| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./generating-sessions.md) |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
 | X-Transaction-Referer | MyClient v1.0.0, siehe [Referrer übergeben](./providing-referrer.md) |
-| X-Auth-Key | siehe [API-Key Anfragen](./request-apikey.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
 
 #### Body raw (JSON)
 
