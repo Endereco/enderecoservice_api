@@ -105,7 +105,7 @@ Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sin
 | Methoden | Use-Case
 |---| ---|
 | addressCheck | [Prüfung einer Adresse mit getrennten Straße/Hausnummer](#prüfung-einer-adresse-mit-getrennten-straßehausnummer)|
-|  | [Prüfung einer Adresse mit Straße/Hausnummer in einem Feld](#prüfung-einer-adresse-mit-straßehausnummer-in-einem-feld) |
+| ↳ | [Prüfung einer Adresse mit Straße/Hausnummer in einem Feld](#prüfung-einer-adresse-mit-straßehausnummer-in-einem-feld) |
 
 
 ### Prüfung einer Adresse mit getrennten Straße/Hausnummer
