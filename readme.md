@@ -129,7 +129,7 @@ wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 | postCodeAutocomplete | [Vorschlagsliste für die Teileingabe der Postleitzahl ↓](#vorschlagsliste-für-die-teileingabe-der-postleitzahl) |
 | cityNameAutocomplete | [Vorschlagsliste für die Teileingabe des Ortes ↓](#vorschlagsliste-für-die-teileingabe-des-ortes) |
 | streetAutocomplete | [Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer ↓](#vorschlagsliste-für-die-teileingabe-der-straße-ohne-hausnummer) |
-| ↳ | Vorschlagsliste für die Teileingabe der Straße mit Hausnummer ↓ |
+| ↳ | [Vorschlagsliste für die Teileingabe der Straße mit Hausnummer ↓](#vorschlagsliste-für-die-teileingabe-der-straße-mit-hausnummer) |
 | emailCheck | Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse ↓ |
 | nameCheck | Prüfung des Namens einer Person ↓ |
 | phoneCheck | Prüfung und ggf. Formatierung einer Telefonnummer ↓ |
