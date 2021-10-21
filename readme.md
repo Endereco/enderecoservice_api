@@ -25,7 +25,7 @@ Neben der API entwickeln wir und unsere Integrationspartner fertige L√∂sungen f√
 | [WordPress/WooCommerce Plugin](https://github.com/Endereco/endereco-wp5-client) | [Magento 2 Webshop Extension](https://www.endereco.de/magento/) | [Plentymarkets Extension](https://www.endereco.de/plentymarkets/) | 
 | [DreamRobot App](https://www.endereco.de/dreamrobot/) |  |  |
 
-Wenn du Interesse an einer neuen Plugins/Integrationen hast, sende eine kurze E-Mail an ilja@endereco.de.
+Wenn du Interesse an einem/r neuen Plugin/Integration hast, sende eine kurze E-Mail an ilja@endereco.de.
 
 ## Vorbereitung
 
