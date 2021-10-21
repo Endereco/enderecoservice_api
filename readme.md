@@ -131,7 +131,7 @@ wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 | streetAutocomplete | [Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer ↓](#vorschlagsliste-für-die-teileingabe-der-straße-ohne-hausnummer) |
 | ↳ | [Vorschlagsliste für die Teileingabe der Straße mit Hausnummer ↓](#vorschlagsliste-für-die-teileingabe-der-straße-mit-hausnummer) |
 | emailCheck | [Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse ↓](#prüfung-und-ggf-zustellbarkeitsprüfung-einer-e-mail-adresse) |
-| nameCheck | Prüfung des Namens einer Person ↓ |
+| nameCheck | [Prüfung des Namens einer Person ↓](#prüfung-des-namens-einer-person) |
 | phoneCheck | Prüfung und ggf. Formatierung einer Telefonnummer ↓ |
 | ibanCheck | Prüfung der IBAN und ggf. der Kontonummer ↓ |
 | vatIdCheck | Prüfung der Umsatzsteuer ID ↓ |
