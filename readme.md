@@ -46,7 +46,7 @@ Wenn du die API nutzen willst, dann kannst du so vorgehen:
 
 | Adresse | E-Mail Adresse | Person |
 |---|---|---|
-| Adressprüfung | E-Mail Prüfung | Namensprüfung |
+| [Adressprüfung](#prüfung-einer-adresse-mit-getrennten-straßehausnummer) | E-Mail Prüfung | Namensprüfung |
 | PLZ Vorschläge | | |
 | Ortsvorschläge | | |
 | Straßenvorschläge | | |
