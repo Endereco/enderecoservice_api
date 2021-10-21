@@ -43,8 +43,8 @@ Wenn du die API nutzen willst, dann kannst du so vorgehen:
 1. Frage [über diese Form](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) oder über E-Mail Kontakt
    info@endereco.de oder support@endereco.de nach einem API-Key. Für einen API-Key wirst du mit Endereco einen
    AV-Vertrag abschließen müssen: nur so dürfen wir deine Daten prüfen. Die Unterlagen senden wir dir zu.
-2. Probiere unsere [Postman-Collection](https://todo.com) aus. Dort sind alle gängige Anfragen schon vorformuliert.
-   Die [Import-Datei](https://todo.com) wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
+2. Probiere unsere [Postman-Collection](./downloads/Endereco_API_Beispiele.postman_collection.json) aus. Dort sind alle gängige Anfragen schon vorformuliert.
+   Die [Import-Datei](./downloads/Endereco_API_Beispiele.postman_collection.json) wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
 3. Falls du noch Fragen hast, suche dir den Ansprechspartner aus der Liste unten.
 
 ### Ansprechspartner
@@ -135,8 +135,8 @@ wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 | phoneCheck | [Prüfung einer Telefonnummer ↓](#prüfung-einer-telefonnummer) |
 | ↳ | [Prüfung und ggf. Formatierung einer nationalen Telefonnummer mit Landescode ↓](#prüfung-und-ggf-formatierung-einer-nationalen-telefonnummer-mit-landescode) |
 | ↳ | [Prüfung und speziale Formatierung einer Telefonnummer ↓](#prüfung-und-speziale-formatierung-einer-telefonnummer) |
-| ibanCheck | Prüfung der IBAN und ggf. der Kontonummer ↓ |
-| vatIdCheck | Prüfung der Umsatzsteuer ID ↓ |
+| ibanCheck | [Prüfung der IBAN und ggf. der Kontonummer ↓](#prüfung-der-iban-und-ggf-der-kontonummer) |
+| vatIdCheck | [Prüfung der Umsatzsteuer ID ↓](#prüfung-der-umsatzsteuer-id) |
 
 ### Prüfung einer Adresse mit getrennten Straße/Hausnummer
 
