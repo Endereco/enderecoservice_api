@@ -107,6 +107,10 @@ Jede Anfrage, die bei uns ankommt, muss einem Nutzer zugeordnet werden können. 
 vorgesehen. Dieser muss bei jeder Anfrage gesetzt werden. Als Wert nimmst du den API-Key, den wir für dich erstellt
 haben.
 
+Um die API in Postman zu nutzen, muss auch in Postman das API-Key hinterlegt werden. Nahdem du die Collection importiert hast, klick auf die Collection, dann auf "Authorization" und dann trage unten bei Type "API Key", bei Key "X-Auth-Key" und bei Value das API-Key, welches wir dir zukommen lassen.
+
+![](./imgs/postman_api.png "")
+
 ## Nutzung der API
 
 Grundsätzlicher Aufbau des Protokolls ist in der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification)
