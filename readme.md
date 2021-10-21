@@ -7,7 +7,7 @@ anderem die Prüfung der Adressen, E-Mail Adressen und Telefonnummern.
 ## Über 200 Unternehmen prüfen ihre Stammdaten mit Endereco
 
 Egal ob Onlineshop, Warenwirtschaftssystem oder eigene Entwicklung, Endereco kümmert sich um die Qualität der Daten und
-spart ihren Kunden den Mehraufwand durch schlechte Stammdaten.
+spart ihren Kunden den Mehraufwand wegen schlechten Stammdaten.
 
 Unsere Referenzen:
 
