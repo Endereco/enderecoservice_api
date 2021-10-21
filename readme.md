@@ -100,6 +100,14 @@ Weitere Steuerinformationen wie API-Key werden in Headers der HTTP Anfrage über
 
 Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sind wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 
+## Verzeichnis der Methoden und Use Cases
+
+| Methoden | Use-Case
+|---| ---|
+| addressCheck | [Prüfung einer Adresse mit getrennten Straße/Hausnummer](#prüfung-einer-adresse-mit-getrennten-straßehausnummer)|
+|  | [Prüfung einer Adresse mit Straße/Hausnummer in einem Feld](#prüfung-einer-adresse-mit-straßehausnummer-in-einem-feld) |
+
+
 ### Prüfung einer Adresse mit getrennten Straße/Hausnummer
 
 ```
