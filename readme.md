@@ -130,7 +130,7 @@ wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 | cityNameAutocomplete | [Vorschlagsliste für die Teileingabe des Ortes ↓](#vorschlagsliste-für-die-teileingabe-des-ortes) |
 | streetAutocomplete | [Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer ↓](#vorschlagsliste-für-die-teileingabe-der-straße-ohne-hausnummer) |
 | ↳ | [Vorschlagsliste für die Teileingabe der Straße mit Hausnummer ↓](#vorschlagsliste-für-die-teileingabe-der-straße-mit-hausnummer) |
-| emailCheck | Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse ↓ |
+| emailCheck | [Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse ↓](#prüfung-und-ggf-zustellbarkeitsprüfung-einer-e-mail-adresse) |
 | nameCheck | Prüfung des Namens einer Person ↓ |
 | phoneCheck | Prüfung und ggf. Formatierung einer Telefonnummer ↓ |
 | ibanCheck | Prüfung der IBAN und ggf. der Kontonummer ↓ |
@@ -708,6 +708,89 @@ POST https://endereco-service.de/rpc/v1
     "status": [
       "A4000",
       "A4700"
+    ]
+  }
+}
+```
+
+### Prüfung des Namens einer Person
+
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+
+#### Request Headers
+
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "nameCheck",
+  "params": {
+    "salutation": "m",
+    "firstName": "julia",
+    "lastName": "Schenk"
+  }
+}
+```
+
+#### Antwort Basis
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "predictions": [
+      {
+        "salutation": "f",
+        "firstName": "Julia",
+        "lastName": "Schenk"
+      }
+    ],
+    "status": [
+      "name_is_natural_person",
+      "salutation_needs_correction",
+      "first_name_needs_correction",
+      "name_needs_correction"
+    ]
+  }
+}
+```
+
+#### Antwort Basis + Zusatzfunktion "Echtheitsprüfung der Person"
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "score": "1.00",
+    "predictions": [
+      {
+        "salutation": "f",
+        "firstName": "Julia",
+        "lastName": "Schenk"
+      }
+    ],
+    "status": [
+      "name_is_natural_person",
+      "salutation_needs_correction",
+      "first_name_needs_correction",
+      "name_needs_correction",
+      "name_is_real"
     ]
   }
 }
