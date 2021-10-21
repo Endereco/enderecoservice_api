@@ -338,3 +338,84 @@ POST https://endereco-service.de/rpc/v1
   }
 }
 ```
+
+### Vorschlagsliste für die Teileingabe der Postleitzahl
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+#### Request Headers
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "postCodeAutocomplete",
+  "params": {
+    "country": "DE",
+    "language": "de",
+    "postCode": "972"
+  }
+}
+```
+
+#### Antwort Basis
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "predictions": [
+      {
+        "cityName": "Höchberg",
+        "postCode": "97204"
+      },
+      {
+        "cityName": "Veitshöchheim",
+        "postCode": "97209"
+      },
+      {
+        "cityName": "Simmershofen",
+        "postCode": "97215"
+      },
+      {
+        "cityName": "Uffenheim",
+        "postCode": "97215"
+      },
+      {
+        "cityName": "Weigenheim",
+        "postCode": "97215"
+      },
+      {
+        "cityName": "Gerbrunn",
+        "postCode": "97218"
+      },
+      {
+        "cityName": "Rimpar",
+        "postCode": "97222"
+      },
+      {
+        "cityName": "Zellingen",
+        "postCode": "97225"
+      },
+      {
+        "cityName": "Rottendorf",
+        "postCode": "97228"
+      }
+    ],
+    "status": [
+      "A2000"
+    ]
+  }
+}
+```
