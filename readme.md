@@ -985,3 +985,106 @@ POST https://endereco-service.de/rpc/v1
   }
 }
 ```
+
+### Prüfung der IBAN und ggf. der Kontonummer
+
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+
+#### Request Headers
+
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "ibanCheck",
+   "params": {
+      "iban": "DE63790500000044649465"
+   }
+}
+```
+
+#### Antwort Basis
+```json
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "original": {
+            "iban": "DE63790500000044649465"
+        },
+        "status": [
+            "iban_correct",
+            "iban_checksum_correct",
+            "iban_length_correct",
+            "iban_is_sepa"
+        ],
+        "predictions": [
+            {
+                "iban": "DE63790500000044649465",
+                "countryCode": "DE",
+                "checksum": "63",
+                "bankCode": "79050000",
+                "bankName": "Sparkasse Mainfranken Würzburg",
+                "bankPostalCode": "97067",
+                "bankLocality": "Würzburg",
+                "bankShortName": "Spk Mainfranken Würzburg",
+                "bic": "BYLADEM1SWU",
+                "accountNumber": "0044649465",
+                "countryCentralBankName": "Deutsche Bundesbank",
+                "countryCentralBankUrl": "http://www.bundesbank.de/"
+            }
+        ]
+    }
+}
+```
+#### Antwort Basis + Zusatzfunktion "Kontonummer verifizieren"
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "result": {
+      "original": {
+         "iban": "DE63790500000044649465"
+      },
+      "status": [
+         "iban_correct",
+         "iban_checksum_correct",
+         "iban_length_correct",
+         "iban_is_sepa",
+         "iban_account_correct",
+         "iban_account_checkmethod_00"
+      ],
+      "predictions": [
+         {
+            "iban": "DE63790500000044649465",
+            "countryCode": "DE",
+            "checksum": "63",
+            "bankCode": "79050000",
+            "bankName": "Sparkasse Mainfranken Würzburg",
+            "bankPostalCode": "97067",
+            "bankLocality": "Würzburg",
+            "bankShortName": "Spk Mainfranken Würzburg",
+            "bic": "BYLADEM1SWU",
+            "accountNumber": "0044649465",
+            "countryCentralBankName": "Deutsche Bundesbank",
+            "countryCentralBankUrl": "http://www.bundesbank.de/"
+         }
+      ]
+   }
+}
+```
