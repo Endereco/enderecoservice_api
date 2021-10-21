@@ -1088,3 +1088,47 @@ POST https://endereco-service.de/rpc/v1
    }
 }
 ```
+
+### Prüfung der Umsatzsteuer ID
+
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+
+#### Request Headers
+
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "vatIdCheck",
+   "params": {
+      "vatId": "DE214205098"
+   }
+}
+```
+
+#### Antwort Basis
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "result": {
+      "status": [
+         "vat_valid"
+      ]
+   }
+}
+```
