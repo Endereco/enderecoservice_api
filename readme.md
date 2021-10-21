@@ -134,7 +134,7 @@ wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 | nameCheck | [Prüfung des Namens einer Person ↓](#prüfung-des-namens-einer-person) |
 | phoneCheck | [Prüfung einer Telefonnummer ↓](#prüfung-einer-telefonnummer) |
 | ↳ | [Prüfung und ggf. Formatierung einer nationalen Telefonnummer mit Landescode ↓](#prüfung-und-ggf-formatierung-einer-nationalen-telefonnummer-mit-landescode) |
-| ↳ | Prüfung und speziale Formatierung einer Telefonnummer ↓ |
+| ↳ | [Prüfung und speziale Formatierung einer Telefonnummer ↓](#prüfung-und-speziale-formatierung-einer-telefonnummer) |
 | ibanCheck | Prüfung der IBAN und ggf. der Kontonummer ↓ |
 | vatIdCheck | Prüfung der Umsatzsteuer ID ↓ |
 
