@@ -14,6 +14,16 @@ Unsere Referenzen:
 | ![](./imgs/bahn-805cdfd6.png "") | ![](./imgs/bodymed-3fa122cb.png "") | ![](./imgs/esmeyer-9ea34a21.png "") | ![](./imgs/leuchtstark-5bc7e2f1.png "") |
 | ![](./imgs/lodenfrey-504abfa7.png "") | ![](./imgs/paltinum-9f33b7f8.png "") | ![](./imgs/session-a3b56a76.png "") | ![](./imgs/sheego-b19f87e2.png "") |
 
+## Plugins und fertige Intergrationen
+
+Neben der API entwickeln wir und unsere Integrationspartner fertige Lösungen für diverse Systeme.
+
+|  |  |  |  |
+|---|---|---|---|
+| [Shopware 5 Plugin](https://github.com/Endereco/endereco-shopware5-client) | [Shopware 6 Plugin](https://github.com/Endereco/endereco-shopware6-client) | [OXID eSales 4 Modul](https://github.com/Endereco/endereco-oxid4-client) | [OXID eSales 6 Modul](https://github.com/Endereco/endereco-oxid6-client) |
+| [JTL Shop 4 Plugin](https://github.com/Endereco/endereco-jtl4-client) | [JTL Shop 5 Plugin](https://github.com/Endereco/endereco-jtl5-client) | [WordPress/WooCommerce Plugin](https://github.com/Endereco/endereco-wp5-client) | [Magento 2 Webshop Extension](https://www.endereco.de/magento/) |
+| [Plentymarkets Extension](https://www.endereco.de/plentymarkets/) | [DreamRobot App](https://www.endereco.de/dreamrobot/) |  |  |
+
 ## Vorbereitung
 
 Wenn du die API nutzen willst, dann kannst du so vorgehen:
