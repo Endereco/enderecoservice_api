@@ -922,3 +922,66 @@ POST https://endereco-service.de/rpc/v1
   }
 }
 ```
+
+### Prüfung und speziale Formatierung einer Telefonnummer
+
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+
+#### Request Headers
+
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "phoneCheck",
+  "params": {
+    "phone": "017680728912",
+    "countryCode": "DE",
+    "format": "international"
+  }
+}
+```
+
+#### Antwort Basis
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "original": {
+      "phone": "017680728912"
+    },
+    "status": [
+      "phone_format_international",
+      "phone_is_mobile",
+      "phone_needs_correction",
+      "phone_carrier_o2"
+    ],
+    "predictions": [
+      {
+        "phone": "+49 176 80728912",
+        "region": "Germany",
+        "carrier": "O2",
+        "countryPrefix": "+49",
+        "nationalNumber": "17680728912",
+        "leadingZeros": 1
+      }
+    ]
+  }
+}
+```
