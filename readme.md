@@ -84,7 +84,7 @@ Die Leistungen von Endereco sind kostenpflichtig. Die einfachste Art der Abrechn
 
 Endereco versucht jedoch dem Nutzer entgegenzukommen und eine Operation erst dann in Rechnung zu stellen, wenn diese tatsächlich einen Mehrwert bringt. Wir nennen es "erfolgsbasierte Abrechnung". Erst wenn ein bestimmter logischer Datensatz (z.B. eine Lieferadresse) nach der Verarbeitung durch Endereco gespeichert wird, rechnen wir ab.
 
-Um die erfolgsbasierte Abrechnung zu nutzen, müssen die sog. Sessions umgesetzt werden. Dafür haben wir [eine Anleitung](./sessions-guideline.md) erstellt. Es ist empfehlenswert sie zu lesen, da wir die Umsetzung abnehmen müssen. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
+Um die erfolgsbasierte Abrechnung zu nutzen, müssen die sog. Sessions implementiert werden. Dafür haben wir [eine Anleitung](./sessions-guideline.md) erstellt. Es ist empfehlenswert sie zu lesen, da wir die Umsetzung abnehmen müssen. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
 
 ## Authentifizierung
 
