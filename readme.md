@@ -1,211 +1,145 @@
-# Endereco JSON API 3.0
+# Endereco API
 
-## Überblick
+Endereco API stellt einen elektronischen und automatisierbaren Zugang zu den [Leistungen der Firma Endereco UG (haftungsbeschränkt)](https://www.endereco.de/services/) her. 
+Darunter fällt unter anderem die Prüfung der Adressen, E-Mail Adressen und Telefonnummern.
 
-| Funktion | Beschreibung |
-| -------- | ------------ |
-| [nameCheck](functions/name-check.md) | Sucht den Vornamen in unserer Datenbank und gibt das Geschlecht, sofern bekannt, zurück. |
-| [postCodeAutocomplete](functions/postcode-autocomplete.md) | Liefert mögliche Autocomplete-Vorschläge für die eingegebene PLZ-Fragmente zurück, sofern der zugehörige Ort bekannt ist , auch den Ort. |
-| [cityNameAutocomplete](functions/cityname-autocomplete.md) | Gibt mögliche Autocomplete-Vorschläge für die eigegebenen Ort-Fragmente zurück, sofert die PLZ bekannt ist, wird auch die PLZ zurückgeliefert. |
-| [streetAutocomplete](functions/street-autocomplete.md) | Gibt mögliche Autocomplete-Vorschläge der Straße zurück. |
-| [addressCheck](functions/address-check.md) | Prüft eine angegebene Adresse. Gibt Varianten zurück, falls die Adresse nicht eindeutig ist oder es mögliche Korrekturen der Eingabe gibt. |
-| [bankAutocomplete](functions/bank-autocomplete.md) | Gibt mögliche Autocomplete-Vorschläge für den Namen der Bank und die zugehörige Bankleitzahl zurück, anhand der eingegebenen Bankleitzahl-Fragmente. |
-| [bankCodeAutocomplete](functions/bankcode-autocomplete.md) | (neu) Gibt den Namen, volle Bankleitzahl und BIC anhand eines Teils der Bankleitzahl zurück. Neuster Stand. |
-| [ibanCheck](functions/iban-check.md) | Prüft die eingegebene IBAN. |
-| [emailCheck](functions/email-check.md) | Prüft die eMail-Adresse anhand diverser Kriterien auf Syntax und auf Zustellbarkeit |
-| [prephoneCheck](functions/prephone-check.md) | Prüft die Vorwahl oder gesamte Telefonnummer. Erkennt ob es sich um eine Mobil- oder Festnetznummer handelt, und gibt die Nummer normalisiert zurück. |
-| [doAccounting](functions/do-accounting.md) | Markiert eine Transaktion zur Abrechnung.  |
-| [startSession](functions/start-session.md) | Startet eine Session.  |
-| [ibanConverter](functions/iban-converter.md) | Konvertiert IBAN zu KTO und BLZ oder umgekehrt. |
-| [readinessCheck](functions/readiness-check.md) | Prüft, ob der Service erreichbar ist. |
-| [splitStreet](functions/split-street.md) | Prüft, ob der Service erreichbar ist. |
-| [vatCheck](functions/vat-check.md) (<span style="color:red;font-weight: bold;">Beta</span>)| Prüft die Umsatzsteuer ID.|
+## Vorbereitung
 
-## Headers
+Wenn du die API nutzen oder ausprobieren willst, dann muss folgendes erledigt werden.
 
-Folgende Header müssen mit jeder Anfrage an den Enderco Service übermittelt werden: **Content-Type**, **X-Auth-Key**, **X-Transaction-Id**, **X-Transaction-Referer**
+1. Frage [über diese Form](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) oder über E-Mail Kontakt info@endereco.de oder support@endereco.de nach einem API-Key. Für einen API-Key wirst du mit Endereco einen AV-Vertrag abschließen müssen: nur so dürfen wir die Daten prüfen.
+2. Probiere unsere [Postman-Collection](https://todo.com) aus. Dort sind alle gängige Anfragen schon vorformuliert. Die [Import-Datei](https://todo.com) wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
+3. Falls du noch Fragen hast, suche dir den Ansprechspartner aus der Liste unten.
 
-| Header | Bedeutung | Beispiel |
-| ------ | --------- | -------- |
-| Content-Type | Content type markierung. Soll immer *application/json* sein. | application/json |
-| X-Auth-Key | Auth Key. Wird zur Authentifizierung verwendet. | Beispiel: *a0835c4d0b31b7df976d1153f336d6086b130560e72092808f15b464702ac0fa* |
-| X-Transaction-Id | Bei Web Clients werden mehrere logisch zusammenhängende Anfragen unter einer Transaction erfasst, welche mit TID markiert ist. Ab 1.1 generiert der Server die TID und gibt sie in der ersten Antwort-JSON zurück. Dabei soll der Client `not_set` als TID übermitteln. Wenn gar keine Transaction aufgebaut werden soll, sol lder Client `not_required` als TID übermitteln. | 976d1153f336d6086b130560e |
-| X-Transaction-Referer | Information von wo innerhalb der Anwendung die Anfragen abgesendet werden. z.B. die Unterseite oder eine spezielle Seite innerhalb einer App | https://domain.de/konto-anlegen |
+| Art der Frage | zuständige Person | Kontakt |
+|---|---|---|
+| geschäftliche/finanzielle Frage | Robert Rieser  | robert@endereco.de oder info@endereco.de |
+| technische Frage | Ilja Weber | ilja@endereco.de oder suppoert@endereco.de  |
+| Frage zu Datenschutz | Lena Schmitt | lena@endereco.de oder datenschutz@endereco.de |
 
-Folgende Header sollen mitübermittelt werden: **X-Agent**
+## Übersicht der Funktionen
 
-| Header | Bedeutung | Beispiel |
-| ------ | --------- | -------- |
-| X-Agent | Eine Kennung des verwendeten Clients. Die Version soll mitangegeben werden. Idealerweise soll auch das Shopsystem und verwendetes Theme mit Version angegeben werden. | client:enderecoclientox 3.2, shop:OXID eShop CE 6.1.0, theme:flow |
+| Adresse | E-Mail Adresse | Person | Telefonnummer | IBAN | Umsatzsteuer ID |
+|---|---|---|---|---|---|
+| Adressprüfung | E-Mail Prüfung | Namensprüfung | Rufnummerprüfung | IBAN-Prüfung | Umsatzsteuer ID Prüfung |
+| PLZ Vorschläge ||||||
+| Ortsvorschläge ||||||
+| Straßenvorschläge ||||||
 
-## Aufbau einer Anfrage
+## Übersicht der Statuscodes
 
-Es wird ein valides JSON erwartet.
+## Methoden der API
 
-Als Basis sollte folgende JSON Struktur verwendet werden:
+Grundstäzlicher Aufbau des Protokolls ist in der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification) beschrieben. Es muss eine JSON Datei formuliert werden und man bekommt eine JSON Datei als Antwort. Die JSON wird im Body der HTTP Anfrage übermittelt. 
+Weitere Steuerinformationen wie API-Key werden in Headers der HTTP Anfrage übermittelt. Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sind nicht zugelassen, wegen [Datenschutz](./data-protection.md).
 
-```javascript
-{
-  "jsonrpc": "2.0",
-  "id": <int>, 
-  "method": <string>,
-  "params": {
-    <string>: <string|int>
-  }  
-}
+### Prüfung einer Adresse mit getrennten Straße/Hausnummer
+
 ```
-
-*Bedeutung der Felder:*
-
-| Feld | Typ | Bedeutung |
-| ---- | --- | --------- |
-| jsonrpc | string | Gibt Protokol und Version an. |
-| id | int | Eindeutige Kennung des Requests. Kann zum Beispiel ein Counter sein. Man benötigt eine Id um ein Request einer Response zuordnen zu können, was bei Bulk Processing möglicherweise benötigt werden kann. Man kann die Id weglassen, wenn keine Antwort erwartet wird. |
-| method | string | Name der Funktion des Webservices. |
-| params | hash | Spezifische Parameter. Je Webservice unterschiedlich. |
-
-
-*Beispiel:*
-
-```javascript
-{
-  "jsonrpc": "2.0",
-  "id": 1,  
-  "method": "nameCheck",
-  "params": {
-    "name": "Robert"
-  }  
-}
+POST https://endereco-service.de/rpc/v1
 ```
+#### Request Headers
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./generating-sessions.md) |
+| X-Transaction-Referer | MyClient v1.0.0, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [API-Key Anfragen](./request-apikey.md) |
 
-## Aufbau einer Antwort (Erfolg)
+#### Body raw (JSON)
 
-Es kann ein valides JSON erwartet werden.
-
-Aufbau entspricht folgender Struktur:
-
-
-```javascript
+```json
 {
   "jsonrpc": "2.0",
-  "id": <int>,
-  "meta": {
-    ...
-  },
-  "result": {
-    "status": <array>,
-    "payload": <null|array|hash>
+  "id": 1,
+  "method": "addressCheck",
+  "params": {
+    "country": "DE",
+    "language": "de",
+    "postCode": "97232",
+    "cityName": "Giebelstadt",
+    "street": "Lindenstraße",
+    "houseNumber": "28"
   }
 }
 ```
 
-Manchmal kann noch ein `cmd` Feld angehängt werden.
+#### Antwort Basis
 
-Beispiel:
-```javascript
-{
-  "jsonrpc": "2.0",
-  "id": <int>,
-  "meta": {
-    ...
-  },
-  "result": {
-    "status": <array>,
-    "payload": <null|array|hash>
-  },
-  "cmd": {
-    "use_tid": "0sb6a717690d139d034eb817704e22994e639d24a9b5a56bbf79223e36a15193dd8f6369680d2fbcd0436fd73b282ca571ca50f0204b0ae35f1766b27163ba16"
-  }
-}
-```
-
-Dieses Feld enthält ein Befehl für den Client. Zur Zeit wird nur der `use_tid` verwendet, der dem Client mitteilt, dass er die angegebene TID nutzen soll. Sinn dahinter ist, dass ab 1.1 Version der Schnittstelle die TID's serverseitig generiert werden.
-
-*Bedeutung der Felder:*
-
-| Feld | Typ | Bedeutung |
-| ---- | --- | --------- |
-| jsonrpc | string | Gibt Protokoll und Version an. |
-| id | int | Eindeutige Kennung des Requests. Kann zum Beispiel ein Counter sein. Man benötigt eine Id um ein Request einer Response zuordnen zu können, was bei Bulk Processing möglicherweise benötigt werden kann. |
-| meta | hash | Optionales Feld. Hier können zusätzlichen Informationen übergeben werden, welche bei der Response wieder zurückgegeben werden. |
-| result.status | array | Statusmeldungen für das Ergebnis. Spezifische Parameter. Je Webservice unterschiedlich. |
-| result.payload | null|array|hash | Rückgabe der Funktion. Enthält die Ergebnise der Funktion. Typ und Struktur sind je Funktion spezifisch. |
-
-*Beispiel:*
-
-```javascript
+```json
 {
   "jsonrpc": "2.0",
   "id": 1,
   "result": {
-    "status": ['A1000', 'A1100'],
-    "name": "Robert",
-    "gender": 'M'
+    "predictions": [
+      {
+        "cityName": "Giebelstadt",
+        "postCode": "97232",
+        "houseNumber": "28",
+        "street": "Lindenstr.",
+        "country": "de"
+      }
+    ],
+    "status": [
+      "address_needs_correction",
+      "A1100",
+      "country_code_correct",
+      "postal_code_correct",
+      "locality_correct",
+      "street_name_needs_correction",
+      "building_number_correct"
+    ]
   }
 }
 ```
 
-## Aufbau einer Antwort (Fehler)
-
-Es kann ein valides JSON erwartet werden.
-
-Der Aufbau soll dabei folgender Struktur entsprechen:
-
-
-```javascript
-{
-  "jsonrpc": "2.0",
-  "id": <int>,
-  "meta": {
-    ...
-  } ,
-  "error": {
-    "code": <int>,
-    "message": <string>
-  }
-}
-```
-
-*Bedeutung der Felder:*
-
-| Feld | Typ | Bedeutung |
-| ---- | --- | --------- |
-| jsonrpc | string | Gibt den Protokol und Version an. |
-| id | int | Eindeutige Kennung des Requests. Kann zum Beispiel ein Counter sein. Man benötigt eine Id um ein Request einer Response zuordnen zu können, was bei Bulk Processing möglicherweise benötigt werden kann. |
-| meta | hash | Optionales Feld. Hier können zusätzlichen Informationen übergeben werden, welche bei der Response wieder zurückgegeben werden. |
-| error.code | int | Fehlercode. |
-| error.message | string | Fehlermeldung. |
-
-*Beispiel:*
-
-```javascript
+#### Antwort Basis + Zusatzfunktion "Automatische Korrekturübernahme"
+```json
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "error": {
-    "code": -32700,
-    "message": "Fehler beim Parsen der JSON."
+  "result": {
+    "predictions": [
+      {
+        "cityName": "Giebelstadt",
+        "postCode": "97232",
+        "houseNumber": "28",
+        "street": "Lindenstr.",
+        "country": "de"
+      }
+    ],
+    "status": [
+      "address_needs_correction",
+      "A1100",
+      "country_code_correct",
+      "postal_code_correct",
+      "locality_correct",
+      "street_name_needs_correction",
+      "street_name_minor_correction",
+      "building_number_correct",
+      "address_minor_correction"
+    ]
   }
 }
 ```
 
-## Session Handling 
-
-Bei Systemen, die für eine Adresse sowohl InputAssistant (streetAutocomplete, postCodeAutocomplete, cityAutocomplete), 
-als auch AddressCheck nutzen, ist es günstiger sich pro Session abrechnen zu lassen.
-
-Dafür muss beim Laden der Seite der Adresse pro Adresse eine eindeutige Session ID generiert werden. Unsere 
-Empfehlung ist dafür eine UUID v4 Id zu generieren.
-
-Z.b. ea5eb301-db9e-49df-93b2-103463142d90
-
-Diese Session ID muss bei jeder Autocomplete und addressCheck Anfrage im X-Transaction-Id Header übermittelt werden.
-
-Sobald der Nutzer einen Erfolgsevent hat, z.B. die Adresse speichert, auf die nächste Seite geht, etc. 
-soll die Session ID mit einem doAccounting abgerechnet werden. Ab dem Moment darf sie nicht mehr verwendet werden.
-
-Falls der Nutzer die Seite neu lädt ohne die Adresse zu speichert, soll die Session ID neugeneriert werden.
-
-Zwei unterschiedliche Adresse auf einer Seite bekommen zwei unterschiedliche Session ID's.
-
-
+#### Antwort Basis + Zusatzfunktion "Hausnummerexistenzprüfung"
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "predictions": [],
+    "status": [
+      "address_needs_correction",
+      "A1100",
+      "country_code_correct",
+      "postal_code_correct",
+      "locality_correct",
+      "street_name_needs_correction",
+      "building_number_needs_correction",
+      "building_number_not_found"
+    ]
+  }
+}
+```
