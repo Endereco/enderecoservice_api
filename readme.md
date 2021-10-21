@@ -7,7 +7,7 @@ Darunter fällt unter anderem die Prüfung der Adressen, E-Mail Adressen und Tel
 
 Egal ob Onlineshop, Warenwirtschaftssystem oder eigene Entwicklung, Endereco kümmert sich um die Qualität der Daten und spart ihren Kunden den Mehraufwand durch schlechte Stammdaten. 
 
-Unsre Referenzen:
+Unsere Referenzen:
 
 |  |  |  |  |
 |---|---|---|---|
@@ -16,7 +16,7 @@ Unsre Referenzen:
 
 ## Vorbereitung
 
-Wenn du die API nutzen willst, dann muss folgendes erledigt werden.
+Wenn du die API nutzen willst, dann kannst du so vorgehen:
 
 1. Frage [über diese Form](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) oder über E-Mail Kontakt info@endereco.de oder support@endereco.de nach einem API-Key. Für einen API-Key wirst du mit Endereco einen AV-Vertrag abschließen müssen: nur so dürfen wir die Daten prüfen.
 2. Probiere unsere [Postman-Collection](https://todo.com) aus. Dort sind alle gängige Anfragen schon vorformuliert. Die [Import-Datei](https://todo.com) wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
