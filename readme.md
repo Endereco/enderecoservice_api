@@ -27,7 +27,7 @@ Neben der API entwickeln wir und unsere Integrationspartner fertige Lösungen f�
 
 Wenn du Interesse an einem/r neuen Plugin/Integration hast, sende eine kurze E-Mail an ilja@endereco.de.
 
-# DSGVO konform und versichert
+## DSGVO konform und versichert
 
 Unsere API ist DSGVO konform. Wir haben einen TÜV-Zertifizierten Datenschutzbeauftragen im Haus und bemühen uns stets die aktuellsten gesetzlichen Anforderungen an Datenschutz umzusetzen.
 
