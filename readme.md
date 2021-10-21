@@ -18,7 +18,7 @@ Unsere Referenzen:
 
 Wenn du die API nutzen willst, dann kannst du so vorgehen:
 
-1. Frage [über diese Form](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) oder über E-Mail Kontakt info@endereco.de oder support@endereco.de nach einem API-Key. Für einen API-Key wirst du mit Endereco einen AV-Vertrag abschließen müssen: nur so dürfen wir die Daten prüfen.
+1. Frage [über diese Form](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) oder über E-Mail Kontakt info@endereco.de oder support@endereco.de nach einem API-Key. Für einen API-Key wirst du mit Endereco einen AV-Vertrag abschließen müssen: nur so dürfen wir deine Daten prüfen.
 2. Probiere unsere [Postman-Collection](https://todo.com) aus. Dort sind alle gängige Anfragen schon vorformuliert. Die [Import-Datei](https://todo.com) wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
 3. Falls du noch Fragen hast, suche dir den Ansprechspartner aus der Liste unten.
 
@@ -31,12 +31,21 @@ Wenn du die API nutzen willst, dann kannst du so vorgehen:
 
 ## Übersicht der Funktionen
 
-| Adresse | E-Mail Adresse | Person | Telefonnummer | IBAN | Umsatzsteuer ID | technische Methoden |
-|---|---|---|---|---|---|---|
-| Adressprüfung | E-Mail Prüfung | Namensprüfung | Rufnummerprüfung | IBAN-Prüfung | Umsatzsteuer ID Prüfung | Abschluss einer Session |
-| PLZ Vorschläge | | | | | | Abschluss eine Konversion |
-| Ortsvorschläge | | | | | |
-| Straßenvorschläge | | | | | |
+| Adresse | E-Mail Adresse | Person |
+|---|---|---|
+| Adressprüfung | E-Mail Prüfung | Namensprüfung |
+| PLZ Vorschläge | | |
+| Ortsvorschläge | | |
+| Straßenvorschläge | | |
+
+| Telefonnummer | IBAN | Umsatzsteuer ID |
+|---|---|---|
+| Rufnummerprüfung | IBAN-Prüfung | Umsatzsteuer ID Prüfung |
+
+| technische Methoden |
+|---|
+| Abschluss einer Session |
+| Abschluss eine Konversion |
 
 ## Übersicht der Statuscodes
 
