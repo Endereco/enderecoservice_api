@@ -108,7 +108,8 @@ POST https://endereco-service.de/rpc/v1
 |---|---|
 | Content-Type| application/json  |
 | X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
-| X-Transaction-Referer | MyClient v1.0.0, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
 | X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
 
 #### Body raw (JSON)
