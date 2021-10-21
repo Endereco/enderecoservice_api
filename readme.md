@@ -1,11 +1,13 @@
 # Endereco API
 
-Endereco API stellt einen elektronischen und automatisierbaren Zugang zu den [Leistungen der Firma Endereco UG (haftungsbeschränkt)](https://www.endereco.de/services/) her. 
-Darunter fällt unter anderem die Prüfung der Adressen, E-Mail Adressen und Telefonnummern.
+Endereco API stellt einen elektronischen und automatisierbaren Zugang zu
+den [Leistungen der Firma Endereco UG (haftungsbeschränkt)](https://www.endereco.de/services/) her. Darunter fällt unter
+anderem die Prüfung der Adressen, E-Mail Adressen und Telefonnummern.
 
 ## Über 200 Unternehmen prüfen ihre Stammdaten mit Endereco
 
-Egal ob Onlineshop, Warenwirtschaftssystem oder eigene Entwicklung, Endereco kümmert sich um die Qualität der Daten und spart ihren Kunden den Mehraufwand durch schlechte Stammdaten. 
+Egal ob Onlineshop, Warenwirtschaftssystem oder eigene Entwicklung, Endereco kümmert sich um die Qualität der Daten und
+spart ihren Kunden den Mehraufwand durch schlechte Stammdaten.
 
 Unsere Referenzen:
 
@@ -29,7 +31,8 @@ Wenn du Interesse an einem/r neuen Plugin/Integration hast, sende eine kurze E-M
 
 ## DSGVO konform und versichert
 
-Unsere API ist DSGVO konform. Wir haben einen TÜV-Zertifizierten Datenschutzbeauftragen im Haus und bemühen uns stets die aktuellsten gesetzlichen Anforderungen an Datenschutz umzusetzen.
+Unsere API ist DSGVO konform. Wir haben einen TÜV-Zertifizierten Datenschutzbeauftragen im Haus und bemühen uns stets
+die aktuellsten gesetzlichen Anforderungen an Datenschutz umzusetzen.
 
 Des Weiteren stehen wir mit einer Betriebshaftungsversicherung für mögliche Schaden unsererseits gerade.
 
@@ -37,11 +40,15 @@ Des Weiteren stehen wir mit einer Betriebshaftungsversicherung für mögliche Sc
 
 Wenn du die API nutzen willst, dann kannst du so vorgehen:
 
-1. Frage [über diese Form](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) oder über E-Mail Kontakt info@endereco.de oder support@endereco.de nach einem API-Key. Für einen API-Key wirst du mit Endereco einen AV-Vertrag abschließen müssen: nur so dürfen wir deine Daten prüfen. Die Unterlagen senden wir dir zu.
-2. Probiere unsere [Postman-Collection](https://todo.com) aus. Dort sind alle gängige Anfragen schon vorformuliert. Die [Import-Datei](https://todo.com) wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
+1. Frage [über diese Form](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) oder über E-Mail Kontakt
+   info@endereco.de oder support@endereco.de nach einem API-Key. Für einen API-Key wirst du mit Endereco einen
+   AV-Vertrag abschließen müssen: nur so dürfen wir deine Daten prüfen. Die Unterlagen senden wir dir zu.
+2. Probiere unsere [Postman-Collection](https://todo.com) aus. Dort sind alle gängige Anfragen schon vorformuliert.
+   Die [Import-Datei](https://todo.com) wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
 3. Falls du noch Fragen hast, suche dir den Ansprechspartner aus der Liste unten.
 
 ### Ansprechspartner
+
 | Art der Frage | zuständige Person | Kontakt |
 |---|---|---|
 | geschäftliche/finanzielle Frage | Robert Rieser  | robert@endereco.de oder info@endereco.de |
@@ -68,37 +75,50 @@ Wenn du die API nutzen willst, dann kannst du so vorgehen:
 
 ## Übersicht der Statuscodes und Feldbezeichnungen
 
-In der Antwort der API wird i.d.R. eine Liste von Statuscodes zurückgegeben. 
+In der Antwort der API wird i.d.R. eine Liste von Statuscodes zurückgegeben.
 
 ![](./imgs/response_1.png "")
 
-Diese Statuscodes beschreiben den geprüften Datensatz und diktieren weiter folgende Reaktion. Die [vollständige Liste der Statuscodes](./statuscodes.md) ist hilfreich für Entwickler, die die Prüfungen von Endereco tief in ihre Geschäftsprozesse integrieren wollen.
+Diese Statuscodes beschreiben den geprüften Datensatz und diktieren weiter folgende Reaktion.
+Die [vollständige Liste der Statuscodes](./statuscodes.md) ist hilfreich für Entwickler, die die Prüfungen von Endereco
+tief in ihre Geschäftsprozesse integrieren wollen.
 
 Alle verfügbaren Feldbezeichnungen und ihre Bedeutung sind [hier](./fields.md) erklärt.
 
-Vorgesehene Reaktion auf bestimmte Statuscodes ist in [UI Guidelines](./ui-guidelines.md) beschrieben. Diese ist für UI Entwickler/Designer nützlich.
+Vorgesehene Reaktion auf bestimmte Statuscodes ist in [UI Guidelines](./ui-guidelines.md) beschrieben. Diese ist für UI
+Entwickler/Designer nützlich.
 
 ## Request oder Session
 
-Die Leistungen von Endereco sind kostenpflichtig. Die einfachste Art der Abrechnung ist, wenn man pro Anfrage/Operation einen gewissen Betrag zahlt.
+Die Leistungen von Endereco sind kostenpflichtig. Die einfachste Art der Abrechnung ist, wenn man pro Anfrage/Operation
+einen gewissen Betrag zahlt.
 
-Endereco versucht jedoch dem Nutzer entgegenzukommen und eine Operation erst dann in Rechnung zu stellen, wenn diese tatsächlich einen Mehrwert bringt. Wir nennen es "erfolgsbasierte Abrechnung". Erst wenn ein bestimmter logischer Datensatz (z.B. eine Lieferadresse) nach der Verarbeitung durch Endereco gespeichert wird, rechnen wir ab.
+Endereco versucht jedoch dem Nutzer entgegenzukommen und eine Operation erst dann in Rechnung zu stellen, wenn diese
+tatsächlich einen Mehrwert bringt. Wir nennen es "erfolgsbasierte Abrechnung". Erst wenn ein bestimmter logischer
+Datensatz (z.B. eine Lieferadresse) nach der Verarbeitung durch Endereco gespeichert wird, rechnen wir ab.
 
-Um die erfolgsbasierte Abrechnung zu nutzen, müssen die sog. Sessions implementiert werden. Dafür haben wir [eine Anleitung](./sessions-guideline.md) erstellt. Es ist empfehlenswert sie zu lesen, da wir die Umsetzung abnehmen müssen. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
+Um die erfolgsbasierte Abrechnung zu nutzen, müssen die sog. Sessions implementiert werden. Dafür haben
+wir [eine Anleitung](./sessions-guideline.md) erstellt. Es ist empfehlenswert sie zu lesen, da wir die Umsetzung
+abnehmen müssen. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
 
 ## Authentifizierung
 
-Jede Anfrage, die bei uns ankommt, muss einem Nutzer zugeordnet werden können. Dafür in ein HTTP Header "X-Auth-Key" vorgesehen. Dieser muss bei jeder Anfrage gesetzt werden. Als Wert nimmst du den API-Key, den wir für dich erstellt haben.
+Jede Anfrage, die bei uns ankommt, muss einem Nutzer zugeordnet werden können. Dafür in ein HTTP Header "X-Auth-Key"
+vorgesehen. Dieser muss bei jeder Anfrage gesetzt werden. Als Wert nimmst du den API-Key, den wir für dich erstellt
+haben.
 
 ## Nutzung der API
 
-Grundsätzlicher Aufbau des Protokolls ist in der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification) beschrieben. Es muss eine JSON Datei formuliert werden und man bekommt eine JSON Datei als Antwort. Die JSON wird im Body der HTTP Anfrage übermittelt. 
+Grundsätzlicher Aufbau des Protokolls ist in der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification)
+beschrieben. Es muss eine JSON Datei formuliert werden und man bekommt eine JSON Datei als Antwort. Die JSON wird im
+Body der HTTP Anfrage übermittelt.
 
 Für die Übermittlung ist HTTPS zu nutzen.
 
-Weitere Steuerinformationen wie API-Key werden in Headers der HTTP Anfrage übermittelt. 
+Weitere Steuerinformationen wie API-Key werden in Headers der HTTP Anfrage übermittelt.
 
-Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sind wegen [Datenschutz](./data-protection.md) nicht zugelassen.
+Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sind
+wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 
 ### Verzeichnis der Methoden und Use Cases
 
@@ -121,7 +141,9 @@ Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sin
 ```
 POST https://endereco-service.de/rpc/v1
 ```
+
 #### Request Headers
+
 |  |  |
 |---|---|
 | Content-Type| application/json  |
@@ -178,6 +200,7 @@ POST https://endereco-service.de/rpc/v1
 ```
 
 #### Antwort Basis + Zusatzfunktion "Automatische Korrekturübernahme"
+
 ```json
 {
   "jsonrpc": "2.0",
@@ -208,6 +231,7 @@ POST https://endereco-service.de/rpc/v1
 ```
 
 #### Antwort Basis + Zusatzfunktion "Hausnummerexistenzprüfung"
+
 ```json
 {
   "jsonrpc": "2.0",
@@ -233,7 +257,9 @@ POST https://endereco-service.de/rpc/v1
 ```
 POST https://endereco-service.de/rpc/v1
 ```
+
 #### Request Headers
+
 |  |  |
 |---|---|
 | Content-Type| application/json  |
@@ -289,6 +315,7 @@ POST https://endereco-service.de/rpc/v1
 ```
 
 #### Antwort Basis + Zusatzfunktion "Automatische Korrekturübernahme"
+
 ```json
 {
   "jsonrpc": "2.0",
@@ -319,6 +346,7 @@ POST https://endereco-service.de/rpc/v1
 ```
 
 #### Antwort Basis + Zusatzfunktion "Hausnummerexistenzprüfung"
+
 ```json
 {
   "jsonrpc": "2.0",
@@ -344,7 +372,9 @@ POST https://endereco-service.de/rpc/v1
 ```
 POST https://endereco-service.de/rpc/v1
 ```
+
 #### Request Headers
+
 |  |  |
 |---|---|
 | Content-Type| application/json  |
@@ -425,7 +455,9 @@ POST https://endereco-service.de/rpc/v1
 ```
 POST https://endereco-service.de/rpc/v1
 ```
+
 #### Request Headers
+
 |  |  |
 |---|---|
 | Content-Type| application/json  |
@@ -484,6 +516,67 @@ POST https://endereco-service.de/rpc/v1
       {
         "cityName": "Wünschbach",
         "postCode": "64753"
+      }
+    ],
+    "status": [
+      "A2000"
+    ]
+  }
+}
+```
+
+### Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+
+#### Request Headers
+
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "streetAutocomplete",
+  "params": {
+    "country": "DE",
+    "language": "de",
+    "cityName": "Würzburg",
+    "postCode": "97070",
+    "street": "Am "
+  }
+}
+```
+
+#### Antwort Basis
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "predictions": [
+      {
+        "street": "Am Bruderhof",
+        "streetName": "Am Bruderhof",
+        "buildingNumber": "",
+        "additionalInfo": ""
+      },
+      {
+        "street": "Am Pleidenturm",
+        "streetName": "Am Pleidenturm",
+        "buildingNumber": "",
+        "additionalInfo": ""
       }
     ],
     "status": [
