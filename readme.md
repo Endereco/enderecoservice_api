@@ -133,7 +133,7 @@ wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 | emailCheck | [Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse ↓](#prüfung-und-ggf-zustellbarkeitsprüfung-einer-e-mail-adresse) |
 | nameCheck | [Prüfung des Namens einer Person ↓](#prüfung-des-namens-einer-person) |
 | phoneCheck | [Prüfung einer Telefonnummer ↓](#prüfung-einer-telefonnummer) |
-| ↳ | Prüfung und ggf. Formatierung einer nationalen Telefonnummer mit Landescode ↓ |
+| ↳ | [Prüfung und ggf. Formatierung einer nationalen Telefonnummer mit Landescode ↓](#prüfung-und-ggf-formatierung-einer-nationalen-telefonnummer-mit-landescode) |
 | ↳ | Prüfung und speziale Formatierung einer Telefonnummer ↓ |
 | ibanCheck | Prüfung der IBAN und ggf. der Kontonummer ↓ |
 | vatIdCheck | Prüfung der Umsatzsteuer ID ↓ |
