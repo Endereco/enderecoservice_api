@@ -104,17 +104,17 @@ Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sin
 
 | Methoden | Use-Case
 |---| ---|
-| addressCheck | [Prüfung einer Adresse mit getrennten Straße/Hausnummer](#prüfung-einer-adresse-mit-getrennten-straßehausnummer)|
-| ↳ | [Prüfung einer Adresse mit Straße/Hausnummer in einem Feld](#prüfung-einer-adresse-mit-straßehausnummer-in-einem-feld) |
-| postCodeAutocomplete | Vorschlagsliste für die Teileingabe der Postleitzahl |
-| cityNameAutocomplete | Vorschlagsliste für die Teileingabe des Ortes |
-| streetAutocomplete | Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer |
-| ↳ | Vorschlagsliste für die Teileingabe der Straße mit Hausnummer |
-| emailCheck | Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse |
-| nameCheck | Prüfung des Namens einer Person |
-| phoneCheck | Prüfung und ggf. Formatierung einer Telefonnummer |
-| ibanCheck | Prüfung der IBAN und ggf. der Kontonummer |
-| vatIdCheck | Prüfung der Umsatzsteuer ID |
+| addressCheck | [Prüfung einer Adresse mit getrennten Straße/Hausnummer ↓](#prüfung-einer-adresse-mit-getrennten-straßehausnummer)|
+| ↳ | [Prüfung einer Adresse mit Straße/Hausnummer in einem Feld ↓](#prüfung-einer-adresse-mit-straßehausnummer-in-einem-feld) |
+| postCodeAutocomplete | Vorschlagsliste für die Teileingabe der Postleitzahl ↓ |
+| cityNameAutocomplete | Vorschlagsliste für die Teileingabe des Ortes ↓ |
+| streetAutocomplete | Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer ↓ |
+| ↳ | Vorschlagsliste für die Teileingabe der Straße mit Hausnummer ↓ |
+| emailCheck | Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse ↓ |
+| nameCheck | Prüfung des Namens einer Person ↓ |
+| phoneCheck | Prüfung und ggf. Formatierung einer Telefonnummer ↓ |
+| ibanCheck | Prüfung der IBAN und ggf. der Kontonummer ↓ |
+| vatIdCheck | Prüfung der Umsatzsteuer ID ↓ |
 
 ### Prüfung einer Adresse mit getrennten Straße/Hausnummer
 
