@@ -211,3 +211,114 @@ POST https://endereco-service.de/rpc/v1
   }
 }
 ```
+
+### Prüfung einer Adresse mit Straße/Hausnummer in einem Feld
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+#### Request Headers
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "addressCheck",
+  "params": {
+    "country": "DE",
+    "language": "de",
+    "postCode": "97232",
+    "cityName": "Giebelstadt",
+    "streetFull": "Lindenstraße 28"
+  }
+}
+```
+
+#### Antwort Basis
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "predictions": [
+      {
+        "cityName": "Giebelstadt",
+        "postCode": "97232",
+        "houseNumber": "28",
+        "street": "Lindenstr.",
+        "country": "de"
+      }
+    ],
+    "status": [
+      "address_needs_correction",
+      "A1100",
+      "country_code_correct",
+      "postal_code_correct",
+      "locality_correct",
+      "street_name_needs_correction",
+      "building_number_correct"
+    ]
+  }
+}
+```
+
+#### Antwort Basis + Zusatzfunktion "Automatische Korrekturübernahme"
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "predictions": [
+      {
+        "cityName": "Giebelstadt",
+        "postCode": "97232",
+        "houseNumber": "28",
+        "street": "Lindenstr.",
+        "country": "de"
+      }
+    ],
+    "status": [
+      "address_needs_correction",
+      "A1100",
+      "country_code_correct",
+      "postal_code_correct",
+      "locality_correct",
+      "street_name_needs_correction",
+      "street_name_minor_correction",
+      "building_number_correct",
+      "address_minor_correction"
+    ]
+  }
+}
+```
+
+#### Antwort Basis + Zusatzfunktion "Hausnummerexistenzprüfung"
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "predictions": [],
+    "status": [
+      "address_needs_correction",
+      "A1100",
+      "country_code_correct",
+      "postal_code_correct",
+      "locality_correct",
+      "street_name_needs_correction",
+      "building_number_needs_correction",
+      "building_number_not_found"
+    ]
+  }
+}
+```
