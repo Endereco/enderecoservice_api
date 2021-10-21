@@ -1014,7 +1014,7 @@ POST https://endereco-service.de/rpc/v1
    "id": 1,
    "method": "ibanCheck",
    "params": {
-      "iban": "DE63790500000044649465"
+      "iban": "DE89 3704 0044 0532 0130 00"
    }
 }
 ```
@@ -1022,35 +1022,35 @@ POST https://endereco-service.de/rpc/v1
 #### Antwort Basis
 ```json
 {
-    "jsonrpc": "2.0",
-    "id": 1,
-    "result": {
-        "original": {
-            "iban": "DE63790500000044649465"
-        },
-        "status": [
-            "iban_correct",
-            "iban_checksum_correct",
-            "iban_length_correct",
-            "iban_is_sepa"
-        ],
-        "predictions": [
-            {
-                "iban": "DE63790500000044649465",
-                "countryCode": "DE",
-                "checksum": "63",
-                "bankCode": "79050000",
-                "bankName": "Sparkasse Mainfranken Würzburg",
-                "bankPostalCode": "97067",
-                "bankLocality": "Würzburg",
-                "bankShortName": "Spk Mainfranken Würzburg",
-                "bic": "BYLADEM1SWU",
-                "accountNumber": "0044649465",
-                "countryCentralBankName": "Deutsche Bundesbank",
-                "countryCentralBankUrl": "http://www.bundesbank.de/"
-            }
-        ]
-    }
+   "jsonrpc": "2.0",
+   "id": 1,
+   "result": {
+      "original": {
+         "iban": "DE89 3704 0044 0532 0130 00"
+      },
+      "status": [
+         "iban_needs_correction",
+         "iban_checksum_correct",
+         "iban_length_correct",
+         "iban_is_sepa"
+      ],
+      "predictions": [
+         {
+            "iban": "DE89370400440532013000",
+            "countryCode": "DE",
+            "checksum": "89",
+            "bankCode": "37040044",
+            "bankName": "Commerzbank",
+            "bankPostalCode": "50447",
+            "bankLocality": "Köln",
+            "bankShortName": "Commerzbank Köln",
+            "bic": "COBADEFFXXX",
+            "accountNumber": "0532013000",
+            "countryCentralBankName": "Deutsche Bundesbank",
+            "countryCentralBankUrl": "http://www.bundesbank.de/"
+         }
+      ]
+   }
 }
 ```
 #### Antwort Basis + Zusatzfunktion "Kontonummer verifizieren"
@@ -1061,28 +1061,28 @@ POST https://endereco-service.de/rpc/v1
    "id": 1,
    "result": {
       "original": {
-         "iban": "DE63790500000044649465"
+         "iban": "DE89 3704 0044 0532 0130 00"
       },
       "status": [
-         "iban_correct",
+         "iban_needs_correction",
          "iban_checksum_correct",
          "iban_length_correct",
          "iban_is_sepa",
          "iban_account_correct",
-         "iban_account_checkmethod_00"
+         "iban_account_checkmethod_13"
       ],
       "predictions": [
          {
-            "iban": "DE63790500000044649465",
+            "iban": "DE89370400440532013000",
             "countryCode": "DE",
-            "checksum": "63",
-            "bankCode": "79050000",
-            "bankName": "Sparkasse Mainfranken Würzburg",
-            "bankPostalCode": "97067",
-            "bankLocality": "Würzburg",
-            "bankShortName": "Spk Mainfranken Würzburg",
-            "bic": "BYLADEM1SWU",
-            "accountNumber": "0044649465",
+            "checksum": "89",
+            "bankCode": "37040044",
+            "bankName": "Commerzbank",
+            "bankPostalCode": "50447",
+            "bankLocality": "Köln",
+            "bankShortName": "Commerzbank Köln",
+            "bic": "COBADEFFXXX",
+            "accountNumber": "0532013000",
             "countryCentralBankName": "Deutsche Bundesbank",
             "countryCentralBankUrl": "http://www.bundesbank.de/"
          }
