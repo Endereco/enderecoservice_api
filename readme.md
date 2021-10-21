@@ -59,14 +59,14 @@ Wenn du die API nutzen willst, dann kannst du so vorgehen:
 
 | Adresse | E-Mail Adresse | Person |
 |---|---|---|
-| [Adressprüfung](#prüfung-einer-adresse-mit-getrennten-straßehausnummer) | E-Mail Prüfung | Namensprüfung |
-| PLZ Vorschläge | | |
-| Ortsvorschläge | | |
-| Straßenvorschläge | | |
+| [Adressprüfung](#prüfung-einer-adresse-mit-getrennten-straßehausnummer) | [E-Mail Prüfung](#prüfung-und-ggf-zustellbarkeitsprüfung-einer-e-mail-adresse) | [Namensprüfung](#prüfung-des-namens-einer-person) |
+| [PLZ Vorschläge](#vorschlagsliste-für-die-teileingabe-der-postleitzahl) | | |
+| [Ortsvorschläge](#vorschlagsliste-für-die-teileingabe-des-ortes) | | |
+| [Straßenvorschläge](#vorschlagsliste-für-die-teileingabe-der-straße-ohne-hausnummer) | | |
 
 | Telefonnummer | IBAN | Umsatzsteuer ID |
 |---|---|---|
-| Rufnummerprüfung | IBAN-Prüfung | Umsatzsteuer ID Prüfung |
+| [Rufnummerprüfung](#prüfung-einer-telefonnummer) | [IBAN-Prüfung](#prüfung-der-iban-und-ggf-der-kontonummer) | [Umsatzsteuer ID Prüfung](#prüfung-der-umsatzsteuer-id) |
 
 | technische Methoden |
 |---|
