@@ -116,8 +116,6 @@ Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sin
 | ibanCheck | Prüfung der IBAN und ggf. der Kontonummer |
 | vatIdCheck | Prüfung der Umsatzsteuer ID |
 
-
-
 ### Prüfung einer Adresse mit getrennten Straße/Hausnummer
 
 ```
