@@ -31,7 +31,7 @@ Wenn du Interesse an einem/r neuen Plugin/Integration hast, sende eine kurze E-M
 
 ## DSGVO konform
 
-Unsere API ist DSGVO konform. Wir haben einen TÜV-Zertifizierten Datenschutzbeauftragen im Haus und bemühen uns stets
+Unsere API ist DSGVO konform. Wir haben einen zertifizierten Datenschutzbeauftragen im Haus und bemühen uns stets
 die aktuellsten gesetzlichen Anforderungen an Datenschutz umzusetzen.
 
 ## Vorbereitung
