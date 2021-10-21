@@ -106,7 +106,7 @@ Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sin
 |---| ---|
 | addressCheck | [Prüfung einer Adresse mit getrennten Straße/Hausnummer ↓](#prüfung-einer-adresse-mit-getrennten-straßehausnummer)|
 | ↳ | [Prüfung einer Adresse mit Straße/Hausnummer in einem Feld ↓](#prüfung-einer-adresse-mit-straßehausnummer-in-einem-feld) |
-| postCodeAutocomplete | Vorschlagsliste für die Teileingabe der Postleitzahl ↓ |
+| postCodeAutocomplete | [Vorschlagsliste für die Teileingabe der Postleitzahl ↓](#vorschlagsliste-für-die-teileingabe-der-postleitzahl) |
 | cityNameAutocomplete | Vorschlagsliste für die Teileingabe des Ortes ↓ |
 | streetAutocomplete | Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer ↓ |
 | ↳ | Vorschlagsliste für die Teileingabe der Straße mit Hausnummer ↓ |
@@ -411,6 +411,79 @@ POST https://endereco-service.de/rpc/v1
       {
         "cityName": "Rottendorf",
         "postCode": "97228"
+      }
+    ],
+    "status": [
+      "A2000"
+    ]
+  }
+}
+```
+
+### Vorschlagsliste für die Teileingabe des Ortes
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+#### Request Headers
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "cityNameAutocomplete",
+  "params": {
+    "country": "DE",
+    "language": "de",
+    "cityName": "Wü"
+  }
+}
+```
+
+#### Antwort Basis
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "predictions": [
+      {
+        "cityName": "Wülfershausen",
+        "postCode": "97618"
+      },
+      {
+        "cityName": "Wülfrath",
+        "postCode": "42489"
+      },
+      {
+        "cityName": "Wülknitz",
+        "postCode": "01609"
+      },
+      {
+        "cityName": "Wülknitz",
+        "postCode": "06369"
+      },
+      {
+        "cityName": "Wülperode",
+        "postCode": "38835"
+      },
+      {
+        "cityName": "Wünsch",
+        "postCode": "06255"
+      },
+      {
+        "cityName": "Wünschbach",
+        "postCode": "64753"
       }
     ],
     "status": [
