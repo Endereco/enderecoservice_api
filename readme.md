@@ -66,13 +66,15 @@ Wenn du die API nutzen willst, dann kannst du so vorgehen:
 | Abschluss einer Session |
 | Abschluss einer Konversion |
 
-## Übersicht der Statuscodes
+## Übersicht der Statuscodes und Feldbezeichnungen
 
 In der Antwort der API wird i.d.R. eine Liste von Statuscodes zurückgegeben. 
 
 ![](./imgs/response_1.png "")
 
 Diese Statuscodes beschreiben den geprüften Datensatz und diktieren weiter folgende Reaktion. Die [vollständige Liste der Statuscodes](./statuscodes.md) ist hilfreich für Entwickler, die die Prüfungen von Endereco tief in ihre Geschäftsprozesse integrieren wollen.
+
+Alle verfügbaren Feldbezeichnungen und ihre Bedeutung sind [hier](./fields.md) erklärt.
 
 Vorgesehene Reaktion auf bestimmte Statuscodes ist in [UI Guidelines](./ui-guidelines.md) beschrieben. Diese ist für UI Entwickler/Designer nützlich.
 
