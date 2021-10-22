@@ -117,3 +117,45 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | name_is_fake | Der Name ist definitiv fake. |
 | name_has_placeholder | Der Name ist ein Platzhalter, z.B. "Max Musterman" |
 | name_has_random_typing | Der Name ist eine Zufallskette an Zeichen, z.B. "Asdasdasd fAsfasf" |
+
+## Telefonnummernprüfung 
+
+### Statuscodes
+
+| Code | Bedeutung |
+| ---- | --------- |
+| phone_correct | Die Telefonnummer ist korrekt und richtig formatiert. |
+| phone_invalid | Die Telefonnummer ist falsch geschrieben. Es gibt keine Korrekturvorschläge. |
+| phone_needs_correction | Die Telefonnummer ist nicht ganz korrekt, kann aber korrigiert werden. |
+| phone_format_e164 | Die Telefonnummer ist im Format E.164 |
+| phone_format_international | Die Telefonnummer ist international formatiert. |
+| phone_format_national | Die Telefonnummer ist national formatiert. |
+| phone_format_rfc3966 | Die Telefonnummer ist ein tel: Link. |
+| phone_format_undefined | Format konnte nicht erkannt werden. |
+| phone_is_mobile | Die Telefonnummer ist eine Mobilfunknetznummer. |
+| phone_is_fixed_line | Die Telefonnummer ist eine Festnetznummer. |
+| phone_is_unknown_type | Der Typ der Telefonnummer konnte nicht eindeutig erkannt werden. |
+| phone_carrier_X | Die Telefonnummer gehört oder gehörte ursprünglich dem X - Anbieter. Anstatt von X steht der Kürzel des Anbieters, z.B. "o2" |
+
+## IBAN Prüfung
+
+### Statuscodes
+
+| Code | Bedeutung |
+| ---- | --------- |
+| iban_correct | Die übermittelte IBAN ist korrekt. |
+| iban_needs_correction | Die übermittelte IBAN soll korrigiert werden. |
+| iban_invalid | Die übermittelte IBAN ist falsch. |
+| iban_checksum_correct | Die Prüfsumme der IBAN ist richtig. |
+| iban_checksum_invalid | Die Prüfsumme der IBAN ist falsch. |
+| iban_length_correct | Die Länge der IBAN ist richtig. |
+| iban_length_invalid | Die Länge der IBAN ist falsch. |
+| iban_is_sepa | Die IBAN ist SEPA fähig. |
+
+### Mit dem Zusatzservice "Kontonummerprüfung"
+
+| Code | Bedeutung |
+| ---- | --------- |
+| iban_account_correct | Die Kontonummer ist korrekt. |
+| iban_account_invalid | Die Kontonummer ist falsch. |
+| iban_account_checkmethod_X | Die Kontonummer wurde mit der Prüfzimmermethode X geprüft. Anstatt von X steht die Nummer der Prüfzimmermethode, z.B. "10" |
