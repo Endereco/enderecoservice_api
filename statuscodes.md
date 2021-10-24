@@ -1,23 +1,23 @@
 # Liste aller Statuscode und ihre Interpretation |
 |[Adresseingabe-Assistent]
-|[Generelle Statuscodes](#head1.1))|
+|[Generelle Statuscodes]<a name="head1.1">|
 
-|Adressprüfung|
-|  <a name="head2.1"></a>Generelle Statuscodes|
-|  <a name="head1.2"></a>Zusatz Erweitere Statuscodes|
-|  <a name="head2.3"></a>Experimentelle Statuscodes|
-|  <a name="head2.4"></a>Veraltete Statuscodes|
+|Adressprüfung|<br/>
+|  <a name="head2.1"></a>Generelle Statuscodes|<br/>
+|  <a name="head1.2"></a>Zusatz Erweitere Statuscodes|<br/>
+|  <a name="head2.3"></a>Experimentelle Statuscodes|<br/>
+|  <a name="head2.4"></a>Veraltete Statuscodes|<br/>
   
-|Namensprüfung|
-|  Generelle Statuscodes|
-|  Zusatz Echtheitsprüfung|
+|Namensprüfung|<br/>
+|  Generelle Statuscodes|<br/>
+|  Zusatz Echtheitsprüfung|<br/>
   
-|Telefnonnummernprüfung|
-|  Generelle Statuscodes|
+|Telefnonnummernprüfung|<br/>
+|  Generelle Statuscodes|<br/>
   
-|IBAN Prüfung|
-|  Generelle Statuscodes|
-|  Zusatz Kontonummerprüfung|
+|IBAN Prüfung|<br/>
+|  Generelle Statuscodes|<br/>
+|  Zusatz Kontonummerprüfung|<br/>
   
 ## Adresseingabeassistent
 
