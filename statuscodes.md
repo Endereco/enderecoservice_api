@@ -1,7 +1,7 @@
 # Liste aller Statuscode und ihre Interpretation
 
 [Adresseingabe-Assistent](#Adresseingabeassistent)
-  [Generelle Statuscodes] (#Generelle Statuscodes)
+  [Generelle Statuscodes](#Generelle Statuscodes:)
  
 Adressprüfung
   Generelle Statuscodes
