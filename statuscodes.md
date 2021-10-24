@@ -1,4 +1,4 @@
-# Liste aller Statuscode und ihre Interpretation [link](#head1.1)
+|# Liste aller Statuscode und ihre Interpretation [link](#head1.1)|
 |[Adresseingabe-Assistent](#Adresseingabeassistent)|
 |[Generelle Statuscodes](#generelle_statuscodes)|
 
