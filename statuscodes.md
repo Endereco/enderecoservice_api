@@ -1,6 +1,6 @@
-|# Liste aller Statuscode und ihre Interpretation [link](#head1.1)|
-|[Adresseingabe-Assistent](#Adresseingabeassistent)|
-|[Generelle Statuscodes](#generelle_statuscodes)|
+# Liste aller Statuscode und ihre Interpretation |
+|[Adresseingabe-Assistent](#head1.1)|
+|[Generelle Statuscodes](#head1.2))|
 
 |Adressprüfung|
 |  <a name="head1.1"></a>Generelle Statuscodes|
