@@ -1,6 +1,6 @@
 # Liste aller Statuscode und ihre Interpretation
 
-[Adresseingabe-Assistent](##Adresseingabeassistent)
+[Adresseingabe-Assistent](#Adresseingabeassistent)
   [Generelle Statuscodes]
  
 Adressprüfung
