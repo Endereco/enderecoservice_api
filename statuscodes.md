@@ -1,24 +1,24 @@
 # Liste aller Statuscode und ihre Interpretation
 
-|[Adresseingabe-Assistent](#Adresseingabeassistent)
-|  [Generelle Statuscodes](#Generelle Statuscodes:)
+|[Adresseingabe-Assistent](#Adresseingabeassistent)|
+|  [Generelle Statuscodes](#Generelle Statuscodes:)|
 | 
-|Adressprüfung
-|  Generelle Statuscodes
-|  Zusatz Erweitere Statuscodes
-|  Experimentelle Statuscodes
-|  Veraltete Statuscodes
+|Adressprüfung|
+|  Generelle Statuscodes|
+|  Zusatz Erweitere Statuscodes|
+|  Experimentelle Statuscodes|
+|  Veraltete Statuscodes|
 |  
-|Namensprüfung
-|  Generelle Statuscodes
-|  Zusatz Echtheitsprüfung
+|Namensprüfung|
+|  Generelle Statuscodes|
+|  Zusatz Echtheitsprüfung|
 |  
-|Telefnonnummernprüfung
-|  Generelle Statuscodes
+|Telefnonnummernprüfung|
+|  Generelle Statuscodes|
 |  
-|IBAN Prüfung
-|  Generelle Statuscodes
-|  Zusatz Kontonummerprüfung
+|IBAN Prüfung|
+|  Generelle Statuscodes|
+|  Zusatz Kontonummerprüfung|
   
 
 ## Adresseingabeassistent
