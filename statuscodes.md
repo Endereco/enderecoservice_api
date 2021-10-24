@@ -1,12 +1,12 @@
 # Liste aller Statuscode und ihre Interpretation |
-|[Adresseingabe-Assistent](#head1.1)|
-|[Generelle Statuscodes](#head1.2))|
+|[Adresseingabe-Assistent]
+|[Generelle Statuscodes](#head1.1))|
 
 |Adressprüfung|
-|  <a name="head1.1"></a>Generelle Statuscodes|
+|  <a name="head2.1"></a>Generelle Statuscodes|
 |  <a name="head1.2"></a>Zusatz Erweitere Statuscodes|
-|  <a name="head1.3"></a>Experimentelle Statuscodes|
-|  <a name="head1.4"></a>Veraltete Statuscodes|
+|  <a name="head2.3"></a>Experimentelle Statuscodes|
+|  <a name="head2.4"></a>Veraltete Statuscodes|
   
 |Namensprüfung|
 |  Generelle Statuscodes|
@@ -21,7 +21,7 @@
   
 ## Adresseingabeassistent
 
-### Generelle Statuscodes
+### Generelle Statuscodes<a name="head1.1">
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -31,7 +31,7 @@
 
 ## Adressprüfung
 
-### Generelle Statuscodes:
+### Generelle Statuscodes:<a name="head2.1">
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -63,7 +63,7 @@
 | address_is_paketshop | Bei der Adresse handelt es sich um ein Paketshop. |
 
 
-### Erweiterte Statuscodes:
+### Erweiterte Statuscodes:<a name="head2.2">
 
 Um den manuellen Aufwand bei Bearbeitung von Adressprüfungen zu minimieren, kann zusätzlich zu Ergebnissen der
 Adressprüfung eine serverseitig klassifizierung die Änderungen bewerten.
@@ -86,7 +86,7 @@ Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [ADRESSTEIL
 | building_number_minor_correction | Kleine Korrektur der Hausnummer. |
 | building_number_major_correction | Wichtige Korrektur der Hausnummer. |
 
-### Experimentelle Statuscodes:
+### Experimentelle Statuscodes:<a name="head2.3">
 
 Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch folgende Statuscodes ausgegeben werden:
 
@@ -95,7 +95,7 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | address_contains_unverified_info | In der Adresse gibt es einen Teil, der nicht geprüft werden kann, der jedoch auch nicht entfernt wird. |
 | building_number_contains_unverified_info | In der Hausnummer wurde ein Element übermittelt, das nicht geprüft werden kann und in der Prüfung ignoriert wurde . z.B. ein Zustellhinweis. |
 
-### <span style="color:red;font-weight: bold;">Veraltete Statuscodes:</span>
+### <span style="color:red;font-weight: bold;">Veraltete Statuscodes:</span><a name="head2.4">
 
 !! **DEPRECATED** !!
 
