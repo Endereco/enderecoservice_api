@@ -1,5 +1,26 @@
 # Liste aller Statuscode und ihre Interpretation
 
+Adresseingabe-Assistent
+  Generelle Statuscodes
+ 
+Adressprüfung
+  Generelle Statuscodes
+  Zusatz Erweitere Statuscodes
+  Experimentelle Statuscodes
+  Veraltete Statuscodes
+  
+Namensprüfung
+  Generelle Statuscodes
+  Zusatz Echtheitsprüfung
+  
+Telefnonnummernprüfung
+  Generelle Statuscodes
+  
+IBAN Prüfung
+  Generelle Statuscodes
+  Zusatz Kontonummerprüfung
+  
+
 ## Adresseingabeassistent
 
 ### Generelle Statuscodes:
@@ -8,7 +29,7 @@
 | ---- | --------- |
 | A1000 | Es gibt nur ein Element in der Vorschlagsliste. |
 | A2000 | Es gibt mehrere Elemente in der Vorschlagsliste. |
-| A3000 | Es wurden keine Elemente frü die Vorschlagsliste gefunden. |
+| A3000 | Es wurden keine Elemente für die Vorschlagsliste gefunden. |
 
 ## Adressprüfung
 
