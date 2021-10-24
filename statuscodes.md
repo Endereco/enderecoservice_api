@@ -4,7 +4,7 @@
 |[Generelle Statuscodes](#generelle_statuscodes)|
 
 |Adressprüfung|
-|  Generelle Statuscodes|
+|  Generelle Statuscodes#1|
 |  Zusatz Erweitere Statuscodes|
 |  Experimentelle Statuscodes|
 |  Veraltete Statuscodes|
@@ -21,9 +21,9 @@
 |  Zusatz Kontonummerprüfung|
   
 
-## Adresseingabeassistent
+## Adresseingabeassistent#1
 
-### Generelle Statuscodes
+### Generelle Statuscodes#2
 
 | Code | Bedeutung |
 | ---- | --------- |
