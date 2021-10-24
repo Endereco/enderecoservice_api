@@ -148,7 +148,7 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | phone_correct | Die Telefonnummer ist korrekt und richtig formatiert. |
 | phone_invalid | Die Telefonnummer ist falsch geschrieben. Es gibt keine Korrekturvorschläge. |
 | phone_needs_correction | Die Telefonnummer ist nicht ganz korrekt, kann aber korrigiert werden. |
-| phone_format_e164 | Die Telefonnummer ist im Format E.164 |
+| phone_format_e164 | Die Telefonnummer ist im {Format E.164](https://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/NP_Nummernraum.pdf?__blob=publicationFile&v=3) |
 | phone_format_international | Die Telefonnummer ist international formatiert. |
 | phone_format_national | Die Telefonnummer ist national formatiert. |
 | phone_format_rfc3966 | Die Telefonnummer ist ein tel: Link. |
