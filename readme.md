@@ -17,7 +17,7 @@ Ein Auszug unserer Referenzen:
 
 ## Plugins und fertige Intergrationen
 
-Auf Basis unserer API entwickeln wir gemeinsam mit Integrationspartner schlüsselfertige Produkte für diverse Systeme.
+Auf Basis unserer API entwickeln wir gemeinsam mit Integrationspartnern schlüsselfertige Produkte für verschiedene Systeme.
 
 ||||
 |---|---|---|
@@ -30,25 +30,25 @@ Wenn du Interesse hast, eine eigene Integration gegen unsere API zu entwickeln, 
 
 ## DSGVO konform
 
-Unsere API ist von Grund auf so konzipiert, dass sie bei korrekter Implementierung den Ansprüchen der DSGVO gerecht wird. Unser interes Datenschutz-Team prüft stets die aktuellen rechtlichen Anforderungen und sorgt für eine gesetzeskonforme umsetzeung.
+Unsere API ist von Grund auf so konzipiert, dass sie bei korrekter Implementierung den Ansprüchen der DSGVO gerecht wird. Unser internes Datenschutz-Team prüft stets die aktuellen rechtlichen Anforderungen und sorgt für eine gesetzeskonforme Umsetzung.
 
 ## Vorbereitung
 
-wie kannst du auf unsere API zugreifen?
+Wie kannst du auf unsere API zugreifen?
 
-1. Frage [über dieses Formular](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) einen API-Key an. Für einen API-Key wirst du mit Endereco eine
-   Vereinbarung zur Auftragsdatenverarbeitung abschließen müssen. Nur so haben wir die rechtliche Grundlage dadür. Die Unterlagen senden wir dir zu.
-2. Probiere unsere [Postman-Collection](./downloads/Endereco_API_Beispiele.postman_collection.json) aus. Dort sind alle gängige Anfragen schon vorformuliert.
+1. Frage [über dieses Formular](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) einen API-Key an. Für einen API-Key benötigst du mit endereco eine
+   Vereinbarung zur Auftragsdatenverarbeitung. Nur so haben wir die rechtliche Grundlage dadür. Die Unterlagen senden wir dir zu.
+2. Probiere unsere [Postman-Collection](./downloads/Endereco_API_Beispiele.postman_collection.json) aus. Dort sind alle gängigen Anfragen schon vorformuliert.
    Die [Import-Datei](./downloads/Endereco_API_Beispiele.postman_collection.json) wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
-3. Falls du noch Fragen hast, suche dir den Ansprechspartner aus der Liste unten.
+3. Falls du noch Fragen hast, such' dir den passenden Ansprechpartner aus der Liste aus.
 
-### Ansprechspartner
+### Ansprechpartner
 
 | Art der Frage | zuständige Person | Kontakt |
 |---|---|---|
-| geschäftliche/ Fragen | Robert Rieser  |  info@endereco.de |
-| technische Frage | Ilja Weber |  support@endereco.de  |
-| Frage zu Datenschutz | Lena Schmitt | datenschutz@endereco.de |
+| geschäftliche Fragen | Robert Rieser  |  info@endereco.de |
+| technische Fragen | Ilja Weber |  support@endereco.de  |
+| Fragen zu Datenschutz | Lena Schmitt | datenschutz@endereco.de |
 
 ## Übersicht der Funktionen
 
@@ -61,7 +61,7 @@ wie kannst du auf unsere API zugreifen?
 
 | Telefonnummer | IBAN | Umsatzsteuer ID |
 |---|---|---|
-| [Rufnummerprüfung](#prüfung-einer-telefonnummer) | [IBAN-Prüfung](#prüfung-der-iban-und-ggf-der-kontonummer) | [Umsatzsteuer ID Prüfung](#prüfung-der-umsatzsteuer-id) |
+| [Rufnummernprüfung](#prüfung-einer-telefonnummer) | [IBAN-Prüfung](#prüfung-der-iban-und-ggf-der-kontonummer) | [Umsatzsteuer-ID Prüfung](#prüfung-der-umsatzsteuer-id) |
 
 | technische Methoden |
 |---|
@@ -74,14 +74,14 @@ Mit jeder Antwort der API auf deine Anfrage wird eine Liste von Statuscodes zur�
 
 ![](./imgs/response_1.png "")
 
-Diese Statuscodes beschreiben den geprüften Datensatz und definieren die ggf. notwendigen Anpassungen sowie die Anzeigelogik an einem Frontend.
+Diese Statuscodes beschreiben den geprüften Datensatz und definieren die ggf. notwendigen Anpassungen, sowie die Anzeigelogik an einem Frontend.
 Die [vollständige Liste der Statuscodes](./statuscodes.md) ist für alle Entwickler hilfreich, die die Prüfungen von Endereco
 in ihre Geschäftsprozesse integrieren möchten.
 
-Alle verfügbaren Feldbezeichnungen und ihre Bedeutung sind [hier](./fields.md) erklärt.
+Alle verfügbaren Feldbezeichnungen und ihre Bedeutungen sind [hier](./fields.md) erklärt.
 
-Die Reaktion auf bestimmte Statuscodes sind in unseren [UI Guidelines](./ui-guidelines.md) beschrieben. Diese sind für Frontend
-Entwickler/Designer hilfreich.
+Die Reaktionen auf bestimmte Statuscodes sind in unseren [UI Guidelines](./ui-guidelines.md) beschrieben. Diese sind für Frontend
+Entwickler/Designer relevant.
 
 ## Request oder Session
 
@@ -99,28 +99,28 @@ wir in [einer Anleitung](./sessions-guideline.md) beschrieben. Jede sessionbasie
 
 ## Authentifizierung
 
-Jede API-Anfrage, die an uns gesendet wird, muss einem Nutzer zugeordnet werden können. Dafür muss imm HTTP Header der "X-Auth-Key" bei jeder Anfrage mit dem Wert des API-Keys gesetzt werden, den wir für dich erstellt haben.
+Jede API-Anfrage, die an uns gesendet wird, muss einem Nutzer zugeordnet werden können. Dafür muss im HTTP Header der "X-Auth-Key" bei jeder Anfrage mit dem Wert des API-Keys gesetzt werden, den wir für dich erstellt haben.
 
-Um die API über Postman anzusprechen, kannst du auch in Postman den API-Key hinterlegen. Nachdem du die Endereco Collection importiert hast, klick auf die Collection, dann auf "Authorization" und dann wähle bei Type "API Key" aus. Trage nun bei Key "X-Auth-Key" ein und bei Value den API-Key, den wir dir für dich erstellt haben. Diese werden dann bei jedem Request zu jedem API Endpunkt im Header automatisch mitgesendet.
+Um unsere API über Postman anzusprechen, kannst du auch in Postman den API-Key hinterlegen. Nachdem du die Endereco "Collection" importiert hast, klicke auf  "Collection", dann auf "Authorization" und dann wähle bei Type "API Key" aus. Trage nun bei Key "X-Auth-Key" ein und bei Value den API-Key, den wir dir für dich erstellt haben. Diese werden dann bei jedem Request zu jedem API Endpunkt im Header automatisch mitgesendet.
 
 ![](./imgs/postman_api.png "")
 
 ## Nutzung der API
 
-Der grundsätzliche Aufbau des Protokolls entspricht der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification)
-Es muss eine JSON Fornat formuliert werden. Die Antwort entspricht ebenfalls dem JSON Datei Format. Die JSON wird im
+Der grundsätzliche Aufbau des Protokolls entspricht der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification).
+Es muss im JSON Format formuliert werden. Die Antwort entspricht ebenfalls dem JSON Datei Format. Die JSON wird im
 Body der HTTP Anfrage übermittelt.
 
 Für die Übermittlung ist HTTPS (Port 443) zu setzen.
 
 Aus [Datenschutz](./data-protection.md)-Gründen erlauben wir nur eine Server-to-Server Kommunikation
-Direkte Anfragen sind nicht erlaubt. So vermeiden wir Browserinformationen des Endnutzers zu erhalten.
+Direkte Anfragen sind nicht erlaubt. So vermeiden wir, Browserinformationen des Endnutzers zu erhalten.
 
 ### Verzeichnis der Methoden und Use Cases
 
 | Methoden | Use-Case
 |---| ---|
-| addressCheck | [Prüfung einer Adresse mit getrennten Straße/Hausnummer ↓](#prüfung-einer-adresse-mit-getrennten-straßehausnummer)|
+| addressCheck | [Prüfung einer Adresse mit getrennter Straße/Hausnummer ↓](#prüfung-einer-adresse-mit-getrennter-straßehausnummer)|
 | ↳ | [Prüfung einer Adresse mit Straße/Hausnummer in einem Feld ↓](#prüfung-einer-adresse-mit-straßehausnummer-in-einem-feld) |
 | postCodeAutocomplete | [Vorschlagsliste für die Teileingabe der Postleitzahl ↓](#vorschlagsliste-für-die-teileingabe-der-postleitzahl) |
 | cityNameAutocomplete | [Vorschlagsliste für die Teileingabe des Ortes ↓](#vorschlagsliste-für-die-teileingabe-des-ortes) |
@@ -134,7 +134,7 @@ Direkte Anfragen sind nicht erlaubt. So vermeiden wir Browserinformationen des E
 | ibanCheck | [Prüfung der IBAN und ggf. der Kontonummer ↓](#prüfung-der-iban-und-ggf-der-kontonummer) |
 | vatIdCheck | [Prüfung der Umsatzsteuer ID ↓](#prüfung-der-umsatzsteuer-id) |
 
-### Prüfung einer Adresse mit getrennten Straße/Hausnummer
+### Prüfung einer Adresse mit getrennter Straße/Hausnummer
 
 [zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
 
