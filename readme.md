@@ -1,14 +1,14 @@
 # Endereco API
 
 Die Endereco API ermöglicht einen automatisierbaren Zugriff auf
-die Echtzeit [Services der Firma Endereco UG (haftungsb.) - Gesellschaft für Master Data Quality Management](https://www.endereco.de/services/). Darunter fällt die Prüfung von internationalen postalischen Adressen, E-Mail Adressen Telefonnummern, Namen und anderen Stammdaten von Personen oder Firmen.
+die Echtzeit [Services der Firma Endereco UG (haftungsb.) - Gesellschaft für Master Data Quality Management](https://www.endereco.de/services/). Darunter fallen die Prüfungen von internationalen postalischen Adressen, E-Mail Adressen, Telefonnummern, Namen und anderen Stammdaten von Personen oder Firmen.
  
-## Über 200 Unternehmen prüfen ihre Stammdaten mit Endereco
+## Über 200 Unternehmen prüfen bereits ihre Stammdaten mit Endereco
 
 Egal ob Onlineshop, Warenwirtschaftssystem, CRM oder eine eigenentwickelte Softwarelösung - Endereco optimiert die Qualität der Stammdaten deiner Kunden und
 erspart Kunden und Mitarbeiten den Mehraufwand, der durch nicht normierte und fehlerhafte Stammdaten entsteht.
 
-Unsere Referenzen:
+Ein Auszug unserer Referenzen:
 
 |  |  |  |  |
 |---|---|---|---|
