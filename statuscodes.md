@@ -1,14 +1,12 @@
-# Liste aller Statuscode und ihre Interpretation
-
-and we can even [link](#head1234) to it so:
+# Liste aller Statuscode und ihre Interpretation [link](#head1.1)
 |[Adresseingabe-Assistent](#Adresseingabeassistent)|
 |[Generelle Statuscodes](#generelle_statuscodes)|
 
 |Adressprüfung|
-|  Generelle Statuscodes#1|
-|  Zusatz Erweitere Statuscodes|
-|  Experimentelle Statuscodes|
-|  Veraltete Statuscodes|
+|  <a name="head1.1"></a>Generelle Statuscodes|
+|  <a name="head1.2"></a>Zusatz Erweitere Statuscodes|
+|  <a name="head1.3"></a>Experimentelle Statuscodes|
+|  <a name="head1.4"></a>Veraltete Statuscodes|
   
 |Namensprüfung|
 |  Generelle Statuscodes|
@@ -21,11 +19,9 @@ and we can even [link](#head1234) to it so:
 |  Generelle Statuscodes|
 |  Zusatz Kontonummerprüfung|
   
-### <a name="head1234"></a>A Heading in this SO entry!
+## Adresseingabeassistent
 
-## Adresseingabeassistent#1
-
-### Generelle Statuscodes#2
+### Generelle Statuscodes
 
 | Code | Bedeutung |
 | ---- | --------- |
