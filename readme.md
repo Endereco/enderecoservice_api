@@ -1,13 +1,12 @@
 # Endereco API
 
-Endereco API stellt einen elektronischen und automatisierbaren Zugang zu
-den [Leistungen der Firma Endereco UG (haftungsbeschränkt)](https://www.endereco.de/services/) her. Darunter fällt unter
-anderem die Prüfung der Adressen, E-Mail Adressen und Telefonnummern.
-
+Die Endereco API ermöglicht einen automatisierbaren Zugriff auf
+die Echtzeit [Services der Firma Endereco UG (haftungsb.) - Gesellschaft für Master Data Quality Management](https://www.endereco.de/services/). Darunter fällt die Prüfung von internationalen postalischen Adressen, E-Mail Adressen Telefonnummern, Namen und anderen Stammdaten von Personen oder Firmen.
+ 
 ## Über 200 Unternehmen prüfen ihre Stammdaten mit Endereco
 
-Egal ob Onlineshop, Warenwirtschaftssystem oder eigene Entwicklung, Endereco kümmert sich um die Qualität der Daten und
-spart ihren Kunden den Mehraufwand wegen schlechten Stammdaten.
+Egal ob Onlineshop, Warenwirtschaftssystem, CRM oder eine eigenentwickelte Softwarelösung - Endereco optimiert die Qualität der Stammdaten deiner Kunden und
+erspart Kunden und Mitarbeiten den Mehraufwand, der durch nicht normierte und fehlerhafte Stammdaten entsteht.
 
 Unsere Referenzen:
 
@@ -18,7 +17,7 @@ Unsere Referenzen:
 
 ## Plugins und fertige Intergrationen
 
-Neben der API entwickeln wir und unsere Integrationspartner fertige Lösungen für diverse Systeme.
+Auf Basis unserer API entwickeln wir gemeinsam mit Integrationspartner schlüsselfertige Produkte für diverse Systeme.
 
 ||||
 |---|---|---|
@@ -27,20 +26,18 @@ Neben der API entwickeln wir und unsere Integrationspartner fertige Lösungen f�
 | [WordPress/WooCommerce Plugin](https://github.com/Endereco/endereco-wp5-client) | [Magento 2 Webshop Extension](https://www.endereco.de/magento/) | [Plentymarkets Extension](https://www.endereco.de/plentymarkets/) | 
 | [DreamRobot App](https://www.endereco.de/dreamrobot/) |  |  |
 
-Wenn du Interesse an einem/r neuen Plugin/Integration hast, sende eine kurze E-Mail an ilja@endereco.de.
+Wenn du Interesse hast, eine eigene Integration gegen unsere API zu entwickeln, sende eine E-Mail an support@endereco.de.
 
 ## DSGVO konform
 
-Unsere API ist DSGVO konform. Wir haben einen zertifizierten Datenschutzbeauftragen im Haus und bemühen uns stets
-die aktuellsten gesetzlichen Anforderungen an Datenschutz umzusetzen.
+Unsere API ist von Grund auf so konzipiert, dass sie bei korrekter Implementierung den Ansprüchen der DSGVO gerecht wird. Unser interes Datenschutz-Team prüft stets die aktuellen rechtlichen Anforderungen und sorgt für eine gesetzeskonforme umsetzeung.
 
 ## Vorbereitung
 
-Wenn du die API nutzen willst, dann kannst du so vorgehen:
+wie kannst du auf unsere API zugreifen?
 
-1. Frage [über diese Form](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) oder über E-Mail Kontakt
-   info@endereco.de oder support@endereco.de nach einem API-Key. Für einen API-Key wirst du mit Endereco einen
-   AV-Vertrag abschließen müssen: nur so dürfen wir deine Daten prüfen. Die Unterlagen senden wir dir zu.
+1. Frage [über dieses Formular](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) einen API-Key an. Für einen API-Key wirst du mit Endereco eine
+   Vereinbarung zur Auftragsdatenverarbeitung abschließen müssen. Nur so haben wir die rechtliche Grundlage dadür. Die Unterlagen senden wir dir zu.
 2. Probiere unsere [Postman-Collection](./downloads/Endereco_API_Beispiele.postman_collection.json) aus. Dort sind alle gängige Anfragen schon vorformuliert.
    Die [Import-Datei](./downloads/Endereco_API_Beispiele.postman_collection.json) wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
 3. Falls du noch Fragen hast, suche dir den Ansprechspartner aus der Liste unten.
@@ -49,9 +46,9 @@ Wenn du die API nutzen willst, dann kannst du so vorgehen:
 
 | Art der Frage | zuständige Person | Kontakt |
 |---|---|---|
-| geschäftliche/finanzielle Frage | Robert Rieser  | robert@endereco.de oder info@endereco.de |
-| technische Frage | Ilja Weber | ilja@endereco.de oder support@endereco.de  |
-| Frage zu Datenschutz | Lena Schmitt | lena@endereco.de oder datenschutz@endereco.de |
+| geschäftliche/ Fragen | Robert Rieser  |  info@endereco.de |
+| technische Frage | Ilja Weber |  support@endereco.de  |
+| Frage zu Datenschutz | Lena Schmitt | datenschutz@endereco.de |
 
 ## Übersicht der Funktionen
 
@@ -73,54 +70,51 @@ Wenn du die API nutzen willst, dann kannst du so vorgehen:
 
 ## Übersicht der Statuscodes und Feldbezeichnungen
 
-In der Antwort der API wird i.d.R. eine Liste von Statuscodes zurückgegeben.
+Mit jeder Antwort der API auf deine Anfrage wird eine Liste von Statuscodes zurückgegeben.
 
 ![](./imgs/response_1.png "")
 
-Diese Statuscodes beschreiben den geprüften Datensatz und diktieren weiter folgende Reaktion.
-Die [vollständige Liste der Statuscodes](./statuscodes.md) ist hilfreich für Entwickler, die die Prüfungen von Endereco
-tief in ihre Geschäftsprozesse integrieren wollen.
+Diese Statuscodes beschreiben den geprüften Datensatz und definieren die ggf. notwendigen Anpassungen sowie die Anzeigelogik an einem Frontend.
+Die [vollständige Liste der Statuscodes](./statuscodes.md) ist für alle Entwickler hilfreich, die die Prüfungen von Endereco
+in ihre Geschäftsprozesse integrieren möchten.
 
 Alle verfügbaren Feldbezeichnungen und ihre Bedeutung sind [hier](./fields.md) erklärt.
 
-Vorgesehene Reaktion auf bestimmte Statuscodes ist in [UI Guidelines](./ui-guidelines.md) beschrieben. Diese ist für UI
-Entwickler/Designer nützlich.
+Die Reaktion auf bestimmte Statuscodes sind in unseren [UI Guidelines](./ui-guidelines.md) beschrieben. Diese sind für Frontend
+Entwickler/Designer hilfreich.
 
 ## Request oder Session
 
-Die Leistungen von Endereco sind kostenpflichtig. Die einfachste Art der Abrechnung ist, wenn man pro Anfrage/Operation
-einen gewissen Betrag zahlt.
+Die Leistungen von Endereco sind kostenpflichtig. Dabei unterscheiden wir zwei Arten der Abrechnung. 
 
-Endereco versucht jedoch dem Nutzer entgegenzukommen und eine Operation erst dann in Rechnung zu stellen, wenn diese
-tatsächlich einen Mehrwert bringt. Wir nennen es "erfolgsbasierte Abrechnung". Erst wenn ein bestimmter logischer
-Datensatz (z.B. eine Lieferadresse) nach der Verarbeitung durch Endereco gespeichert wird, rechnen wir ab.
+1. Die Abrechnung je API-Anfrage-Request
+2. Die erfolgsbasierte Abrechnung
 
-Um die erfolgsbasierte Abrechnung zu nutzen, müssen die sog. Sessions implementiert werden. Dafür haben
-wir [eine Anleitung](./sessions-guideline.md) erstellt. Es ist empfehlenswert sie zu lesen, da wir die Umsetzung
-abnehmen müssen. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
+Endereco ermöglicht es Nutzern, eine Prüfung erst dann in Rechnung zu stellen, wenn diese
+tatsächlich einen Mehrwert liefert. Erst wenn ein bestimmter logisch zusammenhängender
+Datensatz (z.B. eine Lieferadresse) nach der Verarbeitung durch Endereco beim Nutzer verwendet oder gespeichert wird, rechnen wir ab.
+
+Um die erfolgsbasierte Abrechnung zu ermöglichen, müssen die Anfragen in einer Session gebündelt werden. Dieses Vorgehen haben
+wir in [einer Anleitung](./sessions-guideline.md) beschrieben. Jede sessionbasierte Umsetzung wird gemeinsamt mit euch von unserem Team abgenommen und vor dem Livegang freigegeben. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
 
 ## Authentifizierung
 
-Jede Anfrage, die bei uns ankommt, muss einem Nutzer zugeordnet werden können. Dafür in ein HTTP Header "X-Auth-Key"
-vorgesehen. Dieser muss bei jeder Anfrage gesetzt werden. Als Wert nimmst du den API-Key, den wir für dich erstellt
-haben.
+Jede API-Anfrage, die an uns gesendet wird, muss einem Nutzer zugeordnet werden können. Dafür muss imm HTTP Header der "X-Auth-Key" bei jeder Anfrage mit dem Wert des API-Keys gesetzt werden, den wir für dich erstellt haben.
 
-Um die API in Postman zu nutzen, muss auch in Postman das API-Key hinterlegt werden. Nahdem du die Collection importiert hast, klick auf die Collection, dann auf "Authorization" und dann trage unten bei Type "API Key", bei Key "X-Auth-Key" und bei Value das API-Key, welches wir dir zukommen lassen.
+Um die API über Postman anzusprechen, kannst du auch in Postman den API-Key hinterlegen. Nachdem du die Endereco Collection importiert hast, klick auf die Collection, dann auf "Authorization" und dann wähle bei Type "API Key" aus. Trage nun bei Key "X-Auth-Key" ein und bei Value den API-Key, den wir dir für dich erstellt haben. Diese werden dann bei jedem Request zu jedem API Endpunkt im Header automatisch mitgesendet.
 
 ![](./imgs/postman_api.png "")
 
 ## Nutzung der API
 
-Grundsätzlicher Aufbau des Protokolls ist in der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification)
-beschrieben. Es muss eine JSON Datei formuliert werden und man bekommt eine JSON Datei als Antwort. Die JSON wird im
+Der grundsätzliche Aufbau des Protokolls entspricht der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification)
+Es muss eine JSON Fornat formuliert werden. Die Antwort entspricht ebenfalls dem JSON Datei Format. Die JSON wird im
 Body der HTTP Anfrage übermittelt.
 
-Für die Übermittlung ist HTTPS zu nutzen.
+Für die Übermittlung ist HTTPS (Port 443) zu setzen.
 
-Weitere Steuerinformationen wie API-Key werden in Headers der HTTP Anfrage übermittelt.
-
-Es wird nur Server-to-Server Kommunikation erlaubt, Anfragen aus dem Browser sind
-wegen [Datenschutz](./data-protection.md) nicht zugelassen.
+Aus [Datenschutz](./data-protection.md)-Gründen erlauben wir nur eine Server-to-Server Kommunikation
+Direkte Anfragen sind nicht erlaubt. So vermeiden wir Browserinformationen des Endnutzers zu erhalten.
 
 ### Verzeichnis der Methoden und Use Cases
 
@@ -135,8 +129,8 @@ wegen [Datenschutz](./data-protection.md) nicht zugelassen.
 | emailCheck | [Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse ↓](#prüfung-und-ggf-zustellbarkeitsprüfung-einer-e-mail-adresse) |
 | nameCheck | [Prüfung des Namens einer Person ↓](#prüfung-des-namens-einer-person) |
 | phoneCheck | [Prüfung einer Telefonnummer ↓](#prüfung-einer-telefonnummer) |
-| ↳ | [Prüfung und ggf. Formatierung einer nationalen Telefonnummer mit Landescode ↓](#prüfung-und-ggf-formatierung-einer-nationalen-telefonnummer-mit-landescode) |
-| ↳ | [Prüfung und speziale Formatierung einer Telefonnummer ↓](#prüfung-und-speziale-formatierung-einer-telefonnummer) |
+| ↳ | [Prüfung und ggf. Formatierung einer nationalen Telefonnummer mit Ländercode ↓](#prüfung-und-ggf-formatierung-einer-nationalen-telefonnummer-mit-landescode)
+| ↳ | [Prüfung und spezielle Formatierung einer Telefonnummer ↓](#prüfung-und-speziale-formatierung-einer-telefonnummer) |
 | ibanCheck | [Prüfung der IBAN und ggf. der Kontonummer ↓](#prüfung-der-iban-und-ggf-der-kontonummer) |
 | vatIdCheck | [Prüfung der Umsatzsteuer ID ↓](#prüfung-der-umsatzsteuer-id) |
 
