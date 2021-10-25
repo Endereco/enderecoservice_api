@@ -1,5 +1,7 @@
 # Liste aller Statuscode und ihre Interpretation 
 
+## Inhaltsverzeichnis
+
 | Service | Statuscode Gruppe | 
 |---|---|
 | [Adresseingabeassistent](#adresseingabeassistent) | [Generelle Statuscodes](#generelle-statuscodes) |
