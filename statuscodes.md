@@ -14,15 +14,21 @@
 
 ### Generelle Statuscodes
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
 | Code | Bedeutung |
 | ---- | --------- |
 | A1000 | Es gibt nur ein Element in der Vorschlagsliste. |
 | A2000 | Es gibt mehrere Elemente in der Vorschlagsliste. |
 | A3000 | Es wurden keine Elemente für die Vorschlagsliste gefunden. |
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
 ## Adressprüfung
 
 ### Generelle Statuscodes
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -53,8 +59,11 @@
 | address_is_postfach | Bei der Adresse handelt es sich um ein Postfach. |
 | address_is_paketshop | Bei der Adresse handelt es sich um ein Paketshop. |
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
 
 ### Erweiterte Statuscodes
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
 
 Um den manuellen Aufwand bei Bearbeitung von Adressprüfungen zu minimieren, kann zusätzlich zu Ergebnissen der
 Adressprüfung eine serverseitig klassifizierung die Änderungen bewerten.
@@ -77,7 +86,11 @@ Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [ADRESSTEIL
 | building_number_minor_correction | Kleine Korrektur der Hausnummer. |
 | building_number_major_correction | Wichtige Korrektur der Hausnummer. |
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
 ### Experimentelle Statuscodes
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
 
 Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch folgende Statuscodes ausgegeben werden:
 
@@ -86,7 +99,11 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | address_contains_unverified_info | In der Adresse gibt es einen Teil, der nicht geprüft werden kann, der jedoch auch nicht entfernt wird. |
 | building_number_contains_unverified_info | In der Hausnummer wurde ein Element übermittelt, das nicht geprüft werden kann und in der Prüfung ignoriert wurde . z.B. ein Zustellhinweis. |
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
 ### Veraltete Statuscodes
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
 
 !! **DEPRECATED** !!
 
@@ -96,6 +113,8 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | A1100 | Adresse korrekt, aber korrigiert. Gibt es, wenn es nur eine Variante der Adresse gibt, diese sich jedoch einwenig unterscheidet. Kommt mit A1000 zusammen.|
 | A2000 | Mehrere Varianten. |
 | A3000 | Keine Varianten. Die Adresse existiert nicht in unseren Datenbanken. |
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
 
 ## Namensprüfung
 
