@@ -40,7 +40,7 @@ mehrere Datensätze zu übermitteln (Bulk-Processing) und die Error-Codes sind r
 | firstName | String| Enthält den Vornamen. |
 | lastName | String | Enthält den Nachnamen. |
 | phone | String | Enthält die Rufnummer. |
-| format | String | Enthält den Namen des Format. Wird aktuell nur bei Rufnummernprüfung verwendet. Siehe Liste der Rufnummernformate |
+| format | String | Enthält den Namen des Format. Wird aktuell nur bei Rufnummernprüfung verwendet. Siehe [Liste der Rufnummernformate](#liste-der-rufnummernformate). |
 | iban | String | Enthält die IBAN. |
 | vatId | String | Enthält die Umsatzsteuer ID Nummer. |
 | sessionId | String | Enthält die Session ID. Siehe [Doku für Sessions](./sessions-guideline.md). |
