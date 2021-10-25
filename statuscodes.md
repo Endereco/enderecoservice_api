@@ -3,11 +3,11 @@
 | Service | Statuscode Gruppe | 
 |---|---|
 | [Adresseingabeassistent](#adresseingabeassistent) | [Generelle Statuscodes](#generelle-statuscodes) |
-| [Adressprüfung](#adressprüfung) | [Generelle Statuscodes](#) <br> [Erweiterte Statuscodes](#) <br> [Experimentelle Statuscodes](#) <br> [Veraltete Statuscodes](#) |
-| [Namensprüfung](#namensprüfung) | [Generelle Statuscodes](#generelle-statuscodes) <br> [zus. Echtheitsprüfung](#mit-aktivem-zusatzservice-echtheitsprüfung) |
-| [Rufnummernprüfung](#namensprüfung) | [Statuscodes](#statuscodes-1) |
-| [IBAN Prüfung](#iban-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-2) <br> [zus. Kontonummernprüfung](#mit-dem-zusatzservice-kontonummernprüfung) |
-| [E-Mail Adresse Prüfung](#e-mail-adresse-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-3) <br> [zus. Erweiterte STMP Prüfung](#mit-aktivem-zusatzservice-erweiterte-stmp-prüfung) |
+| [Adressprüfung](#adressprüfung) | [Generelle Statuscodes](#generelle-statuscodes-1) <br> [Erweiterte Statuscodes](#erweiterte-statuscodes) <br> [Experimentelle Statuscodes](#experimentelle-statuscodes) <br> [Veraltete Statuscodes](#veraltete-statuscodes) |
+| [Namensprüfung](#namensprüfung) | [Generelle Statuscodes](#generelle-statuscodes-2) <br> [zus. Echtheitsprüfung](#mit-aktivem-zusatzservice-echtheitsprüfung) |
+| [Rufnummernprüfung](#namensprüfung) | [Statuscodes](#statuscodes) |
+| [IBAN Prüfung](#iban-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-3) <br> [zus. Kontonummernprüfung](#mit-dem-zusatzservice-kontonummernprüfung) |
+| [E-Mail Adresse Prüfung](#e-mail-adresse-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-4) <br> [zus. Erweiterte STMP Prüfung](#mit-aktivem-zusatzservice-erweiterte-stmp-prüfung) |
 | [Umsatzsteuer ID Prüfung](#umsatzsteuer-id-prüfung) | [Statuscodes](#statuscodes-2) |
 
 ## Adresseingabeassistent
