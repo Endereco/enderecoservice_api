@@ -69,4 +69,27 @@ mehrere Datensätze zu übermitteln (Bulk-Processing) und die Error-Codes sind r
 
 | Feld | Erwarteter Wert | Bedeutung |
 | --- | --- | --- |
-| | | |
+| predictions | Array | Enthält JSON-Objekte mit Korrekturvorschlägen. |
+| status | Array | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
+| original | Array | Enthält die ursprüngliche Eingabe. |
+| score | Float | Enthält eine Zahl zwischen 0.0 und 1.0. Repräsentiert die Wahrscheinlichkeit oder Qualität der Aussage. |
+| --Eingabefelder| mixed | Alle Felder aus ein Eingabe können in der Ausgabe vorkommen. Ihr Wert wurde ggf. berichtigt. Siehe [Eingabeparameter](#eingabeparameter). |
+| streetName | String | Neuere Schreibweise für das Feld "street". Enthält das gleiche Wert wie "street". Soll zukünftig das Feld "street" ersetzen. |
+| buildingNumber | String | Neuere Schreibweise für das Feld "houseNumber". Enthält das gleiche Wert wie "houseNumber". Soll zukünftig das Feld "houseNumber" ersetzen. |
+| region | String | Erkannte Region bei Rufnummernprüfung. |
+| carrier | String | Der ursprüngliche Netzanbieter bei Rufnummernprüfung. |
+| countryPrefix | String | Landesvorauswahl bei einer Rufnummer. |
+| nationalNumber | String | Der nationale Teil einer Rufnummer. |
+| leadingZeros |  Zahl | Wie viele "0" sollen einer nationalen Rufnummer vorangestellt werden. |
+| checksum | Zahl | Enthält die Prüfsumme. |
+| bankCode | String | Enthält eine Bankleitzahl. |
+| bankName | String | Enthält den Namen der Bank. |
+| bankPostalCode | String | Enthält die PLZ der Bank. |
+| bankLocality | String | Enthält den Ort der Bank. |
+| bankShortName | String | Enthält die verkürzte Schreibweise der Bank. |
+| bic | String | Enthält die BIC. |
+| accountNumber | String | Enthält die Kontonummer. |
+| countryCentralBankName | String | ggf. enthält den Namen der Zentralbank. |
+| countryCentralBankUrl | String | ggf. enthält die URL auf die Website der Zentralbank. |
+| companyName | String | Enthält den Firmennamen. |
+
