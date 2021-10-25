@@ -101,6 +101,8 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 
 ### Generelle Statuscodes
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
 | Code | Bedeutung |
 | ---- | --------- |
 | name_is_natural_person | Bei dem übermittelten Namen handelt es sich um eine natürliche Person. z.B. "Mario Fischer" |
@@ -117,7 +119,11 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | name_has_duplicates | Teile des Namens sind in mehreren Feldern gleichzeitig anwesend, z.B. "Ilja Weber" im Vornamenfeld, "Weber" Nachnamenfeld |
 | name_not_found | Die Schreibweise des Namens ist unbekannt. |
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
 ### Mit aktivem Zusatzservice "Echtheitsprüfung"
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -128,9 +134,13 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | name_has_placeholder | Der Name ist ein Platzhalter, z.B. "Max Musterman" |
 | name_has_random_typing | Der Name ist eine Zufallskette an Zeichen, z.B. "Asdasdasd fAsfasf" |
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
 ## Rufnummernprüfung
 
 ### Statuscodes
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -147,9 +157,13 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | phone_is_unknown_type | Der Typ der Telefonnummer konnte nicht eindeutig erkannt werden. |
 | phone_carrier_X | Die Telefonnummer gehört oder gehörte ursprünglich dem X - Anbieter. Anstatt von X steht der Kürzel des Anbieters, z.B. "o2" |
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
 ## IBAN Prüfung
 
 ### Generelle Statuscodes
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -162,7 +176,11 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | iban_length_invalid | Die Länge der IBAN ist falsch. |
 | iban_is_sepa | Die IBAN ist SEPA fähig. |
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
 ### Mit dem Zusatzservice "Kontonummernprüfung"
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -170,13 +188,33 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | iban_account_invalid | Die Kontonummer ist falsch. |
 | iban_account_checkmethod_X | Die Kontonummer wurde mit der Prüfzimmermethode X geprüft. Anstatt von X steht die Nummer der Prüfzimmermethode, z.B. "10" |
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
 
 ## E-Mail Adresse Prüfung
 
 ### Generelle Statuscodes
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
+
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
 ### Mit aktivem Zusatzservice "Erweiterte STMP Prüfung"
 
 ## Umsatzsteuer ID Prüfung
 
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
+
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
 ### Statuscodes
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+
+
+
+[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
