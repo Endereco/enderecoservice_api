@@ -230,7 +230,7 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 
 ### Mit aktivem Zusatzservice "Erweiterte SMTP Prüfung"
 
-siehe [Veraltete Codes](#veraltete-codes-1)
+siehe [Veraltete Codes](#veraltete-codes)
 
 ### Veraltete Codes
 
