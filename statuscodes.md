@@ -9,7 +9,7 @@
 | [Namensprüfung](#namensprüfung) | [Generelle Statuscodes](#generelle-statuscodes-2) <br> [zus. Echtheitsprüfung](#mit-aktivem-zusatzservice-echtheitsprüfung) |
 | [Rufnummernprüfung](#namensprüfung) | [Statuscodes](#statuscodes) |
 | [IBAN Prüfung](#iban-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-3) <br> [zus. Kontonummernprüfung](#mit-dem-zusatzservice-kontonummernprüfung) |
-| [E-Mail Adresse Prüfung](#e-mail-adresse-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-4) <br> [zus. Erweiterte STMP Prüfung](#mit-aktivem-zusatzservice-erweiterte-stmp-prüfung) |
+| [E-Mail Adresse Prüfung](#e-mail-adresse-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-4) <br> [zus. Erweiterte SMTP Prüfung](#mit-aktivem-zusatzservice-erweiterte-smtp-prüfung) |
 | [Umsatzsteuer ID Prüfung](#umsatzsteuer-id-prüfung) | [Statuscodes](#statuscodes-1) |
 
 ## Adresseingabeassistent
@@ -228,7 +228,7 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
-### Mit aktivem Zusatzservice "Erweiterte STMP Prüfung"
+### Mit aktivem Zusatzservice "Erweiterte SMTP Prüfung"
 
 siehe [Veraltete Codes](#veraltete-codes-1)
 
