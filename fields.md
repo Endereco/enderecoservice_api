@@ -27,7 +27,43 @@ mehrere Datensätze zu übermitteln (Bulk-Processing) und die Error-Codes sind r
 
 | Feld | Erwarteter Wert | Bedeutung |
 | --- | --- | --- |
-| | | |
+| country | String | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
+| language | String | Sprachkürzel für die Ausgabe. Spielt aktuell keine Rolle, zukünftig kann damit die Sprache der Ausgabe beeinflusst werden. |
+| postCode | String | Enthält die Postleitzahl. |
+| cityName | String | Enthält den Ortsnamen. |
+| streetFull | String | Enthält die Straße mit Hausnummer und ggf. Adresszusatz. |
+| street | String | Enthält nur den Straßennamen.  |
+| houseNumber | String | Enthält die Hausnummer. |
+| additionalInfo | String | Enthält Adresszusatz. |
+| email | String | Enthält die E-Mail Adresse. |
+| salutation | [m,f,d,x,s,o] | Enthält die Anrede-Code. Siehe [Tabelle der Anrede-Codes](#tabelle-der-anrede-codes) |
+| firstName | String| Enthält den Vornamen. |
+| lastName | String | Enthält den Nachnamen. |
+| phone | String | Enthält die Rufnummer. |
+| format | String | Enthält den Namen des Format. Wird aktuell nur bei Rufnummernprüfung verwendet. Siehe Liste der Rufnummernformate |
+| iban | String | Enthält die IBAN. |
+| vatId | String | Enthält die Umsatzsteuer ID Nummer. |
+| sessionId | String | Enthält die Session ID. Siehe [Doku für Sessions](./sessions-guideline.md). |
+
+### Tabelle der Anrede-Codes
+
+| Code | Bedeutung |
+| --- | --- |
+| m | männlich |
+| f | weiblich |
+| d | divers |
+| x | unbekannt |
+| s | Familie |
+| o | Organisation |
+
+### Liste der Rufnummernformate
+| Format | Bedeutung |
+| --- | --- |
+| E164 | Siehe, [E.164 Format](https://de.wikipedia.org/wiki/E.164) |
+| INTERNATIONAL | Internationale Schreibweise der Nummer. |
+| NATIONAL | Nationale Schreibweise der Nummer. |
+| RFC3966 | Schreibweise der Nummer, die in *href*-Attribut verwendet werden kann (tel: Link). |
+
 
 ## Ausgabenfelder
 
