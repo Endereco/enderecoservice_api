@@ -1,27 +1,13 @@
-# Liste aller Statuscode und ihre Interpretation |
-|[Adresseingabe-Assistent]
-|[Generelle Statuscodes]<a name="head1.1">|
+# Liste aller Statuscode und ihre Interpretation 
 
-|Adressprüfung|<br/>
-|  <a name="head2.1"></a>Generelle Statuscodes|<br/>
-|  <a name="head1.2"></a>Zusatz Erweitere Statuscodes|<br/>
-|  <a name="head2.3"></a>Experimentelle Statuscodes|<br/>
-|  <a name="head2.4"></a>Veraltete Statuscodes|<br/>
-  
-|Namensprüfung|<br/>
-|  Generelle Statuscodes|<br/>
-|  Zusatz Echtheitsprüfung|<br/>
-  
-|Telefnonnummernprüfung|<br/>
-|  Generelle Statuscodes|<br/>
-  
-|IBAN Prüfung|<br/>
-|  Generelle Statuscodes|<br/>
-|  Zusatz Kontonummerprüfung|<br/>
-  
+| Service | Statuscode Gruppe | 
+|---|---|
+| Adresseingabeassistent | [Generelle Statuscodes](#) 
+
+
 ## Adresseingabeassistent
 
-### Generelle Statuscodes<a name="head1.1">
+### Generelle Statuscodes
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -31,7 +17,7 @@
 
 ## Adressprüfung
 
-### Generelle Statuscodes:<a name="head2.1">
+### Generelle Statuscodes
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -63,7 +49,7 @@
 | address_is_paketshop | Bei der Adresse handelt es sich um ein Paketshop. |
 
 
-### Erweiterte Statuscodes:<a name="head2.2">
+### Erweiterte Statuscodes
 
 Um den manuellen Aufwand bei Bearbeitung von Adressprüfungen zu minimieren, kann zusätzlich zu Ergebnissen der
 Adressprüfung eine serverseitig klassifizierung die Änderungen bewerten.
@@ -86,7 +72,7 @@ Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [ADRESSTEIL
 | building_number_minor_correction | Kleine Korrektur der Hausnummer. |
 | building_number_major_correction | Wichtige Korrektur der Hausnummer. |
 
-### Experimentelle Statuscodes:<a name="head2.3">
+### Experimentelle Statuscodes
 
 Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch folgende Statuscodes ausgegeben werden:
 
