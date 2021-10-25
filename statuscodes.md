@@ -8,7 +8,7 @@
 | [Rufnummernprüfung](#namensprüfung) | [Statuscodes](#statuscodes) |
 | [IBAN Prüfung](#iban-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-3) <br> [zus. Kontonummernprüfung](#mit-dem-zusatzservice-kontonummernprüfung) |
 | [E-Mail Adresse Prüfung](#e-mail-adresse-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-4) <br> [zus. Erweiterte STMP Prüfung](#mit-aktivem-zusatzservice-erweiterte-stmp-prüfung) |
-| [Umsatzsteuer ID Prüfung](#umsatzsteuer-id-prüfung) | [Statuscodes](#statuscodes-2) |
+| [Umsatzsteuer ID Prüfung](#umsatzsteuer-id-prüfung) | [Statuscodes](#statuscodes-1) |
 
 ## Adresseingabeassistent
 
