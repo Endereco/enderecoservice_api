@@ -2,6 +2,10 @@
 
 ## Inhaltsverzeichnis
 
+- [Grundaufbau der JSON](#grundaufbau-der-json)
+- [Eingabeparameter](#eingabeparameter)
+- [Ausgabenfelder](#ausgabenfelder)
+
 ## Grundaufbau der JSON
 
 Der grundsätzliche Aufbau der JSON folgt aus der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification).
@@ -25,4 +29,8 @@ mehrere Datensätze zu übermitteln (Bulk-Processing) und die Error-Codes sind r
 | --- | --- | --- |
 | | | |
 
-## Ausgabeparameter
+## Ausgabenfelder
+
+| Feld | Erwarteter Wert | Bedeutung |
+| --- | --- | --- |
+| | | |
