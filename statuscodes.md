@@ -2,13 +2,13 @@
 
 | Service | Statuscode Gruppe | 
 |---|---|
-| [Adresseingabeassistent](#) | [Generelle Statuscodes](#generelle-statuscodes) |
-| [Adressprüfung](#) | [Generelle Statuscodes](#) <br> [Erweiterte Statuscodes](#) <br> [Experimentelle Statuscodes](#) <br> [Veraltete Statuscodes](#) |
-| [Namensprüfung](#) | [Generelle Statuscodes](#generelle-statuscodes) <br> [zus. Echtheitsprüfung](#) |
-| [Rufnummernprüfung](#) | [Statuscodes](#generelle-statuscodes) |
-| [IBAN Prüfung](#) | [Generelle Statuscodes](#) <br> [zus. Kontonummerprüfung](#) |
-| [E-Mail Adresse Prüfung](#) | [Generelle Statuscodes]() <br> [zus. Erweiterte STMP Prüfung](#) |
-| [Umsatzsteuer ID Prüfung](#) | [Statuscodes](#) |
+| [Adresseingabeassistent](#adresseingabeassistent) | [Generelle Statuscodes](#generelle-statuscodes) |
+| [Adressprüfung](#adressprüfung) | [Generelle Statuscodes](#) <br> [Erweiterte Statuscodes](#) <br> [Experimentelle Statuscodes](#) <br> [Veraltete Statuscodes](#) |
+| [Namensprüfung](#namensprüfung) | [Generelle Statuscodes](#generelle-statuscodes) <br> [zus. Echtheitsprüfung](#mit-aktivem-zusatzservice-echtheitsprüfung) |
+| [Rufnummernprüfung](#namensprüfung) | [Statuscodes](#statuscodes-1) |
+| [IBAN Prüfung](#iban-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-2) <br> [zus. Kontonummernprüfung](#mit-dem-zusatzservice-kontonummernprüfung) |
+| [E-Mail Adresse Prüfung](#e-mail-adresse-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-3) <br> [zus. Erweiterte STMP Prüfung](#mit-aktivem-zusatzservice-erweiterte-stmp-prüfung) |
+| [Umsatzsteuer ID Prüfung](#umsatzsteuer-id-prüfung) | [Statuscodes](#statuscodes-2) |
 
 ## Adresseingabeassistent
 
@@ -99,7 +99,7 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 
 ## Namensprüfung
 
-### Statuscodes
+### Generelle Statuscodes
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -162,7 +162,7 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | iban_length_invalid | Die Länge der IBAN ist falsch. |
 | iban_is_sepa | Die IBAN ist SEPA fähig. |
 
-### Mit dem Zusatzservice "Kontonummerprüfung"
+### Mit dem Zusatzservice "Kontonummernprüfung"
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -173,7 +173,7 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 
 ## E-Mail Adresse Prüfung
 
-### Generelle Statuscode
+### Generelle Statuscodes
 
 ### Mit aktivem Zusatzservice "Erweiterte STMP Prüfung"
 
