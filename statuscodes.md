@@ -14,7 +14,7 @@
 
 ### Generelle Statuscodes
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -22,13 +22,13 @@
 | A2000 | Es gibt mehrere Elemente in der Vorschlagsliste. |
 | A3000 | Es wurden keine Elemente für die Vorschlagsliste gefunden. |
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ## Adressprüfung
 
 ### Generelle Statuscodes
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -59,11 +59,11 @@
 | address_is_postfach | Bei der Adresse handelt es sich um ein Postfach. |
 | address_is_paketshop | Bei der Adresse handelt es sich um ein Paketshop. |
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ### Erweiterte Statuscodes
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 Um den manuellen Aufwand bei Bearbeitung von Adressprüfungen zu minimieren, kann zusätzlich zu Ergebnissen der
 Adressprüfung eine serverseitig klassifizierung die Änderungen bewerten.
@@ -86,11 +86,11 @@ Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [ADRESSTEIL
 | building_number_minor_correction | Kleine Korrektur der Hausnummer. |
 | building_number_major_correction | Wichtige Korrektur der Hausnummer. |
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ### Experimentelle Statuscodes
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch folgende Statuscodes ausgegeben werden:
 
@@ -99,11 +99,11 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | address_contains_unverified_info | In der Adresse gibt es einen Teil, der nicht geprüft werden kann, der jedoch auch nicht entfernt wird. |
 | building_number_contains_unverified_info | In der Hausnummer wurde ein Element übermittelt, das nicht geprüft werden kann und in der Prüfung ignoriert wurde . z.B. ein Zustellhinweis. |
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ### Veraltete Statuscodes
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 !! **DEPRECATED** !!
 
@@ -114,13 +114,13 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | A2000 | Mehrere Varianten. |
 | A3000 | Keine Varianten. Die Adresse existiert nicht in unseren Datenbanken. |
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ## Namensprüfung
 
 ### Generelle Statuscodes
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -138,11 +138,11 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | name_has_duplicates | Teile des Namens sind in mehreren Feldern gleichzeitig anwesend, z.B. "Ilja Weber" im Vornamenfeld, "Weber" Nachnamenfeld |
 | name_not_found | Die Schreibweise des Namens ist unbekannt. |
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ### Mit aktivem Zusatzservice "Echtheitsprüfung"
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -153,13 +153,13 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | name_has_placeholder | Der Name ist ein Platzhalter, z.B. "Max Musterman" |
 | name_has_random_typing | Der Name ist eine Zufallskette an Zeichen, z.B. "Asdasdasd fAsfasf" |
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ## Rufnummernprüfung
 
 ### Statuscodes
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -176,13 +176,13 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | phone_is_unknown_type | Der Typ der Telefonnummer konnte nicht eindeutig erkannt werden. |
 | phone_carrier_X | Die Telefonnummer gehört oder gehörte ursprünglich dem X - Anbieter. Anstatt von X steht der Kürzel des Anbieters, z.B. "o2" |
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ## IBAN Prüfung
 
 ### Generelle Statuscodes
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -195,11 +195,11 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | iban_length_invalid | Die Länge der IBAN ist falsch. |
 | iban_is_sepa | Die IBAN ist SEPA fähig. |
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ### Mit dem Zusatzservice "Kontonummernprüfung"
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -207,33 +207,33 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | iban_account_invalid | Die Kontonummer ist falsch. |
 | iban_account_checkmethod_X | Die Kontonummer wurde mit der Prüfzimmermethode X geprüft. Anstatt von X steht die Nummer der Prüfzimmermethode, z.B. "10" |
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 
 ## E-Mail Adresse Prüfung
 
 ### Generelle Statuscodes
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ### Mit aktivem Zusatzservice "Erweiterte STMP Prüfung"
 
 ## Umsatzsteuer ID Prüfung
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ### Statuscodes
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 
 
-[zurück zum Inhaltsverzeichnis ↑] (#liste-aller-statuscode-und-ihre-interpretation)
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
