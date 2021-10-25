@@ -201,6 +201,8 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
 #### Antwort Basis + Zusatzfunktion "Automatische Korrekturübernahme"
 
 ```json
@@ -232,6 +234,8 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
 #### Antwort Basis + Zusatzfunktion "Hausnummerexistenzprüfung"
 
 ```json
@@ -253,6 +257,8 @@ Siehe [Dokumentation für Felder](./fields.md).
   }
 }
 ```
+
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung einer Adresse mit Straße/Hausnummer in einem Feld
 
@@ -319,6 +325,8 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
 #### Antwort Basis + Zusatzfunktion "Automatische Korrekturübernahme"
 
 ```json
@@ -350,6 +358,8 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
 #### Antwort Basis + Zusatzfunktion "Hausnummerexistenzprüfung"
 
 ```json
@@ -371,6 +381,8 @@ Siehe [Dokumentation für Felder](./fields.md).
   }
 }
 ```
+
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Vorschlagsliste für die Teileingabe der Postleitzahl
 
@@ -459,6 +471,8 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
 ### Vorschlagsliste für die Teileingabe des Ortes
 
 [zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
@@ -538,6 +552,8 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
 ### Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer
 
 [zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
@@ -603,6 +619,8 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
 ### Vorschlagsliste für die Teileingabe der Straße mit Hausnummer
 
 [zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
@@ -662,6 +680,8 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
 ### Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse
 
 [zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
@@ -712,6 +732,8 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
 #### Antwort Basis + Zusatzfunktion "Zustellbarkeitsprüfung"
 
 ```json
@@ -726,6 +748,8 @@ Siehe [Dokumentation für Felder](./fields.md).
   }
 }
 ```
+
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung des Namens einer Person
 
@@ -786,6 +810,8 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
 #### Antwort Basis + Zusatzfunktion "Echtheitsprüfung der Person"
 
 ```json
@@ -811,6 +837,8 @@ Siehe [Dokumentation für Felder](./fields.md).
   }
 }
 ```
+
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung einer Telefonnummer
 
@@ -874,6 +902,8 @@ Siehe [Dokumentation für Felder](./fields.md).
   }
 }
 ```
+
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung und ggf. Formatierung einer nationalen Telefonnummer mit Landescode
 
@@ -939,6 +969,8 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
 ### Prüfung und speziale Formatierung einer Telefonnummer
 
 [zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
@@ -1003,6 +1035,8 @@ Siehe [Dokumentation für Felder](./fields.md).
   }
 }
 ```
+
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung der IBAN und ggf. der Kontonummer
 
@@ -1071,6 +1105,9 @@ Siehe [Dokumentation für Felder](./fields.md).
    }
 }
 ```
+
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
 #### Antwort Basis + Zusatzfunktion "Kontonummer verifizieren"
 
 ```json
@@ -1108,6 +1145,8 @@ Siehe [Dokumentation für Felder](./fields.md).
    }
 }
 ```
+
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung der Umsatzsteuer ID
 
@@ -1154,3 +1193,5 @@ Siehe [Dokumentation für Felder](./fields.md).
    }
 }
 ```
+
+Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
