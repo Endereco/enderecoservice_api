@@ -218,24 +218,59 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
-
+| Code | Bedeutung |
+| ---- | --------- |
+| email_correct | Die E-Mail Adresse ist korrekt. |
+| email_not_correct | Die E-Mail Adresse ist nicht korrekt. |
+| email_syntax_error | die Schreibweise der E-Mail Adresse ist falsch. |
+| email_no_mx | Es gibt keinen E-Mail Server hinter der E-Mail Domain. |
+| email_unknown_tld | Top-Level-Domain der E-Mail Adresse ist nicht bekannt / existiert nicht. |
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ### Mit aktivem Zusatzservice "Erweiterte STMP Prüfung"
 
+siehe [Veraltete Codes](#veraltete-codes-1)
+
+### Veraltete Codes
+
+**!!DEPRECATED!!**
+
+Diese Codes werden bald mit sprechenden Statuscodes ersetzt. Bitte nicht bei der Eigenentwicklung einsetzen.
+
+| Code | Bedeutung |
+| ---- | --------- |
+| A1000	| Alles OK. Die eMail soll zustellbar sein und es wurden keine Tricks auf dem Server erkannt. |
+| A1100	| Die eMail werden zu jeder eMail-Adresse akzeptiert. |
+| A1110	| Alle email zu einer bestimmten Domain werden akzeptiert. |
+| A1400	| Die eMail werden akzeptiert, es handelt sich jedoch um eine "disposable" eMail-Adresse. |
+| A4000	| Fehler. |
+| A4100	| SMTP Fehler. |
+| A4110	| Man könnte sich zwar mit SMTP verbinden, aber danach bricht die Verbindung ab. |
+| A4200	| Falsche Syntax. |
+| A4300	| Server kennt die eMail-Adresse nicht. |
+| A4400	| eMail Zustellung fehlgeschlagen. |
+| A4500	| Relay Fehler. |
+| A4600	| Antispam blockiert die eMail. |
+| A4700	| eMail-Konto existiert nicht, ist inaktiv oder kann keine eMail empfangen. |
+| A4800	| Kein eMail Server auf der Domain gefunden. |
+| A4810	| eMail Server ist down. |
+| A4900	| Span traps erkannt. |
+| A5000	| Unbekannter Fehler. |
+
 ## Umsatzsteuer ID Prüfung
-
-[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
-
-
-
-[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
 ### Statuscodes
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
-
+| Code | Bedeutung |
+| ---- | --------- |
+| vat_valid | Umsatzsteuer ID ist korrekt. |
+| vat_needs_correction | Schreibweise der Umsatzsteuer ID ist korrekturbedürftig. |
+| vat_unknown_country_code | Landeskürzel ist falsch oder unbekannt. | 
+| vat_wrong_format | Format entspricht nicht der [Spezifikation](http://ec.europa.eu/taxation_customs/vies/faq.html?locale=de#item_11). | 
+| vat_has_company_name | Für die Umsatzsteuer ID konnte der Firmenname ermittelt werden. Der Firmenname ist in der Ausgabe vorhanden. | 
+| vat_invalid | Die Umsatzsteuer ID ist ungültig.  |
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
