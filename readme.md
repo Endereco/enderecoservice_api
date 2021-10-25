@@ -170,6 +170,8 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
+Siehe [Dokumentation für Felder](#).
+
 #### Antwort Basis
 
 ```json
@@ -286,6 +288,7 @@ POST https://endereco-service.de/rpc/v1
   }
 }
 ```
+Siehe [Dokumentation für Felder](#).
 
 #### Antwort Basis
 
@@ -402,6 +405,8 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
+Siehe [Dokumentation für Felder](#).
+
 #### Antwort Basis
 
 ```json
@@ -487,6 +492,8 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
+Siehe [Dokumentation für Felder](#).
+
 #### Antwort Basis
 
 ```json
@@ -566,6 +573,8 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
+Siehe [Dokumentation für Felder](#).
+
 #### Antwort Basis
 
 ```json
@@ -629,6 +638,8 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
+Siehe [Dokumentation für Felder](#).
+
 #### Antwort Basis
 
 ```json
@@ -671,6 +682,8 @@ POST https://endereco-service.de/rpc/v1
 
 #### Body raw (JSON)
 
+rodrigo@endereco.de ist eine richtig formatierte, aber nicht zustellbare E-Mail Adresse.
+
 ```json
 {
   "jsonrpc": "2.0",
@@ -678,10 +691,11 @@ POST https://endereco-service.de/rpc/v1
   "method": "emailCheck",
   "params": {
     "email": "rodrigo@endereco.de"
-    // Eine richtig formatierte, aber nicht zustellbare E-Mail Adresse.
   }
 }
 ```
+
+Siehe [Dokumentation für Felder](#).
 
 #### Antwort Basis
 
@@ -745,6 +759,8 @@ POST https://endereco-service.de/rpc/v1
   }
 }
 ```
+
+Siehe [Dokumentation für Felder](#).
 
 #### Antwort Basis
 
@@ -827,6 +843,8 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
+Siehe [Dokumentation für Felder](#).
+
 #### Antwort Basis
 
 ```json
@@ -888,6 +906,8 @@ POST https://endereco-service.de/rpc/v1
   }
 }
 ```
+
+Siehe [Dokumentation für Felder](#).
 
 #### Antwort Basis
 
@@ -952,6 +972,8 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
+Siehe [Dokumentation für Felder](#).
+
 #### Antwort Basis
 
 ```json
@@ -1012,6 +1034,8 @@ POST https://endereco-service.de/rpc/v1
    }
 }
 ```
+
+Siehe [Dokumentation für Felder](#).
 
 #### Antwort Basis
 ```json
@@ -1115,6 +1139,8 @@ POST https://endereco-service.de/rpc/v1
    }
 }
 ```
+
+Siehe [Dokumentation für Felder](#).
 
 #### Antwort Basis
 ```json
