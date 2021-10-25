@@ -1,6 +1,6 @@
-# Endereco Address-Management-Services API
+# Endereco Services API
 
-Die Endereco API ermöglicht einen automatisierbaren Zugriff auf
+Die Endereco Services API ermöglicht einen automatisierbaren Zugriff auf
 die Echtzeit [Services der Firma Endereco UG (haftungsb.) - Gesellschaft für Master Data Quality Management](https://www.endereco.de/services/). Darunter fallen die Prüfungen von internationalen postalischen Adressen aus über 200 Ländern, eine Prüfung von E-Mail Adressen, Telefonnummern, Namen und anderen Stammdaten von Personen oder Firmen.
  
 ## Über 200 Unternehmen prüfen bereits ihre Stammdaten mit Endereco
