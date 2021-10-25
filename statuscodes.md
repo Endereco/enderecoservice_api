@@ -2,9 +2,13 @@
 
 | Service | Statuscode Gruppe | 
 |---|---|
-| Adresseingabeassistent | [Generelle Statuscodes](#generelle-statuscodes) |
-| Adressprüfung | [Generelle Statuscodes](#) <br> [Erweiterte Statuscodes](#) <br> [Experimentelle Statuscodes](#) <br> [Veraltete Statuscodes](#) |
-
+| [Adresseingabeassistent](#) | [Generelle Statuscodes](#generelle-statuscodes) |
+| [Adressprüfung](#) | [Generelle Statuscodes](#) <br> [Erweiterte Statuscodes](#) <br> [Experimentelle Statuscodes](#) <br> [Veraltete Statuscodes](#) |
+| [Namensprüfung](#) | [Generelle Statuscodes](#generelle-statuscodes) <br> [zus. Echtheitsprüfung](#) |
+| [Rufnummernprüfung](#) | [Statuscodes](#generelle-statuscodes) |
+| [IBAN Prüfung](#) | [Generelle Statuscodes](#) <br> [zus. Kontonummerprüfung](#) |
+| [E-Mail Adresse Prüfung](#) | [Generelle Statuscodes]() <br> [zus. Erweiterte STMP Prüfung](#) |
+| [Umsatzsteuer ID Prüfung](#) | [Statuscodes](#) |
 
 ## Adresseingabeassistent
 
@@ -124,7 +128,7 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | name_has_placeholder | Der Name ist ein Platzhalter, z.B. "Max Musterman" |
 | name_has_random_typing | Der Name ist eine Zufallskette an Zeichen, z.B. "Asdasdasd fAsfasf" |
 
-## Telefonnummernprüfung 
+## Rufnummernprüfung
 
 ### Statuscodes
 
@@ -145,7 +149,7 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 
 ## IBAN Prüfung
 
-### Statuscodes
+### Generelle Statuscodes
 
 | Code | Bedeutung |
 | ---- | --------- |
@@ -165,3 +169,14 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | iban_account_correct | Die Kontonummer ist korrekt. |
 | iban_account_invalid | Die Kontonummer ist falsch. |
 | iban_account_checkmethod_X | Die Kontonummer wurde mit der Prüfzimmermethode X geprüft. Anstatt von X steht die Nummer der Prüfzimmermethode, z.B. "10" |
+
+
+## E-Mail Adresse Prüfung
+
+### Generelle Statuscode
+
+### Mit aktivem Zusatzservice "Erweiterte STMP Prüfung"
+
+## Umsatzsteuer ID Prüfung
+
+### Statuscodes
