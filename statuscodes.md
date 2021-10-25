@@ -3,6 +3,7 @@
 | Service | Statuscode Gruppe | 
 |---|---|
 | Adresseingabeassistent | [Generelle Statuscodes](#generelle-statuscodes) |
+| Adressprüfung | [Generelle Statuscodes](#) <br> [Erweiterte Statuscodes](#) <br> [Experimentelle Statuscodes](#) <br> [Veraltete Statuscodes](#) |
 
 
 ## Adresseingabeassistent
@@ -81,7 +82,7 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 | address_contains_unverified_info | In der Adresse gibt es einen Teil, der nicht geprüft werden kann, der jedoch auch nicht entfernt wird. |
 | building_number_contains_unverified_info | In der Hausnummer wurde ein Element übermittelt, das nicht geprüft werden kann und in der Prüfung ignoriert wurde . z.B. ein Zustellhinweis. |
 
-### <span style="color:red;font-weight: bold;">Veraltete Statuscodes:</span><a name="head2.4">
+### Veraltete Statuscodes
 
 !! **DEPRECATED** !!
 
