@@ -41,7 +41,7 @@ Beispiel:
 https://www.example.com/loremipsum-this-and-taht/usemenegementsystemsetc/users/1314/addresses/3312/?utm_md=123123123&acf_d=15415512351c123
 ```
 
-Wenn man einen solchen Referrer hat, dann soll die Länge auf max. 255 begrenzt werden.
+Wenn man einen solchen Referrer hat, dann hat man zu viel Information.
 
 Kürzere Variante:
 ``` 
