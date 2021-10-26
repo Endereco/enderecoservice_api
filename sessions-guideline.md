@@ -140,7 +140,7 @@ ermöglichen wollen. Aktueller Stand ist die Übergangsphase.
 }
 ```
 
-# Nutzung der JS-SDK
+## Nutzung der JS-SDK
 
 Falls in der Implementierung die [JS-SDK](https://github.com/Endereco/js-sdk) genutzt wird, dann kann die Generierung
 der Session ID übersprungen werden. Diese Aufgabe wird von [JS-SDK](https://github.com/Endereco/js-sdk) erledigt.
