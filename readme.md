@@ -36,11 +36,11 @@ Unsere API ist von Grund auf so konzipiert, dass sie bei korrekter Implementieru
 
 Wie kannst du auf unsere API zugreifen?
 
-1. Frage [über dieses Formular](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) einen API-Key an. Für einen API-Key benötigst du mit endereco eine
-   Vereinbarung zur Auftragsdatenverarbeitung. Nur so haben wir die rechtliche Grundlage dadür. Die Unterlagen senden wir dir zu.
+1. Frage [über dieses Formular](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) einen API-Key an. Für einen API-Key benötigst du mit Endereco UG eine
+   Vereinbarung zur Auftragsverarbeitung. Nur so haben wir als Verarbeiter und du als Verantwortlicher die rechtliche Grundlage dafür. Die Unterlagen senden wir dir zu.
 2. Probiere unsere [Postman-Collection](./downloads/Endereco_API_Beispiele.postman_collection.json) aus. Dort sind alle gängigen Anfragen schon vorformuliert.
    Die [Import-Datei](./downloads/Endereco_API_Beispiele.postman_collection.json) wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
-3. Falls du noch Fragen hast, such' dir den passenden Ansprechpartner aus der Liste aus.
+3. Falls du noch Fragen hast, such' dir den passenden Ansprechpartner aus folgender Liste aus.
 
 ### Ansprechpartner
 
@@ -48,7 +48,7 @@ Wie kannst du auf unsere API zugreifen?
 |---|---|---|
 | geschäftliche Fragen | Robert Rieser  |  info@endereco.de |
 | technische Fragen | Ilja Weber |  support@endereco.de  |
-| Fragen zu Datenschutz | Lena Schmitt | datenschutz@endereco.de |
+| Fragen zur Datenschutz | Lena Schmitt | datenschutz@endereco.de |
 
 ## Übersicht der Funktionen
 
