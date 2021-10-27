@@ -64,10 +64,85 @@ Wenn die Namensprüfung einen Statuscode "name_needs_correction" zurückgibt, da
 
 ## Prüfung von Adressen
 
+Bei Adressprüfung ist aktuell zwischen 5 Fällen zu unterscheiden:
+
+1. Korrekte Adresse
+2. Mehrdeutige Adresse
+3. Korrekturbedürftige Adresse mit Korrekturvorschlägen
+4. Korrekturbedürftige Adresse ohne Korrekturvorschlägen
+5. Eine nicht gefundene Adresse
+
+### Korrekte Adresse
+
+Statuscodes:
+```
+address_correct
+```
+
+Es soll kein Modal angezeigt werden. Die Adressteile sind mit grünen Rahmen zu markieren. Eventuell hinter den Eingaben
+ein grünes Häkchen setzen.
+
+### Mehrdeutige Adresse
+
+Statuscodes:
+``` 
+address_multiple_variants
+```
+Es soll ein Modal mit möglichen Adressen angezeigt werden. Die vollständige Adresse soll orange markiert werden, auch wenn der Nutzer sie bestätigt.
+
+Falls der Nutzer einen Vorschlag auswählt, soll die Adresse grün markiert werden. 
+
+### Korrekturbedürftige Adresse mit Korrekturvorschlägen
+
+Statuscodes:
+``` 
+address_needs_correction
+```
+``` 
+Feld "predictions" ist nicht leer
+```
+
+Es soll ein Modal mit möglichen Korrekturen angezeigt werden. Die betroffene Teile der Adresse sollen orange markiert werden.
+
+Falls der Nutzer einen Korrekturvorschlag auswählt, soll die ganze Adresse grün markiert werden.
+
+### Korrekturbedürftige Adresse ohne Korrekturvorschlägen
+
+Statuscodes:
+``` 
+address_needs_correction [building_number_not_found|building_number_missing]
+```
+``` 
+Feld "predictions" ist leer
+```
+
+Es soll ein Modal mit der eingegebener Adresse angezeigt werden. In der Adresse sind korrekturbedürftige Teile rot zu markieren. 
+Über der Adresse sollen die Fehler als Text ausgeschrieben werden.
+
+### Eine nicht gefundene Adresse
+
+Statuscodes:
+``` 
+address_not_found
+```
+``` 
+Feld "predictions" ist leer
+```
+
+Es soll ein Modal mit der eingegebener Adresse angezeigt werden. Die Adresse soll neutral erscheinen.
+
 ## Prüfung von E-Mail Adressen
+
+Falls die E-Mail Adresse nach der Prüfung fehlerhaft ist, soll das Eingabefeld orange umrandet werden.
 
 ## Prüfung von Telefonnummern
 
+Falls die Telefonnummern nach der Prüfung fehlerhaft ist, soll das Eingabefeld orange umrandet werden.
+
 ## Prüfung von IBAN
 
+Falls dieIBAN nach der Prüfung fehlerhaft ist, soll das Eingabefeld orange umrandet werden.
+
 ## Prüfung von Umsatzsteuer ID
+
+Falls die Umsatzsteuer ID nach der Prüfung fehlerhaft ist, soll das Eingabefeld orange umrandet werden.
