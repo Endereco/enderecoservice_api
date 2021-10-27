@@ -66,11 +66,11 @@ Wenn die Namensprüfung einen Statuscode "name_needs_correction" zurückgibt, da
 
 Bei Adressprüfung ist aktuell zwischen 5 Fällen zu unterscheiden:
 
-1. Korrekte Adresse
-2. Mehrdeutige Adresse
-3. Korrekturbedürftige Adresse mit Korrekturvorschlägen
-4. Korrekturbedürftige Adresse ohne Korrekturvorschlägen
-5. Eine nicht gefundene Adresse
+1. [Korrekte Adresse](#korrekte-adresse)
+2. [Mehrdeutige Adresse](#mehrdeutige-adresse)
+3. [Korrekturbedürftige Adresse mit Korrekturvorschlägen](#korrekturbedürftige-adresse-mit-korrekturvorschlägen)
+4. [Korrekturbedürftige Adresse ohne Korrekturvorschlägen](#korrekturbedürftige-adresse-ohne-korrekturvorschlägen)
+5. [Eine nicht gefundene Adresse](#eine-nicht-gefundene-adresse)
 
 ### Korrekte Adresse
 
