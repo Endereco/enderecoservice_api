@@ -113,7 +113,7 @@ Body der HTTP Anfrage übermittelt.
 
 Für die Übermittlung ist HTTPS (Port 443) zu setzen.
 
-Aus [Datenschutz](./data-protection.md)-Gründen erlauben wir nur eine Server-to-Server Kommunikation
+Aus Datenschutz-Gründen erlauben wir nur eine Server-to-Server Kommunikation
 Direkte Anfragen sind nicht erlaubt. So vermeiden wir, Browserinformationen des Endnutzers zu erhalten.
 
 ### Verzeichnis der Methoden und Use Cases
