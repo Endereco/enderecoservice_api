@@ -65,8 +65,7 @@ Wie kannst du auf unsere API zugreifen?
 
 | technische Methoden |
 |---|
-| Abschluss einer Session |
-| Abschluss einer Konversion |
+| [Abschluss einer Session](./sessions-guideline.md#session) |
 
 ## Übersicht der Statuscodes und Feldbezeichnungen
 
