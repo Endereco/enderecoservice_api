@@ -252,7 +252,7 @@ Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Stat
 
 Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
-#### Antwort Basis + Zusatzfunktion "Hausnummerexistenzprüfung"
+#### Antwort Basis + Zusatzfunktion "Hausnummernexistenzprüfung"
 
 ```json
 {
@@ -377,7 +377,7 @@ Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Stat
 
 Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
-#### Antwort Basis + Zusatzfunktion "Hausnummerexistenzprüfung"
+#### Antwort Basis + Zusatzfunktion "Hausnummernexistenzprüfung"
 
 ```json
 {
