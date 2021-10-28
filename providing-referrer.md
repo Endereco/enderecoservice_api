@@ -37,8 +37,8 @@ https://www.example.com/myapp/users/x/addresses/x
 
 ## Der Referrer soll nicht zu lang sein.
 
-Wir speichern die Anfragen dauerhaft, um später Abrechnugsrelevante Statistiken zu erstellen. Zu lange Texte verursachen
-einen großen Aufwand bei der Datenbankanfragen, wenn man mit Mengen von über 300 Mio arbeitet.
+Wir speichern die Anfragen dauerhaft, um später abrechnugsrelevante Statistiken zu erstellen. Zu lange Texte verursachen
+einen großen Aufwand bei der Datenbankanfragen, wenn man mit Mengen von über 300 Mio. Einträgen arbeitet.
 
 Beispiel:
 
@@ -59,7 +59,7 @@ https://www.example.com/loremipsum-this-and-taht/usemenegementsystemsetc/users/x
 
 ## GET-Parameter sollen auf jedem Fall entfernt werden
 
-GET Parameter enthalten öfters Tracking oder sonstige Daten, die für Endereco Service API nicht relevant sind und aus
+GET Parameter enthalten öfters Tracking ID's oder sonstige Daten, die für Endereco Services API nicht relevant sind und aus
 Datenschutzsicht unerwünscht sind.
 
 ``` 
