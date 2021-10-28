@@ -25,7 +25,7 @@ Manche Systeme können ID's von Kunden oder Kundenadressen enthalten.
 https://www.example.com/myapp/users/1/addresses/3
 ```
 
-Wenn wir eine URL wie im Beispiel bei jeder Anfrage erhalten würden, könnten wir die Anfragen der Person mit Id 1
+Wenn wir eine URL wie im Beispiel bei jeder Anfrage erhalten würden, könnten wir die Anfragen zu der Person mit Id 1
 zuordnen. Das wäre ein Verstoß gegen unsere Datenschutzbestimmungen und eine unrechtmäßige Verarbeitung der
 personenbezogenen Daten.
 
