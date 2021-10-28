@@ -1,12 +1,15 @@
 # Endereco Services API
 
-Die Endereco Services API ermöglicht einen automatisierbaren Zugriff auf
-die Echtzeit [Services der Firma Endereco UG (haftungsb.) - Gesellschaft für Master Data Quality Management](https://www.endereco.de/services/). Darunter fallen die Prüfungen von internationalen postalischen Adressen aus über 200 Ländern, eine Prüfung von E-Mail Adressen, Telefonnummern, Namen und anderen Stammdaten von Personen oder Firmen.
- 
+Die Endereco Services API ermöglicht einen automatisierbaren Zugriff in Echtzeit auf
+die [Services der Firma Endereco UG (haftungsb.) - Gesellschaft für Master Data Quality Management](https://www.endereco.de/services/)
+. Darunter fallen die Prüfungen von internationalen postalischen Adressen aus über 200 Ländern, die Prüfung von E-Mail
+Adressen, Telefonnummern, Namen und anderen Stammdaten von Personen oder Firmen.
+
 ## Über 200 Unternehmen prüfen bereits ihre Stammdaten mit Endereco
 
-Egal ob Onlineshop, Warenwirtschaftssystem, CRM oder eine eigenentwickelte Softwarelösung - Endereco optimiert die Qualität der Stammdaten deiner Kunden und
-erspart Kunden und Mitarbeiten den Mehraufwand, der durch nicht normierte und fehlerhafte Stammdaten entsteht.
+Egal ob Onlineshop, Warenwirtschaftssystem, CRM oder eine eigenentwickelte Softwarelösung — Endereco optimiert die
+Qualität der Stammdaten deiner Kunden und erspart Kunden und Mitarbeiten den Mehraufwand, der durch nicht normierte und
+fehlerhafte Stammdaten entsteht.
 
 Ein Auszug unserer Referenzen:
 
@@ -17,7 +20,8 @@ Ein Auszug unserer Referenzen:
 
 ## Plugins und fertige Intergrationen
 
-Auf Basis unserer API entwickeln wir gemeinsam mit Integrationspartnern schlüsselfertige Produkte für verschiedene Systeme.
+Auf Basis unserer API entwickeln wir gemeinsam mit Integrationspartnern schlüsselfertige Produkte für verschiedene
+Systeme.
 
 ||||
 |---|---|---|
@@ -26,20 +30,25 @@ Auf Basis unserer API entwickeln wir gemeinsam mit Integrationspartnern schlüss
 | [WordPress/WooCommerce Plugin](https://github.com/Endereco/endereco-wp5-client) | [Magento 2 Webshop Extension](https://www.endereco.de/magento/) | [Plentymarkets Extension](https://www.endereco.de/plentymarkets/) | 
 | [DreamRobot App](https://www.endereco.de/dreamrobot/) |  |  |
 
-Wenn du Interesse hast, eine eigene Integration gegen unsere API zu entwickeln, sende eine E-Mail an support@endereco.de.
+Wenn du Interesse hast, eine eigene Integration gegen unsere API zu entwickeln, sende eine E-Mail an
+support@endereco.de.
 
 ## DSGVO konform
 
-Unsere API ist von Grund auf so konzipiert, dass sie bei korrekter Implementierung den Ansprüchen der DSGVO gerecht wird. Unser internes Datenschutz-Team prüft stets die aktuellen rechtlichen Anforderungen und sorgt für eine gesetzeskonforme Umsetzung.
+Unsere API ist von Grund auf so konzipiert, dass sie bei korrekter Implementierung den Ansprüchen der DSGVO gerecht
+wird. Unser internes Datenschutz-Team prüft stets die aktuellen rechtlichen Anforderungen und sorgt für eine
+gesetzeskonforme Umsetzung.
 
 ## Vorbereitung
 
 Wie kannst du auf unsere API zugreifen?
 
-1. Frage [über dieses Formular](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) einen API-Key an. Für einen API-Key benötigst du mit Endereco UG eine
-   Vereinbarung zur Auftragsverarbeitung. Nur so haben wir als Verarbeiter und du als Verantwortlicher die rechtliche Grundlage dafür. Die Unterlagen senden wir dir zu.
-2. Probiere unsere [Postman-Collection](./downloads/Endereco_API_Beispiele.postman_collection.json) aus. Dort sind alle gängigen Anfragen schon vorformuliert.
-   Die [Import-Datei](./downloads/Endereco_API_Beispiele.postman_collection.json) wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
+1. Frage [über dieses Formular](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) einen API-Key an. Für einen
+   API-Key benötigst du mit Endereco UG eine Vereinbarung zur Auftragsverarbeitung. Nur so haben wir als Verarbeiter und
+   du als Verantwortlicher die rechtliche Grundlage dafür. Die Unterlagen senden wir dir zu.
+2. Probiere unsere [Postman-Collection](https://www.endereco.de/wp-content/uploads/2021/10/Endereco-API.postman_collection.json_.zip) aus. Dort sind alle
+   gängigen Anfragen schon vorformuliert. Die [Import-Datei](https://www.endereco.de/wp-content/uploads/2021/10/Endereco-API.postman_collection.json_.zip)
+   wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
 3. Falls du noch Fragen hast, such' dir den passenden Ansprechpartner aus folgender Liste aus.
 
 ### Ansprechpartner
@@ -73,47 +82,53 @@ Mit jeder Antwort der API auf deine Anfrage wird eine Liste von Statuscodes zur�
 
 ![](./imgs/response_1.png "")
 
-Diese Statuscodes beschreiben den geprüften Datensatz und definieren die ggf. notwendigen Anpassungen, sowie die Anzeigelogik an einem Frontend.
-Die [vollständige Liste der Statuscodes](./statuscodes.md) ist für alle Entwickler hilfreich, die die Prüfungen von Endereco
-in ihre Geschäftsprozesse integrieren möchten.
+Diese Statuscodes beschreiben den geprüften Datensatz und definieren die ggf. notwendigen Anpassungen, sowie die
+Anzeigelogik an einem Frontend. Die [vollständige Liste der Statuscodes](./statuscodes.md) ist für alle Entwickler
+hilfreich, die die Prüfungen von Endereco in ihre Geschäftsprozesse integrieren möchten.
 
 Alle verfügbaren Feldbezeichnungen und ihre Bedeutungen sind [hier](./fields.md) erklärt.
 
-Die Reaktionen auf bestimmte Statuscodes sind in unseren [UI Guidelines](./ui-guidelines.md) beschrieben. Diese sind für Frontend
-Entwickler/Designer relevant.
+Die Reaktionen auf bestimmte Statuscodes sind in unseren [UI Guidelines](./ui-guidelines.md) beschrieben. Diese sind für
+Frontend Entwickler/Designer relevant.
 
 ## Request oder Session
 
-Die Leistungen von Endereco sind kostenpflichtig. Dabei unterscheiden wir zwischen zwei Arten der Abrechnung. 
+Die Leistungen von Endereco sind kostenpflichtig. Dabei unterscheiden wir zwischen zwei Arten der Abrechnung.
 
 1. Die Abrechnung je API-Anfrage
 2. Die erfolgsbasierte Abrechnung
 
-Endereco ermöglicht es Nutzern, eine Prüfung erst dann in Rechnung zu stellen, wenn diese
-tatsächlich einen Mehrwert liefert. Erst wenn ein bestimmter logisch zusammenhängender
-Datensatz (z.B. eine Lieferadresse) nach der Verarbeitung durch Endereco beim Nutzer verwendet oder gespeichert wird, rechnen wir ab.
+Endereco ermöglicht es Nutzern, eine Prüfung erst dann in Rechnung zu stellen, wenn diese tatsächlich einen Mehrwert
+liefert. Erst wenn ein bestimmter logisch zusammenhängender Datensatz (z.B. eine Lieferadresse) nach der Verarbeitung
+durch Endereco beim Nutzer verwendet oder gespeichert wird, rechnen wir ab.
 
-Um die erfolgsbasierte Abrechnung zu ermöglichen, müssen die Anfragen in einer Session gebündelt werden. Dieses Vorgehen haben
-wir in [einer Anleitung](./sessions-guideline.md) beschrieben. Jede sessionbasierte Umsetzung wird gemeinsam mit euch von unserem Team abgenommen und vor dem Livegang freigegeben. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
+Um die erfolgsbasierte Abrechnung zu ermöglichen, müssen die Anfragen in einer Session gebündelt werden. Dieses Vorgehen
+haben wir in [einer Anleitung](./sessions-guideline.md) beschrieben. Jede sessionbasierte Umsetzung wird gemeinsam mit
+euch von unserem Team abgenommen und vor dem Livegang freigegeben. Wenn du dazu noch Fragen hast, melde dich bei
+unseren [Ansprechspartnern](#Ansprechspartner).
 
 ## Authentifizierung
 
-Jede API-Anfrage, die an uns gesendet wird, muss einem Nutzer zugeordnet werden können. Dafür muss im HTTP Header der "X-Auth-Key" bei jeder Anfrage mit dem Wert des API-Keys gesetzt werden, den wir für dich erstellt haben.
+Jede API-Anfrage, die an uns gesendet wird, muss einem Nutzer zugeordnet werden können. Dafür muss im HTTP Header der "
+X-Auth-Key" bei jeder Anfrage mit dem Wert des API-Keys gesetzt werden, den wir für dich erstellt haben.
 
-Um unsere API über Postman anzusprechen, kannst du auch in Postman den API-Key hinterlegen. Nachdem du die Endereco "Collection" importiert hast, klicke auf  "Collection", dann auf "Authorization" und dann wähle bei Type "API Key" aus. Trage nun bei Key "X-Auth-Key" ein und bei Value den API-Key, den wir für dich erstellt haben. Diese werden dann bei jedem Request zu jedem API Endpunkt im Header automatisch mitgesendet.
+Um unsere API über Postman anzusprechen, kannst du auch in Postman den API-Key hinterlegen. Nachdem du die Endereco "
+Collection" importiert hast, klicke auf  "Collection", dann auf "Authorization" und dann wähle bei Type "API Key" aus.
+Trage nun bei Key "X-Auth-Key" ein und bei Value den API-Key, den wir für dich erstellt haben. Diese werden dann bei
+jedem Request zu jedem API Endpunkt im Header automatisch mitgesendet.
 
 ![](./imgs/postman_api.png "")
 
 ## Nutzung der API
 
-Der grundsätzliche Aufbau des Protokolls entspricht der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification).
-Es muss im JSON Format formuliert werden. Die Antwort entspricht ebenfalls dem JSON Datei Format. Die JSON wird im
-Body der HTTP Anfrage übermittelt.
+Der grundsätzliche Aufbau des Protokolls entspricht
+der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification). Es muss im JSON Format formuliert werden. Die
+Antwort entspricht ebenfalls dem JSON Datei Format. Die JSON wird im Body der HTTP Anfrage übermittelt.
 
 Für die Übermittlung ist HTTPS (Port 443) zu setzen.
 
-Aus Datenschutz-Gründen erlauben wir nur eine Server-to-Server Kommunikation
-Direkte Anfragen sind nicht erlaubt. So vermeiden wir, Browserinformationen des Endnutzers zu erhalten.
+Aus Datenschutz-Gründen erlauben wir nur eine Server-to-Server Kommunikation Direkte Anfragen sind nicht erlaubt. So
+vermeiden wir, Browserinformationen des Endnutzers zu erhalten.
 
 ### Verzeichnis der Methoden und Use Cases
 
@@ -293,6 +308,7 @@ POST https://endereco-service.de/rpc/v1
   }
 }
 ```
+
 Siehe [Dokumentation für Felder](./fields.md).
 
 #### Antwort Basis
@@ -1059,49 +1075,50 @@ POST https://endereco-service.de/rpc/v1
 
 ```json
 {
-   "jsonrpc": "2.0",
-   "id": 1,
-   "method": "ibanCheck",
-   "params": {
-      "iban": "DE89 3704 0044 0532 0130 00"
-   }
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "ibanCheck",
+  "params": {
+    "iban": "DE89 3704 0044 0532 0130 00"
+  }
 }
 ```
 
 Siehe [Dokumentation für Felder](./fields.md).
 
 #### Antwort Basis
+
 ```json
 {
-   "jsonrpc": "2.0",
-   "id": 1,
-   "result": {
-      "original": {
-         "iban": "DE89 3704 0044 0532 0130 00"
-      },
-      "status": [
-         "iban_needs_correction",
-         "iban_checksum_correct",
-         "iban_length_correct",
-         "iban_is_sepa"
-      ],
-      "predictions": [
-         {
-            "iban": "DE89370400440532013000",
-            "countryCode": "DE",
-            "checksum": "89",
-            "bankCode": "37040044",
-            "bankName": "Commerzbank",
-            "bankPostalCode": "50447",
-            "bankLocality": "Köln",
-            "bankShortName": "Commerzbank Köln",
-            "bic": "COBADEFFXXX",
-            "accountNumber": "0532013000",
-            "countryCentralBankName": "Deutsche Bundesbank",
-            "countryCentralBankUrl": "http://www.bundesbank.de/"
-         }
-      ]
-   }
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "original": {
+      "iban": "DE89 3704 0044 0532 0130 00"
+    },
+    "status": [
+      "iban_needs_correction",
+      "iban_checksum_correct",
+      "iban_length_correct",
+      "iban_is_sepa"
+    ],
+    "predictions": [
+      {
+        "iban": "DE89370400440532013000",
+        "countryCode": "DE",
+        "checksum": "89",
+        "bankCode": "37040044",
+        "bankName": "Commerzbank",
+        "bankPostalCode": "50447",
+        "bankLocality": "Köln",
+        "bankShortName": "Commerzbank Köln",
+        "bic": "COBADEFFXXX",
+        "accountNumber": "0532013000",
+        "countryCentralBankName": "Deutsche Bundesbank",
+        "countryCentralBankUrl": "http://www.bundesbank.de/"
+      }
+    ]
+  }
 }
 ```
 
@@ -1111,37 +1128,37 @@ Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Co
 
 ```json
 {
-   "jsonrpc": "2.0",
-   "id": 1,
-   "result": {
-      "original": {
-         "iban": "DE89 3704 0044 0532 0130 00"
-      },
-      "status": [
-         "iban_needs_correction",
-         "iban_checksum_correct",
-         "iban_length_correct",
-         "iban_is_sepa",
-         "iban_account_correct",
-         "iban_account_checkmethod_13"
-      ],
-      "predictions": [
-         {
-            "iban": "DE89370400440532013000",
-            "countryCode": "DE",
-            "checksum": "89",
-            "bankCode": "37040044",
-            "bankName": "Commerzbank",
-            "bankPostalCode": "50447",
-            "bankLocality": "Köln",
-            "bankShortName": "Commerzbank Köln",
-            "bic": "COBADEFFXXX",
-            "accountNumber": "0532013000",
-            "countryCentralBankName": "Deutsche Bundesbank",
-            "countryCentralBankUrl": "http://www.bundesbank.de/"
-         }
-      ]
-   }
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "original": {
+      "iban": "DE89 3704 0044 0532 0130 00"
+    },
+    "status": [
+      "iban_needs_correction",
+      "iban_checksum_correct",
+      "iban_length_correct",
+      "iban_is_sepa",
+      "iban_account_correct",
+      "iban_account_checkmethod_13"
+    ],
+    "predictions": [
+      {
+        "iban": "DE89370400440532013000",
+        "countryCode": "DE",
+        "checksum": "89",
+        "bankCode": "37040044",
+        "bankName": "Commerzbank",
+        "bankPostalCode": "50447",
+        "bankLocality": "Köln",
+        "bankShortName": "Commerzbank Köln",
+        "bic": "COBADEFFXXX",
+        "accountNumber": "0532013000",
+        "countryCentralBankName": "Deutsche Bundesbank",
+        "countryCentralBankUrl": "http://www.bundesbank.de/"
+      }
+    ]
+  }
 }
 ```
 
@@ -1169,27 +1186,28 @@ POST https://endereco-service.de/rpc/v1
 
 ```json
 {
-   "jsonrpc": "2.0",
-   "id": 1,
-   "method": "vatIdCheck",
-   "params": {
-      "vatId": "DE214205098"
-   }
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "vatIdCheck",
+  "params": {
+    "vatId": "DE214205098"
+  }
 }
 ```
 
 Siehe [Dokumentation für Felder](./fields.md).
 
 #### Antwort Basis
+
 ```json
 {
-   "jsonrpc": "2.0",
-   "id": 1,
-   "result": {
-      "status": [
-         "vat_valid"
-      ]
-   }
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "status": [
+      "vat_valid"
+    ]
+  }
 }
 ```
 
