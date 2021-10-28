@@ -53,8 +53,8 @@ verarbeitet werden.
 | --- | --- |
 | m | männlich |
 | f | weiblich |
-| d | divers |
-| x | unbekannt |
+| d | [divers](https://de.wikipedia.org/wiki/Divers) |
+| x | unbekannt (kann sowohl männlich, als auch weiblich sein) |
 | s | Familie |
 | o | Organisation |
 
