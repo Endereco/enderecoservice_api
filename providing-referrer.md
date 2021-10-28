@@ -1,29 +1,33 @@
-# Referer übermitteln
+# Referrer übermitteln
 
-Für uns ist es interessant zu wissen, woher die Anfragen kommen. Das betrifft sowohl die Anfragen us dem Browser, als auch serverseitige Anfragen oder Anfragen aus einer App.
+Für uns ist es interessant zu wissen, woher die Anfragen kommen. Das betrifft sowohl die Anfragen us dem Browser, als
+auch serverseitige Anfragen oder Anfragen aus einer App.
 
-Wir können damit herausfinden, ob irgendjemand 
-unberechtigt den API-Key. Oder bei einem Softwarefehler unsere Abrechnung anpassen, um Fehler in der Nutzungserfassung zu korrigieren.
+Wir können damit herausfinden, ob irgendjemand unberechtigt den API-Key nutzt. Bei einem Softwarefehler können wir
+unsere Abrechnung anpassen, um Fehler in der Nutzungserfassung zu korrigieren.
 
 Es ist von uns sehr gewünscht, dass jede Implementierung uns den Referrer mitteilt.
 
 Dabei sind folgende Punkte zu beachten:
 
 - Der Referrer muss anonym sein und keinesfalls die persönlichen Daten enthalten.
-- Der Referrer soll nicht zu lang sein. Die Länge des Textes im Referrer soll ausreichend sein, um die Erfassungsstelle in der Website/App zu identifizieren.
-- GET-Parameter sollen auf jedem Fall entfernt werden. Falls über GET Parameter geroutet wird, sollen sie vor der Übermittlung in den Text des Referrer rein, aber nicht als GET Parameter.
+- Der Referrer soll nicht zu lang sein. Die Länge des Textes im Referrer soll ausreichend sein, um die Erfassungsstelle
+  in der Website/App zu identifizieren.
+- GET-Parameter sollen auf jedem Fall entfernt werden. Falls über GET Parameter geroutet wird, sollen sie vor der
+  Übermittlung in den Text des Referrer rein, aber nicht als GET Parameter.
 - Es soll nicht möglich die Anfragen zu unterschiedlichen Datensätzen über Referrer zusammenzuführen.
 
 ## Der Referrer muss anonym sein und keinesfalls die persönlichen Daten enthalten.
 
-Manche Systeme können ID's von Kunden oder Kundenadressen enthalten. 
+Manche Systeme können ID's von Kunden oder Kundenadressen enthalten.
 
 ``` 
 https://www.example.com/myapp/users/1/addresses/3
 ```
 
-Wenn wir eine URL wie im Beispiel bei jeder Anfrage erhalten würden, könnten wir die Anfragen der Person mit 
-Id 1 zuordnen. Das wäre ein Verstoß gegen unsere Datenschutzbestimmungen und eine unrechtmäßige Verarbeitung der personenbezogenen Daten.
+Wenn wir eine URL wie im Beispiel bei jeder Anfrage erhalten würden, könnten wir die Anfragen der Person mit Id 1
+zuordnen. Das wäre ein Verstoß gegen unsere Datenschutzbestimmungen und eine unrechtmäßige Verarbeitung der
+personenbezogenen Daten.
 
 Deswegen soll die Domain vor dem Absenden zu Endereco Services API in sowas umgewandelt werden:
 
@@ -33,10 +37,11 @@ https://www.example.com/myapp/users/x/addresses/x
 
 ## Der Referrer soll nicht zu lang sein.
 
-Wir speichern die Anfragen dauerhaft, um später Abrechnugsrelevante Statistiken zu erstellen. Zu lange Texte 
-verursachen einen großen Aufwand bei der Datenbankanfragen, wenn man mit Mengen von über 300 Mio arbeitet.
+Wir speichern die Anfragen dauerhaft, um später Abrechnugsrelevante Statistiken zu erstellen. Zu lange Texte verursachen
+einen großen Aufwand bei der Datenbankanfragen, wenn man mit Mengen von über 300 Mio arbeitet.
 
-Beispiel: 
+Beispiel:
+
 ``` 
 https://www.example.com/loremipsum-this-and-taht/usemenegementsystemsetc/users/1314/addresses/3312/?utm_md=123123123&acf_d=15415512351c123
 ```
@@ -44,16 +49,18 @@ https://www.example.com/loremipsum-this-and-taht/usemenegementsystemsetc/users/1
 Wenn man einen solchen Referrer hat, dann hat man zu viel Information.
 
 Kürzere Variante:
+
 ``` 
 https://www.example.com/loremipsum-this-and-taht/usemenegementsystemsetc/users/x/addresses/x/
 ```
+
 - GET Parameter entfernt
 - ID's mit "x" ersetzt
 
 ## GET-Parameter sollen auf jedem Fall entfernt werden
 
-GET Parameter enthalten öfters Tracking oder sonstige Daten, die für Endereco Service API nicht relevant sind und 
-aus Datenschutzsicht unerwünscht sind. 
+GET Parameter enthalten öfters Tracking oder sonstige Daten, die für Endereco Service API nicht relevant sind und aus
+Datenschutzsicht unerwünscht sind.
 
 ``` 
 https://www.example.com/myapp/users/x/addresses/x?utm_id=k1dk212d8
@@ -71,8 +78,8 @@ Manche Applikationen nutzen GET Parameter für Routing.
 https://www.example.com/index.php?cl=my-account
 ```
 
-In diesem fall ist "my-account" für Endereco Services API interessant, jedoch soll das GET Parameter trotzdem entfernt werden. 
-Den Namen des Controllers kann man in diesem Fall behalten.
+In diesem fall ist "my-account" für Endereco Services API interessant, jedoch soll das GET Parameter trotzdem entfernt
+werden. Den Namen des Controllers kann man in diesem Fall behalten.
 
 ``` 
 https://www.example.com/index.php/my-account
@@ -80,8 +87,8 @@ https://www.example.com/index.php/my-account
 
 ## Es soll nicht möglich die Anfragen zu unterschiedlichen Datensätzen über Referrer zusammenzuführen
 
-Endereco Service API verarbeitet Namen, Rufnummern, E-Mail Adressen und Lieferadressen getrennt von einander. Es soll technisch nicht möglich 
-sein, sie zusammenzuführen. Referrer ist dabei eine Schwachstelle.
+Endereco Service API verarbeitet Namen, Rufnummern, E-Mail Adressen und Lieferadressen getrennt von einander. Es soll
+technisch nicht möglich sein, sie zusammenzuführen. Referrer ist dabei eine Schwachstelle.
 
 ``` 
 https://www.example.com/order/7023x/address
