@@ -46,8 +46,10 @@ Wie kannst du auf unsere API zugreifen?
 1. Frage [über dieses Formular](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) einen API-Key an. Für einen
    API-Key benötigst du mit Endereco UG eine Vereinbarung zur Auftragsverarbeitung. Nur so haben wir als Verarbeiter und
    du als Verantwortlicher die rechtliche Grundlage dafür. Die Unterlagen senden wir dir zu.
-2. Probiere unsere [Postman-Collection](https://www.endereco.de/wp-content/uploads/2021/10/Endereco-API.postman_collection.json_.zip) aus. Dort sind alle
-   gängigen Anfragen schon vorformuliert. Die [Import-Datei](https://www.endereco.de/wp-content/uploads/2021/10/Endereco-API.postman_collection.json_.zip)
+2. Probiere
+   unsere [Postman-Collection](https://www.endereco.de/wp-content/uploads/2021/10/Endereco-API.postman_collection.json_.zip)
+   aus. Dort sind alle gängigen Anfragen schon vorformuliert.
+   Die [Import-Datei](https://www.endereco.de/wp-content/uploads/2021/10/Endereco-API.postman_collection.json_.zip)
    wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
 3. Falls du noch Fragen hast, such' dir den passenden Ansprechpartner aus folgender Liste aus.
 
@@ -109,13 +111,13 @@ unseren [Ansprechspartnern](#Ansprechspartner).
 
 ## Authentifizierung
 
-Jede API-Anfrage, die an uns gesendet wird, muss einem Nutzer zugeordnet werden können. Dafür muss im HTTP Header der "
-X-Auth-Key" bei jeder Anfrage mit dem Wert des API-Keys gesetzt werden, den wir für dich erstellt haben.
+Jede API-Anfrage, die an uns gesendet wird, muss einem Nutzer zugeordnet werden können. Dafür muss in der Afnrage der
+HTTP-Header "X-Auth-Key" bei jeder Anfrage mit dem Wert des API-Keys gesetzt werden, den wir für dich erstellt haben.
 
-Um unsere API über Postman anzusprechen, kannst du auch in Postman den API-Key hinterlegen. Nachdem du die Endereco "
-Collection" importiert hast, klicke auf  "Collection", dann auf "Authorization" und dann wähle bei Type "API Key" aus.
-Trage nun bei Key "X-Auth-Key" ein und bei Value den API-Key, den wir für dich erstellt haben. Diese werden dann bei
-jedem Request zu jedem API Endpunkt im Header automatisch mitgesendet.
+Um unsere API über Postman anzusprechen, kannst du auch in Postman den API-Key hinterlegen. Nachdem du die
+Postman-Collection importiert hast, klicke auf "Endereco API Beispiele", dann auf "Authorization" und dann wähle bei
+Type "API Key" aus. Trage nun bei Key "X-Auth-Key" ein und bei Value den API-Key, den wir für dich erstellt haben. Diese
+werden dann bei jedem Request zu jedem API Endpunkt im Header automatisch mitgesendet.
 
 ![](./imgs/postman_api.png "")
 
@@ -127,8 +129,8 @@ Antwort entspricht ebenfalls dem JSON Datei Format. Die JSON wird im Body der HT
 
 Für die Übermittlung ist HTTPS (Port 443) zu setzen.
 
-Aus Datenschutz-Gründen erlauben wir nur eine Server-to-Server Kommunikation Direkte Anfragen sind nicht erlaubt. So
-vermeiden wir, Browserinformationen des Endnutzers zu erhalten.
+Aus Datenschutz-Gründen erlauben wir nur eine Server-to-Server Kommunikation. Direkte Anfragen sind nicht erlaubt. So
+vermeiden wir, personenbezogene Daten des Endnutzers zu erhalten, die wir nicht brauchen.
 
 ### Verzeichnis der Methoden und Use Cases
 
@@ -184,7 +186,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -215,7 +217,7 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 #### Antwort Basis + Zusatzfunktion "Automatische Korrekturübernahme"
 
@@ -248,7 +250,7 @@ Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Co
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 #### Antwort Basis + Zusatzfunktion "Hausnummerexistenzprüfung"
 
@@ -272,7 +274,7 @@ Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Co
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung einer Adresse mit Straße/Hausnummer in einem Feld
 
@@ -309,7 +311,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -340,7 +342,7 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 #### Antwort Basis + Zusatzfunktion "Automatische Korrekturübernahme"
 
@@ -373,7 +375,7 @@ Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Co
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 #### Antwort Basis + Zusatzfunktion "Hausnummerexistenzprüfung"
 
@@ -397,7 +399,7 @@ Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Co
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Vorschlagsliste für die Teileingabe der Postleitzahl
 
@@ -432,7 +434,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -486,7 +488,7 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Vorschlagsliste für die Teileingabe des Ortes
 
@@ -521,7 +523,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -567,7 +569,7 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer
 
@@ -604,7 +606,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -634,7 +636,7 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Vorschlagsliste für die Teileingabe der Straße mit Hausnummer
 
@@ -671,7 +673,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -695,7 +697,7 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse
 
@@ -730,7 +732,7 @@ rodrigo@endereco.de ist eine richtig formatierte, aber nicht zustellbare E-Mail 
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -747,7 +749,7 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 #### Antwort Basis + Zusatzfunktion "Zustellbarkeitsprüfung"
 
@@ -764,7 +766,7 @@ Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Co
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung des Namens einer Person
 
@@ -799,7 +801,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -825,7 +827,7 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 #### Antwort Basis + Zusatzfunktion "Echtheitsprüfung der Person"
 
@@ -853,7 +855,7 @@ Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Co
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung einer Telefonnummer
 
@@ -886,7 +888,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -918,7 +920,7 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung und ggf. Formatierung einer nationalen Telefonnummer mit Landescode
 
@@ -952,7 +954,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -984,7 +986,7 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung und speziale Formatierung einer Telefonnummer
 
@@ -1019,7 +1021,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -1051,7 +1053,7 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung der IBAN und ggf. der Kontonummer
 
@@ -1084,7 +1086,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -1122,7 +1124,7 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 #### Antwort Basis + Zusatzfunktion "Kontonummer verifizieren"
 
@@ -1162,7 +1164,7 @@ Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Co
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
 ### Prüfung der Umsatzsteuer ID
 
@@ -1195,7 +1197,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md).
+Siehe [Dokumentation für Feldernamen](./fields.md).
 
 #### Antwort Basis
 
@@ -1211,4 +1213,4 @@ Siehe [Dokumentation für Felder](./fields.md).
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
