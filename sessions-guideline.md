@@ -1,4 +1,4 @@
-# Sessions
+# Sessions Guideline
 
 ## Unterschied zwischen Abrechnung pro Anfrage und Abrechnung pro Datensatz
 
