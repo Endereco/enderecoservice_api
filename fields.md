@@ -9,8 +9,10 @@
 ## Grundaufbau der JSON
 
 Der grundsätzliche Aufbau der JSON folgt aus der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification).
-Die Spezifikation ist jedoch nicht vollständig umgesetzt. Unter anderem gibt es aktuell keine Möglichkeit 
-mehrere Datensätze zu übermitteln (Bulk-Processing) und die Error-Codes sind rudimentär und sollen in einer Integration nicht verarbeitet werden.
+
+Die Spezifikation ist jedoch nicht vollständig umgesetzt. Unter anderem gibt es aktuell keine Möglichkeit mehrere
+Datensätze zu übermitteln (Bulk-Processing) und die Error-Codes sind rudimentär und sollen in einer Integration nicht
+verarbeitet werden.
 
 | Feld | Erwarteter Wert | Bedeutung |
 | --- | --- | --- |
@@ -57,13 +59,13 @@ mehrere Datensätze zu übermitteln (Bulk-Processing) und die Error-Codes sind r
 | o | Organisation |
 
 ### Liste der Rufnummernformate
+
 | Format | Bedeutung |
 | --- | --- |
 | E164 | Siehe, [E.164 Format](https://de.wikipedia.org/wiki/E.164) |
 | INTERNATIONAL | Internationale Schreibweise der Nummer. |
 | NATIONAL | Nationale Schreibweise der Nummer. |
 | RFC3966 | Schreibweise der Nummer, die in *href*-Attribut verwendet werden kann (tel: Link). |
-
 
 ## Ausgabenfelder
 
