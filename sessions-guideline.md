@@ -160,4 +160,35 @@ Vor der Abnahme ist nur die anfragenbasierte Abrechnung möglich.
 ## Hilfe und Schulung
 
 Falls diese Guideline das Thema nicht ausreichen erklärt hat bzw. noch weitere Fragen bestehen, stehen
-unsere [Ansprechspartnern](./readme.md#Ansprechspartner) zur Verfügung.
+unsere [Ansprechspartner](./readme.md#Ansprechspartner) zur Verfügung.
+
+## FAQ
+
+### Wenn der Endkunde nach Adressprüfung sich für seine ursprüngliche Eingabe entscheiden, soll ich trotzdem "doAccounting" senden.
+
+Ja. Unabhängig davon welche Adresse der Kunde am Ende auswählt, wenn Endereco die Adresse geprüft hat und die Adresse
+danach gespeichert wird, soll ein "doAccounting" gesendet werden.
+
+### Was heißt "gespeichert"?
+
+Gespeichert ist eine Adresse, wenn sie nach dem Neustart der Applikation oder Neuladen der Seite weiterhin besteht.
+
+Dabei spielt es keine Rolle wo genau sie gespeichert ist: ob Cookie, Session-Cookie auf dem Server, eine Datei,
+localStorage im Browser, Datenbank oder sonstiges.
+
+### Wann soll die Session ID generiert werden?
+
+Die Session ID soll am Anfang der Eingabe generiert werden, damit alle folgende Anfrage diese im Header übermitteln können. 
+
+### Kann die Session ID für mehrere Adressen verwendet werden?
+
+Nein. Eine Session ID soll nur für eine Adresse bzw. für einen Prozess der Eingabe der Adresse verwendet werden. 
+Im Erfolgsfall soll die Session mit "doAccounting" abgeschlossen werden. Danach soll sie nicht mehr genutzt werden.
+
+### Was passiert mit Sessions, die nicht abgeschlossen wurden?
+
+Solche Sessions werden nach 1 Stunde automatisch als "verlassen" markiert. Das erfolgt auf unseren Servern und muss 
+nicht in einer Integration umgesetzt werden. 
+
+Eine Session, die "verlassen" ist, wird nicht in Rechnung gestellt. Wir 
+vergleichen jedoch die Summen der "abgeschlossenen" und "verlassenen" Sessions, um Anomalien zu erkennen.
