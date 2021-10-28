@@ -84,9 +84,9 @@ Entwickler/Designer relevant.
 
 ## Request oder Session
 
-Die Leistungen von Endereco sind kostenpflichtig. Dabei unterscheiden wir zwei Arten der Abrechnung. 
+Die Leistungen von Endereco sind kostenpflichtig. Dabei unterscheiden wir zwischen zwei Arten der Abrechnung. 
 
-1. Die Abrechnung je API-Anfrage-Request
+1. Die Abrechnung je API-Anfrage
 2. Die erfolgsbasierte Abrechnung
 
 Endereco ermöglicht es Nutzern, eine Prüfung erst dann in Rechnung zu stellen, wenn diese
@@ -94,13 +94,13 @@ tatsächlich einen Mehrwert liefert. Erst wenn ein bestimmter logisch zusammenh�
 Datensatz (z.B. eine Lieferadresse) nach der Verarbeitung durch Endereco beim Nutzer verwendet oder gespeichert wird, rechnen wir ab.
 
 Um die erfolgsbasierte Abrechnung zu ermöglichen, müssen die Anfragen in einer Session gebündelt werden. Dieses Vorgehen haben
-wir in [einer Anleitung](./sessions-guideline.md) beschrieben. Jede sessionbasierte Umsetzung wird gemeinsamt mit euch von unserem Team abgenommen und vor dem Livegang freigegeben. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
+wir in [einer Anleitung](./sessions-guideline.md) beschrieben. Jede sessionbasierte Umsetzung wird gemeinsam mit euch von unserem Team abgenommen und vor dem Livegang freigegeben. Wenn du dazu noch Fragen hast, melde dich bei unseren [Ansprechspartnern](#Ansprechspartner).
 
 ## Authentifizierung
 
 Jede API-Anfrage, die an uns gesendet wird, muss einem Nutzer zugeordnet werden können. Dafür muss im HTTP Header der "X-Auth-Key" bei jeder Anfrage mit dem Wert des API-Keys gesetzt werden, den wir für dich erstellt haben.
 
-Um unsere API über Postman anzusprechen, kannst du auch in Postman den API-Key hinterlegen. Nachdem du die Endereco "Collection" importiert hast, klicke auf  "Collection", dann auf "Authorization" und dann wähle bei Type "API Key" aus. Trage nun bei Key "X-Auth-Key" ein und bei Value den API-Key, den wir dir für dich erstellt haben. Diese werden dann bei jedem Request zu jedem API Endpunkt im Header automatisch mitgesendet.
+Um unsere API über Postman anzusprechen, kannst du auch in Postman den API-Key hinterlegen. Nachdem du die Endereco "Collection" importiert hast, klicke auf  "Collection", dann auf "Authorization" und dann wähle bei Type "API Key" aus. Trage nun bei Key "X-Auth-Key" ein und bei Value den API-Key, den wir für dich erstellt haben. Diese werden dann bei jedem Request zu jedem API Endpunkt im Header automatisch mitgesendet.
 
 ![](./imgs/postman_api.png "")
 
