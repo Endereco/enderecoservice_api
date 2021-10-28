@@ -38,7 +38,7 @@ verarbeitet werden.
 | houseNumber | String | Enthält die Hausnummer. |
 | additionalInfo | String | Enthält Adresszusatz. |
 | email | String | Enthält die E-Mail Adresse. |
-| salutation | [m,f,d,x,s,o] | Enthält die Anrede-Code. Siehe [Tabelle der Anrede-Codes](#tabelle-der-anrede-codes) |
+| salutation | [m,f,d,x,s,o] | Enthält den Anrede-Code. Siehe [Tabelle der Anrede-Codes](#tabelle-der-anrede-codes) |
 | firstName | String| Enthält den Vornamen. |
 | lastName | String | Enthält den Nachnamen. |
 | phone | String | Enthält die Rufnummer. |
