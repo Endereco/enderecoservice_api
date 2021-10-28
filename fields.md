@@ -10,7 +10,7 @@
 
 Der grundsätzliche Aufbau der JSON folgt aus der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification).
 Die Spezifikation ist jedoch nicht vollständig umgesetzt. Unter anderem gibt es aktuell keine Möglichkeit 
-mehrere Datensätze zu übermitteln (Bulk-Processing) und die Error-Codes sind rudimentär und können
+mehrere Datensätze zu übermitteln (Bulk-Processing) und die Error-Codes sind rudimentär und sollen in einer Integration nicht verarbeitet werden.
 
 | Feld | Erwarteter Wert | Bedeutung |
 | --- | --- | --- |
