@@ -36,9 +36,9 @@
 | ---- | --------- |
 | address_correct | Die eingegebene Adresse war korrekt und brauchte keine Korrektur. |
 | address_needs_correction | Die eingegebene Adresse ist nicht korrekt, im “predictions” liegt ein Korrekturvorschlag. |
-| address_multiple_variants | Für die Eingabe gab es mehrere Varianten. Der Nutzer soll eine Auswählen. |
-| address_not_found | Die Adresse wurde gar nicht gefunden.  |
-| address_of_not_supported_type | Bei der Adressat geht es um einen Typ der von uns nicht unterstützt wird, z.B. eine Postfiliale, eine Packstation. |
+| address_multiple_variants | Für die Eingabe gab es mehrere Varianten. Der Nutzer soll eine auswählen. |
+| address_not_found | Die Adresse ist nicht bekannt.  |
+| address_of_not_supported_type | Bei der Adresse geht es um einen Typ der von uns nicht unterstützt wird, z.B. eine Postfiliale, eine Packstation. |
 | address_selected_by_customer | Die Adresse wurde von einem Nutzer manuell bestätigt. |
 | country_code_needs_correction | Ländercode ist falsch und muss korrigiert werden. |
 | country_code_correct | Ländercode ist korrekt. |
@@ -48,15 +48,15 @@
 | locality_correct | Ortsname ist korrekt. |
 | street_name_needs_correction | Straßenname ist falsch und muss korrigiert werden. |
 | street_name_correct | Straßenname ist korrekt. |
-| street_full_needs_correction | Volle Straße (inkl Hausnummer) ist falsch und muss korrigiert werden. |
+| street_full_needs_correction | Volle Straße (inkl. Hausnummer) ist falsch und muss korrigiert werden. |
 | street_full_correct | Volle Straße ist korrekt. |
 | building_number_needs_correction | Hausnummer ist falsch und muss korrigiert werden. |
 | building_number_correct | Hausnummer ist korrekt. |
 | building_number_is_missing | Hausnummer wurde nicht angegeben. |
-| building_number_not_found | (optional) Hausnummer wurde auf der Straße und in der PLZ nicht gefunden. |
+| building_number_not_found | (optional) Hausnummer wurde auf der Straße und in dem PLZ-Bereich nicht gefunden. |
 | additional_info_needs_correction | Zusatzinfos sind falsch und müssen korrigiert werden. |
 | additional_info_correct | Zusatzinfos sind korrekt. |
-| address_is_packstation | Bei dem Adress handelt es sich um eine Packstation. |
+| address_is_packstation | Bei der Adresse handelt es sich um eine Packstation. |
 | address_is_postfiliale | Bei der Adresse handelt es sich um eine Postfiliale. |
 | address_is_postfach | Bei der Adresse handelt es sich um ein Postfach. |
 | address_is_paketshop | Bei der Adresse handelt es sich um ein Paketshop. |
@@ -67,17 +67,17 @@
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
-Um den manuellen Aufwand bei Bearbeitung von Adressprüfungen zu minimieren, kann zusätzlich zu Ergebnissen der
-Adressprüfung eine serverseitig klassifizierung die Änderungen bewerten.
-So kann leichter entschieden werden ob eine vorgeschlagene Korrektur automatisch übernommen werden darf, oder bestätigt werden muss.
+Um den manuellen Aufwand bei der Bearbeitung von Adressprüfungen zu minimieren, kann zusätzlich zu Ergebnissen der
+Adressprüfung eine serverseitige Klassifizierung die Änderungen bewerten.
+So kann leichter entschieden werden, ob eine vorgeschlagene Korrektur automatisch übernommen werden darf oder bestätigt werden muss.
 
-Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [ADRESSTEIL]_[minor|major]_correction
+Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [TEIL]_[minor|major]_correction
 
 | Code | Bedeutung |
 | ---- | --------- |
 | address_minor_correction | Es handelt sich um eine "kleine" Korrektur, die automatisch übernommen werden kann. |
 | address_major_correction | Es handelt sich um eine "kritische" Korrektur, bei der eine automatische Korrekturübernahme unmöglich ist. |
-| country_code_minor_correction | Kleine Landkorrektur. Wird akuell nie ausgegeben. |
+| country_code_minor_correction | Kleine Landkorrektur. Wird aktuell nie ausgegeben. |
 | country_code_major_correction | Wichtige Landeskorrektur. |
 | postal_code_minor_correction | Kleine Korrektur der PLZ. |
 | postal_code_major_correction | Wichtige Korrektur der PLZ. |
@@ -240,21 +240,21 @@ Diese Codes werden bald mit sprechenden Statuscodes ersetzt. Bitte nicht bei der
 
 | Code | Bedeutung |
 | ---- | --------- |
-| A1000	| Alles OK. Die eMail soll zustellbar sein und es wurden keine Tricks auf dem Server erkannt. |
-| A1100	| Die eMail werden zu jeder eMail-Adresse akzeptiert. |
-| A1110	| Alle email zu einer bestimmten Domain werden akzeptiert. |
-| A1400	| Die eMail werden akzeptiert, es handelt sich jedoch um eine "disposable" eMail-Adresse. |
+| A1000	| Alles OK. Die E-Mail Adresse soll zustellbar sein und es wurden keine Tricks auf dem Server erkannt. |
+| A1100	| Die E-Mail Adresse werden zu jeder E-Mail Adresse akzeptiert. |
+| A1110	| Alle E-Mails zu einer bestimmten Domain werden akzeptiert. |
+| A1400	| Die E-Mails werden akzeptiert, es handelt sich jedoch um eine "disposable" E-Mail Adresse. |
 | A4000	| Fehler. |
 | A4100	| SMTP Fehler. |
 | A4110	| Man könnte sich zwar mit SMTP verbinden, aber danach bricht die Verbindung ab. |
 | A4200	| Falsche Syntax. |
-| A4300	| Server kennt die eMail-Adresse nicht. |
-| A4400	| eMail Zustellung fehlgeschlagen. |
+| A4300	| Server kennt die E-Mail Adresse nicht. |
+| A4400	| E-Mail Zustellung fehlgeschlagen. |
 | A4500	| Relay Fehler. |
 | A4600	| Antispam blockiert die eMail. |
-| A4700	| eMail-Konto existiert nicht, ist inaktiv oder kann keine eMail empfangen. |
-| A4800	| Kein eMail Server auf der Domain gefunden. |
-| A4810	| eMail Server ist down. |
+| A4700	| E-Mail Konto existiert nicht, ist inaktiv oder kann keine eMail empfangen. |
+| A4800	| Kein E-Mail Server auf der Domain gefunden. |
+| A4810	| E-Mail Server ist down. |
 | A4900	| Span traps erkannt. |
 | A5000	| Unbekannter Fehler. |
 
