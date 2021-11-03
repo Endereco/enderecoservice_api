@@ -65,7 +65,7 @@ Wie kannst du auf unsere API zugreifen?
 
 | Adresse | E-Mail Adresse | Person |
 |---|---|---|
-| [Adressprüfung](#prüfung-einer-adresse-mit-getrennten-straßehausnummer) | [E-Mail Prüfung](#prüfung-und-ggf-zustellbarkeitsprüfung-einer-e-mail-adresse) | [Namensprüfung](#prüfung-des-namens-einer-person) |
+| [Adressprüfung](#prüfung-einer-adresse-mit-getrennter-straßehausnummer) | [E-Mail Prüfung](#prüfung-und-ggf-zustellbarkeitsprüfung-einer-e-mail-adresse) | [Namensprüfung](#prüfung-des-namens-einer-person) |
 | [PLZ Vorschläge](#vorschlagsliste-für-die-teileingabe-der-postleitzahl) | | |
 | [Ortsvorschläge](#vorschlagsliste-für-die-teileingabe-des-ortes) | | |
 | [Straßenvorschläge](#vorschlagsliste-für-die-teileingabe-der-straße-ohne-hausnummer) | | |
