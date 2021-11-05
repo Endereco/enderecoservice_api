@@ -109,12 +109,19 @@ Je nach Server Konfiguration und dem verwendeten Prüfalgorithmen können noch f
 
 !! **DEPRECATED** !!
 
-| Code | Bedeutung |
-| ---- | --------- |
-| A1000 | Adresse korrekt. |
-| A1100 | Adresse korrekt, aber korrigiert. Gibt es, wenn es nur eine Variante der Adresse gibt, diese sich jedoch einwenig unterscheidet. Kommt mit A1000 zusammen.|
-| A2000 | Mehrere Varianten. |
-| A3000 | Keine Varianten. Die Adresse existiert nicht in unseren Datenbanken. |
+Falls du noch die alten Statuscodes mit Zahlen nutzest, empfehlen wir diese mit neuen Statuscodes zu 
+ersetzen, da die alten Statuscodes Mitte/Ende 2022 nicht mehr unterstützt werden.
+
+Das Mapping ist 1-zu-1, bis auf den Statuscode `A1100`. Bei ihm entspricht die Kombination `A1000` + `A1100` dem 
+Statuscode `address_needs_correction`. Das heißt bei einer korrekturbedürftigen Adresse kommt der 
+Statuscode `address_correct` nicht vor.
+
+| Veralteter Code | Neuer Code | Bedeutung |
+| ---- | --- | --------- |
+| A1000 | address_correct |Adresse korrekt. |
+| A1100 | address_needs_correction | Adresse korrekt, aber korrigiert. Gibt es, wenn es nur eine Variante der Adresse gibt, diese sich jedoch einwenig unterscheidet. Kommt mit A1000 zusammen.|
+| A2000 | address_multiple_variants | Mehrere Varianten. |
+| A3000 | address_not_found | Keine Varianten. Die Adresse existiert nicht in unseren Datenbanken. |
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
