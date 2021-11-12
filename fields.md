@@ -81,7 +81,14 @@ verarbeitet werden.
 | region | String | Erkannte Region bei Rufnummernprüfung. |
 | carrier | String | Der ursprüngliche Netzanbieter bei Rufnummernprüfung. |
 | countryPrefix | String | Landesvorauswahl bei einer Rufnummer. |
+| phone | String | Enthält die Rufnummer. |
 | nationalNumber | String | Der nationale Teil einer Rufnummer. |
+| formatNational| String | Enthält die national formatierte Telefonnummer. |
+| formatInternational | String | Enthält die international formatierte Telefonnummer. |
+| formatE164 | String | Enthält die nach [E.164](https://de.wikipedia.org/wiki/E.164) formatierte Telefonnummer. |
+| formatRFC3966 | String | Enthält die nach [RFC3966](https://datatracker.ietf.org/doc/html/rfc3966) formatierte Telefonnummer. |
+| nationalPrefix | String | Enthält die Ortsvorwahl. |
+| nationalBody | String | Enthält einen Teil der Telefonnummer ohne Landes- und Ortsvorwahl. |
 | leadingZeros |  Zahl | Wie viele "0" sollen einer nationalen Rufnummer vorangestellt werden. |
 | checksum | Zahl | Enthält die Prüfsumme. |
 | bankCode | String | Enthält eine Bankleitzahl. |

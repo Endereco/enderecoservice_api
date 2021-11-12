@@ -175,15 +175,18 @@ Statuscode `address_correct` nicht vor.
 | phone_correct | Die Telefonnummer ist korrekt und richtig formatiert. |
 | phone_invalid | Die Telefonnummer ist falsch geschrieben. Es gibt keine Korrekturvorschläge. |
 | phone_needs_correction | Die Telefonnummer ist nicht ganz korrekt, kann aber korrigiert werden. |
-| phone_format_e164 | Die Telefonnummer ist im [Format E.164](https://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/NP_Nummernraum.pdf?__blob=publicationFile&v=3) |
-| phone_format_international | Die Telefonnummer ist international formatiert. |
-| phone_format_national | Die Telefonnummer ist national formatiert. |
-| phone_format_rfc3966 | Die Telefonnummer ist ein tel: Link. |
-| phone_format_undefined | Format konnte nicht erkannt werden. |
+| phone_format_needs_correction | Die Telefonnummer ist falsch formatiert. Voraussetzung ist, dass ein Format in den Eingabeparametern spezifiziert wurde. |
+| phone_format_e164 | Die übermittelte Telefonnummer ist im [Format E.164](https://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/NP_Nummernraum.pdf?__blob=publicationFile&v=3) |
+| phone_format_international | Die übermittelte Telefonnummer ist international formatiert. |
+| phone_format_national | Die übermittelte Telefonnummer ist national formatiert. |
+| phone_format_rfc3966 | Die übermittelte Telefonnummer ist ein tel: Link. |
+| phone_format_unknown | Das Format konnte nicht erkannt werden. |
 | phone_is_mobile | Die Telefonnummer ist eine Mobilfunknetznummer. |
 | phone_is_fixed_line | Die Telefonnummer ist eine Festnetznummer. |
 | phone_is_unknown_type | Der Typ der Telefonnummer konnte nicht eindeutig erkannt werden. |
-| phone_carrier_X | Die Telefonnummer gehört oder gehörte ursprünglich dem X - Anbieter. Anstatt von X steht der Kürzel des Anbieters, z.B. "o2" |
+| phone_hlr_lookup_succeeded | Die Telefonnummer wurde über HLR-Lookup geprüft und ist aktiv. |
+| phone_hlr_lookup_failed | Die Telefonnummer wurde über HLR-Lookup geprüft und ist inaktiv. |
+| phone_hlr_lookup_not_possible | HLR-Lookup ist für die Telefonnummer nicht möglich (z.B. weil es eine Festnetznummer ist). |
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 

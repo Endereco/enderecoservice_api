@@ -901,18 +901,23 @@ Siehe [Dokumentation für Feldernamen](./fields.md).
       "phone": "+491796862470"
     },
     "status": [
-      "phone_format_undefined",
+      "phone_format_e164",
       "phone_is_mobile",
-      "phone_correct",
-      "phone_carrier_o2"
+      "phone_correct"
     ],
     "predictions": [
       {
         "phone": "+491796862470",
+        "formatNational": "0179 6862470",
+        "formatInternational": "+49 179 6862470",
+        "formatE164": "+491796862470",
+        "formatRFC3966": "tel:+49-179-6862470",
         "region": "Germany",
         "carrier": "O2",
         "countryPrefix": "+49",
         "nationalNumber": "1796862470",
+        "nationalPrefix": "0179",
+        "nationalBody": "6862470",
         "leadingZeros": 1
       }
     ]
@@ -969,16 +974,21 @@ Siehe [Dokumentation für Feldernamen](./fields.md).
     "status": [
       "phone_format_undefined",
       "phone_is_mobile",
-      "phone_correct",
-      "phone_carrier_o2"
+      "phone_correct"
     ],
     "predictions": [
       {
         "phone": "017680728912",
+        "formatNational": "0176 80728912",
+        "formatInternational": "+49 176 80728912",
+        "formatE164": "+4917680728912",
+        "formatRFC3966": "tel:+49-176-80728912",
         "region": "Germany",
         "carrier": "O2",
         "countryPrefix": "+49",
         "nationalNumber": "17680728912",
+        "nationalPrefix": "0176",
+        "nationalBody": "80728912",
         "leadingZeros": 1
       }
     ]
@@ -988,7 +998,7 @@ Siehe [Dokumentation für Feldernamen](./fields.md).
 
 Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
-### Prüfung und speziale Formatierung einer Telefonnummer
+### Prüfung und speziale Formatierung einer Telefonnummer + zus. Funktion HLR-Lookup
 
 [zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
 
@@ -1034,18 +1044,25 @@ Siehe [Dokumentation für Feldernamen](./fields.md).
       "phone": "017680728912"
     },
     "status": [
-      "phone_format_international",
+      "phone_format_undefined",
       "phone_is_mobile",
-      "phone_needs_correction",
-      "phone_carrier_o2"
+      "phone_format_needs_correction",
+      "phone_invalid",
+      "phone_hlr_lookup_failed"
     ],
     "predictions": [
       {
         "phone": "+49 176 80728912",
+        "formatNational": "0176 80728912",
+        "formatInternational": "+49 176 80728912",
+        "formatE164": "+4917680728912",
+        "formatRFC3966": "tel:+49-176-80728912",
         "region": "Germany",
-        "carrier": "O2",
+        "carrier": "Telefónica Germany GmbH & Co. oHG (O2)",
         "countryPrefix": "+49",
         "nationalNumber": "17680728912",
+        "nationalPrefix": "0176",
+        "nationalBody": "80728912",
         "leadingZeros": 1
       }
     ]
