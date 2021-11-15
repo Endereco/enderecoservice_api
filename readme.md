@@ -47,9 +47,9 @@ Wie kannst du auf unsere API zugreifen?
    API-Key benötigst du mit Endereco UG eine Vereinbarung zur Auftragsverarbeitung. Nur so haben wir als Verarbeiter und
    du als Verantwortlicher die rechtliche Grundlage dafür. Die Unterlagen senden wir dir zu.
 2. Probiere
-   unsere [Postman-Collection](https://www.endereco.de/wp-content/uploads/2021/10/Endereco-API.postman_collection.json_.zip)
+   unsere [Postman-Collection](https://www.endereco.de/wp-content/uploads/2021/11/Endereco-API.postman_collection.json_.zip)
    aus. Dort sind alle gängigen Anfragen schon vorformuliert.
-   Die [Import-Datei](https://www.endereco.de/wp-content/uploads/2021/10/Endereco-API.postman_collection.json_.zip)
+   Die [Import-Datei](https://www.endereco.de/wp-content/uploads/2021/11/Endereco-API.postman_collection.json_.zip)
    wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
 3. Falls du noch Fragen hast, such' dir den passenden Ansprechpartner aus folgender Liste aus.
 
