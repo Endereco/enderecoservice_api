@@ -43,7 +43,7 @@ gesetzeskonforme Umsetzung.
 
 Wie kannst du auf unsere API zugreifen?
 
-1. Frage [über dieses Formular](https://share.hsforms.com/1Hez4RJSYQt2EFH_tdnCjsw3e78w) einen API-Key an. Für einen
+1. Frage [über dieses Formular](https://share.hsforms.com/11wqETsTLSuq1fiyIgqtKQA3e78w) einen API-Key an. Für einen
    API-Key benötigst du mit Endereco UG eine Vereinbarung zur Auftragsverarbeitung. Nur so haben wir als Verarbeiter und
    du als Verantwortlicher die rechtliche Grundlage dafür. Die Unterlagen senden wir dir zu.
 2. Probiere
