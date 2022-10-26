@@ -1,4 +1,4 @@
-# Ui Guidelines
+# UI Guidelines
 
 Falls ein Datensatz über Endereco Services API geprüft wird, werden in der Regel diverse Statuscodes zurückgegeben.
 Diese Statuscodes können einfach über Automatisierungen eingesetzt werden, jedoch kann ein normaler Benutzer mit ihnen
@@ -23,8 +23,8 @@ In diesem Dokument beschreiben wir von uns vorgesehene UI für diverse Verfahren
 ## Modal
 
 Wenn eine Korrektur vorgeschlagen werden soll, ist es aus UX Sicht wichtig, dass man die ursprüngliche Eingabe und die
-Korrektur gegen einander vergleichen kann und auf die korrigierte Stellen aufmerksam gemacht wird. So bedarf eine
-Entscheidung, ob die Korrektur übernommen wird oder nicht den minimalen Aufwand. Der minimale Aufwand ist besonders für
+Korrektur miteinander vergleichen kann und auf die korrigierte Stellen aufmerksam gemacht wird. So bedarf eine
+Entscheidung, ob die Korrektur übernommen wird oder nicht, den minimalen Aufwand. Der minimale Aufwand ist besonders für
 Onlineshop wichtig, da dort die Adressen der Käufer während Checkout geprüft werden und eine zu aufwändige
 Korrekturaufforderung zum Bestellabbruch führen kann.
 
@@ -70,11 +70,11 @@ Die Guideline von Endereco ist für diesen Prozess ein Modal zu verwenden.
 ## Prüfung von Namen
 
 Wenn ein Name geprüft wird, können wir kleine Schreibfehler (erster Buchstabe kleingeschrieben) erkennen. Wir erkennen
-außerdem, Vorname und Nachname verdreht wurden und ob die Anrede untypisch ist, z.B. "Herr" bei eindeutig weiblichen
+außerdem, wenn Vorname und Nachname verdreht wurden und ob die Anrede untypisch ist, z.B. "Herr" bei eindeutig weiblichen
 Namen.
 
 Wenn die Namensprüfung einen Statuscode "name_needs_correction" zurückgibt, dann ist aus unserer Sicht eine Korrektur
-notwendig. Das Eingabefeld soll in diesem Fall mit orange
+notwendig. Das Eingabefeld soll in diesem Fall mit Orange markiert werden.
 
 ## Prüfung von Adressen
 
@@ -94,7 +94,7 @@ Statuscodes:
 address_correct
 ```
 
-Es soll kein Modal angezeigt werden. Die Adressteile sind mit grünen Rahmen zu markieren. Eventuell hinter den Eingaben
+Es soll kein Modal angezeigt werden. Die Adressteile sind mit den grünen Rahmen zu markieren. Eventuell hinter den Eingaben
 ein grünes Häkchen setzen.
 
 ### Mehrdeutige Adresse
@@ -154,11 +154,11 @@ address_not_found
 Feld "predictions" ist leer
 ```
 
-Es soll ein Modal mit der eingegebener Adresse angezeigt werden. Die Adresse soll neutral erscheinen.
+Es soll ein Modal mit der eingegebenen Adresse angezeigt werden. Die Adresse soll neutral erscheinen.
 
-## Prüfung von E-Mail Adressen
+## Prüfung von E-Mail-Adressen
 
-Falls die E-Mail Adresse nach der Prüfung fehlerhaft ist, soll das Eingabefeld orange umrandet werden.
+Falls die E-Mail-Adresse nach der Prüfung fehlerhaft ist, soll das Eingabefeld orange umrandet werden.
 
 ## Prüfung von Telefonnummern
 
