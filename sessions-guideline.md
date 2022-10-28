@@ -5,19 +5,16 @@
 Die einfachste Art Endereco Services API zu nutzen ist die Anfragen zu senden und pro Anfrage abgerechnet zu werden.
 Jede Anfrage wird einzeln erfasst und getrennt von anderen gezählt.
 
-Das Problem bei dieser Vorgehensweise ist jedoch, dass nicht jede Anfrage tatsächlich einen Mehrwert für den Nutzer hat.
+Beim diesen Verfahren werden alle Anfrage zusammengezählt, unabhängig davon ob der Nutzer die beabsichtigte Anmeldung bzw. Kauf abschließt oder nicht.  
 So kann jemand zwar eine Adresse eingeben, aber im letzten Moment seine Registrierung abbrechen und die Webseite
-verlassen. Man würde somit für Eingabeassistent und ggf. Adressprüfung zahlen, obwohl man sie nicht gebraucht hat.
+verlassen.
 
-Um es möglichst fair zu gestalten, bietet Endereco eine sog. "erfolgsbasierte Abrechnung". Damit ist gemeint, dass
-Endereco nur dann abrechnet, wenn die Services tatsächlich etwas gebracht haben.
+Als Alternative bietet Endereco eine sog. "erfolgsbasierte Abrechnung". Technisch formuliert sieht das wie folgend aus:
 
-Technisch formuliert sieht das so aus.
+Abrechnung erfolgt nicht pro gesendete Anfrage, sondern pro gespeicherter Datensatz. Ein Datensatz kann eine Rechnungs- bzw. Lieferadresse, eine
+Telefonnummer, ein Name etc. sein.
 
-Abrechnung erfolgt nicht pro Anfrage, sondern pro gespeicherter Datensatz. Ein Datensatz kann eine Lieferadresse, eine
-Telefonnummer, ein Name, etc. sein.
-
-Um ein Datensatz zu erfassen ist manchmal die Nutzung von mehreren Funktionen der API notwendig. Zum Beispiel um eine
+Um ein Datensatz zu erfassen ist manchmen Fällen die Nutzung von mehreren Funktionen der API notwendig. Zum Beispiel um eine
 Adresse zu erfassen, wird zuerst PLZ- und Ortseingabehilfe verwendet, danach Straßeneingabehilfe und abschließend die
 Adressprüfung für die gesamte Adresse. Je nach Eingabe und Korrekturvorschlägen können danach noch weitere
 Adressprüfungen folgen.
@@ -36,7 +33,7 @@ Dafür stellen wir zuerst zwei Konzepte vor:
 
 Eine Session ist der Prozess der Datensatzerfassung.
 
-Sie hat eine eindeutige ID. Die ID ist eindeutig, wenn sie zufällig generiert wird und innerhalb von einem Monat nur
+Jede Session hat eine eindeutige ID. Die ID ist nur dann als eindeutig zu sehen, wenn sie zufällig generiert wird und innerhalb von einem Monat nur
 einmal vorkommt.
 
 Jede Anfrage innerhalb der Session muss die Session ID im Header `x-transaction-id` übermitteln.
@@ -91,7 +88,7 @@ console.log(uuid());
 Wenn im Laufe der Datenerfassung der Datensatz gespeichert wird, egal ob in der Datei, Datenbank, Session-Variable,
 Cookie, localStorage, erwartet Endereco Services API eine Meldung darüber.
 
-Die Meldung ist eine spezielle Anfrage, die wie jede andere Anfrage an Endereco Service API gesendet werden muss.
+Die Meldung ist eine spezielle Anfrage, die, wie jede andere Anfrage, an Endereco Service API gesendet werden muss.
 
 Die Anfrage wird so formuliert:
 
@@ -123,7 +120,7 @@ POST https://endereco-service.de/rpc/v1
 ```
 
 Siehe [Dokumentation für Felder](./fields.md). Die Session ID kommt hierbei doppelt vor: einmal im Header und einmal
-als "sessionId"-Parameter. Der Grund dafür ist, dass wir zukünftig Abschluss mehrerer Sessions über einen Aufruf
+als "sessionsId"-Parameter. Der Grund dafür ist, dass wir zukünftig Abschluss mehrerer Sessions über einen Aufruf
 ermöglichen wollen. Aktueller Stand ist die Übergangsphase.
 
 #### Antwort
@@ -152,8 +149,8 @@ doAccounting" and die Endereco Service API zu übermitteln.
 
 ## Abnahme der Eigenimplementierung durch Endereco
 
-Wenn die erfolgsbasierte Abrechnung implementiert wird, muss die Implementation zwingend durch Endereco abgenommen
-werden. Dafür ist ein Termin auszumachen.
+Wenn die Implementierung von der erfolgsbasierten Abrechnung beabsichtigt wird, muss die Implementation erst durch Endereco abgenommen und freigegeben
+werden. Dafür ist ein Termin auszumachen. Schreibe dafür an support@endereco.de
 
 Vor der Abnahme ist nur die anfragenbasierte Abrechnung möglich.
 
@@ -164,31 +161,31 @@ unsere [Ansprechspartner](./readme.md#Ansprechspartner) zur Verfügung.
 
 ## FAQ
 
-### Wenn der Endkunde nach Adressprüfung sich für seine ursprüngliche Eingabe entscheiden, soll ich trotzdem "doAccounting" senden.
+### Wenn der Endkunde nach Adressprüfung sich für seine ursprüngliche Eingabe entscheiden, soll ich trotzdem "doAccounting" senden?
 
 Ja. Unabhängig davon welche Adresse der Kunde am Ende auswählt, wenn Endereco die Adresse geprüft hat und die Adresse
 danach gespeichert wird, soll ein "doAccounting" gesendet werden.
 
 ### Was heißt "gespeichert"?
 
-Gespeichert ist eine Adresse, wenn sie nach dem Neustart der Applikation oder Neuladen der Seite weiterhin besteht.
+Als gespeichert gilt eine Adresse dann, wenn sie nach dem Neustart der Applikation oder Neuladen der Seite weiterhin besteht.
 
 Dabei spielt es keine Rolle wo genau sie gespeichert ist: ob Cookie, Session-Cookie auf dem Server, eine Datei,
 localStorage im Browser, Datenbank oder sonstiges.
 
 ### Wann soll die Session ID generiert werden?
 
-Die Session ID soll am Anfang der Eingabe generiert werden, damit alle folgende Anfrage diese im Header übermitteln können. 
+Die Session ID soll am Anfang der Eingabe generiert werden, damit alle folgende Anfrage diese im Header übermitteln können.
 
 ### Kann die Session ID für mehrere Adressen verwendet werden?
 
-Nein. Eine Session ID soll nur für eine Adresse bzw. für einen Prozess der Eingabe der Adresse verwendet werden. 
+Nein. Eine Session ID soll nur für eine Adresse bzw. für einen Prozess der Eingabe der Adresse verwendet werden.
 Im Erfolgsfall soll die Session mit "doAccounting" abgeschlossen werden. Danach soll sie nicht mehr genutzt werden.
 
 ### Was passiert mit Sessions, die nicht abgeschlossen wurden?
 
-Solche Sessions werden nach 1 Stunde automatisch als "verlassen" markiert. Das erfolgt auf unseren Servern und muss 
-nicht in einer Integration umgesetzt werden. 
+Solche Sessions werden nach 1 Stunde automatisch als "verlassen" markiert. Das erfolgt auf unseren Servern und muss
+nicht in einer Integration umgesetzt werden.
 
-Eine Session, die "verlassen" ist, wird nicht in Rechnung gestellt. Wir 
+Eine Session, die "verlassen" ist, wird nicht in Rechnung gestellt. Wir
 vergleichen jedoch die Summen der "abgeschlossenen" und "verlassenen" Sessions, um Anomalien zu erkennen.
