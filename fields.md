@@ -30,7 +30,7 @@ verarbeitet werden.
 | Feld | Erwarteter Wert | Bedeutung |
 | --- | --- | --- |
 | country | String | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
-| language | String | Sprachkürzel für die Ausgabe. Spielt aktuell keine Rolle, zukünftig kann damit die Sprache der Ausgabe beeinflusst werden. |
+| language | String | Optional, Sprachkürzel für die Ausgabe. Aktuell wird nur die Ausgabe vom nameCheck beeinflusst, zukünftig wird das mit weitere Services möglich sein. [Liste der Sprachcodes](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes)|
 | postCode | String | Enthält die Postleitzahl. |
 | cityName | String | Enthält den Ortsnamen. |
 | streetFull | String | Enthält die Straße mit Hausnummer und ggf. Adresszusatz. |
@@ -46,6 +46,7 @@ verarbeitet werden.
 | iban | String | Enthält die IBAN. |
 | vatId | String | Enthält die Umsatzsteuer ID Nummer. |
 | sessionId | String | Enthält die Session ID. Siehe [Doku für Sessions](./sessions-guideline.md). |
+| countryCode | String | Optional, ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
 
 ### Tabelle der Anrede-Codes
 

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7970fd32-04e3-4154-803e-16f2752277d9",
+		"_postman_id": "36ef3056-ebfb-4314-9bb6-619617ffbdae",
 		"name": "Endereco API Beispiele",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -322,6 +322,51 @@
 		},
 		{
 			"name": "Prüfung des Namens einer Person",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Id",
+						"value": "not_required",
+						"type": "text"
+					},
+					{
+						"key": "X-Transaction-Referer",
+						"value": "Postman",
+						"type": "text"
+					},
+					{
+						"key": "X-Agent",
+						"value": "Postman",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"nameCheck\",\n  \"params\": {\n    \"salutation\": \"m\",\n    \"firstName\": \"julia\",\n    \"lastName\": \"Schenk\"\n  }\n}"
+				},
+				"url": {
+					"raw": "https://endereco-service.de/rpc/v1",
+					"protocol": "https",
+					"host": [
+						"endereco-service",
+						"de"
+					],
+					"path": [
+						"rpc",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prüfung des Namens einer Person mit optionale Parameter",
 			"request": {
 				"method": "POST",
 				"header": [
