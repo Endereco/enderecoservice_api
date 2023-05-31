@@ -803,6 +803,25 @@ POST https://endereco-service.de/rpc/v1
 
 Siehe [Dokumentation für Feldernamen](./fields.md).
 
+#### Body raw mit optionalen Parameter (JSON)
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "nameCheck",
+  "params": {
+    "countryCode" : "US",
+    "language" : "en",
+    "salutation": "m",
+    "firstName": "julia",
+    "lastName": "Schenk"
+  }
+}
+```
+
+Siehe [Dokumentation für Feldernamen](./fields.md).
+
 #### Antwort Basis
 
 ```json
