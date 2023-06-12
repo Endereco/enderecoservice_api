@@ -27,26 +27,70 @@ verarbeitet werden.
 
 ## Eingabeparameter
 
-| Feld | Erwarteter Wert | Bedeutung |
-| --- | --- | --- |
-| country | String | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
-| language | String | Optional, Sprachkürzel für die Ausgabe. Aktuell wird nur die Ausgabe vom nameCheck beeinflusst, zukünftig wird das mit weitere Services möglich sein. Standardwert ist DE [Liste der Sprachcodes](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes)|
-| postCode | String | Enthält die Postleitzahl. |
-| cityName | String | Enthält den Ortsnamen. |
-| streetFull | String | Enthält die Straße mit Hausnummer und ggf. Adresszusatz. |
-| street | String | Enthält nur den Straßennamen.  |
-| houseNumber | String | Enthält die Hausnummer. |
-| additionalInfo | String | Enthält Adresszusatz. |
-| email | String | Enthält die E-Mail Adresse. |
-| salutation | [m,f,d,x,s,o] | Enthält den Anrede-Code. Siehe [Tabelle der Anrede-Codes](#tabelle-der-anrede-codes). |
-| firstName | String| Enthält den Vornamen. |
-| lastName | String | Enthält den Nachnamen. |
-| phone | String | Enthält die Rufnummer. |
-| format | String | Enthält den Namen des Formats. Wird aktuell nur bei Rufnummernprüfung verwendet. Siehe [Liste der Rufnummernformate](#liste-der-rufnummernformate). |
-| iban | String | Enthält die IBAN. |
-| vatId | String | Enthält die Umsatzsteuer ID Nummer. |
-| sessionId | String | Enthält die Session ID. Siehe [Doku für Sessions](./sessions-guideline.md). |
-| countryCode | String | Optional, ISO 3166-1 Alpha-2 Code des Landes. Standardwert ist de Siehe [Liste der Ländercodes](./country-codes.md) |
+# addressCheck
+
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| country | String | Ja | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
+| postCode | String | Ja | Enthält die Postleitzahl. |
+| cityName | String | Ja | Enthält den Ortsnamen. |
+| streetFull | String | Ja, wenn street und houseNumber nicht gesetzt ist | Enthält die Straße mit Hausnummer und ggf. Adresszusatz. |
+| street | String | Ja, wenn streetFull nicht gesetzt ist | Enthält nur den Straßennamen.  |
+| houseNumber | String | Ja, wenn streetFull nicht gesetzt ist | Enthält die Hausnummer. |
+| additionalInfo | String | Nein | Enthält Adresszusatz. |
+
+# postCodeAutocomplete
+
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| country | String | Ja | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
+| postCode | String | Ja | Enthält die Postleitzahl. |
+
+# cityNameAutocomplete
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| country | String | Ja | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
+| cityName | String | Ja | Enthält den Ortsnamen. |
+
+# streetAutocomplete
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| country | String | Ja | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
+| postCode | String | Ja | Enthält die Postleitzahl. |
+| cityName | String | Ja | Enthält den Ortsnamen. |
+| street | String | Ja | Enthält nur den Straßennamen.  |
+
+# emailCheck
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| email | String | Ja | Enthält die E-Mail Adresse. |
+
+# nameCheck
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| title | String | Nein | Enthält einen Titel. z.B. Dr.
+| salutation | [m,f,d,x,s,o] | Nein | Enthält den Anrede-Code. Siehe [Tabelle der Anrede-Codes](#tabelle-der-anrede-codes). |
+| name | String| Ja, wenn name nicht gesetzt ist | Enthält den Vornamen. Veraltet und sollte nicht mehr verwendet werden |
+| firstName | String| Ja, wenn name nicht gesetzt ist | Enthält den Vornamen. |
+| lastName | String | Ja, wenn name nicht gesetzt ist | Enthält den Nachnamen. |
+| countryCode | String | Nein | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
+| language | String | Nein | Sprachkürzel für die Ausgabe. Aktuell wird nur die Ausgabe vom nameCheck beeinflusst, zukünftig wird das mit weitere Services möglich sein. Standardwert ist DE [Liste der Sprachcodes](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes)|
+
+# phoneCheck
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| phone | String | Ja | Enthält die Rufnummer. |
+| format | String | Nein | Enthält den Namen des Formats. Wird aktuell nur bei Rufnummernprüfung verwendet. Siehe [Liste der Rufnummernformate](#liste-der-rufnummernformate). |
+
+# ibanCheck
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| iban | String | Ja | Enthält die IBAN. |
+
+# vatIdCheck
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| vatId | String | Ja | Enthält die Umsatzsteuer ID Nummer. |
 
 ### Tabelle der Anrede-Codes
 
