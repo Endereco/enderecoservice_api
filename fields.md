@@ -91,6 +91,11 @@ verarbeitet werden.
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | vatId | String | Ja | Enthält die Umsatzsteuer ID Nummer. |
+| requesterVatID | String | Nein | Enthält die eigene Umsatzstuer ID Nummer. |
+| companyName | String | Nein | Enthält den Firmenname der abgefragten Umsatzsteuer ID Nummer |
+| companyPostalCode | String | Nein | Enthält die Postleitzahl der abgefragten Firma |
+| companyLocality | String | Nein | Enthält den Ortsnamen der abgefragten Firma |
+| companyStreetFull | String | Nein | Enthält den Straßenname ink. Hausnummer der abgefragten Firma |
 
 ### Tabelle der Anrede-Codes
 
