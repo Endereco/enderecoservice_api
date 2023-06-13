@@ -38,6 +38,7 @@ verarbeitet werden.
 | street | String | Ja, wenn streetFull nicht gesetzt ist | Enthält nur den Straßennamen.  |
 | houseNumber | String | Ja, wenn streetFull nicht gesetzt ist | Enthält die Hausnummer. |
 | additionalInfo | String | Nein | Enthält Adresszusatz. |
+| subdivisionCode | String | Nein | Enthält den Bundesland/Regions code. Format: Ländercode + - + Bundeslandkürzel
 
 ### postCodeAutocomplete
 
@@ -69,7 +70,7 @@ verarbeitet werden.
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | title | String | Nein | Enthält einen Titel. z.B. Dr.
-| salutation | [m,f,d,x,s,o] | Nein | Enthält den Anrede-Code. Siehe [Tabelle der Anrede-Codes](#tabelle-der-anrede-codes). |
+| salutation | [m,f,d,x,s,o] | Ja | Enthält den Anrede-Code. Siehe [Tabelle der Anrede-Codes](#tabelle-der-anrede-codes). |
 | name | String| Ja, wenn name nicht gesetzt ist | Enthält den Vornamen. Veraltet und sollte nicht mehr verwendet werden |
 | firstName | String| Ja, wenn name nicht gesetzt ist | Enthält den Vornamen. |
 | lastName | String | Ja, wenn name nicht gesetzt ist | Enthält den Nachnamen. |
@@ -99,38 +100,113 @@ verarbeitet werden.
 
 ## Ausgabenfelder
 
-| Feld | Erwarteter Wert | Bedeutung |
-| --- | --- | --- |
+### addressCheck
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| predictions | Array | Ja | Enthält JSON-Objekte mit Korrekturvorschlägen |
+| predictions.country | String | Ja | Enthällt den Ländercode zu diesem Vorschlag, siehe [Liste der Ländercodes](./country-codes.md) |
+| predictions.postCode | String | Ja | Enthält die Postleitzahl zu diesem Vorschlag. |
+| predictions.cityName | String | Ja | Enthält den Ortsnamen zu diesem Vorschlag. |
+| predictions.street | String | Ja | Enthält nur den Straßennamen zu diesem Vorschlag.  |
+| predictions.houseNumber | String | Ja | Enthält die Hausnummer zu diesem Vorschlag. |
+| predictions.additionalInfo | String | Nein | Enthält den Adresszusatz zu diesem Vorschlag. |
+| predictions.subdivisionCode | String | Nein | Enthält den Bundesland/Regions-code zu diesem Vorschlag. Format: Ländercode + - + Bundeslandkürzel |
+| status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
+
+### postCodeAutocomplete
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| predictions | Array | Ja | Enthält JSON-Objekte mit Korrekturvorschlägen |
+| predictions.postCode | String | Ja | Enthält die Postleitzahl zu diesem Vorschlag. |
+| predictions.cityName | String | Ja | Enthält den Ortsnamen zu diesem Vorschlag. |
+| predictions.subdivisionCode | String | Nein | Enthält den Bundesland/Regions-code zu diesem Vorschlag. Format: Ländercode + - + Bundeslandkürzel |
+| status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
+
+### cityNameAutocomplete
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| predictions | Array | Ja | Enthält JSON-Objekte mit Korrekturvorschlägen |
+| predictions.postCode | String | Ja | Enthält die Postleitzahl zu diesem Vorschlag. |
+| predictions.cityName | String | Ja | Enthält den Ortsnamen zu diesem Vorschlag. |
+| predictions.subdivisionCode | String | Nein | Enthält den Bundesland/Regions-code zu diesem Vorschlag. Format: Ländercode + - + Bundeslandkürzel |
+| status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
+
+### streetAutocomplete
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| predictions | Array | Ja | Enthält JSON-Objekte mit Korrekturvorschlägen |
+| predictions.street | String | Ja | Enthält den Straßennamen zu diesem Vorschlag. Veraltet, das Feld "streetName" sollte verwendet werden |
+| predictions.streetName | String | Ja | Enthält den Straßennamen zu diesem Vorschlag. Identisch mit dem Feld "street" |
+| predictions.buildingNumber | String | Ja | Enthällt die Hausnummer zu diesem Vorschlag. |
+| predictions.additionalInfo | String | Ja | Enthält Adresszusatz zu diesem Vorschlag. |
+| status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
+
+### emailCheck
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
+
+### nameCheck
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
 | predictions | Array | Enthält JSON-Objekte mit Korrekturvorschlägen. |
-| status | Array | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
-| original | Array | Enthält die ursprüngliche Eingabe. |
-| score | Float | Enthält eine Zahl zwischen 0.0 und 1.0. Repräsentiert die Wahrscheinlichkeit oder Qualität der Aussage. |
-| --Eingabefelder| mixed | Alle Felder aus ein Eingabe können in der Ausgabe vorkommen. Ihr Wert wurde ggf. berichtigt. Siehe [Eingabeparameter](#eingabeparameter). |
-| streetName | String | Neuere Schreibweise für das Feld "street". Enthält das gleiche Wert wie "street". Soll zukünftig das Feld "street" ersetzen. |
-| buildingNumber | String | Neuere Schreibweise für das Feld "houseNumber". Enthält das gleiche Wert wie "houseNumber". Soll zukünftig das Feld "houseNumber" ersetzen. |
-| region | String | Erkannte Region bei Rufnummernprüfung. |
-| carrier | String | Der ursprüngliche Netzanbieter bei Rufnummernprüfung. |
-| countryPrefix | String | Landesvorauswahl bei einer Rufnummer. |
-| phone | String | Enthält die Rufnummer. |
-| nationalNumber | String | Der nationale Teil einer Rufnummer. |
-| formatNational| String | Enthält die national formatierte Telefonnummer. |
-| formatInternational | String | Enthält die international formatierte Telefonnummer. |
-| formatE164 | String | Enthält die nach [E.164](https://de.wikipedia.org/wiki/E.164) formatierte Telefonnummer. |
-| formatRFC3966 | String | Enthält die nach [RFC3966](https://datatracker.ietf.org/doc/html/rfc3966) formatierte Telefonnummer. |
-| nationalPrefix | String | Enthält die Ortsvorwahl. |
-| nationalBody | String | Enthält einen Teil der Telefonnummer ohne Landes- und Ortsvorwahl. |
-| leadingZeros |  Zahl | Wie viele "0" sollen einer nationalen Rufnummer vorangestellt werden. |
-| checksum | Zahl | Enthält die Prüfsumme. |
-| bankCode | String | Enthält eine Bankleitzahl. |
-| bankName | String | Enthält den Namen der Bank. |
-| bankPostalCode | String | Enthält die PLZ der Bank. |
-| bankLocality | String | Enthält den Ort der Bank. |
-| bankShortName | String | Enthält die verkürzte Schreibweise der Bank. |
-| bic | String | Enthält die BIC. |
-| accountNumber | String | Enthält die Kontonummer. |
-| countryCentralBankName | String | ggf. enthält den Namen der Zentralbank. |
-| countryCentralBankUrl | String | ggf. enthält die URL auf die Website der Zentralbank. |
-| companyName | String | Enthält den Firmennamen. |
+| predictions.title | String | Nein | Enthält einen Titel zu diesem Vorschlag |
+| predictions.salutation | [m,f,d,x,s,o] | Ja | Enthält den Anrede-Code zu diesem Vorschlag. Siehe [Tabelle der Anrede-Codes](#tabelle-der-anrede-codes). |
+| predictions.firstName | String | Ja | Enthält den Vornamen zu diesem Vorschlag |
+| predictions.lastName | String | Ja | Enthält den Nachnamen zu diesem Vorschlag |
+| score | Float | Ja | Enthält eine Zahl zwischen 0.0 und 1.0. Repräsentiert die Wahrscheinlichkeit oder Qualität der Aussage. |
+| status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
+
+### phoneCheck
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| original | Json | Ja | Identisch mit der Eingabe |
+| original.phone | String | Ja | Identisch mit der Eingabe |
+| predictions | Array | Nein | Enthält JSON-Objekte mit Korrekturvorschlägen. |
+| predictions.phone | String | Ja, wenn predictions da sind | Enthält die Orginaleingabe zu diesem Vorschlag |
+| predictions.formatNational | String | Ja, wenn predictions da sind | Enthält die Nummer im Nationalen format zu diesem Vorschlag |
+| predictions.formatInternational | String | Ja, wenn predictions da sind | Enthält die Nummer im Internationelen format zu diesem Vorschlag |
+| predictions.formatE164 | String | Ja, wenn predictions da sind | Enthält die Nummer im E164 format zu diesem Vorschlag [E.164](https://de.wikipedia.org/wiki/E.164) |
+| predictions.formatRFC3966 | String | Ja, wenn predictions da sind | Enthält die Nummer im RFC3966 Format zu diesem Vorschlag [RFC3966](https://datatracker.ietf.org/doc/html/rfc3966) |
+| predictions.region | String | Ja, wenn predictions da sind | Enthält die Region zu diesem Vorschlag |
+| predictions.carrier | String | Ja, wenn predictions da sind | Enthält den Netzanbieter zu diesem Vorschlag |
+| predictions.countryPrefix | String | Ja, wenn predictions da sind | Enthält die Landesvorauswahl zu diesem Vorschlag |
+| predictions.nationalNumber | String | Ja, wenn predictions da sind | Enthält den nationalen Teil zu diesem Vorschlag |
+| predictions.nationalPrefix | String | Ja, wenn predictions da sind | Enthält die Ortsvorwahl zu diesem Vorschlag |
+| predictions.nationalBody | String | Ja, wenn predictions da sind | Enthält einen Teil der Telefonnummer ohne Landes- und Ortsvorwahl zu diesem Vorschlag |
+| predictions.leadingZeros | Int | Ja, wenn predictions da sind | Enthält die Anzahl der '0' die vor der nationalen Rufnummer stehen zu diesem Vorschlag |
+| status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
+
+### ibanCheck
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| original | Json | Ja | Identisch mit der Eingabe |
+| original.iban | String | Ja | Identisch mit der Eingabe |
+| predictions | Array | Nein | Enthält JSON-Objekte mit Korrekturvorschlägen. |
+| predictions.iban | String | Ja, wenn predictions da sind | Enthält die formatierte iBan zu diesem Vorschlag |
+| predictions.checksum | String | Ja, wenn predictions da sind | Enthält die Prüfziffer der iBan zu diesem Vorschlag |
+| predictions.bankCode | String | Ja, wenn predictions da sind | Enthält eine Bankleitzahl zu diesem Vorschlag |
+| predictions.bankName | String | Ja, wenn predictions da sind | Enthält den Namen der Bank zu diesem Vorschlag |
+| predictions.bankPostalCode | String | Ja, wenn predictions da sind | Enthält die PLZ der Bank zu diesem Vorschlag |
+| predictions.bankLocality | String | Ja, wenn predictions da sind | Enthält den Ort der Bank zu diesem Vorschlags |
+| predictions.bankShortName | String | Ja, wenn predictions da sind | Enthält die verkürzte Schreibweise der Bank zu diesem Vorschlag |
+| predictions.bic | String | Ja, wenn predictions da sind | Enthält die PIC zu diesem Vorschlag |
+| predictions.accountNumber | String | Ja, wenn predictions da sind | Enthält die Kontonummer zu diesem Vorschlag |
+| predictions.countryCentralBankName | String | Ja, wenn predictions da sind | Enthält ggf. den Namen der Zentralbank zu diesem Vorschlag |
+| predictions.countryCentralBankUrl | String | Ja, wenn predictions da sind | Enthält ggf. die URL auf die Website der Zentralban zu diesem Vorschlag |
+| status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
+
+### vatIdCheck
+| Feld | Erwarteter Wert | Pflicht | Bedeutung |
+| --- | --- | --- | --- |
+| predictions | Array | Ja | Enthält JSON-Objekte mit Korrekturvorschlägen. |
+| predictions.vatId | String | Ja | Enthält die formatierte Umsatzstuerid. |
+| predictions.companyName | String | Nein | Enthält den Firmennamen zu diesem Vorschlag. |
+| predictions.companyAddress | String | Nein | Enthält die Firmenadresse zu diesem Vorschlag. |
+| cerification | Json | Nein | Enthält Informationen zu den Zertifikat |
+| cerification.timestamp | Json | Nein | Enthält den Zeitpunkt der Abfrage |
+| cerification.source | Json | Nein | Enthält die Datenquelle |
+| status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
 ## Weitere Bedeutungen
 
