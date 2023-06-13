@@ -1,4 +1,4 @@
-# Beispiele für die Namensprüfung
+# Beispiele für die UmsatzsteuerId-Prüfung
 
 # Inhaltsverzeichnis
 - [Aktuell](#aktuell)
