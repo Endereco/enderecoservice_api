@@ -27,7 +27,7 @@ verarbeitet werden.
 
 ## Eingabeparameter
 
-# addressCheck
+### addressCheck
 
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
@@ -39,20 +39,20 @@ verarbeitet werden.
 | houseNumber | String | Ja, wenn streetFull nicht gesetzt ist | Enthält die Hausnummer. |
 | additionalInfo | String | Nein | Enthält Adresszusatz. |
 
-# postCodeAutocomplete
+### postCodeAutocomplete
 
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | country | String | Ja | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
 | postCode | String | Ja | Enthält die Postleitzahl. |
 
-# cityNameAutocomplete
+### cityNameAutocomplete
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | country | String | Ja | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
 | cityName | String | Ja | Enthält den Ortsnamen. |
 
-# streetAutocomplete
+### streetAutocomplete
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | country | String | Ja | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
@@ -60,12 +60,12 @@ verarbeitet werden.
 | cityName | String | Ja | Enthält den Ortsnamen. |
 | street | String | Ja | Enthält nur den Straßennamen.  |
 
-# emailCheck
+### emailCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | email | String | Ja | Enthält die E-Mail Adresse. |
 
-# nameCheck
+### nameCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | title | String | Nein | Enthält einen Titel. z.B. Dr.
@@ -76,18 +76,18 @@ verarbeitet werden.
 | countryCode | String | Nein | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
 | language | String | Nein | Sprachkürzel für die Ausgabe. Aktuell wird nur die Ausgabe vom nameCheck beeinflusst, zukünftig wird das mit weitere Services möglich sein. Standardwert ist DE [Liste der Sprachcodes](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes)|
 
-# phoneCheck
+### phoneCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | phone | String | Ja | Enthält die Rufnummer. |
 | format | String | Nein | Enthält den Namen des Formats. Wird aktuell nur bei Rufnummernprüfung verwendet. Siehe [Liste der Rufnummernformate](#liste-der-rufnummernformate). |
 
-# ibanCheck
+### ibanCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | iban | String | Ja | Enthält die IBAN. |
 
-# vatIdCheck
+### vatIdCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | vatId | String | Ja | Enthält die Umsatzsteuer ID Nummer. |
@@ -96,26 +96,6 @@ verarbeitet werden.
 | companyPostalCode | String | Nein | Enthält die Postleitzahl der abgefragten Firma |
 | companyLocality | String | Nein | Enthält den Ortsnamen der abgefragten Firma |
 | companyStreetFull | String | Nein | Enthält den Straßenname ink. Hausnummer der abgefragten Firma |
-
-### Tabelle der Anrede-Codes
-
-| Code | Bedeutung |
-| --- | --- |
-| m | männlich |
-| f | weiblich |
-| d | [divers](https://de.wikipedia.org/wiki/Divers) |
-| x | unbekannt (kann sowohl männlich, als auch weiblich sein) |
-| s | Familie |
-| o | Organisation |
-
-### Liste der Rufnummernformate
-
-| Format | Bedeutung |
-| --- | --- |
-| E164 | Siehe, [E.164 Format](https://de.wikipedia.org/wiki/E.164) |
-| INTERNATIONAL | Internationale Schreibweise der Nummer. |
-| NATIONAL | Nationale Schreibweise der Nummer. |
-| RFC3966 | Schreibweise der Nummer, die in *href*-Attribut verwendet werden kann (tel: Link). |
 
 ## Ausgabenfelder
 
@@ -152,3 +132,24 @@ verarbeitet werden.
 | countryCentralBankUrl | String | ggf. enthält die URL auf die Website der Zentralbank. |
 | companyName | String | Enthält den Firmennamen. |
 
+## Weitere Bedeutungen
+
+### Tabelle der Anrede-Codes
+
+| Code | Bedeutung |
+| --- | --- |
+| m | männlich |
+| f | weiblich |
+| d | [divers](https://de.wikipedia.org/wiki/Divers) |
+| x | unbekannt (kann sowohl männlich, als auch weiblich sein) |
+| s | Familie |
+| o | Organisation |
+
+### Liste der Rufnummernformate
+
+| Format | Bedeutung |
+| --- | --- |
+| E164 | Siehe, [E.164 Format](https://de.wikipedia.org/wiki/E.164) |
+| INTERNATIONAL | Internationale Schreibweise der Nummer. |
+| NATIONAL | Nationale Schreibweise der Nummer. |
+| RFC3966 | Schreibweise der Nummer, die in *href*-Attribut verwendet werden kann (tel: Link). |
