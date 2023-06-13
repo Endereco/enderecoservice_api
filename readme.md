@@ -1251,3 +1251,4 @@ Siehe [Dokumentation für Feldernamen](./fields.md).
 ```
 
 Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Weitere Beispiele](./vatid-check-examples.md).
