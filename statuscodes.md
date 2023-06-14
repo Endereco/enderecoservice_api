@@ -275,10 +275,11 @@ Diese Codes werden bald mit sprechenden Statuscodes ersetzt. Bitte nicht bei der
 | Code | Bedeutung |
 | ---- | --------- |
 | vat_valid | Umsatzsteuer ID ist korrekt. |
-| vat_needs_correction | Schreibweise der Umsatzsteuer ID ist korrekturbedürftig. |
-| vat_unknown_country_code | Landeskürzel ist falsch oder unbekannt. | 
-| vat_wrong_format | Format entspricht nicht der [Spezifikation](http://ec.europa.eu/taxation_customs/vies/faq.html?locale=de#item_11). | 
-| vat_has_company_name | Für die Umsatzsteuer ID konnte der Firmenname ermittelt werden. Der Firmenname ist in der Ausgabe vorhanden. | 
 | vat_invalid | Die Umsatzsteuer ID ist ungültig.  |
+| vat_id_body_needs_correction | Schreibweise der Umsatzsteuer ID ist korrekturbedürftig. |
+| vat_id_body_minor_correction | Kleine Änderung der Umsatzsteuer ID. |
+| vat_id_body_major_correction | Große Änderung der Umsatzsteuer ID. |
+| vat_id_format_invalid | Format entspricht nicht der [Spezifikation](http://ec.europa.eu/taxation_customs/vies/faq.html?locale=de#item_11). |
+| vat_id_format_correct | Format entspricht der [Spezifikation](http://ec.europa.eu/taxation_customs/vies/faq.html?locale=de#item_11). |
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
