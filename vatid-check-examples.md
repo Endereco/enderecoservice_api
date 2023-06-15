@@ -2,15 +2,15 @@
 
 ## Inhaltsverzeichnis
 - [Grundstruktur der JSON](#grundstruktur-der-json)
-- [Einfache Prüfung mit gültiger Umsatzsteuer-ID](#einfache-pruefung-mit-gueltiger-umsatzsteuer-id)
-- [Einfache Prüfung mit ungültiger Umsatzsteuer-ID](#einfache-pruefung-mit-ungueltiger-umsatzsteuer-id)
-- [Qualifizierte Prüfung mit gültiger und richtig formatierter Umsatzsteuer-ID](#qualifizierte-pruefung-mit-gueltiger-und-richtig-formatierter-umsatzsteuer-id)
-- [Qualifizierte Prüfung mit ungültiger, aber richtig formatierter Umsatzsteuer-ID](#qualifizierte-pruefung-mit-ungueltiger-aber-richtig-formatierter-umsatzsteuer-id)
-- [Qualifizierte Prüfung mit gültiger, aber falsch formatierter Umsatzsteuer-ID](#qualifizierte-pruefung-mit-gueltiger-aber-falsch-formatierter-umsatzsteuer-id)
-- [Qualifizierte Prüfung ohne Länderkürzel](#qualifizierte-pruefung-ohne-laenderkuerzel)
-- [Qualifizierte Prüfung mit falschem Länderkürzel](#qualifizierte-pruefung-mit-falschem-laenderkuerzel)
-- [Qualifizierte Prüfung mit ungültigem Format](#qualifizierte-pruefung-mit-ungueltigem-format)
-- [Prüfung mit fehlenden Pflichtfeldern](#pruefung-mit-fehlenden-pflichtfeldern)
+- [Einfache Prüfung mit gültiger Umsatzsteuer-ID](#einfache-prüfung-mit-gültiger-umsatzsteuer-id)
+- [Einfache Prüfung mit ungültiger Umsatzsteuer-ID](#einfache-prüfung-mit-ungültiger-umsatzsteuer-id)
+- [Qualifizierte Prüfung mit gültiger und richtig formatierter Umsatzsteuer-ID](#qualifizierte-prüfung-mit-gültiger-und-richtig-formatierter-umsatzsteuer-id)
+- [Qualifizierte Prüfung mit ungültiger, aber richtig formatierter Umsatzsteuer-ID](#qualifizierte-prüfung-mit-ungültiger-aber-richtig-formatierter-umsatzsteuer-id)
+- [Qualifizierte Prüfung mit gültiger, aber falsch formatierter Umsatzsteuer-ID](#qualifizierte-prüfung-mit-gültiger-aber-falsch-formatierter-umsatzsteuer-id)
+- [Qualifizierte Prüfung ohne Länderkürzel](#qualifizierte-prüfung-ohne-länderkürzel)
+- [Qualifizierte Prüfung mit falschem Länderkürzel](#qualifizierte-prüfung-mit-falschem-länderkürzel)
+- [Qualifizierte Prüfung mit ungültigem Format](#qualifizierte-prüfung-mit-ungültigem-format)
+- [Prüfung mit fehlenden Pflichtfeldern](##prüfung-mit-fehlenden-pflichtfeldern)
 
 ## Grundstruktur der JSON
 
