@@ -1,8 +1,8 @@
 # Beispiele für die Namensprüfung
 
 # Info
-- [Eingabefleder](./fields.md#eingabeparameter-nameCheck)
-- [Ausgabefleder](./fields.md#ausgabenfelder-nameCheck)
+- [Eingabefelder](./fields.md#eingabeparameter-nameCheck)
+- [Ausgabefelder](./fields.md#ausgabenfelder-nameCheck)
 - [Statuscodes](./statuscodes.md)
 
 ## Inhaltsverzeichnis
