@@ -91,12 +91,12 @@ verarbeitet werden.
 ### vatIdCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
-| vatId | String | Ja | Enthält die Umsatzsteuer ID Nummer. |
-| requesterVatID | String | Nein | Enthält die eigene Umsatzstuer ID Nummer. |
-| companyName | String | Nein | Enthält den Firmenname der abgefragten Umsatzsteuer ID Nummer |
-| companyPostalCode | String | Nein | Enthält die Postleitzahl der abgefragten Firma |
-| companyLocality | String | Nein | Enthält den Ortsnamen der abgefragten Firma |
-| companyStreetFull | String | Nein | Enthält den Straßenname ink. Hausnummer der abgefragten Firma |
+| vatId | String | Ja | Enthält die zu prüfende Umsatzsteuer ID Nummer |
+| requesterVatID | String | Nein | Enthält die eigene Umsatzsteuer ID Nummer |
+| companyName | String | Nein | Enthält den Firmenname der zu prüfenden Umsatzsteuer ID Nummer |
+| companyPostalCode | String | Nein | Enthält die Postleitzahl der zu prüfendenn Firma |
+| companyLocality | String | Nein | Enthält den Ortsnamen der zu prüfenden Firma |
+| companyStreetFull | String | Nein | Enthält den Straßenname ink. Hausnummer der zu prüfenden Firma |
 
 ## Ausgabenfelder
 
