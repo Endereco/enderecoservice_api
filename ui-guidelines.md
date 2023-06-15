@@ -65,7 +65,7 @@ Die Guideline von Endereco ist für diesen Prozess ein Modal zu verwenden.
 | Telefonprüfung | nein | Modal nicht notwendig. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern. |
 | E-Mail Adresse Prüfung | nein | Modal nicht notwendig. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern. |
 | IBAN-Prüfung | optional | Modal könnte hilfreich sein. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern. |
-| Umsatzsteuer ID Prüfung | nein | Modal nicht notwendig. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern. |
+| Umsatzsteuer-ID Prüfung | nein | Modal nicht notwendig. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern. |
 
 ## Prüfung von Namen
 
@@ -168,6 +168,6 @@ Falls die Telefonnummern nach der Prüfung fehlerhaft ist, soll das Eingabefeld 
 
 Falls die IBAN nach der Prüfung fehlerhaft ist, soll das Eingabefeld orange umrandet werden.
 
-## Prüfung von Umsatzsteuer ID
+## Prüfung von Umsatzsteuer-ID
 
-Falls die Umsatzsteuer ID nach der Prüfung fehlerhaft ist, soll das Eingabefeld orange umrandet werden.
+Falls die Umsatzsteuer-ID nach der Prüfung fehlerhaft ist, soll das Eingabefeld orange umrandet werden.

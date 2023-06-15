@@ -13,8 +13,8 @@
 - [Name wird nicht gefunden](#name-wird-nicht-gefunden)
 - [Person mit Doktor beim Vornamen ohne Title](#person-mit-doktor-beim-vornamen-ohne-title)
 - [Person mit Doktor beim Vornamen mit Title](#person-mit-doktor-beim-vornamen-mit-title)
-- [Fake-Name](#facename) 
-- [Pflichtfelder fehlen](#pflichtfelder-fehlen) 
+- [Fake-Name](#facename)
+- [Pflichtfelder fehlen](#pflichtfelder-fehlen)
 - [Leere Felder](#leere-felder)
 - [Falscher Inhalt](#falscher-inhalt)
 - [Nicht erreichbar](#nicht-erreichbar)
@@ -98,7 +98,7 @@
 
 ### Männlicher Vorname mit falscher Anrede
 
-#### Anfrage 
+#### Anfrage
 
 ```
 {
@@ -728,7 +728,7 @@
 }
 ```
 
-#### Antwort mit emailadresse 
+#### Antwort mit emailadresse
 
 ```
 {
