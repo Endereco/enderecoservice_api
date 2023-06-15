@@ -1,4 +1,4 @@
-# Beispiele für die Umsatzsteuer-ID
+# Beispiele für die Umsatzsteuer-ID Prüfung
 
 ## Inhaltsverzeichnis
 - [Grundstruktur der JSON](#grundstruktur-der-json)
@@ -11,7 +11,6 @@
 - [Qualifizierte Prüfung mit falschem Länderkürzel](#qualifizierte-pruefung-mit-falschem-laenderkuerzel)
 - [Qualifizierte Prüfung mit ungültigem Format](#qualifizierte-pruefung-mit-ungueltigem-format)
 - [Prüfung mit fehlenden Pflichtfeldern](#pruefung-mit-fehlenden-pflichtfeldern)
-
 
 ## Grundstruktur der JSON
 
@@ -38,9 +37,11 @@ Siehe auch:
 - [Ausgabefelder](./fields.md#ausgabefelder-vatIdCheck)
 - [Statuscodes](./statuscodes.md)
 
-## Einfache Prüfung mit gültiger Umsatzsteuer-ID
+## Beispiele
 
-### Anfrage
+### Einfache Prüfung mit gültiger Umsatzsteuer-ID
+
+#### Anfrage
 
 ```
 {
@@ -53,7 +54,7 @@ Siehe auch:
 }
 ```
 
-### Antwort
+#### Antwort
 
 ```
 {
@@ -73,9 +74,9 @@ Siehe auch:
 }
 ```
 
-## Einfache Prüfung mit ungültiger Umsatzsteuer-ID
+### Einfache Prüfung mit ungültiger Umsatzsteuer-ID
 
-### Anfrage
+#### Anfrage
 
 ```
 {
@@ -88,7 +89,7 @@ Siehe auch:
 }
 ```
 
-### Antwort
+#### Antwort
 
 ```
 {
@@ -104,9 +105,9 @@ Siehe auch:
 }
 ```
 
-## Qualifizierte Prüfung mit gültiger und richtig formatierter Umsatzsteuer-ID
+### Qualifizierte Prüfung mit gültiger und richtig formatierter Umsatzsteuer-ID
 
-### Anfrage
+#### Anfrage
 
 ```
 {
@@ -124,7 +125,7 @@ Siehe auch:
 }
 ```
 
-### Antwort
+#### Antwort
 
 ```
 {
@@ -150,9 +151,9 @@ Siehe auch:
 }
 ```
 
-## Qualifizierte Prüfung mit ungültiger, aber richtig formatierter Umsatzsteuer-ID
+### Qualifizierte Prüfung mit ungültiger, aber richtig formatierter Umsatzsteuer-ID
 
-### Anfrage
+#### Anfrage
 
 ```
 {
@@ -170,7 +171,7 @@ Siehe auch:
 }
 ```
 
-### Antwort
+#### Antwort
 
 ```
 {
@@ -190,9 +191,9 @@ Siehe auch:
 }
 ```
 
-## Qualifizierte Prüfung mit gültiger, aber falsch formatierter Umsatzsteuer-ID
+### Qualifizierte Prüfung mit gültiger, aber falsch formatierter Umsatzsteuer-ID
 
-### Anfrage
+#### Anfrage
 
 ```
 {
@@ -210,7 +211,7 @@ Siehe auch:
 }
 ```
 
-### Antwort
+#### Antwort
 
 ```
 {
@@ -238,9 +239,9 @@ Siehe auch:
 }
 ```
 
-## Qualifizierte Prüfung ohne Länderkürzel
+### Qualifizierte Prüfung ohne Länderkürzel
 
-### Anfrage
+#### Anfrage
 
 ```
 {
@@ -258,7 +259,7 @@ Siehe auch:
 }
 ```
 
-### Antwort
+#### Antwort
 
 ```
 {
@@ -274,9 +275,9 @@ Siehe auch:
 }
 ```
 
-## Qualifizierte Prüfung mit falschem Länderkürzel
+### Qualifizierte Prüfung mit falschem Länderkürzel
 
-### Anfrage
+#### Anfrage
 
 ```
 {
@@ -294,7 +295,7 @@ Siehe auch:
 }
 ```
 
-### Antwort
+#### Antwort
 
 ```
 {
@@ -310,9 +311,9 @@ Siehe auch:
 }
 ```
 
-## Qualifizierte Prüfung mit ungültigem Format
+### Qualifizierte Prüfung mit ungültigem Format
 
-### Anfrage
+#### Anfrage
 
 ```
 {
@@ -330,7 +331,7 @@ Siehe auch:
 }
 ```
 
-### Antwort
+#### Antwort
 
 ```
 {
@@ -346,9 +347,9 @@ Siehe auch:
 }
 ```
 
-## Prüfung mit fehlenden Pflichtfeldern
+### Prüfung mit fehlenden Pflichtfeldern
 
-### Anfrage
+#### Anfrage
 
 ```
 {
@@ -366,7 +367,7 @@ Siehe auch:
 }
 ```
 
-### Antwort
+#### Antwort
 
 ```
 {
