@@ -200,7 +200,7 @@ verarbeitet werden.
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | predictions | Array | Ja | Enthält JSON-Objekte mit Korrekturvorschlägen. |
-| predictions.vatId | String | Ja | Enthält die formatierte Umsatzstuerid. |
+| predictions.vatId | String | Ja | Enthält die formatierte Umsatzsteuer Id. zu prüfenden Firma |
 | predictions.companyName | String | Nein | Enthält den Firmennamen zu diesem Vorschlag. |
 | predictions.companyAddress | String | Nein | Enthält die Firmenadresse zu diesem Vorschlag. |
 | cerification | Json | Nein | Enthält Informationen zu den Zertifikat |
