@@ -10,7 +10,7 @@
 | [Rufnummernprüfung](#namensprüfung) | [Statuscodes](#statuscodes) |
 | [IBAN Prüfung](#iban-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-3) <br> [zus. Kontonummernprüfung](#mit-dem-zusatzservice-kontonummernprüfung) |
 | [E-Mail Adresse Prüfung](#e-mail-adresse-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-4) <br> [zus. Erweiterte SMTP Prüfung](#mit-aktivem-zusatzservice-erweiterte-smtp-prüfung) |
-| [Umsatzsteuer ID Prüfung](#umsatzsteuer-id-prüfung) | [Statuscodes](#statuscodes-1) |
+| [Umsatzsteuer-ID Prüfung](#umsatzsteuer-id-prüfung) | [Statuscodes](#statuscodes-1) |
 
 ## Adresseingabeassistent
 
@@ -266,7 +266,7 @@ Diese Codes werden bald mit sprechenden Statuscodes ersetzt. Bitte nicht bei der
 | A4900	| Span traps erkannt. |
 | A5000	| Unbekannter Fehler. |
 
-## Umsatzsteuer ID Prüfung
+## Umsatzsteuer-ID Prüfung
 
 ### Statuscodes
 
@@ -274,11 +274,11 @@ Diese Codes werden bald mit sprechenden Statuscodes ersetzt. Bitte nicht bei der
 
 | Code | Bedeutung |
 | ---- | --------- |
-| vat_valid | Umsatzsteuer ID ist korrekt. |
-| vat_invalid | Die Umsatzsteuer ID ist ungültig.  |
-| vat_id_body_needs_correction | Schreibweise der Umsatzsteuer ID ist korrekturbedürftig. |
-| vat_id_body_minor_correction | Kleine Änderung der Umsatzsteuer ID. |
-| vat_id_body_major_correction | Große Änderung der Umsatzsteuer ID. |
+| vat_valid | Umsatzsteuer-ID ist korrekt. |
+| vat_invalid | Die Umsatzsteuer-ID ist ungültig.  |
+| vat_id_body_needs_correction | Schreibweise der Umsatzsteuer-ID ist korrekturbedürftig. |
+| vat_id_body_minor_correction | Kleine Änderung der Umsatzsteuer-ID. |
+| vat_id_body_major_correction | Große Änderung der Umsatzsteuer-ID. |
 | vat_id_format_invalid | Format entspricht nicht der [Spezifikation](https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Documents/COSME/VAT%20numbers%20EU.pdf). |
 | vat_id_format_correct | Format entspricht der [Spezifikation](https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Documents/COSME/VAT%20numbers%20EU.pdf). |
 

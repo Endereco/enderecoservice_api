@@ -70,9 +70,9 @@ Wie kannst du auf unsere API zugreifen?
 | [Ortsvorschläge](#vorschlagsliste-für-die-teileingabe-des-ortes) | | |
 | [Straßenvorschläge](#vorschlagsliste-für-die-teileingabe-der-straße-ohne-hausnummer) | | |
 
-| Telefonnummer | IBAN | Umsatzsteuer ID |
+| Telefonnummer | IBAN | Umsatzsteuer-ID |
 |---|---|---|
-| [Rufnummernprüfung](#prüfung-einer-telefonnummer) | [IBAN-Prüfung](#prüfung-der-iban-und-ggf-der-kontonummer) | [Umsatzsteuer ID Prüfung](#prüfung-der-umsatzsteuer-id) |
+| [Rufnummernprüfung](#prüfung-einer-telefonnummer) | [IBAN-Prüfung](#prüfung-der-iban-und-ggf-der-kontonummer) | [Umsatzsteuer-ID Prüfung](#prüfung-der-umsatzsteuer-id) |
 
 | technische Methoden |
 |---|
@@ -148,7 +148,7 @@ vermeiden wir, personenbezogene Daten des Endnutzers zu erhalten, die wir nicht 
 | ↳ | [Prüfung und ggf. Formatierung einer nationalen Telefonnummer mit Ländercode ↓](#prüfung-und-ggf-formatierung-einer-nationalen-telefonnummer-mit-landescode)
 | ↳ | [Prüfung und spezielle Formatierung einer Telefonnummer ↓](#prüfung-und-speziale-formatierung-einer-telefonnummer) |
 | ibanCheck | [Prüfung der IBAN und ggf. der Kontonummer ↓](#prüfung-der-iban-und-ggf-der-kontonummer) |
-| vatIdCheck | [Prüfung der Umsatzsteuer ID ↓](#prüfung-der-umsatzsteuer-id) |
+| vatIdCheck | [Prüfung der Umsatzsteuer-ID ↓](#prüfung-der-umsatzsteuer-id) |
 
 ### Prüfung einer Adresse mit getrennter Straße/Hausnummer
 
@@ -1203,16 +1203,16 @@ Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Stat
 
 Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 
-### Prüfung der Umsatzsteuer ID
+### Prüfung der Umsatzsteuer-ID
 
-Die Umsatzsteuer ID Nr. kann über eine einfache Abfrage oder über eine qualifizierte Abfrage validiert werden.
+Die Umsatzsteuer-ID Nr. kann über eine einfache Abfrage oder über eine qualifizierte Abfrage validiert werden.
 
-1. Einfache Validierung: Die Umsatzsteuer ID wird auf Gültigkeit geprüft, ohne nähere Details zu dieser abzugleichen.
-2. Qualifizierte Validierung: Die Umsatzsteuer ID wird im Zusammenhang mit dem Firmennamen und der Firmenadresse abgefragt.
+1. Einfache Validierung: Die Umsatzsteuer-ID wird auf Gültigkeit geprüft, ohne nähere Details zu dieser abzugleichen.
+2. Qualifizierte Validierung: Die Umsatzsteuer-ID wird im Zusammenhang mit dem Firmennamen und der Firmenadresse abgefragt.
 
 [zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
 
-*Beispiel 1: Einfache Validierung einer Umsatzsteuer ID.*
+*Beispiel 1: Einfache Validierung einer Umsatzsteuer-ID.*
 ```
 POST https://endereco-service.de/rpc/v1
 ```

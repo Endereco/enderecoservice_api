@@ -1,4 +1,4 @@
-# Beispiele für die Umsatzsteuer ID
+# Beispiele für die Umsatzsteuer-ID
 
 # Info
 - [Eingabefleder](./fields.md#eingabeparameter-vatIdCheck)
@@ -6,11 +6,11 @@
 - [Statuscodes](./statuscodes.md)
 
 # Inhaltsverzeichnis
-- [Einfache Prüfung mit gültiger Umsatzsteuer ID](#einfache-prüfung-mit-gültiger-umsatzsteuer-id)
-- [Einfache Prüfung mit ungültiger Umsatzsteuer ID](#einfache-prüfung-mit-ungültiger-umsatzsteuer-id)
-- [Qualifizierte Prüfung mit güliger und richtig formatierten Umsatzsteuer ID](#qualifizierte-prüfung-mit-güliger-und-richtig-formatierten-umsatzsteuer-ID)
-- [Qualifizierte Prüfung mit ungültiger aber richtig formatierter Umsatzsteuer ID](#qualifizierte-prüfung-mit-ungültiger-aber-richtig-formatierter-umsatzsteuer-ID)
-- [Qualifizierte Prüfung mit gültiger aber falsch formatierter Umsatzsteuer ID](#qualifizierte-prüfung-mit-gültiger-aber-falsch-formatierter-umsatzsteuer-ID)
+- [Einfache Prüfung mit gültiger Umsatzsteuer-ID](#einfache-prüfung-mit-gültiger-umsatzsteuer-id)
+- [Einfache Prüfung mit ungültiger Umsatzsteuer-ID](#einfache-prüfung-mit-ungültiger-umsatzsteuer-id)
+- [Qualifizierte Prüfung mit güliger und richtig formatierten Umsatzsteuer-ID](#qualifizierte-prüfung-mit-güliger-und-richtig-formatierten-umsatzsteuer-ID)
+- [Qualifizierte Prüfung mit ungültiger aber richtig formatierter Umsatzsteuer-ID](#qualifizierte-prüfung-mit-ungültiger-aber-richtig-formatierter-umsatzsteuer-ID)
+- [Qualifizierte Prüfung mit gültiger aber falsch formatierter Umsatzsteuer-ID](#qualifizierte-prüfung-mit-gültiger-aber-falsch-formatierter-umsatzsteuer-ID)
 - [Qualifizierte Prüfung ohne Länderkürzel](#qualifizierte-prüfung-ohne-länderkürzel)
 - [Qualifizierte Prüfung mit falschem Länderkürzel](#qualifizierte-prüfung-mit-falschem-länderkürzel)
 - [Qualifizierte Prüfung mit ungültigem Format](#qualifizierte-prüfung-mit-ungültigem-format)
@@ -18,7 +18,7 @@
 
 ## Aktuell
 
-### Einfache Prüfung mit gültiger Umsatzsteuer ID
+### Einfache Prüfung mit gültiger Umsatzsteuer-ID
 
 #### Anfrage
 
@@ -53,7 +53,7 @@
 }
 ```
 
-### Einfache Prüfung mit ungültiger Umsatzsteuer ID
+### Einfache Prüfung mit ungültiger Umsatzsteuer-ID
 
 #### Anfrage
 
@@ -84,7 +84,7 @@
 }
 ```
 
-### Qualifizierte Prüfung mit güliger und richtig formatierten Umsatzsteuer ID
+### Qualifizierte Prüfung mit güliger und richtig formatierten Umsatzsteuer-ID
 
 #### Anfrage
 
@@ -130,7 +130,7 @@
 }
 ```
 
-### Qualifizierte Prüfung mit ungültiger aber richtig formatierter Umsatzsteuer ID
+### Qualifizierte Prüfung mit ungültiger aber richtig formatierter Umsatzsteuer-ID
 
 #### Anfrage
 
@@ -170,7 +170,7 @@
 }
 ```
 
-### Qualifizierte Prüfung mit gültiger aber falsch formatierter Umsatzsteuer ID
+### Qualifizierte Prüfung mit gültiger aber falsch formatierter Umsatzsteuer-ID
 
 #### Anfrage
 
