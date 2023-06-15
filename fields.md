@@ -2,7 +2,7 @@
 
 ## Inhaltsverzeichnis
 
-- [Grundaufbau der JSON](#grundstruktur-der-json)
+- [Grundstruktur der JSON](#grundstruktur-der-json)
 - [Eingabeparameter](#eingabeparameter)
   - [addressCheck](#eingabeparameter-addresscheck)
   - [postCodeAutocomplete](#eingabeparameter-postCodeAutocomplete)

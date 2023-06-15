@@ -1,26 +1,46 @@
 # Beispiele für die Umsatzsteuer-ID
 
-# Info
+## Inhaltsverzeichnis
+- [Grundstruktur der JSON](#grundstruktur-der-json)
+- [Einfache Prüfung mit gültiger Umsatzsteuer-ID](#einfache-pruefung-mit-gueltiger-umsatzsteuer-id)
+- [Einfache Prüfung mit ungültiger Umsatzsteuer-ID](#einfache-pruefung-mit-ungueltiger-umsatzsteuer-id)
+- [Qualifizierte Prüfung mit gültiger und richtig formatierter Umsatzsteuer-ID](#qualifizierte-pruefung-mit-gueltiger-und-richtig-formatierter-umsatzsteuer-id)
+- [Qualifizierte Prüfung mit ungültiger, aber richtig formatierter Umsatzsteuer-ID](#qualifizierte-pruefung-mit-ungueltiger-aber-richtig-formatierter-umsatzsteuer-id)
+- [Qualifizierte Prüfung mit gültiger, aber falsch formatierter Umsatzsteuer-ID](#qualifizierte-pruefung-mit-gueltiger-aber-falsch-formatierter-umsatzsteuer-id)
+- [Qualifizierte Prüfung ohne Länderkürzel](#qualifizierte-pruefung-ohne-laenderkuerzel)
+- [Qualifizierte Prüfung mit falschem Länderkürzel](#qualifizierte-pruefung-mit-falschem-laenderkuerzel)
+- [Qualifizierte Prüfung mit ungültigem Format](#qualifizierte-pruefung-mit-ungueltigem-format)
+- [Prüfung mit fehlenden Pflichtfeldern](#pruefung-mit-fehlenden-pflichtfeldern)
+
+
+## Grundstruktur der JSON
+
+Die Grundstruktur der JSON folgt der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification).
+
+Jedoch ist die Spezifikation nicht vollständig umgesetzt. Unter anderem gibt es aktuell keine Möglichkeit, mehrere
+Datensätze (Bulk-Processing) zu übermitteln, und die Fehlercodes sind rudimentär und sollten in einer Integration nicht
+verarbeitet werden.
+
+| Feld    | Erwarteter Wert     | Bedeutung                                                                                                                                                    |
+|---------|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| jsonrpc | "2.0" als String    | Mit diesem Feld wird die Version des Protokolls angegeben. Der Wert ist immer gleich.                                                                        |
+| id      | Zahl größer als 0   | Mit diesem Feld wird die ID der Anfrage übergeben. Falls mehrere Anfragen asynchron versendet werden, kann über die ID die Sequenz wiederhergestellt werden. |
+| method  | String              | Name [einer der Funktionen](./readme.md#verzeichnis-der-methoden-und-use-cases) der Endereco Services API, z.B. "addressCheck"                               |
+| params  | Hash-Array / Object | Eine Sammlung der methodenspezifischen Parameter                                                                                                             |
+| result  | Hash-Array / Object | Container für die Antwort bei erfolgreichem Verlauf der Anfrage.                                                                                             |
+| error   | Hash-Array / Object | Container für die Fehlermeldung beim fehlerhaften Verlauf der Anfrage.                                                                                       |
+| code    | Zahl                | Nummer des Fehlers. Aktuell rudimentär umgesetzt und soll ignoriert werden.                                                                                  |
+| message | String              | Fehlermeldung in menschenlesbarer Form.                                                                                                                      |
+
+Siehe auch:
+
 - [Eingabeparameter](./fields.md#eingabeparameter-vatIdCheck)
-- [Ausgabefelder](./fields.md#ausgabenfelder-vatIdCheck)
+- [Ausgabefelder](./fields.md#ausgabefelder-vatIdCheck)
 - [Statuscodes](./statuscodes.md)
 
-# Inhaltsverzeichnis
-- [Einfache Prüfung mit gültiger Umsatzsteuer-ID](#einfache-prüfung-mit-gültiger-umsatzsteuer-id)
-- [Einfache Prüfung mit ungültiger Umsatzsteuer-ID](#einfache-prüfung-mit-ungültiger-umsatzsteuer-id)
-- [Qualifizierte Prüfung mit güliger und richtig formatierten Umsatzsteuer-ID](#qualifizierte-prüfung-mit-güliger-und-richtig-formatierten-umsatzsteuer-ID)
-- [Qualifizierte Prüfung mit ungültiger aber richtig formatierter Umsatzsteuer-ID](#qualifizierte-prüfung-mit-ungültiger-aber-richtig-formatierter-umsatzsteuer-ID)
-- [Qualifizierte Prüfung mit gültiger aber falsch formatierter Umsatzsteuer-ID](#qualifizierte-prüfung-mit-gültiger-aber-falsch-formatierter-umsatzsteuer-ID)
-- [Qualifizierte Prüfung ohne Länderkürzel](#qualifizierte-prüfung-ohne-länderkürzel)
-- [Qualifizierte Prüfung mit falschem Länderkürzel](#qualifizierte-prüfung-mit-falschem-länderkürzel)
-- [Qualifizierte Prüfung mit ungültigem Format](#qualifizierte-prüfung-mit-ungültigem-format)
-- [Prüfung mit fehlenden Pflichtfeldern](#prüfung-mit-fehlenden-pflichtfeldern)
+## Einfache Prüfung mit gültiger Umsatzsteuer-ID
 
-## Aktuell
-
-### Einfache Prüfung mit gültiger Umsatzsteuer-ID
-
-#### Anfrage
+### Anfrage
 
 ```
 {
@@ -33,7 +53,7 @@
 }
 ```
 
-#### Antwort
+### Antwort
 
 ```
 {
@@ -53,9 +73,9 @@
 }
 ```
 
-### Einfache Prüfung mit ungültiger Umsatzsteuer-ID
+## Einfache Prüfung mit ungültiger Umsatzsteuer-ID
 
-#### Anfrage
+### Anfrage
 
 ```
 {
@@ -68,7 +88,7 @@
 }
 ```
 
-#### Antwort
+### Antwort
 
 ```
 {
@@ -84,9 +104,9 @@
 }
 ```
 
-### Qualifizierte Prüfung mit güliger und richtig formatierten Umsatzsteuer-ID
+## Qualifizierte Prüfung mit gültiger und richtig formatierter Umsatzsteuer-ID
 
-#### Anfrage
+### Anfrage
 
 ```
 {
@@ -104,7 +124,7 @@
 }
 ```
 
-#### Antwort
+### Antwort
 
 ```
 {
@@ -130,9 +150,9 @@
 }
 ```
 
-### Qualifizierte Prüfung mit ungültiger aber richtig formatierter Umsatzsteuer-ID
+## Qualifizierte Prüfung mit ungültiger, aber richtig formatierter Umsatzsteuer-ID
 
-#### Anfrage
+### Anfrage
 
 ```
 {
@@ -150,7 +170,7 @@
 }
 ```
 
-#### Antwort
+### Antwort
 
 ```
 {
@@ -170,9 +190,9 @@
 }
 ```
 
-### Qualifizierte Prüfung mit gültiger aber falsch formatierter Umsatzsteuer-ID
+## Qualifizierte Prüfung mit gültiger, aber falsch formatierter Umsatzsteuer-ID
 
-#### Anfrage
+### Anfrage
 
 ```
 {
@@ -190,7 +210,7 @@
 }
 ```
 
-#### Antwort
+### Antwort
 
 ```
 {
@@ -218,9 +238,9 @@
 }
 ```
 
-### Qualifizierte Prüfung ohne Länderkürzel
+## Qualifizierte Prüfung ohne Länderkürzel
 
-#### Anfrage
+### Anfrage
 
 ```
 {
@@ -238,7 +258,7 @@
 }
 ```
 
-#### Antwort
+### Antwort
 
 ```
 {
@@ -254,9 +274,9 @@
 }
 ```
 
-### Qualifizierte Prüfung mit falschem Länderkürzel
+## Qualifizierte Prüfung mit falschem Länderkürzel
 
-#### Anfrage
+### Anfrage
 
 ```
 {
@@ -274,7 +294,7 @@
 }
 ```
 
-#### Antwort
+### Antwort
 
 ```
 {
@@ -290,9 +310,9 @@
 }
 ```
 
-### Qualifizierte Prüfung mit ungültigem Format
+## Qualifizierte Prüfung mit ungültigem Format
 
-#### Anfrage
+### Anfrage
 
 ```
 {
@@ -310,7 +330,7 @@
 }
 ```
 
-#### Antwort
+### Antwort
 
 ```
 {
@@ -326,9 +346,9 @@
 }
 ```
 
-### Prüfung mit fehlenden Pflichtfeldern
+## Prüfung mit fehlenden Pflichtfeldern
 
-#### Anfrage
+### Anfrage
 
 ```
 {
@@ -346,7 +366,7 @@
 }
 ```
 
-#### Antwort
+### Antwort
 
 ```
 {
