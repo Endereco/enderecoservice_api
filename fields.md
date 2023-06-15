@@ -4,7 +4,9 @@
 
 - [Grundaufbau der JSON](#grundaufbau-der-json)
 - [Eingabeparameter](#eingabeparameter)
+  - [addressCheck](#adress-check)
 - [Ausgabenfelder](#ausgabenfelder)
+  - [addressCheck](#adress-check)
 
 ## Grundaufbau der JSON
 
