@@ -2,7 +2,7 @@
 
 ## Inhaltsverzeichnis
 
-- [Grundaufbau der JSON](#grundaufbau-der-json)
+- [Grundaufbau der JSON](#grundstruktur-der-json)
 - [Eingabeparameter](#eingabeparameter)
     - [addressCheck](#eingabeparameter-addresscheck)
     - [postCodeAutocomplete](#eingabeparameter-postCodeAutocomplete)
@@ -13,16 +13,16 @@
     - [phoneCheck](#eingabeparameter-phoneCheck)
     - [ibanCheck](#eingabeparameter-ibanCheck)
     - [vatIdCheck](#eingabeparameter-vatIdCheck)
-- [Ausgabenfelder](#ausgabenfelder)
-    - [addressCheck](#ausgabenfelder-addresscheck)
-    - [postCodeAutocomplete](#ausgabenfelder-postCodeAutocomplete)
-    - [cityNameAutocomplete](#ausgabenfelder-cityNameAutocomplete)
-    - [streetAutocomplete](#ausgabenfelder-streetAutocomplete)
-    - [emailCheck](#ausgabenfelder-emailCheck)
-    - [nameCheck](#ausgabenfelder-nameCheck)
-    - [phoneCheck](#ausgabenfelder-phoneCheck)
-    - [ibanCheck](#ausgabenfelder-ibanCheck)
-    - [vatIdCheck](#ausgabenfelder-vatIdCheck)
+- [Ausgabefelder](#ausgabefelder)
+    - [addressCheck](#ausgabefelder-addresscheck)
+    - [postCodeAutocomplete](#ausgabefelder-postCodeAutocomplete)
+    - [cityNameAutocomplete](#ausgabefelder-cityNameAutocomplete)
+    - [streetAutocomplete](#ausgabefelder-streetAutocomplete)
+    - [emailCheck](#ausgabefelder-emailCheck)
+    - [nameCheck](#ausgabefelder-nameCheck)
+    - [phoneCheck](#ausgabefelder-phoneCheck)
+    - [ibanCheck](#ausgabefelder-ibanCheck)
+    - [vatIdCheck](#ausgabefelder-vatIdCheck)
 
 ## Grundstruktur der JSON
 
