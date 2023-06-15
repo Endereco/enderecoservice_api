@@ -1,24 +1,23 @@
-# Beispiele für die UmsatzsteuerId-Prüfung
+# Beispiele für die Umsatzsteuer ID
+
+# Info
+- [Ein- und Ausgabefleder](./fields.md)
+- [Statuscodes](./statuscodes.md)
 
 # Inhaltsverzeichnis
-- [Aktuell](#aktuell)
-  - [Einfache Prüfung mit gültiger Umsatzsteuerid](#einfache-prüfung-mit-gueltiger-umsatzsteuerid)
-  - [Einfache Prüfung mit ungültiger Umsatzsteuerid](#einfache-prüfung-mit-ungueltiger-umsatzsteuerid)
-  - [Qualifizierte Prüfung mit güliger und richtig formatierten UID](#qualifizierte-prüfung-mit-gueliger-und-richtig-formatierten-uid)
-  - [Qualifizierte Prüfung mit ungültiger aber richtig formatierter UID](#qualifizierte-pruefung-mit-ungültiger-aber-richtig-formatierter-uid)
-  - [Qualifizierte Prüfung mit gültiger aber falsch formatierter UID](#qualifizierte-pruefung-mit-gueltiger-aber-falsch-formatierter-uid)
-  - [Qualifizierte Prüfung ohne Länderkürzel](#qualifizierte-pruefung-ohne-Länderkürzel)
-  - [Qualifizierte Prüfung mit falschem Länderkürzel](#qualifizierte-prüfung-mit-falschem-laenderkuerzel)
-  - [Qualifizierte Prüfung mit ungültigem Format](#qualifizierte-preufung-mit-ungueltigem-format)
-  - [Prüfung mit fehlenden Pflichtfeldern](#pruefung-mit-fehlenden-pflichtfeldern) 
-- [Veraltet](#veraltet)
-    - [Gültige Umsatzsteuerid](#gueltige-umsatzsteuerid)
-    - [Ungülite Umsatzsteuerid](#unguelite-umsatzsteuerid)
-    - [Gültige Umsatzsteuerid mit Firmenname](#gueltige-umsatzsteuerid-mit-firmenname)
+- [Einfache Prüfung mit gültiger Umsatzsteuer ID](#einfache-prüfung-mit-gültiger-umsatzsteuer-id)
+- [Einfache Prüfung mit ungültiger Umsatzsteuer ID](#einfache-prüfung-mit-ungültiger-umsatzsteuer-id)
+- [Qualifizierte Prüfung mit güliger und richtig formatierten Umsatzsteuer ID](#qualifizierte-prüfung-mit-güliger-und-richtig-formatierten-umsatzsteuer-ID)
+- [Qualifizierte Prüfung mit ungültiger aber richtig formatierter Umsatzsteuer ID](#qualifizierte-prüfung-mit-ungültiger-aber-richtig-umsatzsteuer-ID)
+- [Qualifizierte Prüfung mit gültiger aber falsch formatierter Umsatzsteuer ID](#qualifizierte-prüfung-mit-gültiger-aber-falsch-umsatzsteuer-ID)
+- [Qualifizierte Prüfung ohne Länderkürzel](#qualifizierte-prüfung-ohne-länderkürzel)
+- [Qualifizierte Prüfung mit falschem Länderkürzel](#qualifizierte-prüfung-mit-falschem-länderkürzel)
+- [Qualifizierte Prüfung mit ungültigem Format](#qualifizierte-prüfung-mit-ungültigem-format)
+- [Prüfung mit fehlenden Pflichtfeldern](#prüfung-mit-fehlenden-pflichtfeldern)
 
 ## Aktuell
 
-### Einfache Prüfung mit gültiger Umsatzsteuerid
+### Einfache Prüfung mit gültiger Umsatzsteuer ID
 
 #### Anfrage
 
@@ -53,7 +52,7 @@
 }
 ```
 
-### Einfache Prüfung mit ungültiger Umsatzsteuerid
+### Einfache Prüfung mit ungültiger Umsatzsteuer ID
 
 #### Anfrage
 
@@ -84,7 +83,7 @@
 }
 ```
 
-### Qualifizierte Prüfung mit güliger und richtig formatierten UID
+### Qualifizierte Prüfung mit güliger und richtig formatierten Umsatzsteuer ID
 
 #### Anfrage
 
@@ -130,7 +129,7 @@
 }
 ```
 
-### Qualifizierte Prüfung mit ungültiger aber richtig formatierter UID
+### Qualifizierte Prüfung mit ungültiger aber richtig formatierter Umsatzsteuer ID
 
 #### Anfrage
 
@@ -170,7 +169,7 @@
 }
 ```
 
-### Qualifizierte Prüfung mit gültiger aber falsch formatierter UID
+### Qualifizierte Prüfung mit gültiger aber falsch formatierter Umsatzsteuer ID
 
 #### Anfrage
 
@@ -341,97 +340,6 @@
     "error": {
         "code": -32603,
         "message": "Field \"params.vatId\" must be set."
-    }
-}
-```
-
-## Veraltet
-
-### Gültige Umsatzsteuerid
-
-#### Anfrage
-
-```
-{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "vatIdCheck",
-    "params": {
-        "vatId": "DE297464149"
-    }
-}
-```
-
-#### Antwort
-
-```
-{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "result": {
-        "status": [
-            "vat_valid"
-        ]
-    }
-}
-```
-
-### Ungülite Umsatzsteuerid
-
-#### Anfrage
-
-```
-{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "vatIdCheck",
-    "params": {
-        "vatId": "DE297464148"
-    }
-}
-```
-
-#### Antwort
-
-```
-{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "result": {
-        "status": [
-            "vat_invalid"
-        ]
-    }
-}
-```
-
-### Gültige Umsatzsteuerid mit Firmenname
-
-#### Anfrage
-
-```
-{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "vatIdCheck",
-    "params": {
-        "vatId": "ATU76571345"
-    }
-}
-```
-
-#### Antwort
-
-```
-{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "result": {
-        "status": [
-            "vat_valid",
-            "vat_has_company_name"
-        ],
-        "companyName": "BS Marketing Solution GmbH"
     }
 }
 ```

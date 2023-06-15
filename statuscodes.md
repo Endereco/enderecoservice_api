@@ -279,7 +279,7 @@ Diese Codes werden bald mit sprechenden Statuscodes ersetzt. Bitte nicht bei der
 | vat_id_body_needs_correction | Schreibweise der Umsatzsteuer ID ist korrekturbedürftig. |
 | vat_id_body_minor_correction | Kleine Änderung der Umsatzsteuer ID. |
 | vat_id_body_major_correction | Große Änderung der Umsatzsteuer ID. |
-| vat_id_format_invalid | Format entspricht nicht der [Spezifikation](http://ec.europa.eu/taxation_customs/vies/faq.html?locale=de#item_11). |
-| vat_id_format_correct | Format entspricht der [Spezifikation](http://ec.europa.eu/taxation_customs/vies/faq.html?locale=de#item_11). |
+| vat_id_format_invalid | Format entspricht nicht der [Spezifikation](https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Documents/COSME/VAT%20numbers%20EU.pdf). |
+| vat_id_format_correct | Format entspricht der [Spezifikation](https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Documents/COSME/VAT%20numbers%20EU.pdf). |
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)

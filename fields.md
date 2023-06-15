@@ -91,9 +91,9 @@ verarbeitet werden.
 ### vatIdCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
-| vatId | String | Ja | Enthält die zu prüfende Umsatzsteuer ID Nummer |
-| requesterVatID | String | Nein | Enthält die eigene Umsatzsteuer ID Nummer |
-| companyName | String | Nein | Enthält den Firmenname der zu prüfenden Umsatzsteuer ID Nummer |
+| vatId | String | Ja | Enthält die zu prüfende Umsatzsteuer ID |
+| requesterVatID | String | Nein | Enthält die eigene Umsatzsteuer ID |
+| companyName | String | Nein | Enthält den Firmenname der zu prüfenden Umsatzsteuer ID |
 | companyPostalCode | String | Nein | Enthält die Postleitzahl der zu prüfendenn Firma |
 | companyLocality | String | Nein | Enthält den Ortsnamen der zu prüfenden Firma |
 | companyStreetFull | String | Nein | Enthält den Straßenname ink. Hausnummer der zu prüfenden Firma |
@@ -200,7 +200,7 @@ verarbeitet werden.
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | predictions | Array | Ja | Enthält JSON-Objekte mit Korrekturvorschlägen. |
-| predictions.vatId | String | Ja | Enthält die formatierte Umsatzsteuer Id. zu prüfenden Firma |
+| predictions.vatId | String | Ja | Enthält die formatierte Umsatzsteuer ID zu prüfenden Firma |
 | predictions.companyName | String | Nein | Enthält den Firmennamen zu diesem Vorschlag. |
 | predictions.companyAddress | String | Nein | Enthält die Firmenadresse zu diesem Vorschlag. |
 | cerification | Json | Nein | Enthält Informationen zu den Zertifikat |

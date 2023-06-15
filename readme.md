@@ -72,7 +72,7 @@ Wie kannst du auf unsere API zugreifen?
 
 | Telefonnummer | IBAN | Umsatzsteuer ID |
 |---|---|---|
-| [Rufnummernprüfung](#prüfung-einer-telefonnummer) | [IBAN-Prüfung](#prüfung-der-iban-und-ggf-der-kontonummer) | [Umsatzsteuer-ID Prüfung](#prüfung-der-umsatzsteuer-id) |
+| [Rufnummernprüfung](#prüfung-einer-telefonnummer) | [IBAN-Prüfung](#prüfung-der-iban-und-ggf-der-kontonummer) | [Umsatzsteuer ID Prüfung](#prüfung-der-umsatzsteuer-id) |
 
 | technische Methoden |
 |---|
@@ -1207,12 +1207,12 @@ Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Stat
 
 Die Umsatzsteuer ID Nr. kann über eine einfache Abfrage oder über eine qualifizierte Abfrage validiert werden.
 
-1. Einfache Validierung: Die Umsatzsteuer-Id-Nr. wird auf Gültigkeit geprüft, ohne nähere Details zu dieser abzugleichen.
-2. Qualifizierte Validierung: Die Umsatzstzer-Id-Nr. wird im Zusammenhang mit dem Firmennamen und der Firmenadresse abgefragt.
+1. Einfache Validierung: Die Umsatzsteuer ID wird auf Gültigkeit geprüft, ohne nähere Details zu dieser abzugleichen.
+2. Qualifizierte Validierung: Die Umsatzsteuer ID wird im Zusammenhang mit dem Firmennamen und der Firmenadresse abgefragt.
 
 [zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
 
-*Beispiel 1: Einfache Validierung einer Umsatzsteuer-Id-Nr.*
+*Beispiel 1: Einfache Validierung einer Umsatzsteuer ID.*
 ```
 POST https://endereco-service.de/rpc/v1
 ```
