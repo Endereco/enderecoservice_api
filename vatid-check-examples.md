@@ -1,7 +1,7 @@
 # Beispiele für die Umsatzsteuer-ID
 
 # Info
-- [Eingabefelder](./fields.md#eingabeparameter-vatIdCheck)
+- [Eingabeparameter](./fields.md#eingabeparameter-vatIdCheck)
 - [Ausgabefelder](./fields.md#ausgabenfelder-vatIdCheck)
 - [Statuscodes](./statuscodes.md)
 

@@ -1,10 +1,5 @@
 # Beispiele für die Namensprüfung
 
-# Info
-- [Eingabefelder](./fields.md#eingabeparameter-nameCheck)
-- [Ausgabefelder](./fields.md#ausgabenfelder-nameCheck)
-- [Statuscodes](./statuscodes.md)
-
 ## Inhaltsverzeichnis
 - [Männlicher Vorname mit richtiger Anrede](#männlicher-vorname-mit-richtiger-anrede)
 - [Weiblicher Vorname mit richtige Anrede](#weiblicher-vorname-mit-richtige-anrede)
@@ -13,13 +8,13 @@
 - [Weiblicher Vorname mit falscher Anrede](#weiblicher-vorname-mit-falscher-anrede)
 - [Weiblicher Vorname ohne Anrede](#weiblicher-vorname-ohne-anrede)
 - [Männlicher Vorname mit diverse Anrede](#männlicher-vorname-mit-diverse-anrede)
-- [Länderabhängige Anrede weiblich](#länderabhängige-anrede-weiblich)
-- [Länderabhängige Anrede männlich](#länderabhängige-anrede-männlich)
+- [Länderabhängige Anrede (weiblich)](#länderabhängige-anrede-weiblich)
+- [Länderabhängige Anrede (männlich)](#länderabhängige-anrede-männlich)
 - [Name wird nicht gefunden](#name-wird-nicht-gefunden)
 - [Person mit Doktor beim Vornamen ohne Title](#person-mit-doktor-beim-vornamen-ohne-title)
 - [Person mit Doktor beim Vornamen mit Title](#person-mit-doktor-beim-vornamen-mit-title)
-- [Fake-Name](#fake-name) 
-- [Pflichtfelder fehlen](#pflichtfelder-fehlen) 
+- [Fake-Name](#facename)
+- [Pflichtfelder fehlen](#pflichtfelder-fehlen)
 - [Leere Felder](#leere-felder)
 - [Falscher Inhalt](#falscher-inhalt)
 - [Nicht erreichbar](#nicht-erreichbar)
@@ -103,7 +98,7 @@
 
 ### Männlicher Vorname mit falscher Anrede
 
-#### Anfrage 
+#### Anfrage
 
 ```
 {
@@ -300,7 +295,7 @@
 }
 ```
 
-### Länderabhängige Anrede weiblich
+### Länderabhängige Anrede (weiblich)
 
 #### Anfrage für Deutschland
 
@@ -384,7 +379,7 @@
 }
 ```
 
-### Länderabhängige Anrede männlich
+### Länderabhängige Anrede (männlich)
 
 #### Anfrage für Deutschland
 
@@ -733,7 +728,7 @@
 }
 ```
 
-#### Antwort mit emailadresse 
+#### Antwort mit emailadresse
 
 ```
 {
