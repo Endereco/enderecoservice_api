@@ -4,9 +4,9 @@
 
 - [Grundaufbau der JSON](#grundaufbau-der-json)
 - [Eingabeparameter](#eingabeparameter)
-  - [Eingabeparameter addressCheck](#eingabeparameter-addresscheck)
+  - [addressCheck](#eingabeparameter-addresscheck)
 - [Ausgabenfelder](#ausgabenfelder)
-  - [Ausgabenfelder addressCheck](#ausgabenfelder-addresscheck)
+  - [addressCheck](#ausgabenfelder-addresscheck)
 
 ## Grundaufbau der JSON
 
@@ -29,7 +29,7 @@ verarbeitet werden.
 
 ## Eingabeparameter
 
-### Eingabeparameter addressCheck
+### addressCheck
 
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
