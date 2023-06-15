@@ -5,9 +5,25 @@
 - [Grundaufbau der JSON](#grundaufbau-der-json)
 - [Eingabeparameter](#eingabeparameter)
   - [addressCheck](#eingabeparameter-addresscheck)
+  - [postCodeAutocomplete](#eingabeparameter-postCodeAutocomplete)
+  - [cityNameAutocomplete](#eingabeparameter-cityNameAutocomplete)
+  - [streetAutocomplete](#eingabeparameter-streetAutocomplete)   
+  - [emailCheck](#eingabeparameter-emailCheck)
+  - [nameCheck](#eingabeparameter-nameCheck)
+  - [phoneCheck](#eingabeparameter-phoneCheck)  
+  - [ibanCheck](#eingabeparameter-ibanCheck)
+  - [vatIdCheck](#eingabeparameter-vatIdCheck)
 - [Ausgabenfelder](#ausgabenfelder)
   - [addressCheck](#ausgabenfelder-addresscheck)
-
+  - [postCodeAutocomplete](#ausgabenfelder-postCodeAutocomplete)
+  - [cityNameAutocomplete](#ausgabenfelder-cityNameAutocomplete)
+  - [streetAutocomplete](#ausgabenfelder-streetAutocomplete)
+  - [emailCheck](#ausgabenfelder-emailCheck)
+  - [nameCheck](#ausgabenfelder-nameCheck)
+  - [phoneCheck](#ausgabenfelder-phoneCheck)
+  - [ibanCheck](#ausgabenfelder-ibanCheck)
+  - [vatIdCheck](#ausgabenfelder-vatIdCheck)
+    
 ## Grundaufbau der JSON
 
 Der grundsätzliche Aufbau der JSON folgt aus der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification).
@@ -27,9 +43,9 @@ verarbeitet werden.
 | code | Zahl | Nummer des Fehlers. Aktuell rudimentär umgesetzt und soll ignoriert werden. |
 | message | String | Fehlermeldung in menschenlesbarer Form. |
 
-## Eingabeparameter
+## Eingabeparameter8
 
-### addressCheck
+### Eingabeparameter addressCheck
 
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
@@ -42,20 +58,20 @@ verarbeitet werden.
 | additionalInfo | String | Nein | Enthält Adresszusatz. |
 | subdivisionCode | String | Nein | Enthält den Bundesland/Regions code. Format: Ländercode + - + Bundeslandkürzel
 
-### postCodeAutocomplete
+### Eingabeparameter postCodeAutocomplete
 
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | country | String | Ja | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
 | postCode | String | Ja | Enthält die Postleitzahl. |
 
-### cityNameAutocomplete
+### Eingabeparameter cityNameAutocomplete
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | country | String | Ja | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
 | cityName | String | Ja | Enthält den Ortsnamen. |
 
-### streetAutocomplete
+### Eingabeparameter streetAutocomplete
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | country | String | Ja | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
@@ -63,12 +79,12 @@ verarbeitet werden.
 | cityName | String | Ja | Enthält den Ortsnamen. |
 | street | String | Ja | Enthält nur den Straßennamen.  |
 
-### emailCheck
+### Eingabeparameter emailCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | email | String | Ja | Enthält die E-Mail Adresse. |
 
-### nameCheck
+### Eingabeparameter nameCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | title | String | Nein | Enthält einen Titel. z.B. Dr.
@@ -79,18 +95,18 @@ verarbeitet werden.
 | countryCode | String | Nein | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
 | language | String | Nein | Sprachkürzel für die Ausgabe. Aktuell wird nur die Ausgabe vom nameCheck beeinflusst, zukünftig wird das mit weitere Services möglich sein. Standardwert ist DE [Liste der Sprachcodes](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes)|
 
-### phoneCheck
+### Eingabeparameter phoneCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | phone | String | Ja | Enthält die Rufnummer. |
 | format | String | Nein | Enthält den Namen des Formats. Wird aktuell nur bei Rufnummernprüfung verwendet. Siehe [Liste der Rufnummernformate](#liste-der-rufnummernformate). |
 
-### ibanCheck
+### Eingabeparameter ibanCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | iban | String | Ja | Enthält die IBAN. |
 
-### vatIdCheck
+### Eingabeparameter vatIdCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | vatId | String | Ja | Enthält die zu prüfende Umsatzsteuer ID |
@@ -115,7 +131,7 @@ verarbeitet werden.
 | predictions.subdivisionCode | String | Nein | Enthält den Bundesland/Regions-code zu diesem Vorschlag. Format: Ländercode + - + Bundeslandkürzel |
 | status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### postCodeAutocomplete
+### Ausgabenfelder postCodeAutocomplete
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | predictions | Array | Ja | Enthält JSON-Objekte mit Korrekturvorschlägen |
@@ -124,7 +140,7 @@ verarbeitet werden.
 | predictions.subdivisionCode | String | Nein | Enthält den Bundesland/Regions-code zu diesem Vorschlag. Format: Ländercode + - + Bundeslandkürzel |
 | status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### cityNameAutocomplete
+### Ausgabenfelder cityNameAutocomplete
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | predictions | Array | Ja | Enthält JSON-Objekte mit Korrekturvorschlägen |
@@ -133,7 +149,7 @@ verarbeitet werden.
 | predictions.subdivisionCode | String | Nein | Enthält den Bundesland/Regions-code zu diesem Vorschlag. Format: Ländercode + - + Bundeslandkürzel |
 | status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### streetAutocomplete
+### Ausgabenfelder streetAutocomplete
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | predictions | Array | Ja | Enthält JSON-Objekte mit Korrekturvorschlägen |
@@ -143,12 +159,12 @@ verarbeitet werden.
 | predictions.additionalInfo | String | Ja | Enthält Adresszusatz zu diesem Vorschlag. |
 | status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### emailCheck
+### Ausgabenfelder emailCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### nameCheck
+### Ausgabenfelder nameCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | predictions | Array | Enthält JSON-Objekte mit Korrekturvorschlägen. |
@@ -159,7 +175,7 @@ verarbeitet werden.
 | score | Float | Ja | Enthält eine Zahl zwischen 0.0 und 1.0. Repräsentiert die Wahrscheinlichkeit oder Qualität der Aussage. |
 | status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### phoneCheck
+### Ausgabenfelder phoneCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | original | Json | Ja | Identisch mit der Eingabe |
@@ -179,7 +195,7 @@ verarbeitet werden.
 | predictions.leadingZeros | Int | Ja, wenn predictions da sind | Enthält die Anzahl der '0' die vor der nationalen Rufnummer stehen zu diesem Vorschlag |
 | status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### ibanCheck
+### Ausgabenfelder ibanCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | original | Json | Ja | Identisch mit der Eingabe |
@@ -198,7 +214,7 @@ verarbeitet werden.
 | predictions.countryCentralBankUrl | String | Ja, wenn predictions da sind | Enthält ggf. die URL auf die Website der Zentralban zu diesem Vorschlag |
 | status | Array | Ja | Enthält eine Liste aus Statuscodes, die das geprüfte Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### vatIdCheck
+### Ausgabenfelder vatIdCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | predictions | Array | Ja | Enthält JSON-Objekte mit Korrekturvorschlägen. |

@@ -1,7 +1,8 @@
 # Beispiele für die Umsatzsteuer ID
 
 # Info
-- [Ein- und Ausgabefleder](./fields.md)
+- [Eingabefleder](./fields.md#eingabeparameter-vatIdCheck)
+- [Ausgabefleder](./fields.md#ausgabenfelder-vatIdCheck)
 - [Statuscodes](./statuscodes.md)
 
 # Inhaltsverzeichnis
