@@ -4,9 +4,9 @@
 
 - [Grundaufbau der JSON](#grundaufbau-der-json)
 - [Eingabeparameter](#eingabeparameter)
-  - [addressCheck](#adress-check)
+  - [Eingabeparameter addressCheck](#eingabeparameter-adresscheck)
 - [Ausgabenfelder](#ausgabenfelder)
-  - [addressCheck](#adress-check)
+  - [Ausgabenfelder addressCheck](#ausgabenfelder-adresscheck)
 
 ## Grundaufbau der JSON
 
@@ -29,7 +29,7 @@ verarbeitet werden.
 
 ## Eingabeparameter
 
-### addressCheck
+### Eingabeparameter addressCheck
 
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
@@ -102,7 +102,7 @@ verarbeitet werden.
 
 ## Ausgabenfelder
 
-### addressCheck
+### Ausgabenfelder addressCheck
 | Feld | Erwarteter Wert | Pflicht | Bedeutung |
 | --- | --- | --- | --- |
 | predictions | Array | Ja | Enthält JSON-Objekte mit Korrekturvorschlägen |
