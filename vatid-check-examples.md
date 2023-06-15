@@ -10,7 +10,7 @@
 - [Qualifizierte Prüfung ohne Länderkürzel](#qualifizierte-prüfung-ohne-länderkürzel)
 - [Qualifizierte Prüfung mit falschem Länderkürzel](#qualifizierte-prüfung-mit-falschem-länderkürzel)
 - [Qualifizierte Prüfung mit ungültigem Format](#qualifizierte-prüfung-mit-ungültigem-format)
-- [Prüfung mit fehlenden Pflichtfeldern](##prüfung-mit-fehlenden-pflichtfeldern)
+- [Prüfung mit fehlenden Pflichtfeldern](#prüfung-mit-fehlenden-pflichtfeldern)
 
 ## Grundstruktur der JSON
 
