@@ -94,12 +94,12 @@
    "id": 1,
    "method": "vatIdCheck",
    "params": {
-      "vatId": "ATU76571345",
+      "vatId": "DE297464149",
       "requesterVatID": "DE297464149",
-      "companyName": "IQ Digital Health GmbH",
-      "companyPostalCode": "5082",
-      "companyLocality": "Grödig",
-      "companyStreetFull": "Via Sanitas,1"
+      "companyName": "endereco",
+      "companyPostalCode": "97236",
+      "companyLocality": "Randersacker",
+      "companyStreetFull": "Balthasar-Neumann Str. 4b"
    }
 }
 ```
@@ -108,25 +108,25 @@
 
 ```
 {
-   "jsonrpc": "2.0",
-   "id": 1,
-   "result": {
-      "predictions": [
-         {
-            "vatId": "ATU76571345",
-            "companyName": "BS Marketing Solution GmbH",
-            "companyAddress": "Pranzing 27, AT-4861 Aurach/Hongar"
-         }
-      ],
-      "cerification": {
-         "timestamp": "2023-05-19 13:04:50",
-         "source": "api.vat-search.eu"
-      },
-      "status": [
-         "vat_id_valid",
-         "vat_id_format_correct"
-      ]
-   }
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "predictions": [
+            {
+                "vatId": "DE297464149",
+                "companyName": "endereco UG (haftungsbeschränkt) Gesellschaft für Master Data Quality Management",
+                "companyAddress": "Balthasar-Neumann Str. 4b, 97236, Randersacker"
+            }
+        ],
+        "cerification": {
+            "timestamp": "2023-06-15 11:09:56",
+            "source": "api.vat-search.eu"
+        },
+        "status": [
+            "vat_id_valid",
+            "vat_id_format_correct"
+        ]
+    }
 }
 ```
 
@@ -140,53 +140,13 @@
    "id": 1,
    "method": "vatIdCheck",
    "params": {
-      "vatId": "ATU74538118",
+      "vatId": "DE297464148",
       "requesterVatID": "DE297464149",
-      "companyName": "IQ Digital Health GmbH",
-      "companyPostalCode": "5082",
-      "companyLocality": "Grödig",
-      "companyStreetFull": "Via Sanitas,1"
+      "companyName": "endereco",
+      "companyPostalCode": "97236",
+      "companyLocality": "Randersacker",
+      "companyStreetFull": "Balthasar-Neumann Str. 4b"
    }
-}
-```
-
-#### Antwort
-
-```
-{
-   "jsonrpc": "2.0",
-   "id": 1,
-   "result": {
-      "predictions": [],
-      "cerification": {
-         "timestamp": "2023-05-19 13:29:04",
-         "source": "api.vat-search.eu"
-      },
-      "status": [
-         "vat_id_invalid",
-         "vat_id_format_correct"
-      ]
-   }
-}
-```
-
-### Qualifizierte Prüfung mit gültiger aber falsch formatierter Umsatzsteuer ID
-
-#### Anfrage
-
-```
-{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "vatIdCheck",
-    "params": {
-        "vatId": "AT U74538119",
-        "requesterVatID": "DE297464149",
-        "companyName": "Ey",
-        "companyPostalCode": "5082",
-        "companyLocality": "Grödig",
-        "companyStreetFull": "Via Sanitas,1"
-    }
 }
 ```
 
@@ -199,12 +159,60 @@
     "result": {
         "predictions": [],
         "cerification": {
-            "timestamp": "2023-05-19 13:32:54",
+            "timestamp": "2023-06-15 11:10:47",
             "source": "api.vat-search.eu"
         },
         "status": [
             "vat_id_invalid",
-            "vat_id_format_invalid"
+            "vat_id_format_correct"
+        ]
+    }
+}
+```
+
+### Qualifizierte Prüfung mit gültiger aber falsch formatierter Umsatzsteuer ID
+
+#### Anfrage
+
+```
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "vatIdCheck",
+   "params": {
+      "vatId": "DE 297464149",
+      "requesterVatID": "DE297464149",
+      "companyName": "endereco",
+      "companyPostalCode": "97236",
+      "companyLocality": "Randersacker",
+      "companyStreetFull": "Balthasar-Neumann Str. 4b"
+   }
+}
+```
+
+#### Antwort
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "predictions": [
+            {
+                "vatId": "DE297464149",
+                "companyName": "endereco UG (haftungsbeschränkt) Gesellschaft für Master Data Quality Management",
+                "companyAddress": "Balthasar-Neumann Str. 4b, 97236, Randersacker"
+            }
+        ],
+        "cerification": {
+            "timestamp": "2023-06-15 11:11:13",
+            "source": "api.vat-search.eu"
+        },
+        "status": [
+            "vat_id_valid",
+            "vat_id_format_invalid",
+            "vat_id_body_needs_correction",
+            "vat_id_body_minor_correction"
         ]
     }
 }
@@ -216,17 +224,17 @@
 
 ```
 {
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "vatIdCheck",
-    "params": {
-        "vatId": "U74538119",
-        "requesterVatID": "DE297464149",
-        "companyName": "IQ Digital Health GmbH",
-        "companyPostalCode": "5082",
-        "companyLocality": "Grödig",
-        "companyStreetFull": "Via Sanitas,1"
-    }
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "vatIdCheck",
+   "params": {
+      "vatId": "297464149",
+      "requesterVatID": "DE297464149",
+      "companyName": "endereco",
+      "companyPostalCode": "97236",
+      "companyLocality": "Randersacker",
+      "companyStreetFull": "Balthasar-Neumann Str. 4b"
+   }
 }
 ```
 
@@ -252,17 +260,17 @@
 
 ```
 {
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "vatIdCheck",
-    "params": {
-        "vatId": "ÜÜU74538118",
-        "requesterVatID": "DE297464149",
-        "companyName": "IQ Digital Health GmbH",
-        "companyPostalCode": "5082",
-        "companyLocality": "Grödig",
-        "companyStreetFull": "Via Sanitas,1"
-    }
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "vatIdCheck",
+   "params": {
+      "vatId": "AA297464149",
+      "requesterVatID": "DE297464149",
+      "companyName": "endereco",
+      "companyPostalCode": "97236",
+      "companyLocality": "Randersacker",
+      "companyStreetFull": "Balthasar-Neumann Str. 4b"
+   }
 }
 ```
 
@@ -288,17 +296,17 @@
 
 ```
 {
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "vatIdCheck",
-    "params": {
-        "vatId": "ATU7453811ASDF8",
-        "requesterVatID": "DE297464149",
-        "companyName": "IQ Digital Health GmbH",
-        "companyPostalCode": "5082",
-        "companyLocality": "Grödig",
-        "companyStreetFull": "Via Sanitas,1"
-    }
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "vatIdCheck",
+   "params": {
+      "vatId": "AA297464149a",
+      "requesterVatID": "DE297464149",
+      "companyName": "endereco",
+      "companyPostalCode": "97236",
+      "companyLocality": "Randersacker",
+      "companyStreetFull": "Balthasar-Neumann Str. 4b"
+   }
 }
 ```
 
@@ -324,12 +332,17 @@
 
 ```
 {
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "vatIdCheck",
-    "params": {
-        "öljk": "ATU74538119"
-    }
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "vatIdCheck",
+   "params": {
+      "vatId2": "AA297464149",
+      "requesterVatID": "DE297464149",
+      "companyName": "endereco",
+      "companyPostalCode": "97236",
+      "companyLocality": "Randersacker",
+      "companyStreetFull": "Balthasar-Neumann Str. 4b"
+   }
 }
 ```
 
