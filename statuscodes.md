@@ -236,9 +236,34 @@ Statuscode `address_correct` nicht vor.
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
-### Mit aktivem Zusatzservice "Erweiterte SMTP Prüfung"
+### Erweiterte Statuscodes (Zusatzservice "Erweiterte SMTP Prüfung")
 
-siehe [Veraltete Codes](#veraltete-codes)
+| Code | Bedeutung |
+| ---- | --------- |
+| email_deliverable | E-Mails können zustellt werden |
+| email_undeliverable | E-Mails können nicht zugestellt werden |
+| email_risky | E-Mail-Adresse ist riskant. Es konnte nicht sichergestellt werden, ob die E-Mail-Adresse E-Mails empfangen kann |
+| email_disposable | Es ist eine wegwerf E-Mail-Adresse, die nur für kurze Zeit existiert |
+| email_at_sign_not_found | Die E-Mail-Adresse enthält kein @ Zeichen |
+| email_dns_error | Der DNS-Server ist nicht erreichbar |
+| email_dns_timeout | Verbindungsaufbau zu dem DNS-Server hat zu lange gedauert |
+| email_domain_does_not_exist | Die Domain dieser E-Mail-Adresse gibt es nicht |
+| email_domain_is_misconfigured | Die Domain dieser E-Mail-Adresse ist nicht richtig konfiguriert |
+| email_domain_part_compliance_failure | Der Domain Teil der E-Mail-Adresse ist nicht vollständig |
+| email_double_dot_sequence | In der E-Mail-Adresse wurden zwei Punkte hintereinander gefunden, was die Syntax nicht erlaubt |
+| email_invalid_address_length | Die Länge der E-Mail-Adresse ist nicht erlaubt |
+| email_invalid_character_sequence | In der E-Mail-Adresse kommt ein ungültiges Zeichen vor |
+| email_local_endpoint_rejected | Die Prüfung der E-Mail-Adresse wurde abgelehnt |
+| email_local_sender_address_rejected | Die Prüfung der E-Mail-Adresse wurde abgelehnt |
+| email_mailbox_does_not_exist | Zu dieser E-Mail-Adresse gibt es kein Postfach |
+| email_mailbox_full | Postfachspeicher ist voll |
+| email_mailbox_temporarily_unavailable | Postfach ist temporär nicht erreichbar |
+| email_spam_trap_detected | Provider hat eine Spam-Falle |
+| email_server_is_catch_all | Diese Domain akzeptiert alle E-Mail-Adressen. Es spielt keine Rolle was vor dem @ Zeichen steht |
+| email_smtp_connection_timeout | Aufbau einer Socket-Verbindung hat zu lange gedauert |
+| email_smtp_dialog_error | Unbekannter Abbruch der Prüfung |
+| email_validation_timeout | Die Prüfung der E-Mail-Adresse hat zu lange gedauert und wurde abgebrochen |
+| email_validation_service_not_available | Die E-Mail-Adresse konnte nicht geprüft werden, da z.b. Datenprovider nicht erreichbar ist |
 
 ### Veraltete Codes
 
