@@ -238,32 +238,33 @@ Statuscode `address_correct` nicht vor.
 
 ### Erweiterte Statuscodes (Zusatzservice "Erweiterte SMTP Prüfung")
 
-| Code | Bedeutung |
-| ---- | --------- |
-| email_deliverable | E-Mails können zustellt werden |
-| email_undeliverable | E-Mails können nicht zugestellt werden |
-| email_risky | E-Mail-Adresse ist riskant. Es konnte nicht sichergestellt werden, ob die E-Mail-Adresse E-Mails empfangen kann |
-| email_disposable | Es ist eine wegwerf E-Mail-Adresse, die nur für kurze Zeit existiert |
-| email_at_sign_not_found | Die E-Mail-Adresse enthält kein @ Zeichen |
-| email_dns_error | Der DNS-Server ist nicht erreichbar |
-| email_dns_timeout | Verbindungsaufbau zu dem DNS-Server hat zu lange gedauert |
-| email_domain_does_not_exist | Die Domain dieser E-Mail-Adresse gibt es nicht |
-| email_domain_is_misconfigured | Die Domain dieser E-Mail-Adresse ist nicht richtig konfiguriert |
-| email_domain_part_compliance_failure | Der Domain Teil der E-Mail-Adresse ist nicht vollständig |
-| email_double_dot_sequence | In der E-Mail-Adresse wurden zwei Punkte hintereinander gefunden, was die Syntax nicht erlaubt |
-| email_invalid_address_length | Die Länge der E-Mail-Adresse ist nicht erlaubt |
-| email_invalid_character_sequence | In der E-Mail-Adresse kommt ein ungültiges Zeichen vor |
-| email_local_endpoint_rejected | Die Prüfung der E-Mail-Adresse wurde abgelehnt |
-| email_local_sender_address_rejected | Die Prüfung der E-Mail-Adresse wurde abgelehnt |
-| email_mailbox_does_not_exist | Zu dieser E-Mail-Adresse gibt es kein Postfach |
-| email_mailbox_full | Postfachspeicher ist voll |
-| email_mailbox_temporarily_unavailable | Postfach ist temporär nicht erreichbar |
-| email_spam_trap_detected | Provider hat eine Spam-Falle |
-| email_server_is_catch_all | Diese Domain akzeptiert alle E-Mail-Adressen. Es spielt keine Rolle was vor dem @ Zeichen steht |
-| email_smtp_connection_timeout | Aufbau einer Socket-Verbindung hat zu lange gedauert |
-| email_smtp_dialog_error | Unbekannter Abbruch der Prüfung |
-| email_validation_timeout | Die Prüfung der E-Mail-Adresse hat zu lange gedauert und wurde abgebrochen |
-| email_validation_service_not_available | Die E-Mail-Adresse konnte nicht geprüft werden, da z.b. Datenprovider nicht erreichbar ist |
+| Code                                   | Bedeutung                                                                                             |
+|----------------------------------------|-------------------------------------------------------------------------------------------------------|
+| email_deliverable                      | E-Mails können zugestellt werden                                                                      |
+| email_undeliverable                    | E-Mails können nicht zugestellt werden                                                                |
+| email_risky                            | E-Mail-Adresse ist riskant. Es konnte nicht sichergestellt werden, ob E-Mails empfangen werden können |
+| email_disposable                       | Es handelt sich um eine Wegwerf-E-Mail-Adresse, die nur für kurze Zeit existiert                      |
+| email_at_sign_not_found                | Die E-Mail-Adresse enthält kein @-Zeichen                                                             |
+| email_dns_error                        | Der DNS-Server ist nicht erreichbar                                                                   |
+| email_dns_timeout                      | Der Verbindungsaufbau zum DNS-Server hat zu lange gedauert                                            |
+| email_domain_does_not_exist            | Die Domain der E-Mail-Adresse existiert nicht                                                         |
+| email_domain_is_misconfigured          | Die Domain der E-Mail-Adresse ist falsch konfiguriert                                                 |
+| email_domain_part_compliance_failure   | Der Domain-Teil der E-Mail-Adresse ist nicht vollständig                                              |
+| email_double_dot_sequence              | In der E-Mail-Adresse wurden zwei Punkte direkt hintereinander gefunden                               |
+| email_invalid_address_length           | Die Länge der E-Mail-Adresse ist nicht zulässig                                                       |
+| email_invalid_character_sequence       | In der E-Mail-Adresse befindet sich ein ungültiges Zeichen                                            |
+| email_local_endpoint_rejected          | Die Prüfung der E-Mail-Adresse wurde abgelehnt                                                        |
+| email_local_sender_address_rejected    | Die Prüfung der Absender-E-Mail-Adresse wurde abgelehnt                                               |
+| email_mailbox_does_not_exist           | Für diese E-Mail-Adresse existiert kein Postfach                                                      |
+| email_mailbox_full                     | Der Postfachspeicher ist voll                                                                         |
+| email_mailbox_temporarily_unavailable  | Das Postfach ist temporär nicht erreichbar                                                            |
+| email_spam_trap_detected               | Der Provider hat eine Spam-Falle erkannt                                                              |
+| email_server_is_catch_all              | Diese Domain akzeptiert alle E-Mail-Adressen, unabhängig vom Text vor dem @-Zeichen                   |
+| email_smtp_connection_timeout          | Der Aufbau einer Socket-Verbindung dauerte zu lange                                                   |
+| email_smtp_dialog_error                | Es gab einen unbekannten Abbruch während der Prüfung                                                  |
+| email_validation_timeout               | Die Prüfung der E-Mail-Adresse dauerte zu lange und wurde abgebrochen                                 |
+| email_validation_service_not_available | Die E-Mail-Adresse konnte nicht geprüft werden, z.B. weil der Datenprovider nicht erreichbar war      |
+
 
 ### Veraltete Codes
 
