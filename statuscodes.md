@@ -260,11 +260,6 @@ Statuscode `address_correct` nicht vor.
 | email_mailbox_temporarily_unavailable  | Das Postfach ist temporär nicht erreichbar                                                            |
 | email_spam_trap_detected               | Der Provider hat eine Spam-Falle erkannt                                                              |
 | email_server_is_catch_all              | Diese Domain akzeptiert alle E-Mail-Adressen, unabhängig vom Text vor dem @-Zeichen                   |
-| email_smtp_connection_timeout          | Der Aufbau einer Socket-Verbindung dauerte zu lange                                                   |
-| email_smtp_dialog_error                | Es gab einen unbekannten Abbruch während der Prüfung                                                  |
-| email_validation_timeout               | Die Prüfung der E-Mail-Adresse dauerte zu lange und wurde abgebrochen                                 |
-| email_validation_service_not_available | Die E-Mail-Adresse konnte nicht geprüft werden, z.B. weil der Datenprovider nicht erreichbar war      |
-
 
 ### Veraltete Codes
 
