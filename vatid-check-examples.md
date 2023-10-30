@@ -136,11 +136,18 @@ Siehe auch:
             {
                 "vatId": "DE297464149",
                 "companyName": "endereco UG (haftungsbeschränkt) Gesellschaft für Master Data Quality Management",
-                "companyAddress": "Balthasar-Neumann Str. 4b, 97236, Randersacker"
+                "companyAddress": "Balthasar-Neumann Str. 4b, 97236, Randersacker",
+                "companyAddressFormatted": {
+                    "streetFull": "Balthasar-Neumann Str. 4b",
+                    "additionalInfo": "",
+                    "postCode": "97236",
+                    "cityName": "Randersacker",
+                    "country": "DE"
+                }
             }
         ],
         "cerification": {
-            "timestamp": "2023-06-15 11:09:56",
+            "timestamp": "2023-10-26 07:24:26",
             "source": "api.vat-search.eu"
         },
         "status": [
@@ -222,11 +229,18 @@ Siehe auch:
             {
                 "vatId": "DE297464149",
                 "companyName": "endereco UG (haftungsbeschränkt) Gesellschaft für Master Data Quality Management",
-                "companyAddress": "Balthasar-Neumann Str. 4b, 97236, Randersacker"
+                "companyAddress": "Balthasar-Neumann Str. 4b, 97236, Randersacker",
+                "companyAddressFormatted": {
+                    "streetFull": "Balthasar-Neumann Str. 4b",
+                    "additionalInfo": "",
+                    "postCode": "97236",
+                    "cityName": "Randersacker",
+                    "country": "DE"
+                }
             }
         ],
         "cerification": {
-            "timestamp": "2023-06-15 11:11:13",
+            "timestamp": "2023-10-26 07:40:30",
             "source": "api.vat-search.eu"
         },
         "status": [
