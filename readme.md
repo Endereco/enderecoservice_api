@@ -1258,3 +1258,74 @@ Siehe [Dokumentation für Feldernamen](./fields.md).
 
 Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 Siehe [Weitere Beispiele](./vatid-check-examples.md).
+
+*Beispiel 2: Qualifizierte Validierung einer Umsatzsteuer-ID.*
+```
+POST https://endereco-service.de/rpc/v1
+```
+
+#### Request Headers
+
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "vatIdCheck",
+   "params": {
+      "vatId": "DE297464149",
+      "requesterVatID": "DE297464149",
+      "companyName": "endereco",
+      "companyPostalCode": "97236",
+      "companyLocality": "Randersacker",
+      "companyStreetFull": "Balthasar-Neumann Str. 4b"
+   }
+}
+```
+
+Siehe [Dokumentation für Feldernamen](./fields.md).
+
+#### Antwort Basis
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "result": {
+      "predictions": [
+         {
+            "vatId": "DE297464149",
+            "companyName": "endereco UG (haftungsbeschränkt) Gesellschaft für Master Data Quality Management",
+            "companyAddress": "Balthasar-Neumann Str. 4b, 97236, Randersacker",
+            "companyAddressFormatted": {
+               "streetFull": "Balthasar-Neumann Str. 4b",
+               "additionalInfo": "",
+               "postCode": "97236",
+               "cityName": "Randersacker",
+               "country": "DE"
+            }
+         }
+      ],
+      "cerification": {
+         "timestamp": "2023-10-26 07:24:26",
+         "source": "api.vat-search.eu"
+      },
+      "status": [
+         "vat_id_valid",
+         "vat_id_format_correct"
+      ]
+   }
+}
+```
+
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+Siehe [Weitere Beispiele](./vatid-check-examples.md).

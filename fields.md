@@ -234,16 +234,22 @@ verarbeitet werden.
 
 ### Ausgabefelder vatIdCheck
 
-| Feld                       | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                     |
-|----------------------------|-----------------|---------|-------------------------------------------------------------------------------------------------------------------------------|
-| predictions                | Array           | Ja      | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                                |
-| predictions.vatId          | String          | Ja      | Enthält die formatierte Umsatzsteuer-ID der zu prüfenden Firma.                                                               |
-| predictions.companyName    | String          | Nein    | Enthält den Firmennamen zu diesem Vorschlag.                                                                                  |
-| predictions.companyAddress | String          | Nein    | Enthält die Firmenadresse zu diesem Vorschlag.                                                                                |
-| certification              | JSON            | Nein    | Enthält Informationen zum Zertifikat.                                                                                         |
-| certification.timestamp    | JSON            | Nein    | Enthält den Zeitpunkt der Abfrage.                                                                                            |
-| certification.source       | JSON            | Nein    | Enthält die Datenquelle.                                                                                                      |
-| status                     | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
+| Feld                                               | Erwarteter Wert | Pflicht                                              | Bedeutung                                                                                                                             |
+|----------------------------------------------------|-----------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| predictions                                        | Array           | Ja                                                   | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                                        |
+| predictions.vatId                                  | String          | Ja                                                   | Enthält die formatierte Umsatzsteuer-ID der zu prüfenden Firma.                                                                       |
+| predictions.companyName                            | String          | Nein                                                 | Enthält den Firmennamen zu diesem Vorschlag.                                                                                          |
+| predictions.companyAddress                         | String          | Nein                                                 | Enthält die unstrukturierte Firmenadresse zu diesem Vorschlag.                                                                        |
+| predictions.companyAddressFormatted                | String          | Nein                                                 | Enthält die strukturierte Firmenadresse zu diesem Vorschlag. Wird nur zurückgegeben, wenn die Adresse in strukturierter Form vorliegt |
+| predictions.companyAddressFormatted.streetFull     | String          | Ja, wenn die Adresse in strukturierter Form vorliegt | Enthält die Straße ink. Hausnummer der strukturierte Firmenadresse zu diesem Vorschlag.                                               |
+| predictions.companyAddressFormatted.additionalInfo | String          | Ja, wenn die Adresse in strukturierter Form vorliegt | Enthält den Adresszusatz der strukturierte Firmenadresse zu diesem Vorschlag.                                                         |
+| predictions.companyAddressFormatted.postCode       | String          | Ja, wenn die Adresse in strukturierter Form vorliegt | Enthält die Postleitzahl der strukturierte Firmenadresse zu diesem Vorschlag.                                                         |
+| predictions.companyAddressFormatted.cityName       | String          | Ja, wenn die Adresse in strukturierter Form vorliegt | Enthält den Ortsname der strukturierte Firmenadresse zu diesem Vorschlag.                                                             |
+| predictions.companyAddressFormatted.country        | String          | Ja, wenn die Adresse in strukturierter Form vorliegt | Enthält den Ländercode der strukturierte Firmenadresse zu diesem Vorschlag.                                                           |
+| certification                                      | JSON            | Nein                                                 | Enthält Informationen zum Zertifikat.                                                                                                 |
+| certification.timestamp                            | JSON            | Nein                                                 | Enthält den Zeitpunkt der Abfrage.                                                                                                    |
+| certification.source                               | JSON            | Nein                                                 | Enthält die Datenquelle.                                                                                                              |
+| status                                             | Array           | Ja                                                   | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md).         |
 
 ## Weitere Informationen
 
