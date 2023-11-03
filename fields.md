@@ -13,6 +13,7 @@
   - [phoneCheck](#eingabeparameter-phoneCheck)
   - [ibanCheck](#eingabeparameter-ibanCheck)
   - [vatIdCheck](#eingabeparameter-vatIdCheck)
+  - [lucidCheck](#eingabeparameter-lucidCheck)
 - [Ausgabefelder](#ausgabefelder)
     - [addressCheck](#ausgabefelder-addresscheck)
     - [postCodeAutocomplete](#ausgabefelder-postCodeAutocomplete)
@@ -23,6 +24,7 @@
     - [phoneCheck](#ausgabefelder-phoneCheck)
     - [ibanCheck](#ausgabefelder-ibanCheck)
     - [vatIdCheck](#ausgabefelder-vatIdCheck)
+    - [lucidCheck](#ausgabefelder-lucidCheck)
 - [Weitere Informationen](#weitere-informationen)
   - [Tabelle der Anrede-Codes](#tabelle-der-anrede-codes)
   - [Liste der Rufnummernformate](#liste-der-rufnummernformate)
@@ -125,6 +127,12 @@ verarbeitet werden.
 | companyPostalCode | String          | Nein    | Enthält die Postleitzahl der zu prüfenden Firma                  |
 | companyLocality   | String          | Nein    | Enthält den Ortsnamen der zu prüfenden Firma                     |
 | companyStreetFull | String          | Nein    | Enthält den Straßennamen inkl. Hausnummer der zu prüfenden Firma |
+
+### Eingabeparameter lucidCheck
+
+| Feld    | Erwarteter Wert | Pflicht | Bedeutung                                                                  |
+|---------|-----------------|---------|----------------------------------------------------------------------------|
+| lucidId | String          | Ja      | Enthält die zu prüfende Registrierungsnummer vom Verpackungsregister Lucid |
 
 ## Ausgabefelder
 
@@ -250,6 +258,18 @@ verarbeitet werden.
 | certification.timestamp                            | JSON            | Nein                                                 | Enthält den Zeitpunkt der Abfrage.                                                                                                    |
 | certification.source                               | JSON            | Nein                                                 | Enthält die Datenquelle.                                                                                                              |
 | status                                             | Array           | Ja                                                   | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md).         |
+
+### Ausgabefelder lucidCheck
+
+| Feld                              | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                                                                                          |
+|-----------------------------------|-----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| predictions                       | Array           | Ja      | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                                                                                                     |
+| predictions.lucidId               | String          | Ja      | Enthält die formatierte Registrierungsnummer vom Verpackungsregister Lucid                                                                                                                         |
+| predictions.companyName           | String          | Ja      | Enthält den Firmennamen zu diesem Vorschlag.                                                                                                                                                       |
+| predictions.kindOfReferenceNumber | String          | Ja      | Enthält den Typ der Referenznummer <br> vat: Umsatzsteuer-Identifikationsnummer <br> tax: Steuernummer <br> unknown: Unbekannt Firmenadresse zu diesem Vorschlag.                                  |
+| predictions.referenceNumber       | String          | Ja      | Enthält die Referenznummer                                                                                                                                                                         |
+| predictions.packagingDetailCode   | Int             | Ja      | Angabe, ob es Verpackungen mit Systembeteiligungspflicht sind <br>1: Verpackungen mit Systembeteiligungspflicht <br>2: Verpackungen ohne Systembeteiligungspflicht <br>3: beides <br> 4: Unbekannt |
+| status                            | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md).                                                                      |
 
 ## Weitere Informationen
 
