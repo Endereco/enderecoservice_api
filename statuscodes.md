@@ -11,6 +11,7 @@
 | [IBAN Prüfung](#iban-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-3) <br> [zus. Kontonummernprüfung](#mit-dem-zusatzservice-kontonummernprüfung) |
 | [E-Mail Adresse Prüfung](#e-mail-adresse-prüfung) | [Generelle Statuscodes](#generelle-statuscodes-4) <br> [zus. Erweiterte SMTP Prüfung](#mit-aktivem-zusatzservice-erweiterte-smtp-prüfung) |
 | [Umsatzsteuer-ID Prüfung](#umsatzsteuer-id-prüfung) | [Statuscodes](#statuscodes-1) |
+| [Lucid Prüfung](#lucid-prüfung) | [Statuscodes](#statuscodes-1) |
 
 ## Adresseingabeassistent
 
@@ -302,5 +303,18 @@ Diese Codes werden bald mit sprechenden Statuscodes ersetzt. Bitte nicht bei der
 | vat_id_body_major_correction | Große Änderung der Umsatzsteuer-ID. |
 | vat_id_format_invalid | Format entspricht nicht der [Spezifikation](https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Documents/COSME/VAT%20numbers%20EU.pdf). |
 | vat_id_format_correct | Format entspricht der [Spezifikation](https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Documents/COSME/VAT%20numbers%20EU.pdf). |
+
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
+
+## Lucid-Check
+
+### Generelle Statuscodes
+
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
+
+| Code          | Bedeutung                                                                 |
+| ------------- | ------------------------------------------------------------------------- |
+| lucid_correct | Diese Registrierungsnummer ist im Verpackungsregister Lucid bekannt       |
+| lucid_invalid | Diese Registrierungsnummer ist im Verpackungsregister Lucid nicht bekannt |
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)

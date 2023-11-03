@@ -149,6 +149,7 @@ vermeiden wir, personenbezogene Daten des Endnutzers zu erhalten, die wir nicht 
 | ↳ | [Prüfung und spezielle Formatierung einer Telefonnummer ↓](#prüfung-und-speziale-formatierung-einer-telefonnummer) |
 | ibanCheck | [Prüfung der IBAN und ggf. der Kontonummer ↓](#prüfung-der-iban-und-ggf-der-kontonummer) |
 | vatIdCheck | [Prüfung der Umsatzsteuer-ID ↓](#prüfung-der-umsatzsteuer-id) |
+| lucidCheck | [Prüfung der Registrierungsnummer beim Verpackungsregister Lucid ↓](#prüfung-der-lucid-nummer) |
 
 ### Prüfung einer Adresse mit getrennter Straße/Hausnummer
 
@@ -1329,3 +1330,61 @@ Siehe [Dokumentation für Feldernamen](./fields.md).
 
 Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 Siehe [Weitere Beispiele](./vatid-check-examples.md).
+
+### Prüfung der Registrierungsnummer beim Verpackungsregister Lucid
+
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+
+#### Request Headers
+
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "lucidCheck",
+   "params": {
+      "lucidId": "DE3151155944772"
+   }
+}
+```
+
+Siehe [Dokumentation für Feldernamen](./fields.md).
+
+#### Antwort Basis
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "result": {
+      "predictions": [
+         {
+            "lucidId": "DE3151155944772",
+            "companyName": "foodsbest GmbH",
+            "kindOfReferenceNumber": "vat",
+            "referenceNumber": "DE311849520",
+            "packagingDetailCode": "10"
+         }
+      ],
+      "status": [
+         "lucid_correct"
+      ]
+   }
+}
+```
+
+Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
