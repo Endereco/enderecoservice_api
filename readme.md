@@ -69,6 +69,7 @@ Wie kannst du auf unsere API zugreifen?
 | [PLZ Vorschläge](#vorschlagsliste-für-die-teileingabe-der-postleitzahl) | | |
 | [Ortsvorschläge](#vorschlagsliste-für-die-teileingabe-des-ortes) | | |
 | [Straßenvorschläge](#vorschlagsliste-für-die-teileingabe-der-straße-ohne-hausnummer) | | |
+| [Adressvorschläge](#vorschlagsliste-für-die-eingabe-der-adresse) | | |
 
 | Telefonnummer | IBAN | Umsatzsteuer-ID |
 |---|---|---|
@@ -141,6 +142,7 @@ vermeiden wir, personenbezogene Daten des Endnutzers zu erhalten, die wir nicht 
 | postCodeAutocomplete | [Vorschlagsliste für die Teileingabe der Postleitzahl ↓](#vorschlagsliste-für-die-teileingabe-der-postleitzahl) |
 | cityNameAutocomplete | [Vorschlagsliste für die Teileingabe des Ortes ↓](#vorschlagsliste-für-die-teileingabe-des-ortes) |
 | streetAutocomplete | [Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer ↓](#vorschlagsliste-für-die-teileingabe-der-straße-ohne-hausnummer) |
+| addressAutocomplete | [Adressvorschläge](#vorschlagsliste-für-die-eingabe-der-adresse) |
 | ↳ | [Vorschlagsliste für die Teileingabe der Straße mit Hausnummer ↓](#vorschlagsliste-für-die-teileingabe-der-straße-mit-hausnummer) |
 | emailCheck | [Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse ↓](#prüfung-und-ggf-zustellbarkeitsprüfung-einer-e-mail-adresse) |
 | nameCheck | [Prüfung des Namens einer Person ↓](#prüfung-des-namens-einer-person) |
@@ -699,6 +701,79 @@ Siehe [Dokumentation für Feldernamen](./fields.md).
 ```
 
 Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
+
+### Vorschlagsliste für die Eingabe der adresse
+
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+
+#### Request Headers
+
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "addressAutocomplete",
+   "params": {
+      "country": "de",
+      "addressFull": "Gerbrunner Str. 22 97236 Randers"
+   }
+}
+```
+
+Siehe [Dokumentation für Feldernamen](./fields.md).
+
+#### Antwort Basis
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "result": {
+      "predictions": [
+         {
+            "country": "DE",
+            "postCode": "97236",
+            "cityName": "Randersacker",
+            "street": "Gerbrunner Str.",
+            "houseNumber": "22",
+            "additionalInfo": "",
+            "streetFull": "Gerbrunner Str. 22",
+            "addressFull": "Gerbrunner Str. 22, 97236 Randersacker",
+            "subdivisionCode": "DE-BY"
+         },
+         {
+            "country": "DE",
+            "postCode": "97236",
+            "cityName": "Randersacker",
+            "street": "Gerbrunner Str.",
+            "houseNumber": "22A",
+            "additionalInfo": "",
+            "streetFull": "Gerbrunner Str. 22A",
+            "addressFull": "Gerbrunner Str. 22A, 97236 Randersacker",
+            "subdivisionCode": "DE-BY"
+         }
+      ],
+      "status": [
+         "A2000",
+         "address_multiple_variants"
+      ]
+   }
+}
+```
 
 ### Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse
 

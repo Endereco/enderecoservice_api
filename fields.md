@@ -8,6 +8,7 @@
   - [postCodeAutocomplete](#eingabeparameter-postCodeAutocomplete)
   - [cityNameAutocomplete](#eingabeparameter-cityNameAutocomplete)
   - [streetAutocomplete](#eingabeparameter-streetAutocomplete)
+  - [addressAutocomplete](#eingabeparameter-addressAutocomplete)
   - [emailCheck](#eingabeparameter-emailCheck)
   - [nameCheck](#eingabeparameter-nameCheck)
   - [phoneCheck](#eingabeparameter-phoneCheck)
@@ -19,6 +20,7 @@
     - [postCodeAutocomplete](#ausgabefelder-postCodeAutocomplete)
     - [cityNameAutocomplete](#ausgabefelder-cityNameAutocomplete)
     - [streetAutocomplete](#ausgabefelder-streetAutocomplete)
+    - [addressAutocomplete](#ausgabeparameter-addressAutocomplete)
     - [emailCheck](#ausgabefelder-emailCheck)
     - [nameCheck](#ausgabefelder-nameCheck)
     - [phoneCheck](#ausgabefelder-phoneCheck)
@@ -85,6 +87,13 @@ verarbeitet werden.
 | postCode | String          | Ja      | Enthält die Postleitzahl.                                                             |
 | cityName | String          | Ja      | Enthält den Ortsnamen.                                                                |
 | street   | String          | Ja      | Enthält nur den Straßennamen.                                                         |
+
+### Eingabeparameter addressAutocomplete
+
+| Feld        | Erwarteter Wert | Pflicht | Bedeutung                                                                             |
+|-------------|-----------------|---------|---------------------------------------------------------------------------------------|
+| country     | String          | Ja      | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
+| addressFull | String          | Ja      | Enthält die Adresseingabe. Kann jeden Bestandteil der Adresse beinhalten              |
 
 ### Eingabeparameter emailCheck
 
@@ -180,6 +189,22 @@ verarbeitet werden.
 | predictions.buildingNumber | String          | Ja      | Enthält die Hausnummer zu diesem Vorschlag.                                                                                   |
 | predictions.additionalInfo | String          | Ja      | Enthält den Adresszusatz zu diesem Vorschlag.                                                                                 |
 | status                     | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
+
+### Ausgabefelder addressAutocomplete
+
+| Feld                        | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                     |
+|-----------------------------|-----------------|---------|-------------------------------------------------------------------------------------------------------------------------------|
+| predictions                 | Array           | Ja      | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                                |
+| predictions.postCode        | String          | Ja      | Enthält die Postleitzahl zu diesem Vorschlag.                                                                                 |
+| predictions.cityName        | String          | Ja      | Enthält den Ortsname zu diesem Vorschlag.                                                                                     |
+| predictions.street          | String          | Ja      | Enthält den Straßennamen zu diesem Vorschlag.                                                                                 |
+| predictions.houseNumber     | String          | Ja      | Enthält die Hausnummer zu diesem Vorschlag.                                                                                   |
+| predictions.additionalInfo  | String          | Ja      | Enthält den Adresszusatz zu diesem Vorschlag.                                                                                 |
+| predictions.streetFull      | String          | Ja      | Enthält die formatierte Straße mit Hausnummer inc. Adresszusatz                                                               |
+| predictions.addressFull     | String          | Ja      | Enthält die formatierte Straße mit Hausnummer inc. Adresszusatz und Postleitzahl mit Ortsnamen                                |
+| predictions.subdivisionCode | String          | Nein    | Enthält den Bundesland-/Regionscode zu diesem Vorschlag. Format: Ländercode + "-" + Bundeslandkürzel                          |
+| status                      | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
+
 
 ### Ausgabefelder emailCheck
 
