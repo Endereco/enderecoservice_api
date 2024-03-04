@@ -294,15 +294,16 @@ Diese Codes werden bald mit sprechenden Statuscodes ersetzt. Bitte nicht bei der
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
-| Code | Bedeutung |
-| ---- | --------- |
-| vat_valid | Umsatzsteuer-ID ist korrekt. |
-| vat_invalid | Die Umsatzsteuer-ID ist ungültig.  |
-| vat_id_body_needs_correction | Schreibweise der Umsatzsteuer-ID ist korrekturbedürftig. |
-| vat_id_body_minor_correction | Kleine Änderung der Umsatzsteuer-ID. |
-| vat_id_body_major_correction | Große Änderung der Umsatzsteuer-ID. |
-| vat_id_format_invalid | Format entspricht nicht der [Spezifikation](https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Documents/COSME/VAT%20numbers%20EU.pdf). |
-| vat_id_format_correct | Format entspricht der [Spezifikation](https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Documents/COSME/VAT%20numbers%20EU.pdf). |
+| Code                         | Bedeutung                                                                                                                                                    |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| vat_id_valid                 | Umsatzsteuer-ID ist korrekt.                                                                                                                                 |
+| vat_id_invalid               | Die Umsatzsteuer-ID ist ungültig.                                                                                                                            |
+| vat_id_unknown_status        | Die Umsatzsteuer-ID konnte nicht auf Gültigkeit geprüft werden.                                                                                              |
+| vat_id_body_needs_correction | Schreibweise der Umsatzsteuer-ID ist korrekturbedürftig.                                                                                                     |
+| vat_id_body_minor_correction | Kleine Änderung der Umsatzsteuer-ID.                                                                                                                         |
+| vat_id_body_major_correction | Große Änderung der Umsatzsteuer-ID.                                                                                                                          |
+| vat_id_format_invalid        | Format entspricht nicht der [Spezifikation](https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Documents/COSME/VAT%20numbers%20EU.pdf). |
+| vat_id_format_correct        | Format entspricht der [Spezifikation](https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Documents/COSME/VAT%20numbers%20EU.pdf).       |
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
