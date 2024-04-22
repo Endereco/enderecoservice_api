@@ -3,31 +3,18 @@
 ## Inhaltsverzeichnis
 
 - [Grundstruktur der JSON](#grundstruktur-der-json)
-- [Eingabeparameter](#eingabeparameter)
-  - [addressCheck](#eingabeparameter-addresscheck)
-  - [postCodeAutocomplete](#eingabeparameter-postCodeAutocomplete)
-  - [cityNameAutocomplete](#eingabeparameter-cityNameAutocomplete)
-  - [streetAutocomplete](#eingabeparameter-streetAutocomplete)
-  - [emailCheck](#eingabeparameter-emailCheck)
-  - [nameCheck](#eingabeparameter-nameCheck)
-  - [phoneCheck](#eingabeparameter-phoneCheck)
-  - [ibanCheck](#eingabeparameter-ibanCheck)
-  - [vatIdCheck](#eingabeparameter-vatIdCheck)
-  - [lucidCheck](#eingabeparameter-lucidCheck)
-- [Ausgabefelder](#ausgabefelder)
-    - [addressCheck](#ausgabefelder-addresscheck)
-    - [postCodeAutocomplete](#ausgabefelder-postCodeAutocomplete)
-    - [cityNameAutocomplete](#ausgabefelder-cityNameAutocomplete)
-    - [streetAutocomplete](#ausgabefelder-streetAutocomplete)
-    - [emailCheck](#ausgabefelder-emailCheck)
-    - [nameCheck](#ausgabefelder-nameCheck)
-    - [phoneCheck](#ausgabefelder-phoneCheck)
-    - [ibanCheck](#ausgabefelder-ibanCheck)
-    - [vatIdCheck](#ausgabefelder-vatIdCheck)
-    - [lucidCheck](#ausgabefelder-lucidCheck)
-- [Weitere Informationen](#weitere-informationen)
-  - [Tabelle der Anrede-Codes](#tabelle-der-anrede-codes)
-  - [Liste der Rufnummernformate](#liste-der-rufnummernformate)
+- [addressCheck](#addresscheck)  
+- [postCodeAutocomplete](#postCodeAutocomplete)
+- [cityNameAutocomplete](#cityNameAutocomplete)
+- [streetAutocomplete](#streetAutocomplete)
+- [emailCheck](#emailCheck)    
+- [nameCheck](#nameCheck)
+- [phoneCheck](#phoneCheck)    
+- [ibanCheck](#ibanCheck)    
+- [vatIdCheck](#vatIdCheck)
+  - [Einfache Prüfung](#vatidcheck-einfache-prüfung)
+  - [Qualifizierte Prüfung](#vatidcheck-qualifizierte-prüfung)
+- [lucidCheck](#lucidCheck)
 
 ## Grundstruktur der JSON
 
@@ -46,11 +33,11 @@ verarbeitet werden.
 | result  | Hash-Array / Object | Container für die Antwort bei erfolgreichem Verlauf der Anfrage.                                                                                             |
 | error   | Hash-Array / Object | Container für die Fehlermeldung beim fehlerhaften Verlauf der Anfrage.                                                                                       |
 | code    | Zahl                | Nummer des Fehlers. Aktuell rudimentär umgesetzt und soll ignoriert werden.                                                                                  |
-| message | String              | Fehlermeldung in menschenlesbarer Form.                                                                                                                      |
+| message | String              | Fehlermeldung in menschenlesbarer Form.
 
-## Eingabeparameter
+## AddressCheck
 
-### Eingabeparameter addressCheck
+### Eingabeparameter
 
 | Feld            | Erwarteter Wert | Pflicht                                            | Bedeutung                                                                             |
 |-----------------|-----------------|----------------------------------------------------|---------------------------------------------------------------------------------------|
@@ -63,80 +50,7 @@ verarbeitet werden.
 | additionalInfo  | String          | Nein                                               | Enthält Adresszusatz.                                                                 |
 | subdivisionCode | String          | Nein                                               | Enthält den Bundesland-/Regionscode. Format: Ländercode + "-" + Bundeslandkürzel      |
 
-### Eingabeparameter postCodeAutocomplete
-
-| Feld     | Erwarteter Wert | Pflicht | Bedeutung                                                                             |
-|----------|-----------------|---------|---------------------------------------------------------------------------------------|
-| country  | String          | Ja      | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
-| postCode | String          | Ja      | Enthält die Postleitzahl.                                                             |
-
-### Eingabeparameter cityNameAutocomplete
-
-| Feld     | Erwarteter Wert | Pflicht | Bedeutung                                                                             |
-|----------|-----------------|---------|---------------------------------------------------------------------------------------|
-| country  | String          | Ja      | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
-| cityName | String          | Ja      | Enthält den Ortsnamen.                                                                |
-
-### Eingabeparameter streetAutocomplete
-
-| Feld     | Erwarteter Wert | Pflicht | Bedeutung                                                                             |
-|----------|-----------------|---------|---------------------------------------------------------------------------------------|
-| country  | String          | Ja      | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
-| postCode | String          | Ja      | Enthält die Postleitzahl.                                                             |
-| cityName | String          | Ja      | Enthält den Ortsnamen.                                                                |
-| street   | String          | Ja      | Enthält nur den Straßennamen.                                                         |
-
-### Eingabeparameter emailCheck
-
-| Feld  | Erwarteter Wert | Pflicht | Bedeutung                   |
-|-------|-----------------|---------|-----------------------------|
-| email | String          | Ja      | Enthält die E-Mail-Adresse. |
-
-### Eingabeparameter nameCheck
-
-| Feld        | Erwarteter Wert | Pflicht                              | Bedeutung                                                                                                                                                                                                                                          |
-|-------------|-----------------|--------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| title       | String          | Nein                                 | Enthält einen Titel, z.B. Dr.                                                                                                                                                                                                                      |
-| salutation  | [m,f,d,x,s,o]   | Ja                                   | Enthält den Anrede-Code. Siehe [Tabelle der Anrede-Codes](#tabelle-der-anrede-codes).                                                                                                                                                              |
-| name        | String          | Ja, wenn firstName nicht gesetzt ist | Enthält den Nachnamen. Veraltet und sollte nicht mehr verwendet werden.                                                                                                                                                                            |
-| firstName   | String          | Ja, wenn name nicht gesetzt ist      | Enthält den Vornamen.                                                                                                                                                                                                                              |
-| lastName    | String          | Ja, wenn name nicht gesetzt ist      | Enthält den Nachnamen.                                                                                                                                                                                                                             |
-| countryCode | String          | Nein                                 | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md)                                                                                                                                                              |
-| language    | String          | Nein                                 | Sprachkürzel für die Ausgabe. Aktuell wird nur die Ausgabe vom nameCheck beeinflusst, zukünftig wird das bei weiteren Services möglich sein. Standardwert ist DE. [Liste der Sprachcodes](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) |
-
-### Eingabeparameter phoneCheck
-
-| Feld   | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                                               |
-|--------|-----------------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| phone  | String          | Ja      | Enthält die Rufnummer.                                                                                                                                  |
-| format | String          | Nein    | Enthält den Namen des Formats. Wird aktuell nur bei der Rufnummernprüfung verwendet. Siehe [Liste der Rufnummernformate](#liste-der-rufnummernformate). |
-
-### Eingabeparameter ibanCheck
-
-| Feld | Erwarteter Wert | Pflicht | Bedeutung         |
-|------|-----------------|---------|-------------------|
-| iban | String          | Ja      | Enthält die IBAN. |
-
-### Eingabeparameter vatIdCheck
-
-| Feld              | Erwarteter Wert | Pflicht | Bedeutung                                                        |
-|-------------------|-----------------|---------|------------------------------------------------------------------|
-| vatId             | String          | Ja      | Enthält die zu prüfende Umsatzsteuer-ID                          |
-| requesterVatID    | String          | Nein    | Enthält die eigene Umsatzsteuer-ID                               |
-| companyName       | String          | Nein    | Enthält den Firmennamen der zu prüfenden Umsatzsteuer-ID         |
-| companyPostalCode | String          | Nein    | Enthält die Postleitzahl der zu prüfenden Firma                  |
-| companyLocality   | String          | Nein    | Enthält den Ortsnamen der zu prüfenden Firma                     |
-| companyStreetFull | String          | Nein    | Enthält den Straßennamen inkl. Hausnummer der zu prüfenden Firma |
-
-### Eingabeparameter lucidCheck
-
-| Feld    | Erwarteter Wert | Pflicht | Bedeutung                                                                  |
-|---------|-----------------|---------|----------------------------------------------------------------------------|
-| lucidId | String          | Ja      | Enthält die zu prüfende Registrierungsnummer vom Verpackungsregister Lucid |
-
-## Ausgabefelder
-
-### Ausgabefelder addressCheck
+### Ausgabefelder
 
 | Feld                        | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                     |
 |-----------------------------|-----------------|---------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -150,7 +64,16 @@ verarbeitet werden.
 | predictions.subdivisionCode | String          | Nein    | Enthält den Bundesland-/Regionscode zu diesem Vorschlag. Format: Ländercode + "-" + Bundeslandkürzel                          |
 | status                      | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### Ausgabefelder postCodeAutocomplete
+## postCodeAutocomplete
+
+### Eingabeparameter
+
+| Feld     | Erwarteter Wert | Pflicht | Bedeutung                                                                             |
+|----------|-----------------|---------|---------------------------------------------------------------------------------------|
+| country  | String          | Ja      | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
+| postCode | String          | Ja      | Enthält die Postleitzahl.                                                             |
+
+### Ausgabefelder
 
 | Feld                        | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                     |
 |-----------------------------|-----------------|---------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -160,7 +83,16 @@ verarbeitet werden.
 | predictions.subdivisionCode | String          | Nein    | Enthält den Bundesland-/Regionscode zu diesem Vorschlag. Format: Ländercode + "-" + Bundeslandkürzel                          |
 | status                      | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### Ausgabefelder cityNameAutocomplete
+## cityNameAutocomplete
+
+### Eingabeparameter
+
+| Feld     | Erwarteter Wert | Pflicht | Bedeutung                                                                             |
+|----------|-----------------|---------|---------------------------------------------------------------------------------------|
+| country  | String          | Ja      | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
+| cityName | String          | Ja      | Enthält den Ortsnamen.                                                                |
+
+### Ausgabefelder
 
 | Feld                        | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                     |
 |-----------------------------|-----------------|---------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -170,7 +102,18 @@ verarbeitet werden.
 | predictions.subdivisionCode | String          | Nein    | Enthält den Bundesland-/Regionscode zu diesem Vorschlag. Format: Ländercode + "-" + Bundeslandkürzel                          |
 | status                      | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### Ausgabefelder streetAutocomplete
+## streetAutocomplete
+
+### Eingabeparameter
+
+| Feld     | Erwarteter Wert | Pflicht | Bedeutung                                                                             |
+|----------|-----------------|---------|---------------------------------------------------------------------------------------|
+| country  | String          | Ja      | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
+| postCode | String          | Ja      | Enthält die Postleitzahl.                                                             |
+| cityName | String          | Ja      | Enthält den Ortsnamen.                                                                |
+| street   | String          | Ja      | Enthält nur den Straßennamen.                                                         |
+
+### Ausgabefelder
 
 | Feld                       | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                     |
 |----------------------------|-----------------|---------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -181,13 +124,35 @@ verarbeitet werden.
 | predictions.additionalInfo | String          | Ja      | Enthält den Adresszusatz zu diesem Vorschlag.                                                                                 |
 | status                     | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### Ausgabefelder emailCheck
+## emailCheck
+
+### Eingabeparameter
+
+| Feld  | Erwarteter Wert | Pflicht | Bedeutung                   |
+|-------|-----------------|---------|-----------------------------|
+| email | String          | Ja      | Enthält die E-Mail-Adresse. |
+
+### Ausgabefelder
 
 | Feld   | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                     |
 |--------|-----------------|---------|-------------------------------------------------------------------------------------------------------------------------------|
 | status | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### Ausgabefelder nameCheck
+## nameCheck
+
+### Eingabeparameter
+
+| Feld        | Erwarteter Wert | Pflicht                              | Bedeutung                                                                                                                                                                                                                                          |
+|-------------|-----------------|--------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| title       | String          | Nein                                 | Enthält einen Titel, z.B. Dr.                                                                                                                                                                                                                      |
+| salutation  | [m,f,d,x,s,o]   | Ja                                   | Enthält den Anrede-Code. Siehe [Tabelle der Anrede-Codes](#tabelle-der-anrede-codes).                                                                                                                                                              |
+| name        | String          | Ja, wenn firstName nicht gesetzt ist | Enthält den Nachnamen. Veraltet und sollte nicht mehr verwendet werden.                                                                                                                                                                            |
+| firstName   | String          | Ja, wenn name nicht gesetzt ist      | Enthält den Vornamen.                                                                                                                                                                                                                              |
+| lastName    | String          | Ja, wenn name nicht gesetzt ist      | Enthält den Nachnamen.                                                                                                                                                                                                                             |
+| countryCode | String          | Nein                                 | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md)                                                                                                                                                              |
+| language    | String          | Nein                                 | Sprachkürzel für die Ausgabe. Aktuell wird nur die Ausgabe vom nameCheck beeinflusst, zukünftig wird das bei weiteren Services möglich sein. Standardwert ist DE. [Liste der Sprachcodes](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) |
+
+### Ausgabefelder
 
 | Feld                   | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                     |
 |------------------------|-----------------|---------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -199,7 +164,27 @@ verarbeitet werden.
 | score                  | Float           | Ja      | Enthält eine Zahl zwischen 0.0 und 1.0. Repräsentiert die Wahrscheinlichkeit oder Qualität der Aussage.                       |
 | status                 | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### Ausgabefelder phoneCheck
+### Tabelle der Anrede-Codes
+
+| Code | Bedeutung                                               |
+|------|---------------------------------------------------------|
+| m    | männlich                                                |
+| f    | weiblich                                                |
+| d    | [divers](https://de.wikipedia.org/wiki/Divers)          |
+| x    | unbekannt (kann sowohl männlich als auch weiblich sein) |
+| s    | Familie                                                 |
+| o    | Organisation                                            |
+
+## phoneCheck
+
+### Eingabeparameter
+
+| Feld   | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                                               |
+|--------|-----------------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| phone  | String          | Ja      | Enthält die Rufnummer.                                                                                                                                  |
+| format | String          | Nein    | Enthält den Namen des Formats. Wird aktuell nur bei der Rufnummernprüfung verwendet. Siehe [Liste der Rufnummernformate](#liste-der-rufnummernformate). |
+
+### Ausgabefelder
 
 | Feld                            | Erwarteter Wert | Pflicht                             | Bedeutung                                                                                                                     |
 |---------------------------------|-----------------|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -220,7 +205,24 @@ verarbeitet werden.
 | predictions.leadingZeros        | Int             | Ja, wenn predictions vorhanden sind | Enthält die Anzahl der führenden '0' in der nationalen Rufnummer zu diesem Vorschlag.                                         |
 | status                          | Array           | Ja                                  | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### Ausgabefelder ibanCheck
+### Liste der Rufnummernformate
+
+| Format        | Bedeutung                                                                         |
+|---------------|-----------------------------------------------------------------------------------|
+| E164          | Siehe [E.164-Format](https://de.wikipedia.org/wiki/E.164)                         |
+| INTERNATIONAL | Internationale Schreibweise der Nummer                                            |
+| NATIONAL      | Nationale Schreibweise der Nummer                                                 |
+| RFC3966       | Schreibweise der Nummer, die im *href*-Attribut verwendet werden kann (tel: Link) |
+
+## ibanCheck
+
+### Eingabeparameter
+
+| Feld | Erwarteter Wert | Pflicht | Bedeutung         |
+|------|-----------------|---------|-------------------|
+| iban | String          | Ja      | Enthält die IBAN. |
+
+### Ausgabefelder
 
 | Feld                               | Erwarteter Wert | Pflicht                             | Bedeutung                                                                                                                     |
 |------------------------------------|-----------------|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -240,24 +242,63 @@ verarbeitet werden.
 | predictions.countryCentralBankUrl  | String          | Ja, wenn predictions vorhanden sind | Enthält ggf. die URL zur Website der Zentralbank zu diesem Vorschlag.                                                         |
 | status                             | Array           | Ja                                  | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md). |
 
-### Ausgabefelder vatIdCheck
+## vatIdCheck
 
-| Feld                                               | Erwarteter Wert | Pflicht                                              | Bedeutung                                                                                                                             |
-|----------------------------------------------------|-----------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| predictions                                        | Array           | Ja                                                   | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                                        |
-| predictions.vatId                                  | String          | Ja                                                   | Enthält die formatierte Umsatzsteuer-ID der zu prüfenden Firma.                                                                       |
-| predictions.companyName                            | String          | Nein                                                 | Enthält den Firmennamen zu diesem Vorschlag.                                                                                          |
-| predictions.companyAddress                         | String          | Nein                                                 | Enthält die unstrukturierte Firmenadresse zu diesem Vorschlag.                                                                        |
-| predictions.companyAddressFormatted                | String          | Nein                                                 | Enthält die strukturierte Firmenadresse zu diesem Vorschlag. Wird nur zurückgegeben, wenn die Adresse in strukturierter Form vorliegt |
-| predictions.companyAddressFormatted.streetFull     | String          | Ja, wenn die Adresse in strukturierter Form vorliegt | Enthält die Straße ink. Hausnummer der strukturierte Firmenadresse zu diesem Vorschlag.                                               |
-| predictions.companyAddressFormatted.additionalInfo | String          | Ja, wenn die Adresse in strukturierter Form vorliegt | Enthält den Adresszusatz der strukturierte Firmenadresse zu diesem Vorschlag.                                                         |
-| predictions.companyAddressFormatted.postCode       | String          | Ja, wenn die Adresse in strukturierter Form vorliegt | Enthält die Postleitzahl der strukturierte Firmenadresse zu diesem Vorschlag.                                                         |
-| predictions.companyAddressFormatted.cityName       | String          | Ja, wenn die Adresse in strukturierter Form vorliegt | Enthält den Ortsname der strukturierte Firmenadresse zu diesem Vorschlag.                                                             |
-| predictions.companyAddressFormatted.country        | String          | Ja, wenn die Adresse in strukturierter Form vorliegt | Enthält den Ländercode der strukturierte Firmenadresse zu diesem Vorschlag.                                                           |
-| certification                                      | JSON            | Nein                                                 | Enthält Informationen zum Zertifikat.                                                                                                 |
-| certification.timestamp                            | JSON            | Nein                                                 | Enthält den Zeitpunkt der Abfrage.                                                                                                    |
-| certification.source                               | JSON            | Nein                                                 | Enthält die Datenquelle.                                                                                                              |
-| status                                             | Array           | Ja                                                   | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md).         |
+### vatIdCheck (Einfache Prüfung)
+
+### Eingabeparameter
+
+| Feld              | Erwarteter Wert | Pflicht | Bedeutung                               |
+|-------------------|-----------------|---------|-----------------------------------------|
+| vatId             | String          | Ja      | Enthält die zu prüfende Umsatzsteuer-ID |
+
+### Ausgabefelder
+
+| Feld              | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                             |
+|-------------------|-----------------|---------|---------------------------------------------------------------------------------------------------------------------------------------|
+| predictions       | Array           | Ja      | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                                        |
+| predictions.vatId | String          | Ja      | Enthält die formatierte Umsatzsteuer-ID der zu prüfenden Firma.                                                                       |
+| status            | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md).         |
+
+### vatIdCheck (Qualifizierte Prüfung)
+
+### Eingabeparameter
+
+| Feld              | Erwarteter Wert | Pflicht | Bedeutung                                                        |
+|-------------------|-----------------|---------|------------------------------------------------------------------|
+| vatId             | String          | Ja      | Enthält die zu prüfende Umsatzsteuer-ID                          |
+| requesterVatID    | String          | Ja      | Enthält die eigene Umsatzsteuer-ID                               |
+| companyName       | String          | Ja      | Enthält den Firmennamen der zu prüfenden Umsatzsteuer-ID         |
+| companyPostalCode | String          | Ja      | Enthält die Postleitzahl der zu prüfenden Firma                  |
+| companyLocality   | String          | Ja      | Enthält den Ortsnamen der zu prüfenden Firma                     |
+| companyStreetFull | String          | Ja      | Enthält den Straßennamen inkl. Hausnummer der zu prüfenden Firma |
+
+### Ausgabefelder
+
+| Feld                                               | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                                                         |
+|----------------------------------------------------|-----------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| predictions                                        | Array           | Ja      | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                                                                    |
+| predictions.vatId                                  | String          | Ja      | Enthält die formatierte Umsatzsteuer-ID der zu prüfenden Firma.                                                                                                   |
+| predictions.companyName                            | String          | Ja      | Enthält den Firmennamen zu diesem Vorschlag.                                                                                                                      |
+| predictions.companyAddress                         | String          | Ja      | Enthält die unstrukturierte Firmenadresse zu diesem Vorschlag.                                                                                                    |
+| predictions.companyAddressFormatted                | String          | Ja      | Enthält die strukturierte Firmenadresse zu diesem Vorschlag. Wird nur zurückgegeben, wenn die Adresse in strukturierter Form vorliegt                             |
+| predictions.companyAddressFormatted.streetFull     | String          | Ja      | Enthält die Straße ink. Hausnummer der strukturierte Firmenadresse zu diesem Vorschlag.                                                                           |
+| predictions.companyAddressFormatted.additionalInfo | String          | Ja      | Enthält den Adresszusatz der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                     |
+| predictions.companyAddressFormatted.postCode       | String          | Ja      | Enthält die Postleitzahl der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                     |
+| predictions.companyAddressFormatted.cityName       | String          | Ja      | Enthält den Ortsname der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                         |
+| predictions.companyAddressFormatted.country        | String          | Ja      | Enthält den Ländercode der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                       |
+| certification                                      | JSON            | Nein    | Enthält Informationen zum Prüfzertifikat. Wird nur zurückgegeben, wenn es sich laut §18e UStG und 18e.1 Abs. 2 Satz 4 UStAE um eine qualifizierte Prüfung handelt |
+| status                                             | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md).                                     |
+
+> Sollte ein Prüfzertifikat in der Ausgabe enthalten sein, wird die ganze Prüfung auf Seiten von endereco gespeichert und archiviert
+
+## lucidCheck
+
+### Eingabeparameter lucidCheck
+
+| Feld    | Erwarteter Wert | Pflicht | Bedeutung                                                                  |
+|---------|-----------------|---------|----------------------------------------------------------------------------|
+| lucidId | String          | Ja      | Enthält die zu prüfende Registrierungsnummer vom Verpackungsregister Lucid |
 
 ### Ausgabefelder lucidCheck
 
@@ -270,25 +311,3 @@ verarbeitet werden.
 | predictions.referenceNumber       | String          | Ja      | Enthält die Referenznummer                                                                                                                                                                         |
 | predictions.packagingDetailCode   | Int             | Ja      | Angabe, ob es Verpackungen mit Systembeteiligungspflicht sind <br>1: Verpackungen mit Systembeteiligungspflicht <br>2: Verpackungen ohne Systembeteiligungspflicht <br>3: beides <br> 4: Unbekannt |
 | status                            | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md).                                                                      |
-
-## Weitere Informationen
-
-### Tabelle der Anrede-Codes
-
-| Code | Bedeutung                                               |
-|------|---------------------------------------------------------|
-| m    | männlich                                                |
-| f    | weiblich                                                |
-| d    | [divers](https://de.wikipedia.org/wiki/Divers)          |
-| x    | unbekannt (kann sowohl männlich als auch weiblich sein) |
-| s    | Familie                                                 |
-| o    | Organisation                                            |
-
-### Liste der Rufnummernformate
-
-| Format        | Bedeutung                                                                         |
-|---------------|-----------------------------------------------------------------------------------|
-| E164          | Siehe [E.164-Format](https://de.wikipedia.org/wiki/E.164)                         |
-| INTERNATIONAL | Internationale Schreibweise der Nummer                                            |
-| NATIONAL      | Nationale Schreibweise der Nummer                                                 |
-| RFC3966       | Schreibweise der Nummer, die im *href*-Attribut verwendet werden kann (tel: Link) |

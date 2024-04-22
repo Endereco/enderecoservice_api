@@ -1316,13 +1316,24 @@ Siehe [Dokumentation für Feldernamen](./fields.md).
             }
          }
       ],
-      "cerification": {
-         "timestamp": "2023-10-26 07:24:26",
-         "source": "api.vat-search.eu"
+      "certification": {
+         "ErrorCode": "213",
+         "Date": "22.04.2024",
+         "Time": "08:58:43",
+         "Name": [],
+         "City": [],
+         "PostalCode": [],
+         "Street": [],
+         "Type": "BZST"
       },
       "status": [
          "vat_id_valid",
-         "vat_id_format_correct"
+         "vat_id_format_correct",
+         "vat_id_company_name_mismatch",
+         "vat_id_company_postal_code_match",
+         "vat_id_company_locality_match",
+         "vat_id_company_street_full_match",
+         "vat_id_company_address_match"
       ]
    }
 }
