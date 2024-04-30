@@ -282,15 +282,15 @@ verarbeitet werden.
 | predictions.companyName                            | String          | Ja      | Enthält den Firmennamen zu diesem Vorschlag.                                                                                                                      |
 | predictions.companyAddress                         | String          | Ja      | Enthält die unstrukturierte Firmenadresse zu diesem Vorschlag.                                                                                                    |
 | predictions.companyAddressFormatted                | String          | Ja      | Enthält die strukturierte Firmenadresse zu diesem Vorschlag. Wird nur zurückgegeben, wenn die Adresse in strukturierter Form vorliegt                             |
-| predictions.companyAddressFormatted.streetFull     | String          | Ja      | Enthält die Straße ink. Hausnummer der strukturierte Firmenadresse zu diesem Vorschlag.                                                                           |
+| predictions.companyAddressFormatted.streetFull     | String          | Ja      | Enthält die Straße inkl. Hausnummer der strukturierte Firmenadresse zu diesem Vorschlag.                                                                           |
 | predictions.companyAddressFormatted.additionalInfo | String          | Ja      | Enthält den Adresszusatz der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                     |
 | predictions.companyAddressFormatted.postCode       | String          | Ja      | Enthält die Postleitzahl der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                     |
 | predictions.companyAddressFormatted.cityName       | String          | Ja      | Enthält den Ortsname der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                         |
 | predictions.companyAddressFormatted.country        | String          | Ja      | Enthält den Ländercode der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                       |
-| certification                                      | JSON            | Nein    | Enthält Informationen zum Prüfzertifikat. Wird nur zurückgegeben, wenn es sich laut §18e UStG und 18e.1 Abs. 2 Satz 4 UStAE um eine qualifizierte Prüfung handelt |
+| certification                                      | JSON            | Nein    | Enthält Informationen zum Prüfzertifikat. Wird nur zurückgegeben, wenn es sich laut §18e UStG und 18e.1 Abs. 2 Satz 4 UStAE um eine qualifizierte Prüfung handelt. Wenn Prüfzertifikat nicht ausgegeben wird, bedeutet es, dass die Prüfung mit Daten aus Cache verglichen wurde, da BZSt Server nicht verfügbar ist. Die erneute Prüfung von UID zum späteren Zeitpunkt kann notwendig sein.|
 | status                                             | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md).                                     |
 
-> Sollte ein Prüfzertifikat in der Ausgabe enthalten sein, wird die ganze Prüfung auf Seiten von endereco gespeichert und archiviert
+> Alle erfolgreichen Prüfanfragen werden auf Seiten von endereco gespeichert und archiviert. 
 
 ## lucidCheck
 
