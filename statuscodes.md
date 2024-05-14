@@ -216,7 +216,7 @@ Statuscode `address_correct` nicht vor.
 | ---- | --------- |
 | iban_account_correct | Die Kontonummer ist korrekt. |
 | iban_account_invalid | Die Kontonummer ist falsch. |
-| iban_account_checkmethod_X | Die Kontonummer wurde mit der Prüfzimmermethode X geprüft. Anstatt von X steht die Nummer der Prüfzimmermethode, z.B. "10" |
+| iban_account_checkmethod_X | Die Kontonummer wurde mit der Prüfziffermethode X geprüft. Anstatt von X steht die Nummer der Prüfziffermethode, z.B. "10" |
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
