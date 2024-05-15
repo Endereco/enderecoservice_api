@@ -27,6 +27,18 @@
 
 [zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
 
+### Experimentelle Statuscodes
+
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
+
+| Code                      | Bedeutung                                                  |
+| ------------------------- | ---------------------------------------------------------- |
+| address_single_variant    | Es gibt nur ein Element in der Vorschlagsliste.            |
+| address_multiple_variants | Es gibt mehrere Elemente in der Vorschlagsliste.           |
+| address_no_variants       | Es wurden keine Elemente für die Vorschlagsliste gefunden. |
+
+[zurück zum Inhaltsverzeichnis ↑](#liste-aller-statuscode-und-ihre-interpretation)
+
 ## Adressprüfung
 
 ### Generelle Statuscodes
