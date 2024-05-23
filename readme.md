@@ -1312,7 +1312,9 @@ Siehe [Dokumentation für Feldernamen](./fields.md).
                "additionalInfo": "",
                "postCode": "97236",
                "cityName": "Randersacker",
-               "country": "DE"
+               "country": "DE",
+               "street": "Balthasar-Neumann Str.",
+               "houseNumber": "4b"
             }
          }
       ],
