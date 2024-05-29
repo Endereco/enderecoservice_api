@@ -70,9 +70,10 @@ Wie kannst du auf unsere API zugreifen?
 | [Ortsvorschläge](#vorschlagsliste-für-die-teileingabe-des-ortes) | | |
 | [Straßenvorschläge](#vorschlagsliste-für-die-teileingabe-der-straße-ohne-hausnummer) | | |
 
-| Telefonnummer | IBAN | Umsatzsteuer-ID |
-|---|---|---|
+| Telefonnummer                                     | IBAN | Unternehmen                |
+|---------------------------------------------------|--|-|
 | [Rufnummernprüfung](#prüfung-einer-telefonnummer) | [IBAN-Prüfung](#prüfung-der-iban-und-ggf-der-kontonummer) | [Umsatzsteuer-ID Prüfung](#prüfung-der-umsatzsteuer-id) |
+| |  | [Firmensuche](#firmensuche) |
 
 | technische Methoden |
 |---|
@@ -1343,6 +1344,72 @@ Siehe [Dokumentation für Feldernamen](./fields.md).
 
 Siehe [Dokumentation für Feldernamen](./fields.md) und [Dokumentation für Status-Codes](./statuscodes.md).
 Siehe [Weitere Beispiele](./vatid-check-examples.md).
+
+### Firmensuche
+
+[zurück zur Übersicht](#verzeichnis-der-methoden-und-use-cases)
+
+```
+POST https://endereco-service.de/rpc/v1
+```
+
+#### Request Headers
+
+|  |  |
+|---|---|
+| Content-Type| application/json  |
+| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
+| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
+| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+
+#### Body raw (JSON)
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "companyAutocomplete",
+   "params": {
+      "countryCode": "de",
+      "companyName": "endereco"
+   }
+}
+```
+
+Siehe [Dokumentation für Feldernamen](./fields.md).
+
+#### Antwort Basis
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "result": {
+      "predictions": [
+         {
+            "vatId": "DE297464149",
+            "companyStatus": "active",
+            "companyName": "endereco UG (haftungsbeschränkt) Gesellschaft für Master Data Quality Management",
+            "companyAddressFull": "Balthasar-Neumann Str. 4b, 97236, Randersacker",
+            "companyAddressFormatted": {
+               "streetFull": "Balthasar-Neumann Str. 4b",
+               "additionalInfo": "",
+               "postCode": "97236",
+               "cityName": "Randersacker",
+               "country": "DE",
+               "street": "Balthasar-Neumann Str.",
+               "houseNumber": "4b"
+            }
+         }
+      ],
+      "status": [
+         "A1000",
+         "company_single_variant"
+      ]
+   }
+}
+```
 
 ### Prüfung der Registrierungsnummer beim Verpackungsregister Lucid
 

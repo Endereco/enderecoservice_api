@@ -15,6 +15,7 @@
   - [Einfache Prüfung](#vatidcheck-einfache-prüfung)
   - [Qualifizierte Prüfung](#vatidcheck-qualifizierte-prüfung)
 - [lucidCheck](#lucidCheck)
+- [Firmensuche](#companyAutocomplete)
 
 ## Grundstruktur der JSON
 
@@ -33,7 +34,7 @@ verarbeitet werden.
 | result  | Hash-Array / Object | Container für die Antwort bei erfolgreichem Verlauf der Anfrage.                                                                                             |
 | error   | Hash-Array / Object | Container für die Fehlermeldung beim fehlerhaften Verlauf der Anfrage.                                                                                       |
 | code    | Zahl                | Nummer des Fehlers. Aktuell rudimentär umgesetzt und soll ignoriert werden.                                                                                  |
-| message | String              | Fehlermeldung in menschenlesbarer Form.
+| message | String              | Fehlermeldung in menschenlesbarer Form. |
 
 ## AddressCheck
 
@@ -313,3 +314,31 @@ verarbeitet werden.
 | predictions.referenceNumber       | String          | Ja      | Enthält die Referenznummer                                                                                                                                                                         |
 | predictions.packagingDetailCode   | Int             | Ja      | Angabe, ob es Verpackungen mit Systembeteiligungspflicht sind <br>1: Verpackungen mit Systembeteiligungspflicht <br>2: Verpackungen ohne Systembeteiligungspflicht <br>3: beides <br> 4: Unbekannt |
 | status                            | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md).                                                                      |
+
+## companyAutocomplete
+
+### Eingabeparameter lucidCheck
+
+| Feld        | Erwarteter Wert | Pflicht | Bedeutung                                                                             |
+|-------------|-----------------|---------|---------------------------------------------------------------------------------------|
+| countryCode | String          | Nein    | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./country-codes.md) |
+| companyName | String          | Ja      | Enthällt den Firmennamen nach dem gesucht werden soll                                 |
+
+### Ausgabefelder
+
+| Feld                                               | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                             |
+|----------------------------------------------------|-----------------|---------|---------------------------------------------------------------------------------------------------------------------------------------|
+| predictions                                        | Array           | Ja      | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                                        |
+| predictions.vatId                                  | String          | Ja      | Enthält die formatierte Umsatzsteuer-ID der zu prüfenden Firma.                                                                       |
+| predictions.companyStatus                          | String          | Ja      | Enthält den Status zu der Firma (active, inaktive, unknown)                                                                           |
+| predictions.companyName                            | String          | Ja      | Enthält den Firmennamen zu diesem Vorschlag.                                                                                          |
+| predictions.companyAddress                         | String          | Ja      | Enthält die unstrukturierte Firmenadresse zu diesem Vorschlag.                                                                        |
+| predictions.companyAddressFormatted                | String          | Ja      | Enthält die strukturierte Firmenadresse zu diesem Vorschlag. Wird nur zurückgegeben, wenn die Adresse in strukturierter Form vorliegt |
+| predictions.companyAddressFormatted.streetFull     | String          | Ja      | Enthält die Straße inkl. Hausnummer der strukturierte Firmenadresse zu diesem Vorschlag.                                              |
+| predictions.companyAddressFormatted.street         | String          | Ja      | Enthält den Straßennamen der strukturierte Firmenadresse zu diesem Vorschlag.                                                         |
+| predictions.companyAddressFormatted.houseNumber    | String          | Ja      | Enthält die Hausnummer der strukturierte Firmenadresse zu diesem Vorschlag.                                                           |
+| predictions.companyAddressFormatted.additionalInfo | String          | Ja      | Enthält den Adresszusatz der strukturierte Firmenadresse zu diesem Vorschlag.                                                         |
+| predictions.companyAddressFormatted.postCode       | String          | Ja      | Enthält die Postleitzahl der strukturierte Firmenadresse zu diesem Vorschlag.                                                         |
+| predictions.companyAddressFormatted.cityName       | String          | Ja      | Enthält den Ortsname der strukturierte Firmenadresse zu diesem Vorschlag.                                                             |
+| predictions.companyAddressFormatted.country        | String          | Ja      | Enthält den Ländercode der strukturierte Firmenadresse zu diesem Vorschlag.                                                           |
+| status                                             | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](./statuscodes.md).         |
