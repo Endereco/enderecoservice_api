@@ -10,15 +10,15 @@ In diesem Dokument beschreiben wir von uns vorgesehene UI für diverse Verfahren
 
 ## UI Elemente
 
-| Element | Beispiel | Bedeutung |
-|---|---|---|
-| orangene Umrandung und Hintergrund der Eingabefelder | ![](./imgs/postal_code_orange.png "") | Warnung! Der Inhalt soll wahrscheinlich korrigiert werden. |
-| rote Umrandung und Hintergrund der Eingabefelder | ![](./imgs/postal_code_red.png "") | Fehler! Der Inhalt ist wahrscheinlich falsch. |
-| grüne Umrandung und Hintergrund der Eingabefelder | ![](./imgs/postal_code_green.png "") | Geprüft! Der Inhalt wurde geprüft und ist richtig. |
-| orangene Warnung unter dem Eingabefeld | ![](./imgs/error_text_red_orange.png "") | Warnung! In der Eingabe wurde möglicherweise ein Fehler gemacht. Die Warnung spezifiziert was falsch sein könnte.  |
-| rote Fehlermeldung unter dem Eingabefeld | ![](./imgs/error_text_red_orange.png "") | Fehler! In der Eingabe wurde wahrscheinlich ein Fehler gemacht. Die Fehlermeldung spezifiziert den Fehler. |
-| Modal mit Korrekturvorschlägen | ![](./imgs/modal_correct.png "") | Bei Datensätzen, die aus mehreren Teilen bestehen, ist es einfacher die Korrekturen auf einem Schlag zu erledigen. Dafür ist ein Modal mit der ursprünglichen Eingabe und den Korrekturvorschlägen zu verwenden. Mehr dazu in [Modal](#modal). |
-| Modal ohne Korrekturvorschlägen | ![](./imgs/modal_nocorrect.png "") | Bei Datensätzen, die aus mehreren Teilen bestehen, für die jedoch kein Korrekturvorschlag vorliegt, soll auch ein Modal eingesetzt werden. Mehr dazu in [Modal](#modal). |
+| Element                                              | Beispiel                                  | Bedeutung                                                                                                                                                                                                                                      |
+|------------------------------------------------------|-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| orangene Umrandung und Hintergrund der Eingabefelder | ![](../imgs/postal_code_orange.png "")    | Warnung! Der Inhalt soll wahrscheinlich korrigiert werden.                                                                                                                                                                                     |
+| rote Umrandung und Hintergrund der Eingabefelder     | ![](../imgs/postal_code_red.png "")       | Fehler! Der Inhalt ist wahrscheinlich falsch.                                                                                                                                                                                                  |
+| grüne Umrandung und Hintergrund der Eingabefelder    | ![](../imgs/postal_code_green.png "")     | Geprüft! Der Inhalt wurde geprüft und ist richtig.                                                                                                                                                                                             |
+| orangene Warnung unter dem Eingabefeld               | ![](../imgs/error_text_red_orange.png "") | Warnung! In der Eingabe wurde möglicherweise ein Fehler gemacht. Die Warnung spezifiziert was falsch sein könnte.                                                                                                                              |
+| rote Fehlermeldung unter dem Eingabefeld             | ![](../imgs/error_text_red_orange.png "") | Fehler! In der Eingabe wurde wahrscheinlich ein Fehler gemacht. Die Fehlermeldung spezifiziert den Fehler.                                                                                                                                     |
+| Modal mit Korrekturvorschlägen                       | ![](../imgs/modal_correct.png "")         | Bei Datensätzen, die aus mehreren Teilen bestehen, ist es einfacher die Korrekturen auf einem Schlag zu erledigen. Dafür ist ein Modal mit der ursprünglichen Eingabe und den Korrekturvorschlägen zu verwenden. Mehr dazu in [Modal](#modal). |
+| Modal ohne Korrekturvorschlägen                      | ![](../imgs/modal_nocorrect.png "")       | Bei Datensätzen, die aus mehreren Teilen bestehen, für die jedoch kein Korrekturvorschlag vorliegt, soll auch ein Modal eingesetzt werden. Mehr dazu in [Modal](#modal).                                                                       |
 
 ## Modal
 
@@ -30,7 +30,7 @@ Korrekturaufforderung zum Bestellabbruch führen kann.
 
 Die Guideline von Endereco ist für diesen Prozess ein Modal zu verwenden.
 
-![](./imgs/modal_guideline.png "")
+![](../imgs/modal_guideline.png "")
 
 1. Das Modal soll so früh wie möglich nach der Prüfung erscheinen. Der vorherige Prozess im System, i.d.R ist das
    Bestell- oder Registrierungsprozess, soll weiterhin hinter dem Modal sichtbar sein, damit der Nutzer nicht zu stark
@@ -57,15 +57,15 @@ Die Guideline von Endereco ist für diesen Prozess ein Modal zu verwenden.
     kommt das andere.
 12. Das Modal ist für folgende Operationen einzusetzen
 
-| Operation | Modal notwendig? | Kommentar |
-| --- | --- | --- |
-| PLZ-, Ort-, Straßenvervollständigung | nein | Modal würde die Eingabe blocken und wirkt belästigend. |
-| Adressprüfung | ja | Im Modal hat man mehr Möglichkeiten zur Formatierung der Adressen und farblichen Markierung der problematischen Stellen. |
-| Namensprüfung | nein | Modal nicht notwendig. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern. |
-| Telefonprüfung | nein | Modal nicht notwendig. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern. |
-| E-Mail Adresse Prüfung | nein | Modal nicht notwendig. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern. |
-| IBAN-Prüfung | optional | Modal könnte hilfreich sein. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern. |
-| Umsatzsteuer-ID Prüfung | nein | Modal nicht notwendig. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern. |
+| Operation                            | Modal notwendig? | Kommentar                                                                                                                                                                      |
+|--------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PLZ-, Ort-, Straßenvervollständigung | nein             | Modal würde die Eingabe blocken und wirkt belästigend.                                                                                                                         |
+| Adressprüfung                        | ja               | Im Modal hat man mehr Möglichkeiten zur Formatierung der Adressen und farblichen Markierung der problematischen Stellen.                                                       |
+| Namensprüfung                        | nein             | Modal nicht notwendig. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern.       |
+| Telefonprüfung                       | nein             | Modal nicht notwendig. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern.       |
+| E-Mail Adresse Prüfung               | nein             | Modal nicht notwendig. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern.       |
+| IBAN-Prüfung                         | optional         | Modal könnte hilfreich sein. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern. |
+| Umsatzsteuer-ID Prüfung              | nein             | Modal nicht notwendig. Korrekturen sollen größtenteils automatisch vorgenommen werden. Ansonsten reicht die Rahmenmarkierung oder Warnhinweise unten den Eingabefeldern.       |
 
 ## Prüfung von Namen
 

@@ -38,7 +38,7 @@ einmal vorkommt.
 
 Jede Anfrage innerhalb der Session muss die Session ID im Header `x-transaction-id` übermitteln.
 
-![](./imgs/sessionid.png "")
+![](../imgs/sessionid.png "")
 
 Dadurch kann Endereco Services API serverseitig die Anfragen zusammenfassen.
 
@@ -98,13 +98,13 @@ POST https://endereco-service.de/rpc/v1
 
 #### Request Headers
 
-|  |  |
-|---|---|
-| Content-Type| application/json  |
-| X-Transaction-Id | not_required, siehe [Generierung der Session ID's](./sessions-guideline.md) |
-| X-Agent | MyClient v1.0.0, siehe [Client ID Guideline](./client-id-guideline.md) |
-| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer.md) |
-| X-Auth-Key | siehe [Authentifizierung](#authentifizierung) |
+|                       |                                                                              |
+|-----------------------|------------------------------------------------------------------------------|
+| Content-Type          | application/json                                                             |
+| X-Transaction-Id      | not_required, siehe [Generierung der Session ID's](sessions-guideline.md)  |
+| X-Agent               | MyClient v1.0.0, siehe [Client ID Guideline](client-id-guideline.md)       |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](../providing-referrer.md) |
+| X-Auth-Key            | siehe [Authentifizierung](#authentifizierung)                                |
 
 #### Body raw (JSON)
 
@@ -157,7 +157,7 @@ Vor der Abnahme ist nur die anfragenbasierte Abrechnung möglich.
 ## Hilfe und Schulung
 
 Falls diese Guideline das Thema nicht ausreichen erklärt hat bzw. noch weitere Fragen bestehen, stehen
-unsere [Ansprechspartner](./readme.md#Ansprechspartner) zur Verfügung.
+unsere [Ansprechspartner](../readme.md#Ansprechspartner) zur Verfügung.
 
 ## FAQ
 
