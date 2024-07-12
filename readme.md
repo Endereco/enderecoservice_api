@@ -100,6 +100,7 @@ Die Struktur der API ist [hier](./structure-api.md) beschrieben
 | [PLZ Vorschläge](#postleitzahlen-autocomplete) |                                   |                                  |                                              |                               | [Firmensuche](#firmensuche)                         |                             |
 | [Ortsvorschläge](#orts-autocomplete)           |                                   |                                  |
 | [Straßenvorschläge](#straßen-autocomplete)     |                                   |                                  |
+| [Adressdetails](#address-details)              |                                   |                                  |
 
 ### Adressprüfung
 
@@ -710,3 +711,42 @@ Siehe [Aufführliche Dokumentation](./services/company-autocomplete.md)
 ```
 
 Siehe [Aufführliche Dokumentation](./services/lucid-check.md)
+
+### Address-details
+
+#### Body raw (JSON)
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 3,
+   "method": "getAddressDetails",
+   "params": {
+      "country": "DE",
+      "postCode": "97236",
+      "cityName": "Randersacker",
+      "streetFull": "Gerbrunner Str. 22"
+   }
+}
+```
+
+#### Antwort Basis
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 3,
+   "result": {
+      "predictions": [
+         {
+            "municipal_district_code": "09679175"
+         }
+      ],
+      "status": [
+         "address_details_found"
+      ]
+   }
+}
+```
+
+Siehe [Aufführliche Dokumentation](./services/address-details.md)
