@@ -101,6 +101,7 @@ Die Struktur der API ist [hier](./structure-api.md) beschrieben
 | [Ortsvorschläge](#orts-autocomplete)           |                                   |                                  |
 | [Straßenvorschläge](#straßen-autocomplete)     |                                   |                                  |
 | [Adressdetails](#address-details)              |                                   |                                  |
+| [Single Line Input](#single-line-input)        |                                   |                                  |
 
 ### Adressprüfung
 
@@ -750,3 +751,60 @@ Siehe [Aufführliche Dokumentation](./services/lucid-check.md)
 ```
 
 Siehe [Aufführliche Dokumentation](./services/address-details.md)
+
+### Single-Line-Input
+
+#### Body raw (JSON)
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "addressAutocomplete",
+   "params": {
+      "country": "de",
+      "addressFull": "Gerbrunner Str. 22 97236 Randers"
+   }
+}
+```
+
+#### Antwort Basis
+
+```json
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "result": {
+      "predictions": [
+         {
+            "country": "DE",
+            "postCode": "97236",
+            "cityName": "Randersacker",
+            "street": "Gerbrunner Str.",
+            "houseNumber": "22",
+            "additionalInfo": "",
+            "streetFull": "Gerbrunner Str. 22",
+            "addressFull": "Gerbrunner Str. 22, 97236 Randersacker",
+            "subdivisionCode": "DE-BY"
+         },
+         {
+            "country": "DE",
+            "postCode": "97236",
+            "cityName": "Randersacker",
+            "street": "Gerbrunner Str.",
+            "houseNumber": "22A",
+            "additionalInfo": "",
+            "streetFull": "Gerbrunner Str. 22A",
+            "addressFull": "Gerbrunner Str. 22A, 97236 Randersacker",
+            "subdivisionCode": "DE-BY"
+         }
+      ],
+      "status": [
+         "A2000",
+         "address_multiple_variants"
+      ]
+   }
+}
+```
+
+Siehe [Aufführliche Dokumentation](./services/address-single-line-autocomplete.md)
