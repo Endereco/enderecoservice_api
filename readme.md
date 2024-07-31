@@ -15,7 +15,7 @@ Ein Auszug unserer Referenzen:
 
 |  |  |  |  |
 |---|---|---|---|
-| ![](./imgs/bahn-805cdfd6.png "") | ![](./imgs/bodymed-3fa122cb.png "") | ![](./imgs/esmeyer-9ea34a21.png "") | ![](./imgs/leuchtstark-5bc7e2f1.png "") |
+| ![](./imgs/bahn-805cdfd6.png "") | ![](./imgs/BasteiLuebbe.png "") | ![](./imgs/esmeyer-9ea34a21.png "") | ![](./imgs/Ravensburger.png "") |
 | ![](./imgs/lodenfrey-504abfa7.png "") | ![](./imgs/paltinum-9f33b7f8.png "") | ![](./imgs/session-a3b56a76.png "") | ![](./imgs/sheego-b19f87e2.png "") |
 
 ## Plugins und fertige Intergrationen
