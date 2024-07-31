@@ -1,14 +1,14 @@
-# Endereco Services API
+# endereco Services-API
 
-Die Endereco Services API ermöglicht einen automatisierbaren Zugriff in Echtzeit auf
+Die endereco Services-API ermöglicht einen automatisierbaren Zugriff in Echtzeit auf
 die [Services der Firma Endereco UG (haftungsb.) - Gesellschaft für Master Data Quality Management](https://www.endereco.de/services/)
-. Darunter fallen die Prüfungen von internationalen postalischen Adressen aus über 200 Ländern, die Prüfung von E-Mail
+. Darunter fallen die Prüfungen von internationalen postalischen Adressen aus über 200 Ländern/Regionen, die Prüfung von E-Mail-
 Adressen, Telefonnummern, Namen und anderen Stammdaten von Personen oder Firmen.
 
-## Über 200 Unternehmen prüfen bereits ihre Stammdaten mit Endereco
+## Über 300 Unternehmen prüfen bereits ihre Stammdaten mit endereco
 
-Egal ob Onlineshop, Warenwirtschaftssystem, CRM oder eine eigenentwickelte Softwarelösung — Endereco optimiert die
-Qualität der Stammdaten deiner Kunden und erspart Kunden und Mitarbeiten den Mehraufwand, der durch nicht normierte und
+Egal ob Onlineshop, Warenwirtschaftssystem, CRM oder eine eigenentwickelte Softwarelösung — endereco optimiert die
+Qualität der Stammdaten deiner Kunden und erspart Kunden und Mitarbeitern den Mehraufwand, der durch nicht normierte und
 fehlerhafte Stammdaten entsteht.
 
 Ein Auszug unserer Referenzen:
@@ -31,7 +31,7 @@ Systeme.
 Wenn du Interesse hast, eine eigene Integration gegen unsere API zu entwickeln, sende eine E-Mail an
 support@endereco.de.
 
-## DSGVO konform
+## DSGVO-konform
 
 Unsere API ist von Grund auf so konzipiert, dass sie bei korrekter Implementierung den Ansprüchen der DSGVO gerecht
 wird. Unser internes Datenschutz-Team prüft stets die aktuellen rechtlichen Anforderungen und sorgt für eine
@@ -42,14 +42,14 @@ gesetzeskonforme Umsetzung.
 Wie kannst du auf unsere API zugreifen?
 
 1. Frage [über dieses Formular](https://share.hsforms.com/11wqETsTLSuq1fiyIgqtKQA3e78w) einen API-Key an. Für einen
-   API-Key benötigst du mit Endereco UG eine Vereinbarung zur Auftragsverarbeitung. Nur so haben wir als Verarbeiter und
+   API-Key muss mit der endereco UG eine Vereinbarung zur Auftragsverarbeitung abgeschlossen werden. Nur so haben wir als Verarbeiter und
    du als Verantwortlicher die rechtliche Grundlage dafür. Die Unterlagen senden wir dir zu.
 2. Probiere
    unsere [Postman-Collection](https://www.endereco.de/wp-content/uploads/2021/11/Endereco-API.postman_collection.json_.zip)
    aus. Dort sind alle gängigen Anfragen schon vorformuliert.
    Die [Import-Datei](https://www.endereco.de/wp-content/uploads/2021/11/Endereco-API.postman_collection.json_.zip)
    wurde für die aktuelle Version von [Postman](https://www.postman.com/) erstellt.
-3. Falls du noch Fragen hast, such' dir den passenden Ansprechpartner aus folgender Liste aus.
+3. Falls du noch Fragen hast, such dir den passenden Ansprechpartner aus folgender Liste aus.
 
 ### Ansprechpartner
 
@@ -61,14 +61,14 @@ Wie kannst du auf unsere API zugreifen?
 
 ## Request oder Session
 
-Die Leistungen von Endereco sind kostenpflichtig. Dabei unterscheiden wir zwischen zwei Arten der Abrechnung.
+Die Leistungen von endereco sind kostenpflichtig. Dabei unterscheiden wir zwischen zwei Arten der Abrechnung.
 
 1. Die Abrechnung je API-Anfrage
 2. Die erfolgsbasierte Abrechnung
 
 Endereco ermöglicht es Nutzern, eine Prüfung erst dann in Rechnung zu stellen, wenn diese tatsächlich einen Mehrwert
 liefert. Erst wenn ein bestimmter logisch zusammenhängender Datensatz (z.B. eine Lieferadresse) nach der Verarbeitung
-durch Endereco beim Nutzer verwendet oder gespeichert wird, rechnen wir ab.
+durch endereco beim Nutzer verwendet oder gespeichert wird, rechnen wir ab.
 
 Um die erfolgsbasierte Abrechnung zu ermöglichen, müssen die Anfragen in einer Session gebündelt werden. Dieses Vorgehen
 haben wir in [einer Anleitung](guidlines/sessions-guideline.md) beschrieben. Jede sessionbasierte Umsetzung wird gemeinsam mit
@@ -81,9 +81,9 @@ Jede API-Anfrage, die an uns gesendet wird, muss einem Nutzer zugeordnet werden 
 HTTP-Header "X-Auth-Key" bei jeder Anfrage mit dem Wert des API-Keys gesetzt werden, den wir für dich erstellt haben.
 
 Um unsere API über Postman anzusprechen, kannst du auch in Postman den API-Key hinterlegen. Nachdem du die
-Postman-Collection importiert hast, klicke auf "Endereco API Beispiele", dann auf "Authorization" und dann wähle bei
-Type "API Key" aus. Trage nun bei Key "X-Auth-Key" ein und bei Value den API-Key, den wir für dich erstellt haben. Diese
-werden dann bei jedem Request zu jedem API Endpunkt im Header automatisch mitgesendet.
+Postman-Collection importiert hast, klicke auf "Endereco API-Beispiele", dann auf "Authorization" und dann wähle bei
+Type "API-Key" aus. Trage nun bei Key "X-Auth-Key" ein und bei Value den API-Key, den wir für dich erstellt haben. Diese
+werden dann bei jedem Request zu jedem API-Endpunkt im Header automatisch mitgesendet.
 
 ![](./imgs/postman_api.png "")
 
@@ -152,7 +152,7 @@ Die Struktur der API ist [hier](./structure-api.md) beschrieben
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/address-check.md)
+Siehe [Ausführliche Dokumentation](./services/address-check.md)
 
 ### Postleitzahlen-Autocomplete
 
@@ -223,7 +223,7 @@ Siehe [Aufführliche Dokumentation](./services/address-check.md)
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/post-code-autocomplete.md)
+Siehe [Ausführliche Dokumentation](./services/post-code-autocomplete.md)
 
 ### Orts-Autocomplete
 
@@ -286,7 +286,7 @@ Siehe [Aufführliche Dokumentation](./services/post-code-autocomplete.md)
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/city-name-autocomplete.md)
+Siehe [Ausführliche Dokumentation](./services/city-name-autocomplete.md)
 
 ### Straßen-Autocomplete
 
@@ -335,7 +335,7 @@ Siehe [Aufführliche Dokumentation](./services/city-name-autocomplete.md)
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/street-autocomplete.md)
+Siehe [Ausführliche Dokumentation](./services/street-autocomplete.md)
 
 ### E-Mail-Prüfung
 
@@ -367,7 +367,7 @@ Siehe [Aufführliche Dokumentation](./services/street-autocomplete.md)
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/email-check.md)
+Siehe [Ausführliche Dokumentation](./services/email-check.md)
 
 ### Namens-Prüfung
 
@@ -410,7 +410,7 @@ Siehe [Aufführliche Dokumentation](./services/email-check.md)
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/name-check.md)
+Siehe [Ausführliche Dokumentation](./services/name-check.md)
 
 ### Telefonnummern-Prüfung
 
@@ -462,7 +462,7 @@ Siehe [Aufführliche Dokumentation](./services/name-check.md)
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/phone-check.md)
+Siehe [Ausführliche Dokumentation](./services/phone-check.md)
 
 ### iBan-Prüfung
 
@@ -515,7 +515,7 @@ Siehe [Aufführliche Dokumentation](./services/phone-check.md)
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/iban-check.md)
+Siehe [Ausführliche Dokumentation](./services/iban-check.md)
 
 ### Umsatzsteuer-ID-Prüfung
 
@@ -553,7 +553,7 @@ Die Umsatzsteuer-ID Nr. kann über eine einfache Abfrage oder über eine qualifi
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/vat-id-check.md)
+Siehe [Ausführliche Dokumentation](./services/vat-id-check.md)
 
 *Beispiel 2: Qualifizierte Validierung einer Umsatzsteuer-ID.*
 
@@ -621,7 +621,7 @@ Siehe [Aufführliche Dokumentation](./services/vat-id-check.md)
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/vat-id-check-extended.md)
+Siehe [Ausführliche Dokumentation](./services/vat-id-check-extended.md)
 
 ### Firmensuche
 
@@ -671,7 +671,7 @@ Siehe [Aufführliche Dokumentation](./services/vat-id-check-extended.md)
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/company-autocomplete.md)
+Siehe [Ausführliche Dokumentation](./services/company-autocomplete.md)
 
 ### Lucid-Check
 
@@ -711,7 +711,7 @@ Siehe [Aufführliche Dokumentation](./services/company-autocomplete.md)
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/lucid-check.md)
+Siehe [Ausführliche Dokumentation](./services/lucid-check.md)
 
 ### Address-details
 
@@ -750,7 +750,7 @@ Siehe [Aufführliche Dokumentation](./services/lucid-check.md)
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/address-details.md)
+Siehe [Ausführliche Dokumentation](./services/address-details.md)
 
 ### Single-Line-Input
 

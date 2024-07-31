@@ -1,4 +1,4 @@
-# Einfache Umsatzsteuer-Id-Prüfung
+# Einfache Umsatzsteuer-ID-Prüfung
 
 - [Struktur der Schnittstelle](#struktur-der-schnittstelle)
   - [Methode](#methode)
@@ -15,7 +15,7 @@ Die Struktur der API ist [hier](./../structure-api.md) beschrieben
 
 ## Methode
 
-Für die Einfache Umsatzsteuer-Id-Prüfung muss ```vatIdCheck``` als Methode angegeben werden
+Für die Einfache Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Methode angegeben werden
 
 ## Eingabeparameter
 
@@ -29,7 +29,7 @@ Für die Einfache Umsatzsteuer-Id-Prüfung muss ```vatIdCheck``` als Methode ang
 |-------------------|-----------------|---------|---------------------------------------------------------------------------------------------------------------------------|
 | predictions       | Array           | Ja      | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                            |
 | predictions.vatId | String          | Ja      | Enthält die formatierte Umsatzsteuer-ID der zu prüfenden Firma.                                                           |
-| status            | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes). |
+| status            | Array           | Ja      | Enthält eine Liste mit Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes). |
 
 ## Statuscodes
 

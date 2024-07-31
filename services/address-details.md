@@ -33,7 +33,7 @@ Für die Get-Address-Details muss ```getAddressDetails``` als Methode angegeben 
 |-------------------------------------|-----------------|---------|---------------------------------------------------------------------------------------------------------------------------|
 | predictions                         | Array           | Ja      | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                            |
 | predictions.municipal_district_code | String          | Ja      | Enthält den Amtlichen Gemeindeschlüssel (AGS)                                                                             |
-| status                              | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes). |
+| status                              | Array           | Ja      | Enthält eine Liste von Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes). |
 
 ## Statuscodes
 

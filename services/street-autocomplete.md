@@ -34,7 +34,7 @@ Für die Straßennamen-Autocomplete muss ```streetAutocomplete``` als Methode an
 | predictions.streetName     | String          | Ja      | Enthält den Straßennamen zu diesem Vorschlag. Identisch mit dem Feld "street".                                            |
 | predictions.buildingNumber | String          | Ja      | Enthält die Hausnummer zu diesem Vorschlag.                                                                               |
 | predictions.additionalInfo | String          | Ja      | Enthält den Adresszusatz zu diesem Vorschlag.                                                                             |
-| status                     | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes). |
+| status                     | Array           | Ja      | Enthält eine Liste mit Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes). |
 
 ## Statuscodes
 

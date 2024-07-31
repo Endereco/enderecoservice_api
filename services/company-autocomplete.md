@@ -21,7 +21,7 @@ Für die Firmen-Autocomplete muss ```companyAutocomplete``` als Methode angegebe
 | Feld        | Erwarteter Wert | Pflicht | Bedeutung                                                                                |
 |-------------|-----------------|---------|------------------------------------------------------------------------------------------|
 | countryCode | String          | Nein    | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./../country-codes.md) |
-| companyName | String          | Ja      | Enthällt den Firmennamen nach dem gesucht werden soll                                    |
+| companyName | String          | Ja      | Enthält den Firmennamen, nach dem gesucht werden soll                                    |
 
 ## Ausgabefelder
 
@@ -29,18 +29,18 @@ Für die Firmen-Autocomplete muss ```companyAutocomplete``` als Methode angegebe
 |----------------------------------------------------|-----------------|---------|---------------------------------------------------------------------------------------------------------------------------------------|
 | predictions                                        | Array           | Ja      | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                                        |
 | predictions.vatId                                  | String          | Ja      | Enthält die formatierte Umsatzsteuer-ID der zu prüfenden Firma.                                                                       |
-| predictions.companyStatus                          | String          | Ja      | Enthält den Status zu der Firma (active, inaktive, unknown)                                                                           |
+| predictions.companyStatus                          | String          | Ja      | Enthält den Status zur Firma (active, inaktive, unknown)                                                                              |
 | predictions.companyName                            | String          | Ja      | Enthält den Firmennamen zu diesem Vorschlag.                                                                                          |
 | predictions.companyAddress                         | String          | Ja      | Enthält die unstrukturierte Firmenadresse zu diesem Vorschlag.                                                                        |
 | predictions.companyAddressFormatted                | String          | Ja      | Enthält die strukturierte Firmenadresse zu diesem Vorschlag. Wird nur zurückgegeben, wenn die Adresse in strukturierter Form vorliegt |
-| predictions.companyAddressFormatted.streetFull     | String          | Ja      | Enthält die Straße inkl. Hausnummer der strukturierte Firmenadresse zu diesem Vorschlag.                                              |
-| predictions.companyAddressFormatted.street         | String          | Ja      | Enthält den Straßennamen der strukturierte Firmenadresse zu diesem Vorschlag.                                                         |
-| predictions.companyAddressFormatted.houseNumber    | String          | Ja      | Enthält die Hausnummer der strukturierte Firmenadresse zu diesem Vorschlag.                                                           |
-| predictions.companyAddressFormatted.additionalInfo | String          | Ja      | Enthält den Adresszusatz der strukturierte Firmenadresse zu diesem Vorschlag.                                                         |
-| predictions.companyAddressFormatted.postCode       | String          | Ja      | Enthält die Postleitzahl der strukturierte Firmenadresse zu diesem Vorschlag.                                                         |
-| predictions.companyAddressFormatted.cityName       | String          | Ja      | Enthält den Ortsname der strukturierte Firmenadresse zu diesem Vorschlag.                                                             |
-| predictions.companyAddressFormatted.country        | String          | Ja      | Enthält den Ländercode der strukturierte Firmenadresse zu diesem Vorschlag.                                                           |
-| status                                             | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes).             |
+| predictions.companyAddressFormatted.streetFull     | String          | Ja      | Enthält die Straße inkl. Hausnummer der strukturierten Firmenadresse zu diesem Vorschlag.                                             |
+| predictions.companyAddressFormatted.street         | String          | Ja      | Enthält den Straßennamen der strukturierten Firmenadresse zu diesem Vorschlag.                                                        |
+| predictions.companyAddressFormatted.houseNumber    | String          | Ja      | Enthält die Hausnummer der strukturierten Firmenadresse zu diesem Vorschlag.                                                          |
+| predictions.companyAddressFormatted.additionalInfo | String          | Ja      | Enthält den Adresszusatz der strukturierten Firmenadresse zu diesem Vorschlag.                                                        |
+| predictions.companyAddressFormatted.postCode       | String          | Ja      | Enthält die Postleitzahl der strukturierten Firmenadresse zu diesem Vorschlag.                                                        |
+| predictions.companyAddressFormatted.cityName       | String          | Ja      | Enthält den Ortsnamen der strukturierten Firmenadresse zu diesem Vorschlag.                                                           |
+| predictions.companyAddressFormatted.country        | String          | Ja      | Enthält den Ländercode der strukturierten Firmenadresse zu diesem Vorschlag.                                                          |
+| status                                             | Array           | Ja      | Enthält eine Liste mit Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes).             |
 
 ## Statuscodes
 

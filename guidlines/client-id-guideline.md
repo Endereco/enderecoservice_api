@@ -1,6 +1,6 @@
 # Client ID Guideline
 
-Neben sonstigen Metadaten, soll auch die Kennung des Clients bei jeder Anfrage übermittelt werden.
+Neben sonstigen Metadaten soll auch die Kennung des Clients bei jeder Anfrage übermittelt werden.
 
 Der Name ist wie folgt aufzubauen:
 
@@ -19,4 +19,4 @@ Wir nutzen die Kennung des Clients bei Problemdiagnosen.
 
 ## Soll auch die Version des Systems oder Themes angegeben werden?
 
-Nein. Für Systemname und -version, sowie für das verwendete Theme, wird es zukünftig andere Möglichkeiten geben.
+Nein. Für Systemname und -version sowie für das verwendete Theme wird es zukünftig andere Möglichkeiten geben.

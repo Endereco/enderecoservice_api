@@ -1,4 +1,4 @@
-# Namens-Prüfung
+# Namensprüfung
 
 - [Struktur der Schnittstelle](#struktur-der-schnittstelle)
   - [Methode](#methode)
@@ -45,7 +45,7 @@ Für die Namens-Prüfung muss ```nameCheck``` als Methode angegeben werden
 | firstName   | String          | Ja, wenn name nicht gesetzt ist      | Enthält den Vornamen.                                                                                                                                                                                                                              |
 | lastName    | String          | Ja, wenn name nicht gesetzt ist      | Enthält den Nachnamen.                                                                                                                                                                                                                             |
 | countryCode | String          | Nein                                 | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./../country-codes.md)                                                                                                                                                           |
-| language    | String          | Nein                                 | Sprachkürzel für die Ausgabe. Aktuell wird nur die Ausgabe vom nameCheck beeinflusst, zukünftig wird das bei weiteren Services möglich sein. Standardwert ist DE. [Liste der Sprachcodes](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) |
+| language    | String          | Nein                                 | Sprachkürzel für die Ausgabe. Aktuell wird nur die Ausgabe des nameChecks beeinflusst, zukünftig wird das bei weiteren Services möglich sein. Standardwert ist DE. [Liste der Sprachcodes](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) |
 
 
 ## Ausgabefelder
@@ -58,7 +58,7 @@ Für die Namens-Prüfung muss ```nameCheck``` als Methode angegeben werden
 | predictions.firstName  | String          | Ja      | Enthält den Vornamen zu diesem Vorschlag.                                                                                 |
 | predictions.lastName   | String          | Ja      | Enthält den Nachnamen zu diesem Vorschlag.                                                                                |
 | score                  | Float           | Ja      | Enthält eine Zahl zwischen 0.0 und 1.0. Repräsentiert die Wahrscheinlichkeit oder Qualität der Aussage.                   |
-| status                 | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes). |
+| status                 | Array           | Ja      | Enthält eine Liste mit Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes). |
 
 ## Anrede-Codes
 
@@ -78,8 +78,8 @@ Für die Namens-Prüfung muss ```nameCheck``` als Methode angegeben werden
 | Code                        | Bedeutung                                                                                                                 |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | name_is_natural_person      | Bei dem übermittelten Namen handelt es sich um eine natürliche Person. z.B. "Mario Fischer"                               |
-| name_is_family              | Bei dem Namen handelt es sich um eine Familie, z.B. "Familie Müller                                                       |
-| name_is_organisation        | Bei dem Namen handelt es sich um eine Organisation, z.B. "Endereco GmbH"                                                  |
+| name_is_family              | Bei dem Namen handelt es sich um eine Familie, z.B. "Familie Müller"                                                      |
+| name_is_organisation        | Bei dem Namen handelt es sich um eine Organisation, z.B. "endereco UG"                                                    |
 | name_is_group               | Bei dem Namen handelt es sich um eine Gruppe.                                                                             |
 | name_multiple_variants      | Bei dem Namen wurden mehrere Personen entdeckt, z.B. "Maria und Fritz Fleischmann"                                        |
 | name_correct                | Der Name ist bekannt und korrekt geschrieben.                                                                             |

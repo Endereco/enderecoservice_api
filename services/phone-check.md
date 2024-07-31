@@ -1,4 +1,4 @@
-# Telefonnummern-Prüfung
+# Telefonnummernprüfung
 
 - [Struktur der Schnittstelle](#struktur-der-schnittstelle)
   - [Methode](#methode)
@@ -15,7 +15,7 @@ Die Struktur der API ist [hier](./../structure-api.md) beschrieben
 
 ## Methode
 
-Für die Telefonnummern-Prüfung muss ```phoneCheck``` als Methode angegeben werden
+Für die Telefonnummernprüfung muss ```phoneCheck``` als Methode angegeben werden
 
 ## Eingabeparameter
 

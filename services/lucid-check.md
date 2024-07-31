@@ -20,14 +20,14 @@ Für die Lucid-Prüfung muss ```lucidCheck``` als Methode angegeben werden
 
 | Feld    | Erwarteter Wert | Pflicht | Bedeutung                                                                  |
 |---------|-----------------|---------|----------------------------------------------------------------------------|
-| lucidId | String          | Ja      | Enthält die zu prüfende Registrierungsnummer vom Verpackungsregister Lucid |
+| lucidId | String          | Ja      | Enthält die zu prüfende Registrierungsnummer des Lucid-Verpackungsregisters|
 
 ## Ausgabefelder
 
 | Feld                              | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                                                                                          |
 |-----------------------------------|-----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | predictions                       | Array           | Ja      | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                                                                                                     |
-| predictions.lucidId               | String          | Ja      | Enthält die formatierte Registrierungsnummer vom Verpackungsregister Lucid                                                                                                                         |
+| predictions.lucidId               | String          | Ja      | Enthält die formatierte Registrierungsnummer aus dem  Lucid -Verpackungsregister                                                                                                                   |
 | predictions.companyName           | String          | Ja      | Enthält den Firmennamen zu diesem Vorschlag.                                                                                                                                                       |
 | predictions.kindOfReferenceNumber | String          | Ja      | Enthält den Typ der Referenznummer <br> vat: Umsatzsteuer-Identifikationsnummer <br> tax: Steuernummer <br> unknown: Unbekannt Firmenadresse zu diesem Vorschlag.                                  |
 | predictions.referenceNumber       | String          | Ja      | Enthält die Referenznummer                                                                                                                                                                         |
@@ -38,8 +38,8 @@ Für die Lucid-Prüfung muss ```lucidCheck``` als Methode angegeben werden
 
 | Code          | Bedeutung                                                                 |
 |---------------|---------------------------------------------------------------------------|
-| lucid_correct | Diese Registrierungsnummer ist im Verpackungsregister Lucid bekannt       |
-| lucid_invalid | Diese Registrierungsnummer ist im Verpackungsregister Lucid nicht bekannt |
+| lucid_correct | Diese Registrierungsnummer ist im Lucid-Verpackungsregister bekannt       |
+| lucid_invalid | Diese Registrierungsnummer ist im  Lucid-Verpackungsregister nicht bekannt|
 
 # Beispiele
 

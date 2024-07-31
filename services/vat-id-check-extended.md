@@ -1,4 +1,4 @@
-# Qualifizierte Umsatzsteuer-Id-Prüfung
+# Qualifizierte Umsatzsteuer-ID-Prüfung
 
 - [Struktur der Schnittstelle](#struktur-der-schnittstelle)
   - [Methode](#methode)
@@ -20,7 +20,7 @@ Die Struktur der API ist [hier](./../structure-api.md) beschrieben
 
 ## Methode
 
-Für die Qualifizierte Umsatzsteuer-Id-Prüfung muss ```vatIdCheck``` als Methode angegeben werden
+Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Methode angegeben werden
 
 ## Eingabeparameter
 
@@ -43,15 +43,15 @@ Für die Qualifizierte Umsatzsteuer-Id-Prüfung muss ```vatIdCheck``` als Method
 | predictions.companyName                            | String          | Ja      | Enthält den Firmennamen zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                                                  |
 | predictions.companyAddress                         | String          | Ja      | Enthält die unstrukturierte Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                                |
 | predictions.companyAddressFormatted                | String          | Ja      | Enthält die strukturierte Firmenadresse zu diesem Vorschlag. Wird nur zurückgegeben, wenn die Adresse in strukturierter Form vorliegt                                                                                                                                                                                                                                                         |
-| predictions.companyAddressFormatted.streetFull     | String          | Ja      | Enthält die Straße inkl. Hausnummer der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                      |
-| predictions.companyAddressFormatted.street         | String          | Ja      | Enthält den Straßennamen der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                 |
-| predictions.companyAddressFormatted.houseNumber    | String          | Ja      | Enthält die Hausnummer der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                   |
-| predictions.companyAddressFormatted.additionalInfo | String          | Ja      | Enthält den Adresszusatz der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                 |
-| predictions.companyAddressFormatted.postCode       | String          | Ja      | Enthält die Postleitzahl der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                 |
-| predictions.companyAddressFormatted.cityName       | String          | Ja      | Enthält den Ortsname der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                     |
-| predictions.companyAddressFormatted.country        | String          | Ja      | Enthält den Ländercode der strukturierte Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                   |
-| certification                                      | JSON            | Nein    | Enthält Informationen zum Prüfzertifikat. Wird nur zurückgegeben, wenn es sich laut §18e UStG und 18e.1 Abs. 2 Satz 4 UStAE um eine qualifizierte Prüfung handelt. Wenn Prüfzertifikat nicht ausgegeben wird, bedeutet es, dass die Prüfung mit Daten aus Cache verglichen wurde, da BZSt Server nicht verfügbar ist. Die erneute Prüfung von UID zum späteren Zeitpunkt kann notwendig sein. |
-| status                                             | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes).                                                                                                                                                                                                                                                                     |
+| predictions.companyAddressFormatted.streetFull     | String          | Ja      | Enthält die Straße inkl. Hausnummer der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                      |
+| predictions.companyAddressFormatted.street         | String          | Ja      | Enthält den Straßennamen der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                 |
+| predictions.companyAddressFormatted.houseNumber    | String          | Ja      | Enthält die Hausnummer der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                   |
+| predictions.companyAddressFormatted.additionalInfo | String          | Ja      | Enthält den Adresszusatz der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                 |
+| predictions.companyAddressFormatted.postCode       | String          | Ja      | Enthält die Postleitzahl der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                 |
+| predictions.companyAddressFormatted.cityName       | String          | Ja      | Enthält den Ortsname der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                     |
+| predictions.companyAddressFormatted.country        | String          | Ja      | Enthält den Ländercode der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                   |
+| certification                                      | JSON            | Nein    | Enthält Informationen zum Prüfzertifikat. Wird nur zurückgegeben, wenn es sich laut §18e UStG und 18e.1 Abs. 2 Satz 4 UStAE um eine qualifizierte Prüfung handelt. Wenn das Prüfzertifikat nicht ausgegeben wird, bedeutet es, dass die Prüfung mit Daten aus dem Cache verglichen wurde, da der BZSt-Server nicht verfügbar ist. Die erneute Prüfung der USt-ID zu einem späteren Zeitpunkt kann notwendig sein. |
+| status                                             | Array           | Ja      | Enthält eine Liste mit Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes).                                                                                                                                                                                                                                                                     |
 
 > Alle erfolgreichen Prüfanfragen werden auf Seiten von endereco gespeichert und archiviert.
 > 
@@ -67,31 +67,31 @@ Für die Qualifizierte Umsatzsteuer-Id-Prüfung muss ```vatIdCheck``` als Method
 | vat_id_body_major_correction              | Große Änderung der Umsatzsteuer-ID.                                                                                                                                                                                     |
 | vat_id_format_invalid                     | Format entspricht nicht der [Spezifikation](https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Documents/COSME/VAT%20numbers%20EU.pdf).                                                            |
 | vat_id_format_correct                     | Format entspricht der [Spezifikation](https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Documents/COSME/VAT%20numbers%20EU.pdf).                                                                  |
-| vat_id_company_address_match              | Die angebegene Firmenanschrift passt zu der Firmenanschrift, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                                         |
-| vat_id_company_address_partial_match      | Die angebegene Firmenanschrift passt teilweise zu der Firmenanschrift, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                               |
-| vat_id_company_address_mismatch           | Die angebegene Firmenanschrift passt nicht zu der Firmenanschrift, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                                   |
-| vat_id_company_postal_code_match          | Die angebegene Postleitzahl der Firmenanschrift passt zu der Postleitzahl, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                           |
-| vat_id_company_postal_code_partial_match  | Die angebegene Postleitzahl der Firmenanschrift passt teilweise zu der Postleitzahl, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                 |
-| vat_id_company_postal_code_mismatch       | Die angebegene Postleitzahl der Firmenanschrift passt nicht zu der Postleitzahl, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                     |
-| vat_id_company_locality_match             | Der angebegener Ortsname von der Firmenanschrift passt zu dem Ortsname, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                              |
-| vat_id_company_locality_partial_match     | Der angebegener Ortsname von der Firmenanschrift passt teilweise zu dem Ortsname, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                    |
-| vat_id_company_locality_mismatch          | Der angebegener Ortsname von der Firmenanschrift passt nicht zu dem Ortsname, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                        |
-| vat_id_company_street_full_match          | Die angebegener Straßenname mit Hausnummer von der Firmenanschrift passt zu dem Straßenname mit Hausnummer, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.          |
-| vat_id_company_street_full_partial_match  | Die angebegener Straßenname mit Hausnummer von der Firmenanschrift passt teilweise zu dem Straßenname mit Hausnummer, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt |
-| vat_id_company_street_full_mismatch       | Die angebegener Straßenname mit Hausnummer von der Firmenanschrift passt nicht zu dem Straßenname mit Hausnummer, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt     |
-| vat_id_company_street_match               | Die angebegener Straßenname von der Firmenanschrift passt zu dem Straßenname, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                        |
-| vat_id_company_street_partial_match       | Die angebegener Straßenname von der Firmenanschrift passt teilweise zu dem Straßenname, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt                               |
-| vat_id_company_street_mismatch            | Die angebegener Straßenname von der Firmenanschrift passt nicht zu dem Straßenname, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt                                   |
-| vat_id_company_house_number_match         | Die angebegene Hausnummer von der Firmenanschrift passt zu der Hausnummer, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                           |
-| vat_id_company_house_number_partial_match | Die angebegene Hausnummer von der Firmenanschrift passt teilweise zu der Hausnummer, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt                                  |
-| vat_id_company_house_number_mismatch      | Die angebegene Hausnummer von der Firmenanschrift passt nicht zu der Hausnummer, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt                                      |
-| vat_id_company_name_match                 | Der angebegener Firmenname passt zu dem Firmenname, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                                                  |
-| vat_id_company_name_partial_match         | Der angebegener Firmenname passt teilweise zu dem Firmenname, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                                        |
-| vat_id_company_name_mismatch              | Der angebegener Firmenname passt nicht zu dem Firmenname der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht von BZSt.                                                             |
+| vat_id_company_address_match              | Die angegebene Firmenanschrift passt zu der Firmenanschrift, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                                         |
+| vat_id_company_address_partial_match      | Die angegebene Firmenanschrift passt teilweise zu der Firmenanschrift, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                               |
+| vat_id_company_address_mismatch           | Die angegebene Firmenanschrift passt nicht zu der Firmenanschrift, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                                   |
+| vat_id_company_postal_code_match          | Die angegebene Postleitzahl der Firmenanschrift passt zu der Postleitzahl, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                           |
+| vat_id_company_postal_code_partial_match  | Die angegebene Postleitzahl der Firmenanschrift passt teilweise zu der Postleitzahl, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                 |
+| vat_id_company_postal_code_mismatch       | Die angegebene Postleitzahl der Firmenanschrift passt nicht zu der Postleitzahl, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                     |
+| vat_id_company_locality_match             | Der angegebene Ortsname der Firmenanschrift passt zu dem Ortsnamen, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                                  |
+| vat_id_company_locality_partial_match     | Der angegebene Ortsname der Firmenanschrift passt teilweise zu dem Ortsname, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                         |
+| vat_id_company_locality_mismatch          | Der angegebene Ortsname der Firmenanschrift passt nicht zu dem Ortsname, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                             |
+| vat_id_company_street_full_match          | Die angegebene Straßenname mit Hausnummer der Firmenanschrift passt zu dem Straßenname mit Hausnummer, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.               |
+| vat_id_company_street_full_partial_match  | Die angegebene Straßenname mit Hausnummer der Firmenanschrift passt teilweise zu dem Straßenname mit Hausnummer, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt      |
+| vat_id_company_street_full_mismatch       | Die angegebene Straßenname mit Hausnummer der Firmenanschrift passt nicht zu dem Straßenname mit Hausnummer, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt          |
+| vat_id_company_street_match               | Die angegebene Straßenname der Firmenanschrift passt zu dem Straßenname, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                             |
+| vat_id_company_street_partial_match       | Die angegebene Straßenname der Firmenanschrift passt teilweise zu dem Straßenname, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nichtdes BZSt                                     |
+| vat_id_company_street_mismatch            | Die angegebene Straßenname der Firmenanschrift passt nicht zu dem Straßenname, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt                                        |
+| vat_id_company_house_number_match         | Die angebegene Hausnummer der Firmenanschrift passt zu der Hausnummer, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                               |
+| vat_id_company_house_number_partial_match | Die angegebene Hausnummer der Firmenanschrift passt teilweise zu der Hausnummer, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt                                      |
+| vat_id_company_house_number_mismatch      | Die angegebene Hausnummer der Firmenanschrift passt nicht zu der Hausnummer, die bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt                                          |
+| vat_id_company_name_match                 | Der angegebene Firmenname passt zum Firmennamen, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                                                     |
+| vat_id_company_name_partial_match         | Der angegebene Firmenname passt teilweise zum Firmennamen, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                                           |
+| vat_id_company_name_mismatch              | Der angegebene Firmenname passt nicht zum Firmennamen, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                                               |
 
 # Beispiele
 
-## Gültiger und richtig formatierter Umsatzsteuer-ID
+## Gültige und richtig formatierte Umsatzsteuer-ID
 
 ### Anfrage
 
@@ -155,7 +155,7 @@ Für die Qualifizierte Umsatzsteuer-Id-Prüfung muss ```vatIdCheck``` als Method
 }
 ```
 
-## Ungültiger, aber richtig formatierter Umsatzsteuer-ID
+## Ungültige, aber richtig formatierte Umsatzsteuer-ID
 
 ### Anfrage
 
@@ -205,7 +205,7 @@ Für die Qualifizierte Umsatzsteuer-Id-Prüfung muss ```vatIdCheck``` als Method
 }
 ```
 
-## Gültiger, aber falsch formatierter Umsatzsteuer-ID
+## Gültige, aber falsch formatierte Umsatzsteuer-ID
 
 ### Anfrage
 
@@ -307,7 +307,7 @@ Für die Qualifizierte Umsatzsteuer-Id-Prüfung muss ```vatIdCheck``` als Method
 }
 ```
 
-## Falschem Länderkürzel
+## Falsches Länderkürzel
 
 ### Anfrage
 
@@ -343,7 +343,7 @@ Für die Qualifizierte Umsatzsteuer-Id-Prüfung muss ```vatIdCheck``` als Method
 }
 ```
 
-## Ungültigem Format
+## Ungültiges Format
 
 ### Anfrage
 
@@ -379,7 +379,7 @@ Für die Qualifizierte Umsatzsteuer-Id-Prüfung muss ```vatIdCheck``` als Method
 }
 ```
 
-## Fehlenden Pflichtfeldern
+## Fehlendes Pflichtfelder
 
 ### Anfrage
 

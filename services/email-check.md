@@ -29,7 +29,7 @@ Für die E-Mail-Prüfung muss ```emailCheck``` als Methode angegeben werden
 
 | Feld   | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                 |
 |--------|-----------------|---------|---------------------------------------------------------------------------------------------------------------------------|
-| status | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes). |
+| status | Array           | Ja      | Enthält eine Liste mit Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes). |
 
 ## Statuscodes
 
@@ -37,11 +37,11 @@ Für die E-Mail-Prüfung muss ```emailCheck``` als Methode angegeben werden
 
 | Code               | Bedeutung                                                                |
 |--------------------|--------------------------------------------------------------------------|
-| email_correct      | Die E-Mail Adresse ist korrekt.                                          |
-| email_not_correct  | Die E-Mail Adresse ist nicht korrekt.                                    |
-| email_syntax_error | die Schreibweise der E-Mail Adresse ist falsch.                          |
-| email_no_mx        | Es gibt keinen E-Mail Server hinter der E-Mail Domain.                   |
-| email_unknown_tld  | Top-Level-Domain der E-Mail Adresse ist nicht bekannt / existiert nicht. |
+| email_correct      | Die E-Mail-Adresse ist korrekt.                                          |
+| email_not_correct  | Die E-Mail-Adresse ist nicht korrekt.                                    |
+| email_syntax_error | die Schreibweise der E-Mail-Adresse ist falsch.                          |
+| email_no_mx        | Es gibt keinen E-Mail-Server hinter der E-Mail-Domain.                   |
+| email_unknown_tld  | Top-Level-Domain der E-Mail-Adresse ist nicht bekannt/existiert nicht.   |
 
 ### Erweiterte Statuscodes
 

@@ -1,11 +1,11 @@
-# Adress-Prüfung
+# Adressprüfung
 
 - [Struktur der Schnittstelle](#struktur-der-schnittstelle)
   - [Methode](#methode)
   - [Eingabeparameter](#eingabeparameter)
   - [Ausgabefelder](#ausgabefelder)
   - [Statuscodes](#statuscodes)
-    - [Gernelle Statuscodes](#generelle-statuscodes)
+    - [Generelle Statuscodes](#generelle-statuscodes)
     - [Erweiterte Statuscodes](#erweiterte-statuscodes)
     - [Veraltete Statuscodes](#veraltete-statuscodes)
 - [Beispiele](#beispiele)
@@ -18,7 +18,7 @@ Die Struktur der API ist [hier](./../structure-api.md) beschrieben
 
 ## Methode
 
-Für die Adress-Prüfung muss ```addressCheck``` als Methode angegeben werden
+Für die Adressprüfung muss ```addressCheck``` als Methode angegeben werden
 
 ## Eingabeparameter
 
@@ -30,7 +30,7 @@ Für die Adress-Prüfung muss ```addressCheck``` als Methode angegeben werden
 | streetFull      | String          | Ja, wenn street und houseNumber nicht gesetzt sind | Enthält die Straße mit Hausnummer und ggf. Adresszusatz.                               |
 | street          | String          | Ja, wenn streetFull nicht gesetzt ist              | Enthält nur den Straßennamen.                                                          |
 | houseNumber     | String          | Ja, wenn streetFull nicht gesetzt ist              | Enthält die Hausnummer.                                                                |
-| additionalInfo  | String          | Nein                                               | Enthält Adresszusatz.                                                                  |
+| additionalInfo  | String          | Nein                                               | Enthält den Adresszusatz.                                                              |
 | subdivisionCode | String          | Nein                                               | Enthält den Bundesland-/Regionscode. Format: Ländercode + "-" + Bundeslandkürzel       |
 
 ## Ausgabefelder
@@ -45,7 +45,7 @@ Für die Adress-Prüfung muss ```addressCheck``` als Methode angegeben werden
 | predictions.houseNumber     | String          | Ja      | Enthält die Hausnummer zu diesem Vorschlag.                                                                               |
 | predictions.additionalInfo  | String          | Nein    | Enthält den Adresszusatz zu diesem Vorschlag.                                                                             |
 | predictions.subdivisionCode | String          | Nein    | Enthält den Bundesland-/Regionscode zu diesem Vorschlag. Format: Ländercode + "-" + Bundeslandkürzel                      |
-| status                      | Array           | Ja      | Enthält eine Liste aus Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes). |
+| status                      | Array           | Ja      | Enthält eine Liste von Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes). |
 
 ## Statuscodes
 
@@ -105,7 +105,7 @@ Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [TEIL]_[min
 
 !! **DEPRECATED** !!
 
-Falls du noch die alten Statuscodes mit Zahlen nutzest, empfehlen wir diese mit neuen Statuscodes zu
+Falls du noch die alten Statuscodes mit Zahlen nutzt, empfehlen wir diese mit neuen Statuscodes zu
 ersetzen, da die alten Statuscodes Mitte/Ende 2022 nicht mehr unterstützt werden.
 
 Das Mapping ist 1-zu-1, bis auf den Statuscode `A1100`. Bei ihm entspricht die Kombination `A1000` + `A1100` dem
@@ -115,7 +115,7 @@ Statuscode `address_correct` nicht vor.
 | Veralteter Code | Newer Code                | Bedeutung                                                                                                                                                  |
 |-----------------|---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | A1000           | address_correct           | Adresse korrekt.                                                                                                                                           |
-| A1100           | address_needs_correction  | Adresse korrekt, aber korrigiert. Gibt es, wenn es nur eine Variante der Adresse gibt, diese sich jedoch einwenig unterscheidet. Kommt mit A1000 zusammen. |
+| A1100           | address_needs_correction  | Adresse korrekt, aber korrigiert. Gibt es, wenn es nur eine Variante der Adresse gibt, diese sich jedoch leicht unterscheidet. Kommt mit A1000 zusammen.   |
 | A2000           | address_multiple_variants | Mehrere Varianten.                                                                                                                                         |
 | A3000           | address_not_found         | Keine Varianten. Die Adresse existiert nicht in unseren Datenbanken.                                                                                       |
 

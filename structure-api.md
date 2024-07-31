@@ -2,12 +2,12 @@
 
 Die Grundstruktur der JSON folgt der [JSON-RPC 2.0 Spezifikation](https://www.jsonrpc.org/specification).
 
-Es muss im JSON Format formuliert werden. Die Antwort entspricht ebenfalls dem JSON Datei Format. Die JSON wird im Body der HTTP Anfrage übermittelt.
+Es muss im JSON-Format formuliert werden. Die Antwort entspricht ebenfalls dem JSON-Dateiformat. Die JSON wird im Body der HTTP Anfrage übermittelt.
 
 Für die Übermittlung ist HTTPS (Port 443) zu setzen.
 
-Aus Datenschutz-Gründen erlauben wir nur eine Server-to-Server Kommunikation. Direkte Anfragen sind nicht erlaubt. So
-vermeiden wir, personenbezogene Daten des Endnutzers zu erhalten, die wir nicht brauchen.
+Aus Datenschutzgründen erlauben wir nur eine Server-to-Server-Kommunikation. Direkte Anfragen sind nicht erlaubt. So
+vermeiden wir es, personenbezogene Daten des Endnutzers zu erhalten, die wir nicht brauchen.
 
 Jedoch ist die Spezifikation nicht vollständig umgesetzt. Unter anderem gibt es aktuell keine Möglichkeit, mehrere
 Datensätze (Bulk-Processing) zu übermitteln, und die Fehlercodes sind rudimentär und sollten in einer Integration nicht
