@@ -98,13 +98,13 @@ POST https://endereco-service.de/rpc/v1
 
 #### Request Headers
 
-|                       |                                                                              |
-|-----------------------|------------------------------------------------------------------------------|
-| Content-Type          | application/json                                                             |
-| X-Transaction-Id      | not_required, siehe [Generierung der Session ID's](sessions-guideline.md)  |
-| X-Agent               | MyClient v1.0.0, siehe [Client ID Guideline](client-id-guideline.md)       |
-| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](../providing-referrer.md) |
-| X-Auth-Key            | siehe [Authentifizierung](#authentifizierung)                                |
+|                       |                                                                                        |
+|-----------------------|----------------------------------------------------------------------------------------|
+| Content-Type          | application/json                                                                       |
+| X-Transaction-Id      | not_required, siehe [Generierung der Session ID's](sessions-guideline.md)              |
+| X-Agent               | MyClient v1.0.0, siehe [Client ID Guideline](client-id-guideline.md)                   |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./providing-referrer-guidlines.md) |
+| X-Auth-Key            | siehe [Authentifizierung](./../readme.md#authentifizierung)                            |
 
 #### Body raw (JSON)
 
@@ -119,7 +119,7 @@ POST https://endereco-service.de/rpc/v1
 }
 ```
 
-Siehe [Dokumentation für Felder](./fields.md). Die Session-ID kommt hierbei doppelt vor: einmal im Header und einmal
+Die Session-ID kommt hierbei doppelt vor: einmal im Header und einmal
 als "sessionsId"-Parameter. Der Grund dafür ist, dass wir zukünftig den Abschluss mehrerer Sessions über einen Aufruf
 ermöglichen wollen. Aktueller Stand ist die Übergangsphase.
 
@@ -157,7 +157,7 @@ Vor der Abnahme ist nur die anfragenbasierte Abrechnung möglich.
 ## Hilfe und Schulung
 
 Falls diese Guideline das Thema nicht ausreichen erklärt hat bzw. noch weitere Fragen bestehen, stehen
-unsere [Ansprechspartner](../readme.md#Ansprechspartner) zur Verfügung.
+unsere [Ansprechspartner](../readme.md#ansprechpartner) zur Verfügung.
 
 ## FAQ
 

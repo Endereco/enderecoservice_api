@@ -18,9 +18,9 @@ Für die Lucid-Prüfung muss ```lucidCheck``` als Methode angegeben werden
 
 ## Eingabeparameter
 
-| Feld    | Erwarteter Wert | Pflicht | Bedeutung                                                                  |
-|---------|-----------------|---------|----------------------------------------------------------------------------|
-| lucidId | String          | Ja      | Enthält die zu prüfende Registrierungsnummer des Lucid-Verpackungsregisters|
+| Feld    | Erwarteter Wert | Pflicht | Bedeutung                                                                   |
+|---------|-----------------|---------|-----------------------------------------------------------------------------|
+| lucidId | String          | Ja      | Enthält die zu prüfende Registrierungsnummer des Lucid-Verpackungsregisters |
 
 ## Ausgabefelder
 
@@ -36,10 +36,10 @@ Für die Lucid-Prüfung muss ```lucidCheck``` als Methode angegeben werden
 
 ## Statuscodes
 
-| Code          | Bedeutung                                                                 |
-|---------------|---------------------------------------------------------------------------|
-| lucid_correct | Diese Registrierungsnummer ist im Lucid-Verpackungsregister bekannt       |
-| lucid_invalid | Diese Registrierungsnummer ist im  Lucid-Verpackungsregister nicht bekannt|
+| Code          | Bedeutung                                                                  |
+|---------------|----------------------------------------------------------------------------|
+| lucid_correct | Diese Registrierungsnummer ist im Lucid-Verpackungsregister bekannt        |
+| lucid_invalid | Diese Registrierungsnummer ist im  Lucid-Verpackungsregister nicht bekannt |
 
 # Beispiele
 
