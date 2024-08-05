@@ -15,8 +15,8 @@ Ein Auszug unserer Referenzen:
 
 |                                       |                                      |                                     |                                         |
 |---------------------------------------|--------------------------------------|-------------------------------------|-----------------------------------------|
-| ![](./imgs/bahn-805cdfd6.png "")      | ![](./imgs/BasteiLuebbe.png "")  | ![](./imgs/esmeyer-9ea34a21.png "") | ![](./imgs/Ravensburger.png "") |
-| ![](./imgs/Ergo.png "") | ![](./imgs/TechniSat.png "") | ![](./imgs/Drykorn.png "") | ![](./imgs/Lavera.png "")      |
+| ![](./imgs/Lavera.png "") | ![](./imgs/Ravensburger.png "")  | ![](./imgs/BasteiLuebbe.png "")  | ![](./imgs/Berentzen.png "") |
+| ![](./imgs/Ergo.png "") | ![](./imgs/TechniSat.png "") | ![](./imgs/DB.png "") | ![](./imgs/Drykorn.png "") |
 
 ## Plugins und fertige Intergrationen
 
