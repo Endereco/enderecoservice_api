@@ -36,7 +36,7 @@ POST https://endereco-service.de/rpc/v1
 | Feld                  | Bedeutung                                                                                        |
 |-----------------------|--------------------------------------------------------------------------------------------------|
 | Content-Type          | application/json                                                                                 |
-| X-Transaction-Id      | not_required, siehe [Generierung der Session ID's](./guidlines/sessions-guideline.md)            |
-| X-Agent               | MyClient v1.0.0, siehe [Client ID Guideline](./guidlines/client-id-guideline.md)                 |
-| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](./guidlines/providing-referrer-guidlines.md) |
+| X-Transaction-Id      | not_required, siehe [Generierung der Session ID's](guidelines/sessions-guideline.md)            |
+| X-Agent               | MyClient v1.0.0, siehe [Client ID Guideline](guidelines/client-id-guideline.md)                 |
+| X-Transaction-Referer | www.example.de/register, siehe [Referrer übergeben](guidelines/providing-referrer-guidlines.md) |
 | X-Auth-Key            | siehe [Authentifizierung](./readme.md#authentifizierung)                                         |

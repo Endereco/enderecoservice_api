@@ -71,7 +71,7 @@ liefert. Erst wenn ein bestimmter logisch zusammenhängender Datensatz (z.B. ein
 durch endereco beim Nutzer verwendet oder gespeichert wird, rechnen wir ab.
 
 Um die erfolgsbasierte Abrechnung zu ermöglichen, müssen die Anfragen in einer Session gebündelt werden. Dieses Vorgehen
-haben wir in [einer Anleitung](guidlines/sessions-guideline.md) beschrieben. Jede sessionbasierte Umsetzung wird gemeinsam mit
+haben wir in [einer Anleitung](guidelines/sessions-guideline.md) beschrieben. Jede sessionbasierte Umsetzung wird gemeinsam mit
 euch von unserem Team abgenommen und vor dem Livegang freigegeben. Wenn du dazu noch Fragen hast, melde dich bei
 unseren [Ansprechspartnern](#ansprechpartner).
 
@@ -96,7 +96,7 @@ Die Struktur der API ist [hier](./structure-api.md) beschrieben
 
 | Adresse                                        | E-Mail Adresse                    | Person                           | Telefonnummer                                | IBAN                          | Unternehmen                                         | Verpackung                  |  technische Methoden                                               |
 |------------------------------------------------|-----------------------------------|----------------------------------|----------------------------------------------|-------------------------------|-----------------------------------------------------|-----------------------------|--------------------------------------------------------------------|
-| [Adressprüfung](#adressprüfung)                | [E-Mail Prüfung](#e-mail-prüfung) | [Namensprüfung](#namens-prüfung) | [Rufnummernprüfung](#telefonnummern-prüfung) | [IBAN-Prüfung](#iBan-prüfung) | [Umsatzsteuer-ID Prüfung](#umsatzsteuer-id-prüfung) | [Lucid Check](#lucid-check) | [Abschluss einer Session](guidlines/sessions-guideline.md#session) |
+| [Adressprüfung](#adressprüfung)                | [E-Mail Prüfung](#e-mail-prüfung) | [Namensprüfung](#namens-prüfung) | [Rufnummernprüfung](#telefonnummern-prüfung) | [IBAN-Prüfung](#iBan-prüfung) | [Umsatzsteuer-ID Prüfung](#umsatzsteuer-id-prüfung) | [Lucid Check](#lucid-check) | [Abschluss einer Session](guidelines/sessions-guideline.md#session) |
 | [PLZ Vorschläge](#postleitzahlen-autocomplete) |                                   |                                  |                                              |                               | [Firmensuche](#firmensuche)                         |                             |
 | [Ortsvorschläge](#orts-autocomplete)           |                                   |                                  |
 | [Straßenvorschläge](#straßen-autocomplete)     |                                   |                                  |
@@ -807,4 +807,4 @@ Siehe [Ausführliche Dokumentation](./services/address-details.md)
 }
 ```
 
-Siehe [Aufführliche Dokumentation](./services/address-single-line-autocomplete.md)
+Siehe [Ausführliche Dokumentation](./services/address-single-line-autocomplete.md)
