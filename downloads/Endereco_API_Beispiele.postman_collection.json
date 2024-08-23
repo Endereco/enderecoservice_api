@@ -1,656 +1,834 @@
 {
 	"info": {
-		"_postman_id": "36ef3056-ebfb-4314-9bb6-619617ffbdae",
+		"_postman_id": "f31ac07b-d7e4-4791-bc1f-e4c13927e9ef",
 		"name": "Endereco API Beispiele",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Prüfung einer Adresse mit getrennten Straße/Hausnummer",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+			"name": "address",
+			"item": [
+				{
+					"name": "postCodeAutocomplete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": 1,\n    \"method\": \"postCodeAutocomplete\",\n    \"params\": {\n        \"country\": \"de\",\n        \"language\": \"de\",\n        \"postCode\": \"9723\"\n   }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
 					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"addressCheck\",\n  \"params\": {\n    \"country\": \"DE\",\n    \"language\": \"de\",\n    \"postCode\": \"97232\",\n    \"cityName\": \"Giebelstadt\",\n    \"street\": \"Lindenstraße\",\n    \"houseNumber\": \"28\"\n  }\n}"
+					"response": []
 				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
+				{
+					"name": "cityNameAutocomplete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": 1,\n    \"method\": \"cityNameAutocomplete\",\n    \"params\": {\n        \"country\": \"de\",\n        \"language\": \"de\",\n        \"cityName\": \"Würzb\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "streetAutocomplete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": 1,\n    \"method\": \"streetAutocomplete\",\n    \"params\": {\n        \"country\": \"de\",\n        \"language\": \"de\",\n        \"postCode\": \"97209\",\n        \"cityName\": \"Veitshöchheim\",\n        \"street\": \"He\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addressAutocomplete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": 1,\n    \"method\": \"addressAutocomplete\",\n    \"params\": {\n        \"country\": \"de\",\n        \"addressFull\": \"Hauptstr. 3, Ze\"\n   }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addressCheck",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": 1,\n    \"method\": \"addressCheck\",\n    \"params\": {\n        \"country\": \"de\",\n        \"language\": \"de\",\n        \"postCode\": \"97236\",\n        \"cityName\": \"Randersacker\",\n        \"street\": \"Gerbrunnerstr.\",\n        \"houseNumber\": \"2\",\n        \"additionalInfo\":\"1. OG\",\n        \"subdivisionCode\" : \"\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAddressDetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": 3,\n    \"method\": \"getAddressDetails\",\n    \"params\": {\n        \"country\": \"DE\",\n        \"postCode\": \"97236\",\n        \"cityName\": \"Randersacker\",\n        \"streetFull\": \"Gerbrunner Str. 2\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "splitStreet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"id\":1,\n    \"method\":\"splitStreet\",\n    \"params\":{\n        \"formatCountry\":\"de\",\n        \"language\":\"de\",\n        \"street\": \"Hauptstr. 22\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Check HTTP status code\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// Teste, ob das 'result'-Objekt vorhanden ist.",
+							"pm.test(\"Check result object exists\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.property(\"result\");",
+							"});",
+							"",
+							"// Teste, ob das 'status'-Array vorhanden und nicht leer ist.",
+							"pm.test(\"Check status array exists and is not empty\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.result).to.have.property(\"status\");",
+							"    pm.expect(jsonData.result.status).to.be.an('array').that.is.not.empty;",
+							"});"
+						]
+					}
+				}
+			]
 		},
 		{
-			"name": "Prüfung einer Adresse mit Straße/Hausnummer in einem Feld",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+			"name": "bank",
+			"item": [
+				{
+					"name": "ibanCheck",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"ibanCheck\",\n  \"params\": {\n    \"iban\": \"DE63790500000044649465\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
 					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"addressCheck\",\n  \"params\": {\n    \"country\": \"DE\",\n    \"language\": \"de\",\n    \"postCode\": \"97232\",\n    \"cityName\": \"Giebelstadt\",\n    \"streetFull\": \"Lindenstraße 28\"\n  }\n}"
-				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Vorschlagsliste für die Teileingabe der Postleitzahl",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+			"name": "company",
+			"item": [
+				{
+					"name": "vatCheck (qualified)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"jsonrpc\": \"2.0\",\n   \"id\": 1,\n   \"method\": \"vatIdCheck\",\n   \"params\": {\n      \"vatId\": \"DE297464149\",\n      \"requesterVatID\": \"DE297464149\",\n      \"companyName\": \"endereco\",\n      \"companyPostalCode\": \"97236\",\n      \"companyLocality\": \"Randersacker\",\n      \"companyStreetFull\": \"Balthasar-Neumann Str. 4\"\n   }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
 					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"postCodeAutocomplete\",\n  \"params\": {\n    \"country\": \"DE\",\n    \"language\": \"de\",\n    \"postCode\": \"972\"\n  }\n}"
+					"response": []
 				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
+				{
+					"name": "vatCheck (simple)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"jsonrpc\": \"2.0\",\n   \"id\": 1,\n   \"method\": \"vatIdCheck\",\n   \"params\": {\n      \"vatId\": \"DE297464149\"\n   }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "companyAutocomplete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"jsonrpc\": \"2.0\",\n   \"id\": 1,\n   \"method\": \"companyAutocomplete\",\n   \"params\": {\n      \"countryCode\": \"de\",\n      \"companyName\": \"endereco\"\n   }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Vorschlagsliste für die Teileingabe des Ortes",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+			"name": "lucid",
+			"item": [
+				{
+					"name": "lucidCheck",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"jsonrpc\": \"2.0\",\n   \"id\": 1,\n   \"method\": \"lucidCheck\",\n   \"params\": {\n      \"lucidId\": \"DE3151155944772\"\n   }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
 					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"cityNameAutocomplete\",\n  \"params\": {\n    \"country\": \"DE\",\n    \"language\": \"de\",\n    \"cityName\": \"Wü\"\n  }\n}"
-				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Vorschlagsliste für die Teileingabe der Straße ohne Hausnummer",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+			"name": "name",
+			"item": [
+				{
+					"name": "nameCheck",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": 1,\n    \"method\": \"nameCheck\",\n    \"params\": {\n        \"countryCode\" : \"de\",\n        \"language\" : \"de\",\n        \"salutation\": \"\",\n        \"firstName\": \"Florian\",\n        \"lastName\" : \"Müller\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
 					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"streetAutocomplete\",\n  \"params\": {\n    \"country\": \"DE\",\n    \"language\": \"de\",\n    \"cityName\": \"Würzburg\",\n    \"postCode\": \"97070\",\n    \"street\": \"Am \"\n  }\n}"
-				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Vorschlagsliste für die Teileingabe der Straße mit Hausnummer",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+			"name": "phone",
+			"item": [
+				{
+					"name": "phoneCheck",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": 1,\n    \"method\": \"phoneCheck\",\n    \"params\": {\n        \"phone\": \"+491796862470\",\n        \"countryCode\": \"DE\",\n        \"format\": \"E164\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
 					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"streetAutocomplete\",\n  \"params\": {\n    \"country\": \"DE\",\n    \"language\": \"de\",\n    \"cityName\": \"Würzburg\",\n    \"postCode\": \"97070\",\n    \"streetFull\": \"Am B 3\"\n  }\n}"
-				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Prüfung und ggf. Zustellbarkeitsprüfung einer E-Mail Adresse",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+			"name": "email",
+			"item": [
+				{
+					"name": "emailCheck",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": 1,\n    \"method\": \"emailCheck\",\n    \"params\": {\n        \"email\": \"info@endereco.de\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
 					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"emailCheck\",\n  \"params\": {\n    \"email\": \"rodrigo@endereco.de\"\n  }\n}"
-				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Prüfung des Namens einer Person",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+			"name": "technic",
+			"item": [
+				{
+					"name": "readinessCheck",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"type": "text",
+								"value": "{{X-Auth-Key}}"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"type": "text",
+								"value": "{{X-Transaction-Id}}"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"type": "text",
+								"value": "{{X-Transaction-Referer}}"
+							},
+							{
+								"key": "X-Agent",
+								"type": "text",
+								"value": "{{X-Agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": 1,\n    \"method\": \"readinessCheck\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
 					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"nameCheck\",\n  \"params\": {\n    \"salutation\": \"m\",\n    \"firstName\": \"julia\",\n    \"lastName\": \"Schenk\"\n  }\n}"
+					"response": []
 				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
+				{
+					"name": "doAccounting",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Key",
+								"value": "{{X-Auth-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Id",
+								"value": "{{X-Transaction-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Transaction-Referer",
+								"value": "{{X-Transaction-Referer}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Agent",
+								"value": "{{X-Agent}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"doAccounting\",\n  \"params\": {\n    \"sessionsId\": \"c07968ba-ec38-4cf2-8819-5b9c70b78a72\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "Prüfung des Namens einer Person mit optionale Parameter",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"nameCheck\",\n  \"params\": {\n    \"salutation\": \"m\",\n    \"firstName\": \"julia\",\n    \"lastName\": \"Schenk\"\n  }\n}"
-				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Prüfung einer Telefonnummer",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"phoneCheck\",\n  \"params\": {\n  \t\"phone\": \"+491796862470\"\n  }\n}"
-				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Prüfung und ggf. Formatierung einer nationalen Telefonnummer mit Landescode",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"phoneCheck\",\n  \"params\": {\n  \t\"phone\": \"017680728912\",\n    \"countryCode\": \"DE\"\n  }\n}"
-				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Prüfung und speziale Formatierung einer Telefonnummer",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"phoneCheck\",\n  \"params\": {\n  \t\"phone\": \"017680728912\",\n    \"countryCode\": \"DE\",\n    \"format\": \"international\"\n  }\n}"
-				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Prüfung der IBAN und ggf. der Kontonummer",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"ibanCheck\",\n  \"params\": {\n  \t\"iban\": \"DE63790500000044649465\"\n  }\n}"
-				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Prüfung der Umsatzsteuer-ID",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Id",
-						"value": "not_required",
-						"type": "text"
-					},
-					{
-						"key": "X-Transaction-Referer",
-						"value": "Postman",
-						"type": "text"
-					},
-					{
-						"key": "X-Agent",
-						"value": "Postman",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"vatIdCheck\",\n  \"params\": {\n  \t\"vatId\": \"DE214205098\"\n  }\n}"
-				},
-				"url": {
-					"raw": "https://endereco-service.de/rpc/v1",
-					"protocol": "https",
-					"host": [
-						"endereco-service",
-						"de"
-					],
-					"path": [
-						"rpc",
-						"v1"
-					]
-				}
-			},
-			"response": []
+			]
 		}
 	],
-	"auth": {
-		"type": "apikey",
-		"apikey": [
-			{
-				"key": "value",
-				"value": "hier kommt dein api key",
-				"type": "string"
-			},
-			{
-				"key": "key",
-				"value": "X-Auth-Key",
-				"type": "string"
-			}
-		]
-	},
 	"event": [
 		{
 			"listen": "prerequest",
@@ -669,6 +847,28 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://endereco-service.de/rpc/v1/"
+		},
+		{
+			"key": "X-Auth-Key",
+			"value": "<Enter API Key>"
+		},
+		{
+			"key": "X-Transaction-Id",
+			"value": "not_required"
+		},
+		{
+			"key": "X-Transaction-Referer",
+			"value": "Postman"
+		},
+		{
+			"key": "X-Agent",
+			"value": "Postman test"
 		}
 	]
 }
