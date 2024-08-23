@@ -13,20 +13,36 @@ fehlerhafte Stammdaten entsteht.
 
 Ein Auszug unserer Referenzen:
 
-|                                       |                                      |                                     |                                         |
-|---------------------------------------|--------------------------------------|-------------------------------------|-----------------------------------------|
-| ![](./imgs/Lavera.png "") | ![](./imgs/Ravensburger.png "")  | ![](./imgs/BasteiLuebbe.png "")  | ![](./imgs/Berentzen.png "") |
-| ![](./imgs/Ergo.png "") | ![](./imgs/TechniSat.png "") | ![](./imgs/DB.png "") | ![](./imgs/Drykorn.png "") |
+|                           |                                 |                                 |                              |
+|---------------------------|---------------------------------|---------------------------------|------------------------------|
+| ![](./imgs/Lavera.png "") | ![](./imgs/Ravensburger.png "") | ![](./imgs/BasteiLuebbe.png "") | ![](./imgs/Berentzen.png "") |
+| ![](./imgs/Ergo.png "")   | ![](./imgs/TechniSat.png "")    | ![](./imgs/DB.png "")           | ![](./imgs/Drykorn.png "")   |
+
+## Übersicht der Funktionen
+
+| **Adresse**             | [Adressprüfung](#adressprüfung)                                       | [PLZ Vorschläge](#postleitzahlen-autocomplete) </br> [Ortsvorschläge](#orts-autocomplete) </br> [Straßenvorschläge](#straßen-autocomplete) | [Adressdetails](#address-details) | [Single Line Adressvorschläge](#single-line-input) |
+|-------------------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|----------------------------------------------------|
+| **E-Mail Adresse**      | [E-Mail Prüfung](#e-mail-prüfung)                                     |                                                                                                                                            |                                   |                                                    |
+| **Person**              | [Namensprüfung](#namens-prüfung)                                      |                                                                                                                                            |                                   |                                                    |
+| **Telefonnummer**       | [Rufnummernprüfung](#telefonnummern-prüfung)                          |                                                                                                                                            |                                   |                                                    |
+| **IBAN**                | [IBAN-Prüfung](#iBan-prüfung)                                         |                                                                                                                                            |                                   |                                                    |
+| **Unternehmen**         | [Einfache Umsatzsteuer-ID Prüfung](#einfache-umsatzsteuer-id-prüfung) | [Qualifizierte Umsatzsteuer-ID Prüfung](#qualifizierte-umsatzsteuer-id-prüfung)                                                            | [Firmensuche](#firmensuche)       |                                                    |
+| **Verpackung**          | [Lucid Check](#lucid-check)                                           |                                                                                                                                            |                                   |                                                    |
+| **Technische Methoden** | [Abschluss einer Session](guidelines/sessions-guideline.md#session)   |                                                                                                                                            |                                   |                                                    |
 
 ## Plugins und fertige Intergrationen
 
 Auf Basis unserer API entwickeln wir gemeinsam mit Integrationspartnern schlüsselfertige Produkte für verschiedene
 Systeme.
 
-| Shopware                                                                   | Oxid                                                                     | JTL                                                                   | Plenty                                                            | DreamRobot                                            | Magento                                                         | Wordpress                                                                       |
-|----------------------------------------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------------------|
-| [Shopware 5 Plugin](https://github.com/Endereco/endereco-shopware5-client) | [OXID eSales 4 Modul](https://github.com/Endereco/endereco-oxid4-client) | [JTL Shop 4 Plugin](https://github.com/Endereco/endereco-jtl4-client) | [Plentymarkets Extension](https://www.endereco.de/plentymarkets/) | [DreamRobot App](https://www.endereco.de/dreamrobot/) | [Magento 2 Webshop Extension](https://www.endereco.de/magento/) | [WordPress/WooCommerce Plugin](https://github.com/Endereco/endereco-wp5-client) |
-| [Shopware 6 Plugin](https://github.com/Endereco/endereco-shopware6-client) | [OXID eSales 6 Modul](https://github.com/Endereco/endereco-oxid6-client) | [JTL Shop 5 Plugin](https://github.com/Endereco/endereco-jtl5-client) |
+| **Shopware**   | [Shopware 5 Plugin](https://github.com/Endereco/endereco-shopware5-client)      | [Shopware 6 Plugin](https://github.com/Endereco/endereco-shopware6-client) |
+|----------------|---------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| **Oxid**       | [OXID eSales 4 Modul](https://github.com/Endereco/endereco-oxid4-client)        | [OXID eSales 6 Modul](https://github.com/Endereco/endereco-oxid6-client)   |
+| **JTL**        | [JTL Shop 4 Plugin](https://github.com/Endereco/endereco-jtl4-client)           | [JTL Shop 5 Plugin](https://github.com/Endereco/endereco-jtl5-client)      |
+| **Plenty**     | [Plentymarkets Extension](https://www.endereco.de/plentymarkets/)               |                                                                            |
+| **DreamRobot** | [DreamRobot App](https://www.endereco.de/dreamrobot/)                           |                                                                            |
+| **Magento**    | [Magento 2 Webshop Extension](https://www.endereco.de/magento/)                 |                                                                            |
+| **Wordpress**  | [WordPress/WooCommerce Plugin](https://github.com/Endereco/endereco-wp5-client) |                                                                            |
 
 Wenn du Interesse hast, eine eigene Integration gegen unsere API zu entwickeln, sende eine E-Mail an
 support@endereco.de.
@@ -41,7 +57,7 @@ gesetzeskonforme Umsetzung.
 
 Wie kannst du auf unsere API zugreifen?
 
-1. Frage [über dieses Formular](https://share.hsforms.com/11wqETsTLSuq1fiyIgqtKQA3e78w) einen API-Key an. Für einen
+1. Frage [über dieses Formular](https://www.endereco.de/apikey-beantragen/) einen API-Key an. Für einen
    API-Key muss mit der endereco UG eine Vereinbarung zur Auftragsverarbeitung abgeschlossen werden. Nur so haben wir als Verarbeiter und
    du als Verantwortlicher die rechtliche Grundlage dafür. Die Unterlagen senden wir dir zu.
 2. Probiere
@@ -91,18 +107,6 @@ werden dann bei jedem Request zu jedem API-Endpunkt im Header automatisch mitges
 
 Um mit der API zu arbeiten, muss eine POST Anfrage an unseren Server gesendet werden.
 Die Struktur der API ist [hier](./structure-api.md) beschrieben
-
-## Übersicht der Funktionen
-
-| **Adresse**             | [Adressprüfung](#adressprüfung)                                     | [PLZ Vorschläge](#postleitzahlen-autocomplete) </br> [Ortsvorschläge](#orts-autocomplete) </br> [Straßenvorschläge](#straßen-autocomplete) | [Adressdetails](#address-details) | [Single Line Adressvorschläge](#single-line-input) |
-|-------------------------|---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|----------------------------------------------------|
-| **E-Mail Adresse**      | [E-Mail Prüfung](#e-mail-prüfung)                                   |                                                                                                                                            |                                   |                                                    |
-| **Person**              | [Namensprüfung](#namens-prüfung)                                    |                                                                                                                                            |                                   |                                                    |
-| **Telefonnummer**       | [Rufnummernprüfung](#telefonnummern-prüfung)                        |                                                                                                                                            |                                   |                                                    |
-| **IBAN**                | [IBAN-Prüfung](#iBan-prüfung)                                       |                                                                                                                                            |                                   |                                                    |
-| **Unternehmen**         | [Umsatzsteuer-ID Prüfung](#umsatzsteuer-id-prüfung)                 | [Firmensuche](#firmensuche)                                                                                                                |                                   |                                                    |
-| **Verpackung**          | [Lucid Check](#lucid-check)                                         |                                                                                                                                            |                                   |                                                    |
-| **Technische Methoden** | [Abschluss einer Session](guidelines/sessions-guideline.md#session) |                                                                                                                                            |                                   |                                                    |
 
 ### Adressprüfung
 
@@ -518,14 +522,7 @@ Siehe [Ausführliche Dokumentation](./services/phone-check.md)
 
 Siehe [Ausführliche Dokumentation](./services/iban-check.md)
 
-### Umsatzsteuer-ID-Prüfung
-
-Die Umsatzsteuer-ID Nr. kann über eine einfache Abfrage oder über eine qualifizierte Abfrage validiert werden.
-
-1. Einfache Validierung: Die Umsatzsteuer-ID wird auf Gültigkeit geprüft, ohne nähere Details zu dieser abzugleichen.
-2. Qualifizierte Validierung: Die Umsatzsteuer-ID wird im Zusammenhang mit dem Firmennamen und der Firmenadresse abgefragt.
-
-*Beispiel 1: Einfache Validierung einer Umsatzsteuer-ID.*
+### Einfache Umsatzsteuer-ID-Prüfung
 
 #### Body raw (JSON)
 
@@ -556,7 +553,7 @@ Die Umsatzsteuer-ID Nr. kann über eine einfache Abfrage oder über eine qualifi
 
 Siehe [Ausführliche Dokumentation](./services/vat-id-check.md)
 
-*Beispiel 2: Qualifizierte Validierung einer Umsatzsteuer-ID.*
+### Qualifizierte Umsatzsteuer-ID-Prüfung
 
 #### Body raw (JSON)
 
