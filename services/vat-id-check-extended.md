@@ -24,14 +24,15 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
 
 ## Eingabeparameter
 
-| Feld              | Erwarteter Wert | Pflicht | Bedeutung                                                        |
-|-------------------|-----------------|---------|------------------------------------------------------------------|
-| vatId             | String          | Ja      | Enthält die zu prüfende Umsatzsteuer-ID                          |
-| requesterVatID    | String          | Ja      | Enthält die eigene Umsatzsteuer-ID                               |
-| companyName       | String          | Ja      | Enthält den Firmennamen der zu prüfenden Umsatzsteuer-ID         |
-| companyPostalCode | String          | Ja      | Enthält die Postleitzahl der zu prüfenden Firma                  |
-| companyLocality   | String          | Ja      | Enthält den Ortsnamen der zu prüfenden Firma                     |
-| companyStreetFull | String          | Ja      | Enthält den Straßennamen inkl. Hausnummer der zu prüfenden Firma |
+| Feld              | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                                                                                                                                                              |
+|-------------------|-----------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| vatId             | String          | Ja      | Enthält die zu prüfende Umsatzsteuer-ID                                                                                                                                                                                                                                |
+| requesterVatId    | String          | Ja      | Enthält die eigene Umsatzsteuer-ID                                                                                                                                                                                                                                     |
+| companyName       | String          | Ja      | Enthält den Firmennamen der zu prüfenden Umsatzsteuer-ID                                                                                                                                                                                                               |
+| companyPostalCode | String          | Ja      | Enthält die Postleitzahl der zu prüfenden Firma                                                                                                                                                                                                                        |
+| companyLocality   | String          | Ja      | Enthält den Ortsnamen der zu prüfenden Firma                                                                                                                                                                                                                           |
+| companyStreetFull | String          | Ja      | Enthält den Straßennamen inkl. Hausnummer der zu prüfenden Firma                                                                                                                                                                                                       |
+| timeout           | Int             | Nein    | (Beta) Der Timeout bezieht sich nicht auf die Abfrage zum Endereco-Server. Er gibt die Anzahl an Sekunden an, innerhalb derer die Antwort vom Finanzamt eintreffen muss. Sollte diese Zeit überschritten werden, werden die Daten stattdessen aus dem Cache abgerufen. |
 
 
 ## Ausgabefelder
@@ -54,7 +55,7 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
 | status                                             | Array           | Ja      | Enthält eine Liste mit Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes).                                                                                                                                                                                                                                                                                         |
 
 > Alle erfolgreichen Prüfanfragen werden auf Seiten von endereco gespeichert und archiviert.
-> 
+>
 ## Statuscodes
 
 | Code                                      | Bedeutung                                                                                                                                                                                                               |
