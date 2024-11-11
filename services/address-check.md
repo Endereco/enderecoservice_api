@@ -51,32 +51,34 @@ Für die Adressprüfung muss ```addressCheck``` als Methode angegeben werden
 
 ### Generelle Statuscodes
 
-| Code                             | Bedeutung                                                                                                         |
-|----------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| address_correct                  | Die eingegebene Adresse war korrekt und brauchte keine Korrektur.                                                 |
-| address_needs_correction         | Die eingegebene Adresse ist nicht korrekt, im “predictions” liegt ein Korrekturvorschlag.                         |
-| address_multiple_variants        | Für die Eingabe gab es mehrere Varianten. Der Nutzer soll eine auswählen.                                         |
-| address_not_found                | Die Adresse ist nicht bekannt.                                                                                    |
-| address_of_not_supported_type    | Bei der Adresse geht es um einen Typ der von uns nicht unterstützt wird, z.B. eine Postfiliale, eine Packstation. |
-| address_selected_by_customer     | Die Adresse wurde von einem Nutzer manuell bestätigt.                                                             |
-| country_code_needs_correction    | Ländercode ist falsch und muss korrigiert werden.                                                                 |
-| country_code_correct             | Ländercode ist korrekt.                                                                                           |
-| postal_code_needs_correction     | Postleitzahl ist falsch und muss korrigiert werden.                                                               |
-| postal_code_correct              | Postleitzahl ist korrekt.                                                                                         |
-| locality_needs_correction        | Ortsname ist falsch und muss korrigiert werden.                                                                   |
-| locality_correct                 | Ortsname ist korrekt.                                                                                             |
-| street_name_needs_correction     | Straßenname ist falsch und muss korrigiert werden.                                                                |
-| street_name_correct              | Straßenname ist korrekt.                                                                                          |
-| street_full_needs_correction     | Volle Straße (inkl. Hausnummer) ist falsch und muss korrigiert werden.                                            |
-| street_full_correct              | Volle Straße ist korrekt.                                                                                         |
-| building_number_needs_correction | Hausnummer ist falsch und muss korrigiert werden.                                                                 |
-| building_number_correct          | Hausnummer ist korrekt.                                                                                           |
-| building_number_is_missing       | Hausnummer wurde nicht angegeben.                                                                                 |
-| building_number_not_found        | (optional) Hausnummer wurde auf der Straße und in dem PLZ-Bereich nicht gefunden.                                 |
-| additional_info_needs_correction | Zusatzinfos sind falsch und müssen korrigiert werden.                                                             |
-| additional_info_correct          | Zusatzinfos sind korrekt.                                                                                         |
-| address_is_packstation           | Bei der Adresse handelt es sich um eine Packstation.                                                              |
-| address_is_postoffice            | Bei der Adresse handelt es sich um eine Postfiliale.                                                              |
+| Code                              | Bedeutung                                                                                                         |
+|-----------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| address_correct                   | Die eingegebene Adresse war korrekt und brauchte keine Korrektur.                                                 |
+| address_needs_correction          | Die eingegebene Adresse ist nicht korrekt, im “predictions” liegt ein Korrekturvorschlag.                         |
+| address_multiple_variants         | Für die Eingabe gab es mehrere Varianten. Der Nutzer soll eine auswählen.                                         |
+| address_not_found                 | Die Adresse ist nicht bekannt.                                                                                    |
+| address_of_not_supported_type     | Bei der Adresse geht es um einen Typ der von uns nicht unterstützt wird, z.B. eine Postfiliale, eine Packstation. |
+| address_selected_by_customer      | Die Adresse wurde von einem Nutzer manuell bestätigt.                                                             |
+| country_code_needs_correction     | Ländercode ist falsch und muss korrigiert werden.                                                                 |
+| country_code_correct              | Ländercode ist korrekt.                                                                                           |
+| subdivision_code_needs_correction | Bundesland-/Regionscode ist falsch und muss korrigiert werden.                                                                 |
+| subdivision_code_correct          | Bundesland-/Regionscode ist korrekt.                                                                                           |
+| postal_code_needs_correction      | Postleitzahl ist falsch und muss korrigiert werden.                                                               |
+| postal_code_correct               | Postleitzahl ist korrekt.                                                                                         |
+| locality_needs_correction         | Ortsname ist falsch und muss korrigiert werden.                                                                   |
+| locality_correct                  | Ortsname ist korrekt.                                                                                             |
+| street_name_needs_correction      | Straßenname ist falsch und muss korrigiert werden.                                                                |
+| street_name_correct               | Straßenname ist korrekt.                                                                                          |
+| street_full_needs_correction      | Volle Straße (inkl. Hausnummer) ist falsch und muss korrigiert werden.                                            |
+| street_full_correct               | Volle Straße ist korrekt.                                                                                         |
+| building_number_needs_correction  | Hausnummer ist falsch und muss korrigiert werden.                                                                 |
+| building_number_correct           | Hausnummer ist korrekt.                                                                                           |
+| building_number_is_missing        | Hausnummer wurde nicht angegeben.                                                                                 |
+| building_number_not_found         | (optional) Hausnummer wurde auf der Straße und in dem PLZ-Bereich nicht gefunden.                                 |
+| additional_info_needs_correction  | Zusatzinfos sind falsch und müssen korrigiert werden.                                                             |
+| additional_info_correct           | Zusatzinfos sind korrekt.                                                                                         |
+| address_is_packstation            | Bei der Adresse handelt es sich um eine Packstation.                                                              |
+| address_is_postoffice             | Bei der Adresse handelt es sich um eine Postfiliale.                                                              |
 
 ### Erweiterte Statuscodes
 
@@ -86,20 +88,22 @@ So kann leichter entschieden werden, ob eine vorgeschlagene Korrektur automatisc
 
 Die Statuscodes werden dabei nach einem einheitlichen Muster gebaut: [TEIL]_[minor|major]_correction
 
-| Code                             | Bedeutung                                                                                                  |
-|----------------------------------|------------------------------------------------------------------------------------------------------------|
-| address_minor_correction         | Es handelt sich um eine "kleine" Korrektur, die automatisch übernommen werden kann.                        |
-| address_major_correction         | Es handelt sich um eine "kritische" Korrektur, bei der eine automatische Korrekturübernahme unmöglich ist. |
-| country_code_minor_correction    | Kleine Landkorrektur. Wird aktuell nie ausgegeben.                                                         |
-| country_code_major_correction    | Wichtige Landeskorrektur.                                                                                  |
-| postal_code_minor_correction     | Kleine Korrektur der PLZ.                                                                                  |
-| postal_code_major_correction     | Wichtige Korrektur der PLZ.                                                                                |
-| locality_minor_correction        | Kleine Korrektur des Ortes.                                                                                |
-| locality_major_correction        | Wichtige Korrektur des Ortes.                                                                              |
-| street_name_minor_correction     | Kleine Korrektur der Straße.                                                                               |
-| street_name_major_correction     | Wichtige Korrektur der Straße.                                                                             |
-| building_number_minor_correction | Kleine Korrektur der Hausnummer.                                                                           |
-| building_number_major_correction | Wichtige Korrektur der Hausnummer.                                                                         |
+| Code                              | Bedeutung                                                                                                  |
+|-----------------------------------|------------------------------------------------------------------------------------------------------------|
+| address_minor_correction          | Es handelt sich um eine "kleine" Korrektur, die automatisch übernommen werden kann.                        |
+| address_major_correction          | Es handelt sich um eine "kritische" Korrektur, bei der eine automatische Korrekturübernahme unmöglich ist. |
+| country_code_minor_correction     | Kleine Landkorrektur. Wird aktuell nie ausgegeben.                                                         |
+| country_code_major_correction     | Wichtige Landeskorrektur.                                                                                  |
+| subdivision_code_minor_correction | Kleine Korrektur von Bundesland-/Regionscode.                                                              |
+| subdivision_code_major_correction | Wichtige Korrektur von Bundesland-/Regionscode.                                                            |
+| postal_code_minor_correction      | Kleine Korrektur der PLZ.                                                                                  |
+| postal_code_major_correction      | Wichtige Korrektur der PLZ.                                                                                |
+| locality_minor_correction         | Kleine Korrektur des Ortes.                                                                                |
+| locality_major_correction         | Wichtige Korrektur des Ortes.                                                                              |
+| street_name_minor_correction      | Kleine Korrektur der Straße.                                                                               |
+| street_name_major_correction      | Wichtige Korrektur der Straße.                                                                             |
+| building_number_minor_correction  | Kleine Korrektur der Hausnummer.                                                                           |
+| building_number_major_correction  | Wichtige Korrektur der Hausnummer.                                                                         |
 
 ### Veraltete Statuscodes
 
