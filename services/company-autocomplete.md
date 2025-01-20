@@ -18,10 +18,12 @@ Für die Firmen-Autocomplete muss ```companyAutocomplete``` als Methode angegebe
 
 ## Eingabeparameter
 
-| Feld        | Erwarteter Wert | Pflicht | Bedeutung                                                                                |
-|-------------|-----------------|---------|------------------------------------------------------------------------------------------|
-| countryCode | String          | Nein    | ISO 3166-1 Alpha-2 Code des Landes, siehe [Liste der Ländercodes](./../country-codes.md) |
-| companyName | String          | Ja      | Enthält den Firmennamen, nach dem gesucht werden soll                                    |
+| Feld        | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                                   |
+|-------------|-----------------|---------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| companyName | String          | Ja      | Enthält den Firmennamen, nach dem gesucht werden soll                                                                                       |
+| countryCode | String          | Nein    | Enthält den ISO 3166-1 Alpha-2 Code des Landes für die Filterung der Firmenvorschläge, siehe [Liste der Ländercodes](./../country-codes.md) |
+| postCode    | String          | Nein    | Enthält die Postleitzahl für die Filterung der Firmenvorschläge                                                                             |
+| cityName    | String          | Nein    | Enthält den Ortsname für die Filterung der Firmenvorschläge                                                                                 |
 
 ## Ausgabefelder
 
