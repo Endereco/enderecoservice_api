@@ -1,4 +1,4 @@
-# Firmen-Autocomplete
+# Firmennamen-Autocomplete
 
 - [Struktur der Schnittstelle](#struktur-der-schnittstelle)
   - [Methode](#methode)
