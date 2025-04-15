@@ -69,8 +69,6 @@ Für die Adressprüfung muss ```addressCheck``` als Methode angegeben werden
 | locality_correct                  | Ortsname ist korrekt.                                                                                             |
 | street_name_needs_correction      | Straßenname ist falsch und muss korrigiert werden.                                                                |
 | street_name_correct               | Straßenname ist korrekt.                                                                                          |
-| street_full_needs_correction      | Volle Straße (inkl. Hausnummer) ist falsch und muss korrigiert werden.                                            |
-| street_full_correct               | Volle Straße ist korrekt.                                                                                         |
 | building_number_needs_correction  | Hausnummer ist falsch und muss korrigiert werden.                                                                 |
 | building_number_correct           | Hausnummer ist korrekt.                                                                                           |
 | building_number_is_missing        | Hausnummer wurde nicht angegeben.                                                                                 |
