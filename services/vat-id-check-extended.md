@@ -24,35 +24,38 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
 
 ## Eingabeparameter
 
-| Feld              | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                                                                                                                                                              |
-|-------------------|-----------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| vatId             | String          | Ja      | Enthält die zu prüfende Umsatzsteuer-ID                                                                                                                                                                                                                                |
-| requesterVatId    | String          | Ja      | Enthält die eigene Umsatzsteuer-ID                                                                                                                                                                                                                                     |
-| companyName       | String          | Ja      | Enthält den Firmennamen der zu prüfenden Umsatzsteuer-ID                                                                                                                                                                                                               |
-| companyPostalCode | String          | Ja      | Enthält die Postleitzahl der zu prüfenden Firma                                                                                                                                                                                                                        |
-| companyLocality   | String          | Ja      | Enthält den Ortsnamen der zu prüfenden Firma                                                                                                                                                                                                                           |
-| companyStreetFull | String          | Ja      | Enthält den Straßennamen inkl. Hausnummer der zu prüfenden Firma                                                                                                                                                                                                       |
-| timeout           | Int             | Nein    | (Beta) Der Timeout bezieht sich nicht auf die Abfrage zum Endereco-Server. Er gibt die Anzahl an Sekunden an, innerhalb derer die Antwort vom Finanzamt eintreffen muss. Sollte diese Zeit überschritten werden, werden die Daten stattdessen aus dem Cache abgerufen. |
+| Feld              | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                                                                                                                                                                                                                                                          |
+|-------------------|-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| vatId             | String          | Ja      | Enthält die zu prüfende Umsatzsteuer-ID                                                                                                                                                                                                                                                                                                                            |
+| requesterVatId    | String          | Ja      | Enthält die eigene Umsatzsteuer-ID                                                                                                                                                                                                                                                                                                                                 |
+| companyName       | String          | Ja      | Enthält den Firmennamen der zu prüfenden Umsatzsteuer-ID                                                                                                                                                                                                                                                                                                           |
+| companyPostalCode | String          | Ja      | Enthält die Postleitzahl der zu prüfenden Firma                                                                                                                                                                                                                                                                                                                    |
+| companyLocality   | String          | Ja      | Enthält den Ortsnamen der zu prüfenden Firma                                                                                                                                                                                                                                                                                                                       |
+| companyStreetFull | String          | Ja      | Enthält den Straßennamen inkl. Hausnummer der zu prüfenden Firma                                                                                                                                                                                                                                                                                                   |
+| timeout           | Int             | Nein    | (Beta) Der Timeout bezieht sich nicht auf die Abfrage zum Endereco-Server. Er gibt die Anzahl an Sekunden an, innerhalb derer die Antwort vom Finanzamt eintreffen muss. Sollte diese Zeit überschritten werden, wird ein Fehler zurückgegeben. Es wird eine Zahl zwischen 5 und 60 erwartet. Wenn dieser Parameter nicht gesetzt ist, wird der Wert 60 verwendet. |
+| allowCache        | Boolean         | Nein    | (Beta) Mit diesem Parameter kann gesteuert werden, ob in der Antwort nur Live-Daten vom Bundeszentralamt für Steuern oder auch Daten aus dem Cache enthalten sein dürfen. Hier wird entweder true oder false erwartet. Wenn dieser Parameter nicht gesetzt ist, wird false verwendet.                                                                              |
 
 
 ## Ausgabefelder
 
-| Feld                                               | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                         |
-|----------------------------------------------------|-----------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| predictions                                        | Array           | Ja      | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                                                                                                                                                                                                                                                                                                                    |
-| predictions.vatId                                  | String          | Ja      | Enthält die formatierte Umsatzsteuer-ID der zu prüfenden Firma.                                                                                                                                                                                                                                                                                                                                                   |
-| predictions.companyName                            | String          | Ja      | Enthält den Firmennamen zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                                                                      |
-| predictions.companyAddress                         | String          | Ja      | Enthält die unstrukturierte Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                                                    |
-| predictions.companyAddressFormatted                | String          | Ja      | Enthält die strukturierte Firmenadresse zu diesem Vorschlag. Wird nur zurückgegeben, wenn die Adresse in strukturierter Form vorliegt                                                                                                                                                                                                                                                                             |
-| predictions.companyAddressFormatted.streetFull     | String          | Ja      | Enthält die Straße inkl. Hausnummer der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                         |
-| predictions.companyAddressFormatted.street         | String          | Ja      | Enthält den Straßennamen der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                                    |
-| predictions.companyAddressFormatted.houseNumber    | String          | Ja      | Enthält die Hausnummer der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                                      |
-| predictions.companyAddressFormatted.additionalInfo | String          | Ja      | Enthält den Adresszusatz der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                                    |
-| predictions.companyAddressFormatted.postCode       | String          | Ja      | Enthält die Postleitzahl der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                                    |
-| predictions.companyAddressFormatted.cityName       | String          | Ja      | Enthält den Ortsname der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                                        |
-| predictions.companyAddressFormatted.country        | String          | Ja      | Enthält den Ländercode der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                                                                                                                      |
-| certification                                      | JSON            | Nein    | Enthält Informationen zum Prüfzertifikat. Wird nur zurückgegeben, wenn es sich laut §18e UStG und 18e.1 Abs. 2 Satz 4 UStAE um eine qualifizierte Prüfung handelt. Wenn das Prüfzertifikat nicht ausgegeben wird, bedeutet es, dass die Prüfung mit Daten aus dem Cache verglichen wurde, da der BZSt-Server nicht verfügbar ist. Die erneute Prüfung der USt-ID zu einem späteren Zeitpunkt kann notwendig sein. |
-| status                                             | Array           | Ja      | Enthält eine Liste mit Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes).                                                                                                                                                                                                                                                                                         |
+| Feld                                               | Erwarteter Wert | Pflicht | Bedeutung                                                                                                                                                                                                                                                                                      |
+|----------------------------------------------------|-----------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| predictions                                        | Array           | Ja      | Enthält JSON-Objekte mit Korrekturvorschlägen.                                                                                                                                                                                                                                                 |
+| predictions.vatId                                  | String          | Ja      | Enthält die formatierte Umsatzsteuer-ID der zu prüfenden Firma.                                                                                                                                                                                                                                |
+| predictions.companyName                            | String          | Ja      | Enthält den Firmennamen zu diesem Vorschlag.                                                                                                                                                                                                                                                   |
+| predictions.companyAddress                         | String          | Ja      | Enthält die unstrukturierte Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                                 |
+| predictions.companyAddressFormatted                | String          | Ja      | Enthält die strukturierte Firmenadresse zu diesem Vorschlag. Wird nur zurückgegeben, wenn die Adresse in strukturierter Form vorliegt                                                                                                                                                          |
+| predictions.companyAddressFormatted.streetFull     | String          | Ja      | Enthält die Straße inkl. Hausnummer der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                      |
+| predictions.companyAddressFormatted.street         | String          | Ja      | Enthält den Straßennamen der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                 |
+| predictions.companyAddressFormatted.houseNumber    | String          | Ja      | Enthält die Hausnummer der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                   |
+| predictions.companyAddressFormatted.additionalInfo | String          | Ja      | Enthält den Adresszusatz der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                 |
+| predictions.companyAddressFormatted.postCode       | String          | Ja      | Enthält die Postleitzahl der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                 |
+| predictions.companyAddressFormatted.cityName       | String          | Ja      | Enthält den Ortsname der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                     |
+| predictions.companyAddressFormatted.country        | String          | Ja      | Enthält den Ländercode der strukturierten Firmenadresse zu diesem Vorschlag.                                                                                                                                                                                                                   |
+| certification                                      | JSON            | Ja      | Enthält das Prüfzertifikat.                                                                                                                                                                                                                                                                    |
+| certificationStatus                                | JSON            | Ja      | Enthält Informationen zum Prüfzertifikat.                                                                                                                                                                                                                                                      |
+| certificationStatus.source                         | String          | Ja      | Enthält die Quelle des Prüfzertifikats. Wenn dieser "realtime" ist, dann kommen die Daten direkt vom Bundeszentralamt für Stuern und es handelt sich laut §18e UStG und 18e.1 Abs. 2 Satz 4 UStAE um eine qualifizierte Prüfung. Wenn dieser "cache" ist, dann kommen die Daten aus dem cache. |
+| status                                             | Array           | Ja      | Enthält eine Liste mit Statuscodes, die den geprüften Datensatz beschreiben. Siehe [Liste der Statuscodes](#statuscodes).                                                                                                                                                                      |
 
 > Alle erfolgreichen Prüfanfragen werden auf Seiten von endereco gespeichert und archiviert.
 >
@@ -91,6 +94,152 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
 | vat_id_company_name_mismatch              | Der angegebene Firmenname passt nicht zum Firmennamen, der bei der Handelskammer hinterlegt ist. Das ist die Interpretation von endereco, nicht des BZSt.                                                               |
 
 # Beispiele
+
+## Gültige Daten - Antwort kommt vom Bundeszentralamt für Steuern
+
+### Anfrage
+
+```
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "vatIdCheck",
+   "params": {
+      "vatId": "DE297464149",
+      "requesterVatID": "DE297464149",
+      "companyName": "endereco",
+      "companyPostalCode": "97236",
+      "companyLocality": "Randersacker",
+      "companyStreetFull": "Balthasar-Neumann Str. 4b",
+      "allowCache": false,
+      "timeout": "30"
+   }
+}
+```
+
+### Antwort
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "predictions": [
+            {
+                "vatId": "DE297464149",
+                "companyName": "endereco UG (haftungsbeschränkt) Gesellschaft für Master Data Quality Management",
+                "companyAddress": "Balthasar-Neumann Str. 4 b, 97236, Randersacker",
+                "companyAddressFormatted": {
+                    "streetFull": "Balthasar-Neumann Str. 4 b",
+                    "additionalInfo": "",
+                    "postCode": "97236",
+                    "cityName": "Randersacker",
+                    "country": "DE",
+                    "street": "Balthasar-Neumann Str.",
+                    "houseNumber": "4 b"
+                }
+            }
+        ],
+        "certification": {
+            "ErrorCode": "213",
+            "Date": "08.12.2025",
+            "Time": "11:31:57",
+            "Name": [],
+            "City": [],
+            "PostalCode": [],
+            "Street": [],
+            "Type": "BZST"
+        },
+        "certificationStatus": {
+            "source": "realtime"
+        },
+        "status": [
+            "vat_id_valid",
+            "vat_id_format_correct",
+            "vat_id_company_name_mismatch",
+            "vat_id_company_postal_code_match",
+            "vat_id_company_locality_match",
+            "vat_id_company_street_full_match",
+            "vat_id_company_street_match",
+            "vat_id_company_house_number_match",
+            "vat_id_company_address_match"
+        ]
+    }
+}
+```
+
+## Gültige Daten - Antwort aus dem Cache
+
+### Anfrage
+
+```
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "vatIdCheck",
+   "params": {
+      "vatId": "DE297464149",
+      "requesterVatID": "DE297464149",
+      "companyName": "endereco",
+      "companyPostalCode": "97236",
+      "companyLocality": "Randersacker",
+      "companyStreetFull": "Balthasar-Neumann Str. 4b",
+      "allowCache": true,
+      "timeout": "5"
+   }
+}
+```
+
+### Antwort
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "predictions": [
+            {
+                "vatId": "DE297464149",
+                "companyName": "endereco UG (haftungsbeschränkt) Gesellschaft für Master Data Quality Management",
+                "companyAddress": "Balthasar-Neumann Str. 4 b, 97236, Randersacker",
+                "companyAddressFormatted": {
+                    "streetFull": "Balthasar-Neumann Str. 4 b",
+                    "additionalInfo": "",
+                    "postCode": "97236",
+                    "cityName": "Randersacker",
+                    "country": "DE",
+                    "street": "Balthasar-Neumann Str.",
+                    "houseNumber": "4 b"
+                }
+            }
+        ],
+        "certification": {
+            "ErrorCode": "213",
+            "Date": "08.12.2025",
+            "Time": "11:31:57",
+            "Name": [],
+            "City": [],
+            "PostalCode": [],
+            "Street": [],
+            "Type": "BZST"
+        },
+        "certificationStatus": {
+            "source": "cache"
+        },
+        "status": [
+            "vat_id_valid",
+            "vat_id_format_correct",
+            "vat_id_company_name_mismatch",
+            "vat_id_company_postal_code_match",
+            "vat_id_company_locality_match",
+            "vat_id_company_street_full_match",
+            "vat_id_company_street_match",
+            "vat_id_company_house_number_match",
+            "vat_id_company_address_match"
+        ]
+    }
+}
+```
 
 ## Gültige und richtig formatierte Umsatzsteuer-ID
 
@@ -145,6 +294,9 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
             "Street": [],
             "Type": "BZST"
         },
+        "certificationStatus": {
+            "source": "realtime"
+        },
         "status": [
             "vat_id_valid",
             "vat_id_format_correct",
@@ -197,6 +349,9 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
             "PostalCode": [],
             "Street": [],
             "Type": "BZST"
+        },
+        "certificationStatus": {
+            "source": "realtime"
         },
         "status": [
             "vat_id_invalid",
@@ -258,6 +413,9 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
             "PostalCode": [],
             "Street": [],
             "Type": "BZST"
+        },
+        "certificationStatus": {
+            "source": "realtime"
         },
         "status": [
             "vat_id_valid",
