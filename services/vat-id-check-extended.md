@@ -123,20 +123,22 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
             {
                 "vatId": "DE297464149",
                 "companyName": "endereco UG (haftungsbeschränkt) Gesellschaft für Master Data Quality Management",
-                "companyAddress": "Balthasar-Neumann Str. 4b, 97236, Randersacker",
+                "companyAddress": "Balthasar-Neumann Str. 4 b, 97236, Randersacker",
                 "companyAddressFormatted": {
-                    "streetFull": "Balthasar-Neumann Str. 4b",
+                    "streetFull": "Balthasar-Neumann Str. 4 b",
                     "additionalInfo": "",
                     "postCode": "97236",
                     "cityName": "Randersacker",
-                    "country": "DE"
+                    "country": "DE",
+                    "street": "Balthasar-Neumann Str.",
+                    "houseNumber": "4 b"
                 }
             }
         ],
         "certification": {
             "ErrorCode": "213",
-            "Date": "22.04.2024",
-            "Time": "10:13:54",
+            "Date": "08.12.2025",
+            "Time": "11:31:57",
             "Name": [],
             "City": [],
             "PostalCode": [],
@@ -149,8 +151,10 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
             "vat_id_company_name_mismatch",
             "vat_id_company_postal_code_match",
             "vat_id_company_locality_match",
-            "vat_id_company_street_full_partial_match",
-            "vat_id_company_address_partial_match"
+            "vat_id_company_street_full_match",
+            "vat_id_company_street_match",
+            "vat_id_company_house_number_match",
+            "vat_id_company_address_match"
         ]
     }
 }
@@ -186,8 +190,8 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
         "predictions": [],
         "certification": {
             "ErrorCode": "213",
-            "Date": "22.04.2024",
-            "Time": "11:39:01",
+            "Date": "08.12.2025",
+            "Time": "11:32:46",
             "Name": [],
             "City": [],
             "PostalCode": [],
@@ -196,11 +200,7 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
         },
         "status": [
             "vat_id_invalid",
-            "vat_id_format_correct",
-            "vat_id_company_postal_code_mismatch",
-            "vat_id_company_locality_mismatch",
-            "vat_id_company_street_full_mismatch",
-            "vat_id_company_address_mismatch"
+            "vat_id_format_correct"
         ]
     }
 }
@@ -237,20 +237,22 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
             {
                 "vatId": "DE297464149",
                 "companyName": "endereco UG (haftungsbeschränkt) Gesellschaft für Master Data Quality Management",
-                "companyAddress": "Balthasar-Neumann Str. 4b, 97236, Randersacker",
+                "companyAddress": "Balthasar-Neumann Str. 4 b, 97236, Randersacker",
                 "companyAddressFormatted": {
-                    "streetFull": "Balthasar-Neumann Str. 4b",
+                    "streetFull": "Balthasar-Neumann Str. 4 b",
                     "additionalInfo": "",
                     "postCode": "97236",
                     "cityName": "Randersacker",
-                    "country": "DE"
+                    "country": "DE",
+                    "street": "Balthasar-Neumann Str.",
+                    "houseNumber": "4 b"
                 }
             }
         ],
         "certification": {
             "ErrorCode": "213",
-            "Date": "22.04.2024",
-            "Time": "11:41:24",
+            "Date": "08.12.2025",
+            "Time": "11:33:23",
             "Name": [],
             "City": [],
             "PostalCode": [],
@@ -258,7 +260,7 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
             "Type": "BZST"
         },
         "status": [
-            "vat_id_unknown_status",
+            "vat_id_valid",
             "vat_id_format_invalid",
             "vat_id_body_needs_correction",
             "vat_id_body_minor_correction",
@@ -266,6 +268,8 @@ Für die qualifizierte Umsatzsteuer-ID-Prüfung muss ```vatIdCheck``` als Method
             "vat_id_company_postal_code_match",
             "vat_id_company_locality_match",
             "vat_id_company_street_full_match",
+            "vat_id_company_street_match",
+            "vat_id_company_house_number_match",
             "vat_id_company_address_match"
         ]
     }
