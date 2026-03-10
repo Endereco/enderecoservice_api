@@ -15,8 +15,8 @@ Ein Auszug unserer Referenzen:
 
 |                           |                                 |                                 |                              |
 |---------------------------|---------------------------------|---------------------------------|------------------------------|
-| ![](./imgs/Lavera.png "") | ![](./imgs/Ravensburger.png "") | ![](./imgs/BasteiLuebbe.png "") | ![](./imgs/Berentzen.png "") |
-| ![](./imgs/Ergo.png "")   | ![](./imgs/TechniSat.png "")    | ![](./imgs/DB.png "")           | ![](./imgs/Drykorn.png "")   |
+| ![](./imgs/Lavera.png "") | | ![](./imgs/BasteiLuebbe.png "") | ![](./imgs/Berentzen.png "") |
+|   | ![](./imgs/TechniSat.png "")    | ![](./imgs/DB.png "")           | ![](./imgs/Drykorn.png "")   |
 
 ## Übersicht der Funktionen
 
